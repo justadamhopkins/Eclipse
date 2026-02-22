@@ -4,7 +4,7 @@
     "baseUrl": ".",
     "target": "es5",
     "lib": ["dom", "dom.iterable", "esnext"],
-    "types": ["vitest/globals"],
+    "types": ["vitest/globals", "next"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": false,
