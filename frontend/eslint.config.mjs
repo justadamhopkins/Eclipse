@@ -38,6 +38,7 @@ export default [
       '*.stories.tsx',
       'coverage',
       'postcss.config.js',
+      '**/sanity.types.ts',
       '**/.next/*',
       'next-env.d.ts',
     ],
