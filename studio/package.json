@@ -9,13 +9,20 @@
     "start": "sanity start",
     "build": "sanity build",
     "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy"
+    "deploy-graphql": "sanity graphql deploy",
+    "typegen": "sanity typegen generate",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "typecheck": "tsc --noEmit",
+    "prettier:fix": "prettier --write \"**/*.{ts,js,tsx}\"",
+    "prettier:check": "prettier --check .",
+    "schema:extract": "sanity schema extract --enforce-required-fields --path ../sanity.schema.json"
   },
   "keywords": [
     "sanity"
   ],
   "dependencies": {
-    "@sanity/vision": "5.10.0",
+    "@sanity/vision": "5.11.0",
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "sanity": "5.11.0",
