@@ -63,7 +63,6 @@
     "eslint-plugin-vitest": "0.5.4",
     "fetch-mock": "12.6.0",
     "globals": "16.0.0",
-    "husky": "9.1.7",
     "identity-obj-proxy": "3.0.0",
     "jsdom": "26.1.0",
     "msw": "2.12.7",
