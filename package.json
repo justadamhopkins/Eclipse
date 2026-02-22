@@ -19,6 +19,7 @@
     "prepare": "husky"
   },
   "devDependencies": {
+    "lint-staged": "16.2.7",
     "prettier": "3.8.0"
   }
 }
