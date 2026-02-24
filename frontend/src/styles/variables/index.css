@@ -1,0 +1,7 @@
+/* Primitives */
+@import url('primitives/colors.css');
+@import url('primitives/spacing.css');
+
+/* Semantics */
+@import url('semantics/surface.css');
+@import url('semantics/foreground.css');
