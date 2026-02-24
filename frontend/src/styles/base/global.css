@@ -1,0 +1,8 @@
+:root {
+  --siteMaxWidth: 120rem;
+}
+
+body {
+  background: var(--surface-primary);
+  color: var(--foreground-text-primary);
+}
