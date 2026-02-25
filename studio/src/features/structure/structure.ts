@@ -5,5 +5,5 @@ import {
 
 export const baseStructure: StructureResolver = (S: StructureBuilder) =>
   S.list()
-    .title('Base')
+    .title('Schemas')
     .items([...S.documentTypeListItems().reverse()]);
