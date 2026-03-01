@@ -1,7 +1,19 @@
 /* Primitives */
 @import url('primitives/colors.css');
 @import url('primitives/spacing.css');
+@import url('primitives/borders.css');
+@import url('primitives/layers.css');
+@import url('primitives/typography.css');
+@import url('primitives/shadows.css');
+@import url('primitives/durations.css');
+@import url('primitives/opacity.css');
 
 /* Semantics */
 @import url('semantics/surface.css');
 @import url('semantics/foreground.css');
+@import url('semantics/layers.css');
+@import url('semantics/spacing.css');
+@import url('semantics/borders.css');
+@import url('semantics/typography.css');
+@import url('semantics/shadows.css');
+@import url('semantics/motion.css');

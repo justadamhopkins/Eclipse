@@ -8,13 +8,12 @@
   "license": "ISC",
   "packageManager": "pnpm@10.18.0",
   "scripts": {
-    "dev": "next dev",
     "lint": "pnpm -r lint",
     "lint:fix": "pnpm -r lint:fix",
     "typecheck": "pnpm -r typecheck",
     "prettier:fix": "pnpm -r prettier:fix",
     "prettier:check": "pnpm -r prettier:check",
-    "dev:next": "pnpm run -F @eclipse/frontend dev",
+    "dev:frontend": "pnpm run -F @eclipse/frontend dev",
     "dev:studio": "pnpm run -F @eclipse/studio dev",
     "prepare": "husky"
   },
