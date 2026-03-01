@@ -1,0 +1,15 @@
+:root {
+    --z-hide: var(--z-1);
+    --z-base: var(--z-2);
+    --z-docked: var(--z-3);
+    --z-dropDown: var(--z-4);
+    --z-sticky: var(--z-5);
+    --z-banner: var(--z-6);
+    --z-overlay: var(--z-7);
+    --z-modal: var(--z-8);
+    --z-popover: var(--z-9);
+    --z-skipNav: var(--z-10);
+    --z-toast: var(--z-11);
+    --z-tooltip: var(--z-12);
+    --z-max: var(--z-13);
+}

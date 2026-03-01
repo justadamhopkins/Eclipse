@@ -1,3 +1,6 @@
 :root {
-  --foreground-text-primary: var(--eggshell);
+    --foreground-text-primary: var(--eggshell);
+    --foreground-text-muted: var(--apricot-cream);
+    --foreground-text-accent: var(--burnt-peach);
+    --foreground-icon-base: var(--eggshell);
 }

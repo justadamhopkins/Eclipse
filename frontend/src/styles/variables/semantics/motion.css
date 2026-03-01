@@ -1,0 +1,7 @@
+:root {
+    --motion-instant: var(--duration-1);
+    --motion-fast: var(--duration-2);
+    --motion-base: var(--duration-3);
+    --motion-slow: var(--duration-4);
+    --motion-deliberate: var(--duration-5);
+}
