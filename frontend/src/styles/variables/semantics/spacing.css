@@ -1,0 +1,10 @@
+:root {
+    --spacing-gap-tight: var(--space-1);
+    --spacing-gap-base: var(--space-2);
+    --spacing-gap-wide: var(--space-4);
+    --spacing-padding-tight: var(--space-2);
+    --spacing-padding-base: var(--space-4);
+    --spacing-padding-wide: var(--space-8);
+    --spacing-section-gap: var(--space-8);
+    --spacing-page-gutter: var(--space-6);
+}

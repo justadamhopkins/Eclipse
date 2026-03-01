@@ -1,0 +1,6 @@
+:root {
+    --elevation-low: var(--shadow-1);
+    --elevation-base: var(--shadow-3);
+    --elevation-high: var(--shadow-5);
+    --elevation-max: var(--shadow-6);
+}

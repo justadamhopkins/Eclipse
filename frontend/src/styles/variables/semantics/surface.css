@@ -1,3 +1,6 @@
 :root {
-  --surface-primary: var(--twilight-indigo);
+    --surface-primary: var(--twilight-indigo);
+    --surface-secondary: var(--muted-teal);
+    --surface-accent: var(--burnt-peach);
+    --surface-muted: var(--apricot-cream);
 }

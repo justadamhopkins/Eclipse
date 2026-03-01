@@ -1,0 +1,17 @@
+:root {
+    --text-size-caption: var(--font-size-1);
+    --text-size-body-sm: var(--font-size-2);
+    --text-size-body: var(--font-size-3);
+    --text-size-heading-sm: var(--font-size-5);
+    --text-size-heading: var(--font-size-7);
+    --text-size-heading-lg: var(--font-size-9);
+    --text-size-display: var(--font-size-11);
+
+    --text-leading-tight: var(--line-height-2);
+    --text-leading-body: var(--line-height-4);
+    --text-leading-loose: var(--line-height-6);
+
+    --text-weight-normal: var(--font-weight-1);
+    --text-weight-medium: var(--font-weight-2);
+    --text-weight-bold: var(--font-weight-4);
+}
