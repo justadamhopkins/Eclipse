@@ -1,14 +1,16 @@
-import { type FC, type ReactNode } from 'react';
+import { type TWithClassName } from '@typings/utils';
+import clsx from 'clsx';
+import { type PropsWithChildren } from 'react';
 
-interface IAppContainerProps {
-  children: ReactNode;
-}
+import styles from './AppContainer.module.css';
 
-export const AppContainer: FC<IAppContainerProps> = ({ children }) => {
+interface IAppContainerProps {}
+
+export const AppContainer = ({
+  children,
+  className,
+}: TWithClassName<PropsWithChildren<IAppContainerProps>>) => {
   return (
-    <main>
-      <h1>Hello world!</h1>
-      {children}
-    </main>
+    <main className={clsx([styles.appContainer, className])}>{children}</main>
   );
 };
