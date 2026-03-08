@@ -7,7 +7,14 @@ export const SiteHeader = () => {
   return (
     <header className={clsx([styles.siteHeader])}>
       <SiteLogo />
-      <div className={clsx([styles.siteHeader__navContainer])}>ham/nav</div>
+      <nav className={clsx([styles.siteHeader__navContainer])}>
+        <ul>
+          <li>page 1</li>
+          <li>page 2</li>
+          <li>page 3</li>
+        </ul>
+      </nav>
+      <button>testsr</button>
     </header>
   );
 };
