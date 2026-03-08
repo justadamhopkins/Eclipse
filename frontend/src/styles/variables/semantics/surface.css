@@ -3,4 +3,5 @@
   --surface-secondary: var(--dark-blue);
   --surface-accent: var(--muted-dark-blue);
   --surface-muted: var(--dark-blue);
+  --surface-bright: var(--white);
 }
