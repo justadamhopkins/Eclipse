@@ -3,10 +3,10 @@
 @import url('primitives/spacing.css');
 @import url('primitives/borders.css');
 @import url('primitives/layers.css');
-@import url('primitives/typography.css');
 @import url('primitives/shadows.css');
 @import url('primitives/durations.css');
 @import url('primitives/opacity.css');
+@import url('primitives/typography.css');
 
 /* Semantics */
 @import url('semantics/surface.css');
