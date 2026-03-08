@@ -1,0 +1,4 @@
+.siteContainer {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+}
