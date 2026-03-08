@@ -1,0 +1,19 @@
+.siteHeader {
+  padding: var(--spacing-gap-base) var(--spacing-gap-wide);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  @media (min-width: 40rem) {
+    justify-content: flex-start;
+  }
+
+  &__navContainer {
+    display: flex;
+    justify-content: center;
+
+    @media (min-width: 40rem) {
+      flex-grow: 1;
+    }
+  }
+}
