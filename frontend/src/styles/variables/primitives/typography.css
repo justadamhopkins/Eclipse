@@ -1,5 +1,5 @@
 :root {
-  /* Font sizes — fluid clamp scale, 1 (smallest) → 15 (largest) */
+  /* Font sizes */
   --font-size-1: clamp(0.657rem, calc(0.777rem + -0.16vw), 0.745rem);
   --font-size-2: clamp(0.714rem, calc(0.817rem + -0.137vw), 0.79rem);
   --font-size-3: clamp(0.777rem, calc(0.86rem + -0.111vw), 0.838rem);
@@ -16,7 +16,7 @@
   --font-size-14: clamp(2.283rem, calc(1.933rem + 1.752vw), 3.247rem);
   --font-size-15: clamp(2.569rem, calc(2.106rem + 2.314vw), 3.842rem);
 
-  /* Font weights — 1 (lightest) → 6 (heaviest) */
+  /* Font weights */
   --font-weight-1: 300;
   --font-weight-2: 400;
   --font-weight-3: 500;
@@ -24,13 +24,13 @@
   --font-weight-5: 700;
   --font-weight-6: 800;
 
-  /* Line heights — 1 (tightest) → 4 (most relaxed) */
+  /* Line heights */
   --line-height-1: 1.5;
   --line-height-2: 1.55;
   --line-height-3: 1.6;
   --line-height-4: 1.65;
 
-  /* Letter spacings — 1 (tightest) → 5 (widest) */
+  /* Letter spacings */
   --letter-spacing-1: 0.01em;
   --letter-spacing-2: 0.015em;
   --letter-spacing-3: 0.02em;
