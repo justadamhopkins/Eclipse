@@ -4,12 +4,10 @@ import { type PropsWithChildren } from 'react';
 
 import styles from './AppContainer.module.css';
 
-interface IAppContainerProps {}
-
 export const AppContainer = ({
   children,
   className,
-}: TWithClassName<PropsWithChildren<IAppContainerProps>>) => {
+}: TWithClassName<PropsWithChildren>) => {
   return (
     <main className={clsx([styles.appContainer, className])}>{children}</main>
   );
