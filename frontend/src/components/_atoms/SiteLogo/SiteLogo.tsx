@@ -8,7 +8,7 @@ export const SiteLogo = () => {
       aria-label="adam hopkins logo"
     >
       <NextImage
-        src="./brand-logo.svg"
+        src="/brand-logo.svg"
         alt="brand logo"
         width={80}
         height={80}

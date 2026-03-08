@@ -25,7 +25,7 @@ export function ListRenderer<T>({
     }
 
     return (
-      <Fragment key={getId?.({ item, self, index }) || item?.id || index}>
+      <Fragment key={getId?.({ item, self, index }) ?? item?.id ?? index}>
         {render({ item, self, index })}
       </Fragment>
     );
