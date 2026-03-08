@@ -1,7 +1,6 @@
 :root {
-  --eggshell: oklch(95.32% 0.0254 97.12);
-  --burnt-peach: oklch(69.25% 0.1321 36.39);
-  --twilight-indigo: oklch(38.1% 0.0479 279.14);
-  --muted-teal: oklch(71.95% 0.0612 163.7);
-  --apricot-cream: oklch(86.17% 0.0905 78.69);
+  --muted-dark-blue: oklch(44.55% 0.0374 257.28);
+  --dark-blue: oklch(37.12% 0.0376 256.15);
+  --white: oklch(100% 0 0);
+  --deep-blue: oklch(19.91% 0.0314 258.98);
 }

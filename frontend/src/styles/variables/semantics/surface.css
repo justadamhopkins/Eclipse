@@ -1,6 +1,6 @@
 :root {
-    --surface-primary: var(--twilight-indigo);
-    --surface-secondary: var(--muted-teal);
-    --surface-accent: var(--burnt-peach);
-    --surface-muted: var(--apricot-cream);
+  --surface-primary: var(--deep-blue);
+  --surface-secondary: var(--dark-blue);
+  --surface-accent: var(--muted-dark-blue);
+  --surface-muted: var(--dark-blue);
 }
