@@ -15,8 +15,8 @@ const RootLayout = ({ children }) => {
     >
       <body>
         <Providers>
+          <SiteHeader />
           <SiteContainer>
-            <SiteHeader />
             <AppContainer>{children}</AppContainer>
           </SiteContainer>
         </Providers>
