@@ -1,3 +1,4 @@
+import { NavigationLink } from '@atoms/Navigation/NavigationLink/NavigationLink';
 import { SiteContainer } from '@atoms/SiteContainer';
 import { SiteLogo } from '@atoms/SiteLogo';
 import clsx from 'clsx';
@@ -11,9 +12,15 @@ export const SiteHeader = () => {
         <SiteLogo />
         <nav className={clsx([styles.siteHeader__navContainer])}>
           <ul>
-            <li>page 1</li>
-            <li>page 2</li>
-            <li>page 3</li>
+            <li>
+              <NavigationLink href="/">About</NavigationLink>
+            </li>
+            <li>
+              <NavigationLink href="/">About</NavigationLink>
+            </li>
+            <li>
+              <NavigationLink href="/">About</NavigationLink>
+            </li>
           </ul>
         </nav>
         <button>testsr</button>
