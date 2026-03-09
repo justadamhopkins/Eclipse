@@ -1,0 +1,18 @@
+.navigationLink {
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+    padding: var(--spacing-padding-tight) var(--spacing-padding-base);
+    border-radius: var(--radius-2);
+    transition: background-color 0.2s ease-in-out;
+
+    &__primary {
+        &:hover {
+            color: var(--surface-primary);
+            background-color: var(--surface-bright);
+        }
+        &:focus-visible {
+            outline: 2px solid var(--surface-bright);
+        }
+    }
+}
