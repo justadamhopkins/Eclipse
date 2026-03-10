@@ -1,20 +1,42 @@
 :root {
-  /* Font sizes */
-  --font-size-1: clamp(0.657rem, calc(0.777rem + -0.16vw), 0.745rem);
-  --font-size-2: clamp(0.714rem, calc(0.817rem + -0.137vw), 0.79rem);
-  --font-size-3: clamp(0.777rem, calc(0.86rem + -0.111vw), 0.838rem);
-  --font-size-4: clamp(0.845rem, calc(0.905rem + -0.079vw), 0.889rem);
-  --font-size-5: clamp(0.919rem, calc(0.951rem + -0.043vw), 0.943rem);
-  --font-size-6: 1rem;
-  --font-size-7: clamp(1.061rem, calc(1.051rem + 0.049vw), 1.088rem);
-  --font-size-8: clamp(1.125rem, calc(1.104rem + 0.106vw), 1.183rem);
-  --font-size-9: clamp(1.194rem, calc(1.159rem + 0.17vw), 1.287rem);
-  --font-size-10: clamp(1.266rem, calc(1.217rem + 0.244vw), 1.4rem);
-  --font-size-11: clamp(1.424rem, calc(1.34rem + 0.422vw), 1.657rem);
-  --font-size-12: clamp(1.603rem, calc(1.473rem + 0.65vw), 1.96rem);
-  --font-size-13: clamp(2.029rem, calc(1.769rem + 1.3vw), 2.744rem);
-  --font-size-14: clamp(2.283rem, calc(1.933rem + 1.752vw), 3.247rem);
-  --font-size-15: clamp(2.569rem, calc(2.106rem + 2.314vw), 3.842rem);
+  /* Body font sizes */
+  --font-size-body-1: clamp(0.563rem, calc(0.66rem + -0.108vw), 0.638rem);
+  --font-size-body-2: clamp(0.625rem, calc(0.71rem + -0.094vw), 0.691rem);
+  --font-size-body-3: clamp(0.75rem, calc(0.826rem + -0.084vw), 0.809rem);
+  --font-size-body-4: clamp(0.813rem, calc(0.867rem + -0.061vw), 0.855rem);
+  --font-size-body-5: clamp(0.875rem, calc(0.905rem + -0.033vw), 0.898rem);
+  --font-size-body-6: 1rem;
+  --font-size-body-7: clamp(1.097rem, calc(1.089rem + 0.04vw), 1.125rem);
+  --font-size-body-8: clamp(1.189rem, calc(1.172rem + 0.087vw), 1.25rem);
+
+  /* Heading font sizes */
+  --font-size-heading-1: clamp(1.18rem, calc(1.13rem + 0.2vw), 1.32rem);
+  --font-size-heading-2: clamp(1.28rem, calc(1.2rem + 0.33vw), 1.52rem);
+  --font-size-heading-3: clamp(1.39rem, calc(1.28rem + 0.49vw), 1.75rem);
+  --font-size-heading-4: clamp(1.51rem, calc(1.35rem + 0.68vw), 2.01rem);
+  --font-size-heading-5: clamp(1.64rem, calc(1.42rem + 0.92vw), 2.31rem);
+  --font-size-heading-6: clamp(1.78rem, calc(1.5rem + 1.2vw), 2.65rem);
+
+  /* Display font sizes */
+  --font-size-display-1: clamp(1.93rem, calc(1.57rem + 1.53vw), 3.05rem);
+  --font-size-display-2: clamp(2.1rem, calc(1.65rem + 1.93vw), 3.5rem);
+  --font-size-display-3: clamp(2.28rem, calc(1.71rem + 2.4vw), 4.02rem);
+  --font-size-display-4: clamp(2.47rem, calc(1.78rem + 2.96vw), 4.62rem);
+  --font-size-display-5: clamp(2.69rem, calc(1.84rem + 3.62vw), 5.31rem);
+
+  /* Fixed font sizes */
+  --font-size-1: 0.625rem; /* 10px */
+  --font-size-2: 0.75rem; /* 12px */
+  --font-size-3: 0.813rem; /* 13px */
+  --font-size-4: 0.875rem; /* 14px */
+  --font-size-5: 1rem; /* 16px */
+  --font-size-6: 1.125rem; /* 18px */
+  --font-size-7: 1.25rem; /* 20px */
+  --font-size-8: 1.5rem; /* 24px */
+  --font-size-9: 1.75rem; /* 28px */
+  --font-size-10: 2rem; /* 32px */
+  --font-size-11: 2.5rem; /* 40px */
+  --font-size-12: 3rem; /* 48px */
 
   /* Font weights */
   --font-weight-1: 300;
@@ -29,8 +51,10 @@
   --line-height-2: 1.55;
   --line-height-3: 1.6;
   --line-height-4: 1.65;
+  --line-height-5: 1.7;
 
   /* Letter spacings */
+  --letter-spacing-0: 0.008em;
   --letter-spacing-1: 0.01em;
   --letter-spacing-2: 0.015em;
   --letter-spacing-3: 0.02em;
