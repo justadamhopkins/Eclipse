@@ -67,8 +67,11 @@ p {
 }
 
 a {
+  cursor: pointer;
+  text-decoration: none;
+  color: inherit;
   font-family: var(--text-font-body);
-  font-size: var(--text-body-xl-size);
+  font-size: var(--text-lg);
   font-weight: var(--font-weight-2);
   line-height: var(--text-body-leading);
   letter-spacing: var(--text-body-tracking);
