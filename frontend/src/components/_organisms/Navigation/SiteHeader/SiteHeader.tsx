@@ -13,13 +13,10 @@ export const SiteHeader = () => {
         <nav className={clsx([styles.siteHeader__navContainer])}>
           <ul>
             <li>
-              <NavigationLink href="/">About</NavigationLink>
+              <NavigationLink href="/">Home</NavigationLink>
             </li>
             <li>
-              <NavigationLink href="/">About</NavigationLink>
-            </li>
-            <li>
-              <NavigationLink href="/">About</NavigationLink>
+              <NavigationLink href="/about">About</NavigationLink>
             </li>
           </ul>
         </nav>
