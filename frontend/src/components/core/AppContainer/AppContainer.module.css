@@ -1,2 +1,5 @@
 .appContainer {
+  max-width: var(--container-max-width);
+  margin-inline: auto;
+  flex: 1;
 }

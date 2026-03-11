@@ -1,4 +1,4 @@
-import { HomePage } from '@templates/Homepage';
+import { HomePage } from '@templates/HomePage';
 
 const HomePageRoot = () => {
   return <HomePage />;

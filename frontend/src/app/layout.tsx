@@ -1,13 +1,12 @@
-import { SiteContainer } from '@atoms/SiteContainer';
 import { AppContainer } from '@core/AppContainer';
+import { PageWrapper } from '@core/PageWrapper';
+import { SiteFooter } from '@organisms/Navigation/SiteFooter';
 import { SiteHeader } from '@organisms/Navigation/SiteHeader';
 import { FONT_FUSTAT, FONT_INTER } from '@styles/typography/fonts';
 
 import '@styles/index.css';
 
 import Providers from './providers';
-
-import { SiteFooter } from '@organisms/Navigation/SiteFooter';
 
 const RootLayout = ({ children }) => {
   return (
@@ -17,11 +16,11 @@ const RootLayout = ({ children }) => {
     >
       <body>
         <Providers>
-          <SiteHeader />
-          <SiteContainer>
+          <PageWrapper>
+            <SiteHeader />
             <AppContainer>{children}</AppContainer>
-          </SiteContainer>
-          <SiteFooter />
+            <SiteFooter />
+          </PageWrapper>
         </Providers>
       </body>
     </html>
