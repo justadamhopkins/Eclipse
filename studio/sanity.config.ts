@@ -5,10 +5,10 @@ import { schemaTypes } from './src/schemaTypes';
 import { baseStructure } from '@features/structure/structure';
 
 export default defineConfig({
-  name: 'default',
+  name: 'eclipse_content_studio',
   title: 'Eclipse',
-  projectId: 'o7fi7oqy',
-  dataset: 'production',
+  projectId: process.env.SANITY_STUDIO_PROJECT_ID!,
+  dataset: process.env.SANITY_STUDIO_DATASET!,
   plugins: [
     structureTool({
       structure: baseStructure,
