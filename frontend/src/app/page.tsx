@@ -1,7 +1,7 @@
-import { AboutPage } from '@templates/AboutPage';
+import { HomePage } from '@templates/HomePage';
 
 const HomePageRoot = () => {
-  return <AboutPage />;
+  return <HomePage />;
 };
 
 export default HomePageRoot;
