@@ -1,0 +1,12 @@
+.button {
+    cursor: pointer;
+    appearance: none;
+    border: none;
+    padding: var(--spacing-padding-tight) var(--spacing-padding-base);
+    border-radius: var(--radius-2);
+    transition: background-color 0.2s ease-in-out;
+
+    & __primary {
+
+    }
+}
