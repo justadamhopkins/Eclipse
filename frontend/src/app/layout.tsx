@@ -8,6 +8,8 @@ import '@styles/index.css';
 
 import Providers from './providers';
 
+import { SiteContainer } from '@atoms/SiteContainer';
+
 const RootLayout = ({ children }) => {
   return (
     <html
@@ -18,7 +20,7 @@ const RootLayout = ({ children }) => {
         <Providers>
           <PageWrapper>
             <SiteHeader />
-            <AppContainer>{children}</AppContainer>
+            <AppContainer><SiteContainer>{children}</SiteContainer></AppContainer>
             <SiteFooter />
           </PageWrapper>
         </Providers>
