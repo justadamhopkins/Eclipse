@@ -1,7 +1,7 @@
-import { Homepage } from '@templates/Homepage/Homepage';
+import { HomePage } from '@templates/Homepage';
 
-const HomePage = () => {
-  return <Homepage />;
+const HomePageRoot = () => {
+  return <HomePage />;
 };
 
-export default HomePage;
+export default HomePageRoot;

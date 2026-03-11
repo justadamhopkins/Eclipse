@@ -7,6 +7,8 @@ import '@styles/index.css';
 
 import Providers from './providers';
 
+import { SiteFooter } from '@organisms/Navigation/SiteFooter';
+
 const RootLayout = ({ children }) => {
   return (
     <html
@@ -19,6 +21,7 @@ const RootLayout = ({ children }) => {
           <SiteContainer>
             <AppContainer>{children}</AppContainer>
           </SiteContainer>
+          <SiteFooter />
         </Providers>
       </body>
     </html>
