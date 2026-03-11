@@ -17,8 +17,8 @@ export const aboutPage = defineType({
       name: 'slug',
       title: 'Slug',
       type: 'slug',
-      options: {source: 'headline'},
-      validation: (rule) => rule.required(),
+      options: { source: 'headline' },
+      validation: rule => rule.required(),
     }),
     defineField({
       name: 'profileImage',
