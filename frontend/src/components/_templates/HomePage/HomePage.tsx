@@ -1,12 +1,10 @@
+import { CoverHero } from '@organisms/Heros/CoverHero';
+
 export const HomePage = () => {
   return (
-    <div>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor
-        molestiae, nobis. Ad aliquam aspernatur dolores harum ipsa omnis
-        possimus quo rerum vero. Dolore dolorem neque numquam perspiciatis
-        provident rerum voluptatum?
-      </p>
-    </div>
+    <>
+      <CoverHero title="Welcome to the Home Page" />
+      <p>Home page content goes here.</p>
+    </>
   );
 };
