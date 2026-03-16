@@ -1,3 +1,4 @@
+import { Button } from '@atoms/Button';
 import { NavigationLink } from '@atoms/Navigation/NavigationLink/NavigationLink';
 import { SiteContainer } from '@atoms/SiteContainer';
 import { SiteLogo } from '@atoms/SiteLogo';
@@ -20,7 +21,7 @@ export const SiteHeader = () => {
             </li>
           </ul>
         </nav>
-        <button>testsr</button>
+        <Button>Contact</Button>
       </SiteContainer>
     </header>
   );
