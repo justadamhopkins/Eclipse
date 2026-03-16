@@ -1,6 +1,10 @@
 :root {
   --foreground-text-primary: var(--white);
+  --foreground-text-secondary: var(--slate-blue);
   --foreground-text-muted: var(--muted-dark-blue);
   --foreground-text-accent: var(--dark-blue);
   --foreground-icon-base: var(--white);
+
+  --foreground-accent-teal: var(--teal);
+  --foreground-accent-lavender: var(--lavender);
 }

@@ -9,4 +9,6 @@
     --border-thin: var(--border-width-2);
     --border-thick: var(--border-width-3);
     --border-heavy: var(--border-width-4);
+
+    --border-focus: var(--lavender);
 }

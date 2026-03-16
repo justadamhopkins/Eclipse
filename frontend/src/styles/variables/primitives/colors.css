@@ -3,4 +3,13 @@
   --dark-blue: oklch(37.12% 0.0376 256.15);
   --white: oklch(100% 0 0);
   --deep-blue: oklch(19.91% 0.0314 258.98);
+  --ice-blue:         oklch(84% 0.034 220);
+  --powder-blue:      oklch(69% 0.042 220);
+  --slate-blue:       oklch(60% 0.038 220);
+  --navy:             oklch(33% 0.040 258);
+  --midnight:         oklch(29% 0.036 258);
+  --abyss:            oklch(24% 0.032 258);
+  --teal:             oklch(76% 0.072 192);
+  --lavender:         oklch(70% 0.072 290);
+  --sky:              oklch(63% 0.072 220);
 }
