@@ -1,0 +1,1 @@
+export { CoverHero } from './CoverHero';
