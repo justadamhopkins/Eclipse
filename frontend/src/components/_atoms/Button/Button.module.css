@@ -1,12 +1,20 @@
 .button {
-    cursor: pointer;
-    appearance: none;
-    border: none;
+    color: var(--foreground-text-primary);
     padding: var(--spacing-padding-tight) var(--spacing-padding-base);
     border-radius: var(--radius-2);
     transition: background-color 0.2s ease-in-out;
+    min-width: 6rem;
 
-    & __primary {
+    &__primary {
+        background-color: var(--surface-action);
 
+        &:hover {
+            background-color: var(--surface-action-hover);
+        }
+
+        &:focus-visible {
+            outline: 2px solid var(--border-focus);
+            outline-offset: 3px;
+        }
     }
 }
