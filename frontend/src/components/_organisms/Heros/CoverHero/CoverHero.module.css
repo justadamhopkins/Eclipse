@@ -1,0 +1,52 @@
+.coverHero {
+  min-height: 200px;
+  background-color: var(--surface-action);
+  padding: var(--spacing-padding-base);
+
+  @media (min-width: 40rem) {
+    padding: var(--spacing-padding-wide);
+  }
+
+  &__container {
+    @media (min-width: 40rem) {
+      display: grid;
+      grid-template-columns: repeat(12, minmax(0, 1fr));
+    }
+  }
+
+  &__contentWrapper {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-gap-tight);
+
+    @media (min-width: 40rem) {
+      grid-column: span 8 / span 8;
+    }
+
+    h1 {
+      font-size: var(--text-display-2xl-size);
+      line-height: var(--text-display-2xl-leading);
+      letter-spacing: var(--text-display-2xl-tracking);
+      font-family: var(--text-display-2xl-font);
+      weight: var(--text-display-2xl-weight);
+    }
+
+    p {
+      font-size: var(--text-h3-size);
+    }
+  }
+
+  &__imageWrapper {
+    display: none;
+
+    @media (min-width: 40rem) {
+      display: block;
+      grid-column: span 4 / span 4;
+    }
+  }
+
+  &__label {
+    color: var(--foreground-text-primary);
+    font-size: var(--text-body-xl-size) !important;
+  }
+}
