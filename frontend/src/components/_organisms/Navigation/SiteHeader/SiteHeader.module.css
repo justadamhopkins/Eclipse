@@ -3,7 +3,7 @@
   border-bottom: 1px solid var(--surface-bright);
 
   @media (min-width: 40rem) {
-    padding: var(--spacing-gap-wide) var(--spacing-padding-wide);
+    padding: var(--spacing-padding-wide);
   }
 
   &__container {

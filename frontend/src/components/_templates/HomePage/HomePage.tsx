@@ -3,7 +3,11 @@ import { CoverHero } from '@organisms/Heros/CoverHero';
 export const HomePage = () => {
   return (
     <>
-      <CoverHero title="Welcome to the Home Page" />
+      <CoverHero
+        label="Software engineer"
+        title="Adam Hopkins"
+        subtitle="Building modern user interfaces out of the UK"
+      />
       <p>Home page content goes here.</p>
     </>
   );
