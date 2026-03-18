@@ -1,17 +1,9 @@
-import { Fustat, Inter } from 'next/font/google';
+import { Heebo } from 'next/font/google';
 
-export const FONT_FUSTAT = Fustat({
+export const FONT_HEEBO = Heebo({
   display: 'swap',
   preload: true,
-  variable: '--font-fustat',
+  variable: '--font-heebo',
   subsets: ['latin'],
-  weight: ['200', '300', '400', '500', '600', '700', '800'],
-});
-
-export const FONT_INTER = Inter({
-  display: 'swap',
-  preload: true,
-  variable: '--font-inter',
-  subsets: ['latin'],
-  weight: ['300', '400', '500', '600', '700'],
+  weight: ['300', '400', '500', '600', '700', '800', '900'],
 });

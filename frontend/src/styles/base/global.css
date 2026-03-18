@@ -60,10 +60,10 @@ h6 {
 }
 
 p {
-  font-size: var(--text-body-size);
-  font-weight: var(--text-body-weight);
-  line-height: var(--text-body-leading);
-  letter-spacing: var(--text-body-tracking);
+  font-size: var(--text-body-md-size);
+  font-weight: var(--text-body-md-weight);
+  line-height: var(--text-body-md-leading);
+  letter-spacing: var(--text-body-md-tracking);
 }
 
 a {
@@ -73,6 +73,6 @@ a {
   font-family: var(--text-font-body);
   font-size: var(--text-lg);
   font-weight: var(--font-weight-2);
-  line-height: var(--text-body-leading);
-  letter-spacing: var(--text-body-tracking);
+  line-height: var(--text-body-md-leading);
+  letter-spacing: var(--text-body-md-tracking);
 }
