@@ -47,6 +47,6 @@
 
   &__label {
     color: var(--foreground-text-primary);
-    font-size: var(--text-body-xl-size) !important;
+    font-size: var(--text-body-lg-size) !important;
   }
 }

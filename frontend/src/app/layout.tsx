@@ -3,7 +3,7 @@ import { AppContainer } from '@core/AppContainer';
 import { PageWrapper } from '@core/PageWrapper';
 import { SiteFooter } from '@organisms/Navigation/SiteFooter';
 import { SiteHeader } from '@organisms/Navigation/SiteHeader';
-import { FONT_FUSTAT, FONT_INTER } from '@styles/typography/fonts';
+import { FONT_HEEBO } from '@styles/typography/fonts';
 
 import '@styles/index.css';
 
@@ -13,7 +13,7 @@ const RootLayout = ({ children }) => {
   return (
     <html
       lang="en"
-      className={`${FONT_FUSTAT.variable} ${FONT_INTER.variable}`}
+      className={`${FONT_HEEBO.variable}`}
     >
       <body>
         <Providers>
