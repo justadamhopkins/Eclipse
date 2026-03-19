@@ -1,13 +1,14 @@
 .navigationLink {
   padding: var(--spacing-padding-tight) var(--spacing-padding-base);
   border-radius: var(--radius-2);
+  color: var(--foreground-text-primary);
   transition: background-color 0.2s ease-in-out;
 
   &__primary {
     &:hover {
-      color: var(--surface-bright);
-      background-color: var(--surface-action);
+      background-color: var(--surface-action-hover);
     }
+
     &:focus-visible {
       outline: 2px solid var(--border-focus);
       outline-offset: 3px;
