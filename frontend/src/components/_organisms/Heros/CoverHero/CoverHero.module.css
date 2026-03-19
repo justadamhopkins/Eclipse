@@ -23,11 +23,11 @@
     }
 
     h1 {
-      font-size: var(--text-display-xl-size);
-      line-height: var(--text-display-xl-leading);
-      letter-spacing: var(--text-display-xl-tracking);
-      font-family: var(--text-display-xl-font);
-      font-weight: var(--text-display-xl-weight);
+      font-size: var(--text-h1-size);
+      line-height: var(--text-h1-leading);
+      letter-spacing: var(--text-h1-tracking);
+      font-family: var(--text-h1-font);
+      font-weight: var(--text-h1-weight);
     }
 
     p {
