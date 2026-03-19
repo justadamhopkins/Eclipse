@@ -1,11 +1,8 @@
 .coverHero {
   min-height: 200px;
-  background-color: var(--surface-action);
-  padding: var(--spacing-padding-base);
+  background-color: var(--surface-primary);
 
-  @media (min-width: 40rem) {
-    padding: var(--spacing-padding-wide);
-  }
+
 
   &__container {
     @media (min-width: 40rem) {
@@ -18,17 +15,19 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-gap-tight);
+    padding: var(--spacing-padding-base);
 
     @media (min-width: 40rem) {
+      padding: var(--spacing-padding-wide);
       grid-column: span 8 / span 8;
     }
 
     h1 {
-      font-size: var(--text-display-2xl-size);
-      line-height: var(--text-display-2xl-leading);
-      letter-spacing: var(--text-display-2xl-tracking);
-      font-family: var(--text-display-2xl-font);
-      weight: var(--text-display-2xl-weight);
+      font-size: var(--text-display-xl-size);
+      line-height: var(--text-display-xl-leading);
+      letter-spacing: var(--text-display-xl-tracking);
+      font-family: var(--text-display-xl-font);
+      font-weight: var(--text-display-xl-weight);
     }
 
     p {
@@ -43,10 +42,15 @@
       display: block;
       grid-column: span 4 / span 4;
     }
+
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
   }
 
   &__label {
-    color: var(--foreground-text-primary);
+    color: var(--foreground-text-secondary);
     font-size: var(--text-body-lg-size) !important;
   }
 }

@@ -1,4 +1,5 @@
 import clsx from 'clsx';
+import NextImage from 'next/image';
 
 import styles from './CoverHero.module.css';
 
@@ -17,7 +18,14 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
           <h1>{title}</h1>
           <p>{subtitle}</p>
         </div>
-        <div className={styles.coverHero__imageWrapper}>image</div>
+        <div className={styles.coverHero__imageWrapper}>
+          <NextImage
+            src="/adam.png"
+            alt="adam hopkins"
+            width={400}
+            height={400}
+          />
+        </div>
       </div>
     </section>
   );
