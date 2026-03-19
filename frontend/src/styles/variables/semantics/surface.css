@@ -1,9 +1,8 @@
 :root {
-  --surface-primary: var(--deep-blue);
+  --surface-primary: var(--white);
   --surface-secondary: var(--dark-blue);
   --surface-accent: var(--muted-dark-blue);
   --surface-muted: var(--dark-blue);
-  --surface-bright: var(--white);
 
   --surface-deep: var(--navy);
   --surface-deeper: var(--midnight);

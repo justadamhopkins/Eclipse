@@ -2,6 +2,7 @@
   --muted-dark-blue: oklch(44.55% 0.0374 257.28);
   --dark-blue: oklch(37.12% 0.0376 256.15);
   --white: oklch(100% 0 0);
+  --black: oklch(0% 0 0);
   --deep-blue: oklch(19.91% 0.0314 258.98);
   --ice-blue:         oklch(84% 0.034 220);
   --powder-blue:      oklch(69% 0.042 220);

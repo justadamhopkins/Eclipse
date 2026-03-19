@@ -4,7 +4,7 @@
 
 body {
   background: var(--surface-primary);
-  color: var(--foreground-text-primary);
+  color: var(--foreground-text-accent);
   font-family: var(--text-font-body);
 }
 
