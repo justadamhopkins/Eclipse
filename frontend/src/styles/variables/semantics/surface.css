@@ -11,4 +11,5 @@
   --surface-action: var(--sky);
   --surface-action-hover: var(--powder-blue);
   --surface-action-subtle: var(--ice-blue);
+  --surface-accent-light: var(--lavender);
 }

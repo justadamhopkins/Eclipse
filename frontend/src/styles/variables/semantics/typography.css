@@ -17,13 +17,13 @@
 
   --text-display-lg-size: var(--font-size-fluid-4xl);
   --text-display-lg-weight: var(--font-weight-6);
-  --text-display-lg-leading: var(--line-height-3);
+  --text-display-lg-leading: var(--line-height-1);
   --text-display-lg-tracking: var(--letter-spacing-2);
   --text-display-lg-font: var(--text-font-display);
 
   --text-display-md-size: var(--font-size-fluid-3xl);
   --text-display-md-weight: var(--font-weight-6);
-  --text-display-md-leading: var(--line-height-3);
+  --text-display-md-leading: var(--line-height-1);
   --text-display-md-tracking: var(--letter-spacing-2);
   --text-display-md-font: var(--text-font-display);
 
@@ -88,11 +88,11 @@
   --text-caption-lg-tracking: var(--letter-spacing-5);
   --text-caption-lg-font: var(--text-font-body);
 
-  --text-caption-size: var(--font-size-fluid-xs);
-  --text-caption-weight: var(--font-weight-2);
-  --text-caption-leading: var(--line-height-5);
-  --text-caption-tracking: var(--letter-spacing-5);
-  --text-caption-font: var(--text-font-body);
+  --text-caption-md-size: var(--font-size-fluid-xs);
+  --text-caption-md-weight: var(--font-weight-2);
+  --text-caption-md-leading: var(--line-height-5);
+  --text-caption-md-tracking: var(--letter-spacing-5);
+  --text-caption-md-font: var(--text-font-body);
 
   --text-caption-sm-size: var(--font-size-xs);
   --text-caption-sm-weight: var(--font-weight-1);
