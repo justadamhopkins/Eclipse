@@ -2,8 +2,6 @@
   min-height: 200px;
   background-color: var(--surface-primary);
 
-
-
   &__container {
     @media (min-width: 40rem) {
       display: grid;
@@ -15,19 +13,20 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-gap-tight);
-    padding: var(--spacing-padding-base);
+    padding-block: var(--spacing-padding-base);
+    align-items: flex-start;
 
     @media (min-width: 40rem) {
-      padding: var(--spacing-padding-wide);
+      padding-block: var(--spacing-padding-wide);
       grid-column: span 8 / span 8;
     }
 
     h1 {
-      font-size: var(--text-h1-size);
-      line-height: var(--text-h1-leading);
-      letter-spacing: var(--text-h1-tracking);
-      font-family: var(--text-h1-font);
-      font-weight: var(--text-h1-weight);
+      font-size: var(--text-display-2xl-size);
+      line-height: var(--text-display-2xl-leading);
+      letter-spacing: var(--text-display-2xl-tracking);
+      font-family: var(--text-display-2xl-font);
+      font-weight: var(--text-display-2xl-weight);
     }
 
     p {
