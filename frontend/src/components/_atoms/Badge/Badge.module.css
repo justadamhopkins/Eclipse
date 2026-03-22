@@ -1,0 +1,15 @@
+.badge {
+  border-radius: var(--radius-badge);
+  padding: var(--spacing-padding-tight) var(--spacing-padding-base);
+  display: inline-block;
+  font-size: var(--text-md);
+  font-weight: var(--text-caption-md-weight);
+  line-height: var(--text-caption-md-leading);
+  letter-spacing: var(--text-caption-md-tracking);
+  font-family: var(--text-caption-md-font);
+
+  &--primary {
+    color: var(--foreground-text-primary);
+    background-color: var(--surface-accent-light);
+  }
+}
