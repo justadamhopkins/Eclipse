@@ -10,11 +10,8 @@ type TButtonAsButton = {
 } & ComponentProps<'button'>;
 
 type TButtonAsLink = {
-  href: string;
   variant?: 'primary' | 'secondary';
-  children: React.ReactNode;
-  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
-};
+} & ComponentProps<typeof Link>;
 
 type TButtonProps = TButtonAsButton | TButtonAsLink;
 
@@ -28,8 +25,7 @@ export const Button = ({
   if ('href' in rest && rest.href) {
     return (
       <Link
-        href={rest.href}
-        onClick={(rest as TButtonAsLink).onClick}
+        {...(rest as Omit<TButtonAsLink, 'variant'>)}
         className={className}
       >
         {children}

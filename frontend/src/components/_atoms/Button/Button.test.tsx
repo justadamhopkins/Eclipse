@@ -1,4 +1,4 @@
-import { render, screen } from '@tests/configs/customRender';
+import { render, screen, userEvent } from '@tests/configs/customRender';
 
 import { Button } from './Button';
 
@@ -17,9 +17,10 @@ describe('Button', () => {
     });
 
     it('calls onClick when clicked', async () => {
+      const user = userEvent.setup();
       const onClick = vi.fn();
       render(<Button onClick={onClick}>Click me</Button>);
-      await screen.getByRole('button').click();
+      await user.click(screen.getByRole('button'));
       expect(onClick).toHaveBeenCalledTimes(1);
     });
   });
@@ -43,6 +44,7 @@ describe('Button', () => {
     });
 
     it('calls onClick when clicked', async () => {
+      const user = userEvent.setup();
       const onClick = vi.fn();
       render(
         <Button
@@ -52,7 +54,7 @@ describe('Button', () => {
           Get in touch
         </Button>,
       );
-      await screen.getByRole('link').click();
+      await user.click(screen.getByRole('link'));
       expect(onClick).toHaveBeenCalledTimes(1);
     });
   });
