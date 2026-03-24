@@ -1,10 +1,19 @@
 :root {
-  --foreground-text-primary: var(--white);
-  --foreground-text-secondary: var(--black);
-  --foreground-text-tertiary: var(--slate-blue);
-  --foreground-text-muted: var(--muted-dark-blue);
-  --foreground-text-accent: var(--dark-blue);
-  --foreground-icon-base: var(--white);
-  --foreground-accent-teal: var(--teal);
-  --foreground-accent-lavender: var(--lavender);
+  /* ── Text ───────────────────────────────────────────────────── */
+  --text-primary: var(--neutral-0); /* primary body / heading text */
+  --text-secondary: var(--neutral-600); /* supporting / descriptive    */
+  --text-tertiary: var(--neutral-950); /* supporting / descriptive    */
+  --text-muted: var(--neutral-500); /* placeholder / disabled      */
+  --text-accent: var(--purple-300); /* highlighted / linked text   */
+  --icon-base: var(--neutral-0); /* default icon fill           */
+
+  /* ── Accent ─────────────────────────────────────────────────── */
+  --accent-subtle: var(--purple-100); /* badge / tag background      */
+  --accent-base: var(--purple-300); /* primary accent              */
+  --accent-strong: var(--purple-500); /* high-emphasis accent        */
+
+  /* ── Status ─────────────────────────────────────────────────── */
+  --status-success: var(--success-500);
+  --status-warning: var(--warning-400);
+  --status-danger: var(--danger-500);
 }

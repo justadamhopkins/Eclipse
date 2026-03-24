@@ -1,16 +1,23 @@
 :root {
-  --muted-dark-blue: oklch(44.55% 0.0374 257.28);
-  --dark-blue: oklch(37.12% 0.0376 256.15);
-  --white: oklch(100% 0 0);
-  --black: oklch(0% 0 0);
-  --deep-blue: oklch(19.91% 0.0314 258.98);
-  --ice-blue:         oklch(84% 0.034 220);
-  --powder-blue:      oklch(69% 0.042 220);
-  --slate-blue:       oklch(60% 0.038 220);
-  --navy:             oklch(33% 0.040 258);
-  --midnight:         oklch(29% 0.036 258);
-  --abyss:            oklch(24% 0.032 258);
-  --teal:             oklch(76% 0.072 192);
-  --lavender:         oklch(70% 0.072 290);
-  --sky:              oklch(63% 0.072 220);
+  /* ── Neutrals ───────────────────────────────────────────────── */
+  --neutral-0: oklch(100% 0 0); /* white       */
+  --neutral-50: oklch(94.91% 0.0001 263.28); /* light grey  */
+  --neutral-500: oklch(55% 0.014 262); /* mid grey / disabled text */
+  --neutral-600: oklch(44% 0.016 262); /* subtle text / icons      */
+  --neutral-800: oklch(33.17% 0.0174 262.26); /* dark grey   */
+  --neutral-900: oklch(27.49% 0.0188 258.38); /* near-black  */
+  --neutral-950: oklch(22% 0.018 260); /* page / canvas background */
+  --neutral-1000: oklch(0% 0 0); /* black       */
+
+  /* ── Purple accent ─────────────────────────────────────────── */
+  --purple-100: oklch(88% 0.08 285); /* subtle highlight         */
+  --purple-300: oklch(72% 0.18 290); /* hover / active state     */
+  --purple-500: oklch(55% 0.22 290); /* primary interactive      */
+  --purple-700: oklch(40% 0.14 285); /* muted accent / borders   */
+  --purple-900: oklch(30% 0.08 280); /* deep tint background     */
+
+  /* ── Status ────────────────────────────────────────────────── */
+  --success-500: oklch(54% 0.18 155); /* success / positive       */
+  --warning-400: oklch(72% 0.18 62); /* warning / caution        */
+  --danger-500: oklch(55% 0.22 25); /* error / destructive      */
 }

@@ -1,14 +1,14 @@
 :root {
-    --radius-button: var(--radius-3);
-    --radius-card: var(--radius-4);
-    --radius-input: var(--radius-2);
-    --radius-badge: var(--radius-7);
-    --radius-dialog: var(--radius-5);
+  --radius-button: var(--radius-3);
+  --radius-card: var(--radius-4);
+  --radius-input: var(--radius-2);
+  --radius-badge: var(--radius-7);
+  --radius-dialog: var(--radius-5);
 
-    --border-hairline: var(--border-width-1);
-    --border-thin: var(--border-width-2);
-    --border-thick: var(--border-width-3);
-    --border-heavy: var(--border-width-4);
+  --border-hairline: var(--border-width-1);
+  --border-thin: var(--border-width-2);
+  --border-thick: var(--border-width-3);
+  --border-heavy: var(--border-width-4);
 
-    --border-focus: var(--lavender);
+  --border-focus: var(--purple-300);
 }

@@ -1,15 +1,13 @@
 :root {
-  --surface-primary: var(--white);
-  --surface-secondary: var(--dark-blue);
-  --surface-accent: var(--muted-dark-blue);
-  --surface-muted: var(--dark-blue);
+  /* ── Backgrounds ────────────────────────────────────────────── */
+  --bg-page: var(--neutral-950); /* darkest — page / canvas  */
+  --bg-surface: var(--neutral-900); /* default surface          */
+  --bg-raised: var(--neutral-800); /* elevated card / panel    */
+  --bg-subtle: var(--neutral-50); /* light inset / tinted     */
 
-  --surface-deep: var(--navy);
-  --surface-deeper: var(--midnight);
-  --surface-deepest: var(--abyss);
-
-  --surface-action: var(--sky);
-  --surface-action-hover: var(--powder-blue);
-  --surface-action-subtle: var(--ice-blue);
-  --surface-accent-light: var(--lavender);
+  /* ── Interactive ────────────────────────────────────────────── */
+  --interactive-default: var(--neutral-0); /* default button fill      */
+  --interactive-hover: var(--purple-300); /* hover state              */
+  --interactive-subtle: var(--purple-100); /* ghost / subtle hover     */
+  --interactive-accent: var(--purple-700); /* muted accent fill        */
 }
