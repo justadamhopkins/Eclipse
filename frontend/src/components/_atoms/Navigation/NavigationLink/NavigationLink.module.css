@@ -1,12 +1,14 @@
 .navigationLink {
   padding: var(--spacing-padding-tight) var(--spacing-padding-base);
   border-radius: var(--radius-2);
-  color: var(--foreground-text-primary);
+  color: var(--text-primary);
   transition: background-color 0.2s ease-in-out;
+  min-width: 6rem;
 
   &__primary {
     &:hover {
-      background-color: var(--surface-action-hover);
+      background-color: var(--interactive-default);
+      color: var(--bg-page);
     }
 
     &:focus-visible {

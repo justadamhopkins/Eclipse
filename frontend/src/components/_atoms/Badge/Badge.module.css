@@ -9,7 +9,7 @@
   font-family: var(--text-caption-md-font);
 
   &--primary {
-    color: var(--foreground-text-primary);
-    background-color: var(--surface-accent-light);
+    color: var(--text-primary);
+    background-color: var(--accent-subtle);
   }
 }
