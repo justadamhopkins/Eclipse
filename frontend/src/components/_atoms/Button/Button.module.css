@@ -1,20 +1,40 @@
 .button {
-    color: var(--foreground-text-primary);
-    padding: var(--spacing-padding-tight) var(--spacing-padding-base);
-    border-radius: var(--radius-2);
-    transition: background-color 0.2s ease-in-out;
-    min-width: 6rem;
+  color: var(--text-secondary);
+  padding: var(--spacing-padding-tight) var(--spacing-padding-base);
+  border-radius: var(--radius-2);
+  transition: background-color 0.2s ease-in-out;
+  min-width: 6rem;
+  font-size: inherit;
+  font-weight: inherit;
 
-    &__primary {
-        background-color: var(--surface-action);
+  &__primary {
+    background-color: var(--interactive-default);
+    color: var(--text-tertiary);
 
-        &:hover {
-            background-color: var(--surface-action-hover);
-        }
-
-        &:focus-visible {
-            outline: 2px solid var(--border-focus);
-            outline-offset: 3px;
-        }
+    &:hover {
+      color: var(--text-primary);
+      background-color: var(--interactive-hover);
     }
+
+    &:focus-visible {
+      outline: 2px solid var(--border-focus);
+      outline-offset: 3px;
+    }
+  }
+
+  &__secondary {
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--accent-base);
+
+    &:hover {
+      background-color: var(--interactive-accent);
+      color: var(--text-primary);
+    }
+
+    &:focus-visible {
+      outline: 2px solid var(--border-focus);
+      outline-offset: 3px;
+    }
+  }
 }
