@@ -1,4 +1,5 @@
 import { Badge } from '@atoms/Badge';
+import { Button } from '@atoms/Button';
 import clsx from 'clsx';
 import NextImage from 'next/image';
 
@@ -19,9 +20,22 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
             label={label}
             variant="primary"
           />
-
           <h1>{title}</h1>
           <p>{subtitle}</p>
+          <div className={styles.coverHero__ctaRow}>
+            <Button
+              href="#footer"
+              variant="primary"
+            >
+              View my work
+            </Button>
+            <Button
+              href="/contact"
+              variant="secondary"
+            >
+              Get in touch
+            </Button>
+          </div>
         </div>
       </div>
       <div className={styles.coverHero__imageWrapper}>

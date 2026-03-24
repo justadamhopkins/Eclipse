@@ -1,6 +1,6 @@
 .coverHero {
   min-height: 200px;
-  background-color: var(--surface-primary);
+  background-color: var(--bg-page);
   display: grid;
   grid-template-columns: 1fr;
 
@@ -53,7 +53,14 @@
   }
 
   &__label {
-    color: var(--foreground-text-secondary);
+    color: var(--text-secondary);
     font-size: var(--text-body-lg-size) !important;
+  }
+
+  &__ctaRow {
+    display: flex;
+    gap: var(--spacing-gap-wide);
+    flex-wrap: wrap;
+    align-items: center;
   }
 }
