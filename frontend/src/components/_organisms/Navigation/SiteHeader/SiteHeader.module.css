@@ -1,6 +1,7 @@
 .siteHeader {
-  padding: var(--spacing-padding-tight) var(--spacing-padding-base);
-  background-color: var(--surface-secondary);
+  padding: var(--spacing-padding-base);
+  background-color: var(--bg-page);
+  border-bottom: 1px solid var(--neutral-50);
 
   @media (min-width: 40rem) {
     padding: var(--spacing-padding-base);

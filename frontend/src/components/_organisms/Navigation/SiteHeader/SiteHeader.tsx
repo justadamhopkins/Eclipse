@@ -21,7 +21,7 @@ export const SiteHeader = () => {
             </li>
           </ul>
         </nav>
-        <Button>Contact</Button>
+        <Button variant="secondary">Contact</Button>
       </SiteContainer>
     </header>
   );
