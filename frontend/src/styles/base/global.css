@@ -1,10 +1,11 @@
 :root {
   --siteMaxWidth: 120rem;
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--surface-primary);
-  color: var(--foreground-text-accent);
+  background: var(--bg-page);
+  color: var(--text-primary);
   font-family: var(--text-font-body);
 }
 
