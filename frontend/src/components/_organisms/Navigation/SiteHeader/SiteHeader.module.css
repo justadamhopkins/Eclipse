@@ -3,7 +3,7 @@
   background-color: var(--surface-secondary);
 
   @media (min-width: 40rem) {
-    padding: var(--spacing-padding-tight) var(--spacing-padding-wide);
+    padding: var(--spacing-padding-base);
   }
 
   &__container {
