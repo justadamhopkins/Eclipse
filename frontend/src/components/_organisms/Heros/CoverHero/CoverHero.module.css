@@ -13,7 +13,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-block: var(--spacing-padding-wide);
+    padding: var(--spacing-padding-base);
     grid-column: span 8 / span 8;
   }
 
@@ -21,7 +21,6 @@
     display: flex;
     flex-direction: column;
     gap: var(--spacing-gap-base);
-    padding-block: var(--spacing-padding-base);
     align-items: flex-start;
 
     @media (min-width: 40rem) {
