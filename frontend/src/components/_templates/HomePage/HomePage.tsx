@@ -5,9 +5,9 @@ export const HomePage = () => {
   return (
     <>
       <CoverHero
-        label="Software engineer"
+        label="Senior Software engineer"
         title="Hi, I'm Adam Hopkins"
-        subtitle="London-based software engineer crafting high-quality digital products with a focus on performance, accessibility, and long-term scalability."
+        subtitle="London-based senior software engineer crafting high-quality digital products with a focus on performance, accessibility, and long-term scalability."
       />
       <Gutter>
         <p>Home page content goes here.</p>

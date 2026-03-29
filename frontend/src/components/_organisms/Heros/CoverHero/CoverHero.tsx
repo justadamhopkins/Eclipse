@@ -15,6 +15,7 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
     <section className={clsx([styles.coverHero])}>
       <div className={styles.coverHero__contentWrapper}>
         <div className={styles.coverHero__contentInner}>
+          <span className={styles.coverHero__label}>{label}</span>
           <h1>{title}</h1>
           <p>{subtitle}</p>
           <div className={styles.coverHero__ctaRow}>
