@@ -70,13 +70,13 @@
   --text-body-sm-tracking: var(--letter-spacing-5);
   --text-body-sm-font: var(--text-font-body);
 
-  --text-body-md-size: var(--font-size-fluid-sm);
+  --text-body-md-size: var(--font-size-fluid-md);
   --text-body-md-weight: var(--font-weight-2);
   --text-body-md-leading: var(--line-height-4);
   --text-body-md-tracking: var(--letter-spacing-5);
   --text-body-md-font: var(--text-font-body);
 
-  --text-body-lg-size: var(--font-size-fluid-md);
+  --text-body-lg-size: var(--font-size-fluid-lg);
   --text-body-lg-weight: var(--font-weight-2);
   --text-body-lg-leading: var(--line-height-3);
   --text-body-lg-tracking: var(--letter-spacing-4);
