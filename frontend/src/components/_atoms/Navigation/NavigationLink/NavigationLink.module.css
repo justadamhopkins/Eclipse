@@ -7,8 +7,8 @@
 
   &__primary {
     &:hover {
-      background-color: var(--interactive-default);
-      color: var(--bg-page);
+      color: var(--text-primary);
+      background-color: var(--interactive-hover);
     }
 
     &:focus-visible {
