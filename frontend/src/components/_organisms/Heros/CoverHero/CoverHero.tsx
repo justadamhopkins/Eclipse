@@ -1,4 +1,3 @@
-import { Badge } from '@atoms/Badge';
 import { Button } from '@atoms/Button';
 import clsx from 'clsx';
 import NextImage from 'next/image';
@@ -16,10 +15,6 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
     <section className={clsx([styles.coverHero])}>
       <div className={styles.coverHero__contentWrapper}>
         <div className={styles.coverHero__contentInner}>
-          <Badge
-            label={label}
-            variant="primary"
-          />
           <h1>{title}</h1>
           <p>{subtitle}</p>
           <div className={styles.coverHero__ctaRow}>
