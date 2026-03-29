@@ -6,8 +6,8 @@ export const HomePage = () => {
     <>
       <CoverHero
         label="Software engineer"
-        title="Hi, i am Adam Hopkins"
-        subtitle="Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic growth."
+        title="Hi, I'm Adam Hopkins"
+        subtitle="London-based software engineer crafting high-quality digital products with a focus on performance, accessibility, and long-term scalability."
       />
       <Gutter>
         <p>Home page content goes here.</p>

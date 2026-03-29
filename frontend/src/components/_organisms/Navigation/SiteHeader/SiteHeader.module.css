@@ -4,7 +4,7 @@
   border-bottom: 1px solid var(--neutral-50);
 
   @media (min-width: 40rem) {
-    padding: var(--spacing-padding-base);
+    padding: var(--spacing-padding-base) var(--spacing-padding-wide);
   }
 
   &__container {
