@@ -1,0 +1,15 @@
+.featuredHeaderBlock {
+  padding-block: var(--spacing-padding-base);
+
+  @media (min-width: 40rem) {
+    padding-block: var(--spacing-padding-wide);
+  }
+
+  h2 {
+    margin-bottom: var(--spacing-gap-wide);
+
+    @media (min-width: 40rem) {
+      margin-bottom: var(--spacing-gap-extra-wide);
+    }
+  }
+}
