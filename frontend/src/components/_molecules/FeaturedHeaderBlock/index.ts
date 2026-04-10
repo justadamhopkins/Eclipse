@@ -1,0 +1,1 @@
+export { FeaturedHeaderBlock } from './FeaturedHeaderBlock';

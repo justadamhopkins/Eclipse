@@ -1,5 +1,5 @@
 import { ModuleSectionWrapper } from '@atoms/ModuleSectionWrapper';
-import { FeaturedHeaderBlock } from '@molecules/ModuleWrapper/FeaturedHeaderBlock';
+import { FeaturedHeaderBlock } from '@molecules/FeaturedHeaderBlock';
 import { CoverHero } from '@organisms/Heros/CoverHero';
 
 export const HomePage = () => {

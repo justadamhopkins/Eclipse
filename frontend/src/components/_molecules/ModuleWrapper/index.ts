@@ -1,1 +1,0 @@
-export { ModuleWrapper } from './FeaturedHeaderBlock';
