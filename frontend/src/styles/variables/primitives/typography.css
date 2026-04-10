@@ -16,7 +16,7 @@
   --font-size-fluid-md: clamp(1rem, calc(0.929rem + 0.357vw), 1.25rem);
   --font-size-fluid-lg: clamp(1.25rem, calc(1.161rem + 0.447vw), 1.563rem);
   --font-size-fluid-xl: clamp(1.563rem, calc(1.452rem + 0.557vw), 1.953rem);
-  --font-size-fluid-2xl: clamp(1.953rem, calc(1.814rem + 0.697vw), 2.441rem);
+  --font-size-fluid-2xl: clamp(1.625rem, calc(1.5rem + 0.6vw), 2.25rem);
   --font-size-fluid-3xl: clamp(2.441rem, calc(2.266rem + 0.873vw), 3.052rem);
   --font-size-fluid-4xl: clamp(3.052rem, calc(2.834rem + 1.09vw), 3.815rem);
 
