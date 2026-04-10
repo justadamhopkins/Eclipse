@@ -1,7 +1,0 @@
-.gutter {
-  padding-inline: var(--spacing-padding-base);
-
-  @media (min-width: 40rem) {
-    padding-inline: var(--spacing-padding-wide);
-  }
-}
