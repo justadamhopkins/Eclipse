@@ -4,6 +4,7 @@
   --bg-surface: var(--neutral-900); /* default surface          */
   --bg-raised: var(--neutral-800); /* elevated card / panel    */
   --bg-subtle: var(--neutral-50); /* light inset / tinted     */
+  --bg-card: var(--neutral-0); /* light inset / tinted     */
 
   /* ── Interactive ────────────────────────────────────────────── */
   --interactive-default: var(--neutral-0); /* default button fill      */
