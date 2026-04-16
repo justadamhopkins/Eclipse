@@ -1,5 +1,6 @@
 import { ModuleSectionWrapper } from '@atoms/ModuleSectionWrapper';
 import { FeaturedHeaderBlock } from '@molecules/FeaturedHeaderBlock';
+import { JobCard } from '@molecules/JobCard';
 import { CoverHero } from '@organisms/Heros/CoverHero';
 
 export const HomePage = () => {
@@ -12,10 +13,11 @@ export const HomePage = () => {
       />
       <ModuleSectionWrapper>
         <FeaturedHeaderBlock title="Featured Work">
-          <div style={{ display: 'flex', flexWrap: 'wrap', gap: '4px' }}>
-            <div style={{ background: 'white', height: 300, width: 300 }}></div>
-            <div style={{ background: 'white', height: 300, width: 300 }}></div>
-            <div style={{ background: 'white', height: 300, width: 300 }}></div>
+          <div style={{ display: 'flex', gap: '20px' }}>
+            <JobCard />
+            <JobCard />
+            <JobCard />
+            <JobCard />
           </div>
         </FeaturedHeaderBlock>
       </ModuleSectionWrapper>
