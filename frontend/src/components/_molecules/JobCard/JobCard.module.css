@@ -20,7 +20,7 @@
 
   &__inner {
     background-color: var(--bg-page);
-    border-radius: calc(var(--radius-card) - 1px);
+    border-radius: var(--radius-card);
     padding: var(--spacing-padding-base);
     display: flex;
     flex-direction: column;
