@@ -1,12 +1,56 @@
 .jobCard {
+  position: relative;
   width: 100%;
-  background-color: var(--bg-card);
-  color: var(--text-tertiary);
-  padding: var(--spacing-padding-base);
+  border-radius: var(--radius-card);
+  padding: 1px;
+  height: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--accent-base),
+    var(--accent-strong),
+    var(--accent-base)
+  );
+  transition: box-shadow var(--motion-base) ease-in-out;
 
-  &__wrapper {
+  &:hover {
+    box-shadow:
+      0 0 16px oklch(0.6 0.2 290 / 0.3),
+      0 0 32px oklch(0.6 0.2 290 / 0.15);
+  }
+
+  &__inner {
+    background-color: var(--bg-page);
+    border-radius: calc(var(--radius-card) - 1px);
+    padding: var(--spacing-padding-base);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-gap-base);
+    height: 100%;
+  }
+
+  &__logo {
+    display: block;
+    object-fit: contain;
+  }
+
+  &__title {
+    font-size: var(--text-h5-size);
+    font-weight: var(--text-h5-weight);
+    line-height: var(--text-h5-leading);
+    color: var(--accent-subtle);
+    margin: 0;
+  }
+
+  &__meta {
+    font-size: var(--text-body-sm-size);
+    line-height: var(--text-body-sm-leading);
+    color: var(--text-primary);
+  }
+
+  &__description {
+    font-size: var(--text-body-md-size);
+    line-height: var(--text-body-md-leading);
+    color: var(--text-primary);
+    margin: 0;
   }
 }

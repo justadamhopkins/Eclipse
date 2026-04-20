@@ -1,29 +1,48 @@
 import { type TWithClassName } from '@typings/utils';
 import clsx from 'clsx';
+import { type PropsWithChildren } from 'react';
 
 import styles from './JobCard.module.css';
 
-type TJobCardProps = TWithClassName<{
-  toDate: string;
-  fromDate: string;
-  company: string;
-  position: string;
-  description: string;
-}>;
+type TLogoProps = TWithClassName<{ src: string; alt: string; size?: number }>;
 
-export const JobCard = ({ className }: TJobCardProps) => {
+const Logo = ({ src, alt, size = 32, className }: TLogoProps) => (
+  <img
+    src={src}
+    alt={alt}
+    width={size}
+    height={size}
+    className={clsx(styles.jobCard__logo, className)}
+  />
+);
+
+const Title = ({ children, className }: TWithClassName<PropsWithChildren>) => (
+  <h3 className={clsx(styles.jobCard__title, className)}>{children}</h3>
+);
+
+const Meta = ({ children, className }: TWithClassName<PropsWithChildren>) => (
+  <span className={clsx(styles.jobCard__meta, className)}>{children}</span>
+);
+
+const Description = ({
+  children,
+  className,
+}: TWithClassName<PropsWithChildren>) => (
+  <p className={clsx(styles.jobCard__description, className)}>{children}</p>
+);
+
+export function JobCard({
+  children,
+  className,
+}: TWithClassName<PropsWithChildren>) {
   return (
-    <article className={clsx([styles.jobCard, className])}>
-      <div className={styles['jobCard__wrapper']}>
-        <p>logo</p>
-        <h3>Travelex</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-          architecto culpa esse iure possimus? Dignissimos esse est incidunt
-          perspiciatis voluptatem? Aut dignissimos doloribus incidunt iusto
-          labore maxime omnis perspiciatis quasi.
-        </p>
-      </div>
+    <article className={clsx(styles.jobCard, className)}>
+      <div className={styles.jobCard__inner}>{children}</div>
     </article>
   );
-};
+}
+
+JobCard.Logo = Logo;
+JobCard.Title = Title;
+JobCard.Meta = Meta;
+JobCard.Description = Description;
