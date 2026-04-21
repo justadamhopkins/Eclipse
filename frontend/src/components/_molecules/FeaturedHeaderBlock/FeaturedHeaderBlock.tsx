@@ -12,9 +12,9 @@ export const FeaturedHeaderBlock = ({
   children,
 }: PropsWithChildren<TFeaturedHeaderBlockProps>) => {
   return (
-    <section className={clsx([styles.featuredHeaderBlock])}>
+    <div className={clsx([styles.featuredHeaderBlock])}>
       <h2>{title}</h2>
       {children}
-    </section>
+    </div>
   );
 };
