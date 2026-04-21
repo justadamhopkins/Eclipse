@@ -31,16 +31,16 @@ const Description = ({
   <p className={clsx(styles.jobCard__description, className)}>{children}</p>
 );
 
-export function JobCard({
+export const JobCard = ({
   children,
   className,
-}: TWithClassName<PropsWithChildren>) {
+}: TWithClassName<PropsWithChildren>) => {
   return (
     <article className={clsx(styles.jobCard, className)}>
       <div className={styles.jobCard__inner}>{children}</div>
     </article>
   );
-}
+};
 
 JobCard.Logo = Logo;
 JobCard.Title = Title;
