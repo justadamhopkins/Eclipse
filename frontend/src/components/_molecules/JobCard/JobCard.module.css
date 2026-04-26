@@ -34,17 +34,21 @@
   }
 
   &__title {
-    font-size: var(--text-h5-size);
-    font-weight: var(--text-h5-weight);
-    line-height: var(--text-h5-leading);
+    font-size: var(--text-h4-size);
+    font-weight: var(--text-h4-weight);
+    line-height: var(--text-h4-leading);
+    letter-spacing: var(--text-h4-tracking);
     color: var(--accent-subtle);
     margin: 0;
   }
 
   &__meta {
-    font-size: var(--text-body-sm-size);
-    line-height: var(--text-body-sm-leading);
     color: var(--text-primary);
+    font-size: var(--font-size-fluid-md);
+    font-weight: var(--text-body-md-weight);
+    line-height: var(--text-body-md-leading);
+    letter-spacing: var(--text-body-md-tracking);
+    font-family: var(--text-body-md-font);
   }
 
   &__description {
