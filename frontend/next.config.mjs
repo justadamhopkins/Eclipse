@@ -1,6 +1,7 @@
 // @ts-check
 
 import path from 'path';
+import svgoConfig from './svgo.config.ts';
 
 /**
  * @type {import('next').NextConfig}
@@ -8,6 +9,19 @@ import path from 'path';
 const nextConfig = {
   turbopack: {
     root: path.join(import.meta.dirname, '..'),
+    rules: {
+      '*.inline.svg': {
+        loaders: [
+          {
+            loader: '@svgr/webpack',
+            options: {
+              svgoConfig,
+            },
+          },
+        ],
+        as: '*.js',
+      },
+    },
   },
 };
 
