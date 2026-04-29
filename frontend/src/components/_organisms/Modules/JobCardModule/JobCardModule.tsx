@@ -25,11 +25,7 @@ export const JobCardModule = ({ jobCards }: IWorkExperienceModuleProps) => {
               items={jobCards}
               render={({ item }) => (
                 <JobCard className={styles['jobCardModule__slide']}>
-                  <JobCard.Logo
-                    src="/brand-logo-2.svg"
-                    alt="brand logo"
-                    size={60}
-                  />
+                  <JobCard.Logo name="lickLogo" />
                   <JobCard.Title>{item.title}</JobCard.Title>
                   <JobCard.Meta>
                     {`${item.startDate} - ${item.isCurrentRole ? 'Present' : item.endDate}`}

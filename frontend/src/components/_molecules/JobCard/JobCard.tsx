@@ -1,17 +1,16 @@
+import { Icon, type TIconProps } from '@atoms/Icon';
 import { type TWithClassName } from '@typings/utils';
 import clsx from 'clsx';
 import { type PropsWithChildren } from 'react';
 
 import styles from './JobCard.module.css';
 
-type TLogoProps = TWithClassName<{ src: string; alt: string; size?: number }>;
+type TLogoProps = TWithClassName<{ name: TIconProps['name'] }>;
 
-const Logo = ({ src, alt, size = 32, className }: TLogoProps) => (
-  <img
-    src={src}
-    alt={alt}
-    width={size}
-    height={size}
+const Logo = ({ name, className }: TLogoProps) => (
+  <Icon
+    isInline={false}
+    name={name}
     className={clsx(styles.jobCard__logo, className)}
   />
 );
