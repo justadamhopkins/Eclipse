@@ -21,7 +21,7 @@
   &__inner {
     background-color: var(--bg-page);
     border-radius: var(--radius-card);
-    padding: var(--spacing-padding-base);
+    padding: var(--spacing-padding-wide) var(--spacing-padding-base);
     display: flex;
     flex-direction: column;
     gap: var(--spacing-gap-wide);
