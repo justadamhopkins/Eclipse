@@ -33,10 +33,11 @@
   }
 
   &__logo {
+    width: min(100%, 80px);
+
     img {
-      width: min(100%, 80px);
       height: auto;
-      object-fit: contain;
+      width:100%;
     }
   }
 
