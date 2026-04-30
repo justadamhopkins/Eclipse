@@ -8,11 +8,12 @@ import styles from './JobCard.module.css';
 type TLogoProps = TWithClassName<{ name: TIconProps['name'] }>;
 
 const Logo = ({ name, className }: TLogoProps) => (
-  <Icon
-    isInline={false}
-    name={name}
-    className={clsx(styles.jobCard__logo, className)}
-  />
+  <div className={clsx(styles.jobCard__logo, className)}>
+    <Icon
+      isInline={false}
+      name={name}
+    />
+  </div>
 );
 
 const Title = ({ children, className }: TWithClassName<PropsWithChildren>) => (
