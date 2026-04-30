@@ -24,13 +24,20 @@
     padding: var(--spacing-padding-base);
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-gap-base);
+    gap: var(--spacing-gap-wide);
     height: 100%;
+
+    @media (min-width: 40rem) {
+      padding: var(--spacing-padding-wide);
+    }
   }
 
   &__logo {
-    display: block;
-    object-fit: contain;
+    img {
+      width: min(100%, 80px);
+      height: auto;
+      object-fit: contain;
+    }
   }
 
   &__title {
@@ -40,6 +47,7 @@
     letter-spacing: var(--text-h4-tracking);
     color: var(--accent-subtle);
     margin: 0;
+
   }
 
   &__meta {
