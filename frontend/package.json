@@ -18,6 +18,7 @@
     "sanity:typegen": " cd ../studio && pnpm run schema:extract && cd ../frontend && sanity typegen generate"
   },
   "dependencies": {
+    "@base-ui/react": "1.4.1",
     "@portabletext/react": "6.0.2",
     "@sanity/client": "7.15.0",
     "@sanity/image-url": "2.0.3",
