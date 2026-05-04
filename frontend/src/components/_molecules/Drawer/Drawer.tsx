@@ -2,14 +2,15 @@ import {
   Drawer as BaseDrawer,
   type DrawerRootProps,
 } from '@base-ui/react/drawer';
-import { type FC } from 'react';
+import { DrawerPanel } from '@molecules/Drawer/components/Panel';
+import { DrawerTrigger } from '@molecules/Drawer/components/Trigger';
 
 interface IDrawerProps {
   isOpen: boolean;
   onOpenChange: DrawerRootProps['onOpenChange'];
 }
 
-export const Drawer: FC<IDrawerProps> = ({ isOpen, onOpenChange }) => {
+export const Drawer = ({ isOpen, onOpenChange }: IDrawerProps) => {
   return (
     <BaseDrawer.Root
       open={isOpen}
@@ -29,3 +30,6 @@ export const Drawer: FC<IDrawerProps> = ({ isOpen, onOpenChange }) => {
     </BaseDrawer.Root>
   );
 };
+
+Drawer.Trigger = DrawerTrigger;
+Drawer.Panel = DrawerPanel;
