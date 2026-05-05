@@ -2,34 +2,29 @@ import {
   Drawer as BaseDrawer,
   type DrawerRootProps,
 } from '@base-ui/react/drawer';
+import { DrawerClose } from '@molecules/Drawer/components/CloseTrigger';
 import { DrawerPanel } from '@molecules/Drawer/components/Panel';
 import { DrawerTrigger } from '@molecules/Drawer/components/Trigger';
+import  { type ReactNode } from 'react';
 
 interface IDrawerProps {
-  isOpen: boolean;
+  children: ReactNode;
+  open: boolean;
   onOpenChange: DrawerRootProps['onOpenChange'];
 }
 
-export const Drawer = ({ isOpen, onOpenChange }: IDrawerProps) => {
+export const Drawer = ({ children, open, onOpenChange }: IDrawerProps) => {
   return (
     <BaseDrawer.Root
-      open={isOpen}
+      open={open}
       onOpenChange={onOpenChange}
+      swipeDirection="right"
     >
-      <BaseDrawer.Trigger>Open</BaseDrawer.Trigger>
-      <BaseDrawer.Portal>
-        <BaseDrawer.Viewport>
-          <BaseDrawer.Popup>
-            <BaseDrawer.Content>
-              <BaseDrawer.Title>Example drawer</BaseDrawer.Title>
-              <BaseDrawer.Close>Close</BaseDrawer.Close>
-            </BaseDrawer.Content>
-          </BaseDrawer.Popup>
-        </BaseDrawer.Viewport>
-      </BaseDrawer.Portal>
+      {children}
     </BaseDrawer.Root>
   );
 };
 
 Drawer.Trigger = DrawerTrigger;
 Drawer.Panel = DrawerPanel;
+Drawer.CloseTrigger = DrawerClose;
