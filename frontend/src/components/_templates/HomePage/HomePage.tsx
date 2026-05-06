@@ -1,12 +1,11 @@
 'use client';
 
-import { Drawer } from '@molecules/Drawer';
 import { CoverHero } from '@organisms/Heros/CoverHero';
 import {
   type IWorkExperienceModuleProps,
   JobCardModule,
 } from '@organisms/Modules/JobCardModule';
-import { useState } from 'react';
+import { OffCanvasMenu } from '@organisms/Navigation/OffCanvasMenu/OffCanvasMenu';
 
 export const MOCK_JOB_CARDS = [
   {
@@ -44,18 +43,9 @@ export const MOCK_JOB_CARDS = [
 ] satisfies IWorkExperienceModuleProps['jobCards'];
 
 export const HomePage = () => {
-  const [open, setOpen] = useState(false);
   return (
     <>
-      <Drawer
-        open={open}
-        onOpenChange={setOpen}
-      >
-        <Drawer.Trigger
-          render={<button style={{ color: 'white' }}>Drawer Trigger</button>}
-        />
-        <Drawer.Panel title="wowowo">I am the panel</Drawer.Panel>
-      </Drawer>
+      <OffCanvasMenu />
       <CoverHero
         label="Senior Software engineer"
         title="Hi, I'm Adam Hopkins"
