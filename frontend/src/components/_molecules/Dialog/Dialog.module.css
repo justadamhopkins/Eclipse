@@ -1,0 +1,72 @@
+.dialog {
+  &__backdrop {
+    position: fixed;
+    inset: 0;
+    background-color: var(--bg-surface);
+    opacity: var(--opacity-3);
+    transition-property: opacity;
+    transition-duration: 450ms;
+    transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+
+    /* iOS 26+: Ensure the backdrop covers the entire visible viewport. */
+    @supports (-webkit-touch-callout: none) {
+      position: absolute;
+    }
+
+    &[data-starting-style],
+    &[data-ending-style] {
+      opacity: 0;
+    }
+  }
+
+  &__viewport {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: stretch;
+    overflow: hidden;
+
+    &--right {
+      justify-content: flex-end;
+    }
+  }
+
+  &__popup {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: min(320px, 100vw);
+    background-color: var(--bg-surface);
+    outline: 1px solid var(--bg-raised);
+    color: var(--text-primary);
+    transition: transform 450ms cubic-bezier(0.32, 0.72, 0, 1);
+    overflow: hidden;
+    will-change: transform;
+    transform: translateX(0);
+
+    &--right {
+      border-left: 1px solid var(--interactive-hover);
+
+      &[data-starting-style],
+      &[data-ending-style] {
+        transform: translateX(100%);
+      }
+    }
+  }
+
+  &__title {
+    margin: 0;
+    font-size: var(--font-size-lg);
+    font-weight: 700;
+    line-height: 1.4;
+    letter-spacing: -0.0025em;
+    color: var(--text-primary);
+  }
+
+  &__description {
+    margin: 0;
+    font-size: var(--font-size-md);
+    line-height: 1.5;
+    color: var(--text-secondary);
+  }
+}
