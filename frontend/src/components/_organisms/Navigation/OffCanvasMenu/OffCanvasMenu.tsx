@@ -4,9 +4,12 @@ import { Dialog } from '@molecules/Dialog';
 import { type FC, useState } from 'react';
 
 import styles from './OffCanvasMenu.module.css';
+
 interface IOffCanvasMenuProps {}
 
-export const OffCanvasMenu: FC<IOffCanvasMenuProps> = props => {
+export const OffCanvasMenu: FC<IOffCanvasMenuProps> = (
+  props: IOffCanvasMenuProps,
+) => {
   const [open, setOpen] = useState(true);
 
   return (
