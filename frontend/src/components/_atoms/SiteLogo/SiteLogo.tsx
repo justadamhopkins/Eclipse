@@ -1,18 +1,18 @@
-import NextImage from 'next/image';
+import { Icon } from '@atoms/Icon';
 import Link from 'next/link';
+
+import styles from './SiteLogo.module.css';
 
 export const SiteLogo = () => {
   return (
     <Link
       href="/"
       aria-label="adam hopkins logo"
+      className={styles.siteLogo}
     >
-      <NextImage
-        src="/brand-logo-2.svg"
-        alt="brand logo"
-        width={130}
-        height={50}
-        unoptimized={true}
+      <Icon
+        isInline={false}
+        name="brandLogo"
       />
     </Link>
   );

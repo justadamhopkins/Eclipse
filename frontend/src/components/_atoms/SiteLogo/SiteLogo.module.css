@@ -1,0 +1,4 @@
+.siteLogo {
+    display: inline-block;
+    width: min(100%, 6.25rem);
+}
