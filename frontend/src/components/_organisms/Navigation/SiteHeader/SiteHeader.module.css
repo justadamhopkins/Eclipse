@@ -18,6 +18,7 @@
   }
 
   &__navContainer {
+    display: none;
     margin-inline: auto;
     max-width: fit-content;
 
@@ -29,6 +30,7 @@
     }
 
     @media (min-width: 40rem) {
+      display: block;
       flex-grow: 1;
     }
   }
