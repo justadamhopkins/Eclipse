@@ -5,8 +5,8 @@
     background-color: var(--bg-surface);
     opacity: var(--opacity-3);
     transition-property: opacity;
-    transition-duration: 450ms;
-    transition-timing-function: cubic-bezier(0.32, 0.72, 0, 1);
+    transition-duration: 300ms;
+    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
 
     /* iOS 26+: Ensure the backdrop covers the entire visible viewport. */
     @supports (-webkit-touch-callout: none) {
@@ -39,10 +39,8 @@
     background-color: var(--bg-surface);
     outline: 1px solid var(--bg-raised);
     color: var(--text-primary);
-    transition: transform 450ms cubic-bezier(0.32, 0.72, 0, 1);
+    transition: transform 500ms cubic-bezier(0.25, 0.1, 0.25, 1);
     overflow: hidden;
-    will-change: transform;
-    transform: translateX(0);
 
     &--right {
       border-left: 1px solid var(--interactive-hover);
