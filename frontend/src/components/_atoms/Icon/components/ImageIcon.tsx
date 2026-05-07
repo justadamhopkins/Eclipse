@@ -1,10 +1,12 @@
 import { omit } from '@utils/primitives/objetcs';
 import NextImage, { type ImageProps } from 'next/image';
 
+import BrandLogo from '../icons/ah_logo.svg';
 import LickLogo from '../icons/lick_logo.svg';
 
 const STATIC_ICON_MAP = {
   lickLogo: LickLogo,
+  brandLogo: BrandLogo,
 };
 
 export type TIconImgProps = Omit<ImageProps, 'src' | 'alt'> & {
