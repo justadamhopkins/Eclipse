@@ -10,7 +10,7 @@ interface IOffCanvasMenuProps {}
 export const OffCanvasMenu: FC<IOffCanvasMenuProps> = (
   props: IOffCanvasMenuProps,
 ) => {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   return (
     <Dialog
