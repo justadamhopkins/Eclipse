@@ -1,56 +1,53 @@
 .offCanvasMenu {
-    &__header {
-        display: flex;
-        justify-content: space-between;
-        border-bottom: 1px solid var(--interactive-hover);
-        padding: var(--spacing-padding-base);
-    }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--interactive-hover);
+    margin-top: 12vh;
+  }
 
-    &__content {
-        padding: var(--spacing-padding-base);
-    }
+  &__content {
+    padding: var(--spacing-padding-base);
+  }
 }
 
-
 .Body {
-    position: relative;
-    flex: 1 1 auto;
-    display: flex;
-    min-height: 0;
-    overflow: hidden;
+  position: relative;
+  flex: 1 1 auto;
+  display: flex;
+  min-height: 0;
+  overflow: hidden;
 
-    &::before,
-    &::after {
-        content: '';
-        position: absolute;
-        height: 1px;
-        width: 100%;
-        background: var(--color-gray-200);
-    }
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+  }
 
-    &::before {
-        top: 0;
-    }
-    &::after {
-        bottom: 0;
-    }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
 }
 
 .BodyViewport {
-    flex: 1 1 auto;
-    min-height: 0;
-    overscroll-behavior: contain;
-    padding: var(--spacing-padding-base);
+  flex: 1 1 auto;
+  min-height: 0;
+  overscroll-behavior: contain;
+  padding: var(--spacing-padding-base);
 
-    &:focus-visible {
-        outline: 1px solid red;
-        outline-offset: -1px;
-    }
+  &:focus-visible {
+    outline: 1px solid red;
+    outline-offset: -1px;
+  }
 }
 
 .BodyContent {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }

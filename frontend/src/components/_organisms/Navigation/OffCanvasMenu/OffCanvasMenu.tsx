@@ -1,30 +1,24 @@
-import { SiteLogo } from '@atoms/SiteLogo';
 import { ScrollArea } from '@base-ui/react/scroll-area';
-import { Dialog } from '@molecules/Dialog';
-import { type FC, useState } from 'react';
+import { Dialog, type IDrawerProps } from '@molecules/Dialog';
 
 import styles from './OffCanvasMenu.module.css';
 
-interface IOffCanvasMenuProps {}
+interface IOffCanvasMenuProps {
+  isOpen: boolean;
+  onOpenChange: IDrawerProps['onOpenChange'];
+}
 
-export const OffCanvasMenu: FC<IOffCanvasMenuProps> = (
-  props: IOffCanvasMenuProps,
-) => {
-  const [open, setOpen] = useState(false);
-
+export const OffCanvasMenu = ({
+  isOpen,
+  onOpenChange,
+}: IOffCanvasMenuProps) => {
   return (
     <Dialog
-      open={open}
-      onOpenChange={setOpen}
+      open={isOpen}
+      onOpenChange={onOpenChange}
     >
-      <Dialog.Trigger
-        render={<button style={{ color: 'white' }}>Dialog Trigger</button>}
-      />
       <Dialog.Panel variant="right">
-        <div className={styles.offCanvasMenu__header}>
-          <SiteLogo />
-          hdhd
-        </div>
+        <div className={styles.offCanvasMenu__header}></div>
         <ScrollArea.Root className={styles.Body}>
           <ScrollArea.Viewport className={styles.BodyViewport}>
             <ScrollArea.Content className={styles.BodyContent}>
