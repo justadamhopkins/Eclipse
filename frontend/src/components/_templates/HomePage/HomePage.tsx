@@ -5,7 +5,6 @@ import {
   type IWorkExperienceModuleProps,
   JobCardModule,
 } from '@organisms/Modules/JobCardModule';
-import { OffCanvasMenu } from '@organisms/Navigation/OffCanvasMenu/OffCanvasMenu';
 
 export const MOCK_JOB_CARDS = [
   {
@@ -45,7 +44,6 @@ export const MOCK_JOB_CARDS = [
 export const HomePage = () => {
   return (
     <>
-      <OffCanvasMenu />
       <CoverHero
         label="Senior Software engineer"
         title="Hi, I'm Adam Hopkins"
