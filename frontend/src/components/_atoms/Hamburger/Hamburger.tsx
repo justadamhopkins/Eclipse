@@ -1,7 +1,6 @@
 'use client';
 
 import clsx from 'clsx';
-import { type FC, useState } from 'react';
 
 import styles from './Hamburger.module.css';
 
@@ -10,18 +9,15 @@ interface IHamburgerProps {
   onToggle?: () => void;
 }
 
-export const Hamburger: FC<IHamburgerProps> = ({ isOpen, onToggle }) => {
-  const [internalOpen, setInternalOpen] = useState(false);
-
-  const open = isOpen ?? internalOpen;
-  const handleClick = onToggle ?? (() => setInternalOpen(prev => !prev));
-
+export const Hamburger = ({ isOpen, onToggle }: IHamburgerProps) => {
   return (
     <button
-      className={clsx(styles.hamburger, { [styles['hamburger--open']]: open })}
-      onClick={handleClick}
-      aria-label={open ? 'Close menu' : 'Open menu'}
-      aria-expanded={open}
+      className={clsx(styles.hamburger, {
+        [styles['hamburger--open']]: isOpen,
+      })}
+      onClick={onToggle}
+      aria-label={isOpen ? 'Close menu' : 'Open menu'}
+      aria-expanded={isOpen}
     >
       <span className={styles.hamburger__dot}></span>
       <span className={styles.hamburger__dot}></span>
