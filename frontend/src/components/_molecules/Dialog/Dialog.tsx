@@ -10,7 +10,7 @@ import { DialogPanel } from './components/Panel';
 import { DialogTitle } from './components/Title';
 import { DialogTrigger } from './components/Trigger';
 
-interface IDrawerProps {
+export interface IDrawerProps {
   children: ReactNode;
   open: boolean;
   onOpenChange: DrawerRootProps['onOpenChange'];

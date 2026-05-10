@@ -2,7 +2,7 @@
   &__backdrop {
     position: fixed;
     inset: 0;
-    background-color: var(--bg-surface);
+    background-color: var(--bg-page);
     opacity: var(--opacity-3);
     transition-property: opacity;
     transition-duration: 300ms;
