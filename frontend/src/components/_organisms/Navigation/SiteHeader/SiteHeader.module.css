@@ -11,14 +11,22 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: var(--spacing-gap-wide);
+  }
+
+  &__navWrapper {
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    flex: 1;
 
     @media (min-width: 40rem) {
-      justify-content: flex-start;
+      display: flex;
+      flex-grow: 1;
     }
   }
 
   &__navContainer {
-    display: none;
     margin-inline: auto;
     max-width: fit-content;
 
@@ -32,6 +40,13 @@
     @media (min-width: 40rem) {
       display: block;
       flex-grow: 1;
+    }
+  }
+
+  &__mobileNavWrapper {
+    z-index: var(--z-toast);
+    @media (min-width: 40rem) {
+      display: none;
     }
   }
 }
