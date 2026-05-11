@@ -1,13 +1,15 @@
+import { type TWithClassName } from '@typings/utils';
 import clsx from 'clsx';
 import NextLink, { type LinkProps } from 'next/link';
 import { type PropsWithChildren } from 'react';
 
 import styles from './NavigationLink.module.css';
 
-type TNavigationLinkProps = LinkProps;
+type TNavigationLinkProps = TWithClassName<LinkProps>;
 
 export const NavigationLink = ({
   children,
+  className,
   ...rest
 }: PropsWithChildren<TNavigationLinkProps>) => {
   return (
@@ -16,6 +18,7 @@ export const NavigationLink = ({
       className={clsx([
         styles.navigationLink,
         styles['navigationLink__primary'],
+        className,
       ])}
     >
       {children}
