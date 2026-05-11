@@ -18,10 +18,7 @@ export const OffCanvasMenu = ({
       open={isOpen}
       onOpenChange={onOpenChange}
     >
-      <Dialog.Panel
-        variant="right"
-        className={styles.offCanvasMenu}
-      >
+      <Dialog.Panel variant="right">
         <div className={styles.offCanvasMenu__header}></div>
         <ScrollArea.Root className={styles.offCanvasMenu__body}>
           <ScrollArea.Viewport className={styles.offCanvasMenu__viewport}>
