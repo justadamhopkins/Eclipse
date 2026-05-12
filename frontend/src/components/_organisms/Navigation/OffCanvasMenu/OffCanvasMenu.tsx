@@ -1,3 +1,4 @@
+import { Eyebrow } from '@atoms/Eyebrow';
 import { NavigationLink } from '@atoms/Navigation/NavigationLink/NavigationLink';
 import { ScrollArea } from '@base-ui/react/scroll-area';
 import { Dialog, type IDrawerProps } from '@molecules/Dialog';
@@ -23,7 +24,11 @@ export const OffCanvasMenu = ({
         <ScrollArea.Root className={styles.offCanvasMenu__body}>
           <ScrollArea.Viewport className={styles.offCanvasMenu__viewport}>
             <ScrollArea.Content className={styles.offCanvasMenu__content}>
-              <h3>Navigation</h3>
+              <Eyebrow
+                variant="primary"
+                size="lg"
+                label="Navigation"
+              />
               <nav className={styles.offCanvasMenu__navContainer}>
                 <ul>
                   <li>
@@ -47,13 +52,17 @@ export const OffCanvasMenu = ({
                       className={styles.offCanvasMenu__navLink}
                       href="/about"
                     >
-                      Download cv
+                      Download CV
                     </NavigationLink>
                   </li>
                 </ul>
               </nav>
               <div>
-                <h3>Get in touch</h3>
+                <Eyebrow
+                  variant="primary"
+                  size="lg"
+                  label="Get in touch"
+                />
                 <p>adamhopkins87@gmail.com</p>
               </div>
               <div>
