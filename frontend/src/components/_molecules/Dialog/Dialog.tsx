@@ -1,7 +1,7 @@
 import {
-  Drawer as BaseDrawer,
-  type DrawerRootProps,
-} from '@base-ui/react/drawer';
+  Dialog as BaseDialog,
+  type DialogRootProps,
+} from '@base-ui/react/dialog';
 import { type ReactNode } from 'react';
 
 import { DialogClose } from './components/CloseTrigger';
@@ -13,18 +13,17 @@ import { DialogTrigger } from './components/Trigger';
 export interface IDrawerProps {
   children: ReactNode;
   open: boolean;
-  onOpenChange: DrawerRootProps['onOpenChange'];
+  onOpenChange: DialogRootProps['onOpenChange'];
 }
 
 export const Dialog = ({ children, open, onOpenChange }: IDrawerProps) => {
   return (
-    <BaseDrawer.Root
+    <BaseDialog.Root
       open={open}
       onOpenChange={onOpenChange}
-      swipeDirection="right"
     >
       {children}
-    </BaseDrawer.Root>
+    </BaseDialog.Root>
   );
 };
 

@@ -5,7 +5,7 @@ import { useDisclosure } from '@hooks/useDisclosure/useDisclosure';
 import { OffCanvasMenu } from '@organisms/Navigation/OffCanvasMenu';
 
 export const SiteHeaderClient = () => {
-  const { isOpen, toggle, open } = useDisclosure();
+  const { isOpen, toggle, open, close } = useDisclosure();
 
   return (
     <>
@@ -15,7 +15,7 @@ export const SiteHeaderClient = () => {
       />
       <OffCanvasMenu
         isOpen={isOpen}
-        onOpenChange={open}
+        onOpenChange={shouldOpen => (shouldOpen ? open() : close())}
       />
     </>
   );
