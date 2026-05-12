@@ -1,0 +1,15 @@
+.eyebrow {
+  display: inline-block;
+
+  &--sm {
+    font-family: var(--text-body-md-font);
+    font-size: var(--text-body-md-size);
+    font-weight: var(--text-body-md-weight);
+    line-height: var(--text-body-md-leading);
+    letter-spacing: var(--text-body-md-tracking);
+  }
+
+  &--primary {
+    color: var(--accent-primary);
+  }
+}
