@@ -55,6 +55,7 @@
     flex-direction: column;
     gap: var(--spacing-gap-extra-wide);
     justify-content: center;
+
     ul {
       display: flex;
       flex-direction: column;
