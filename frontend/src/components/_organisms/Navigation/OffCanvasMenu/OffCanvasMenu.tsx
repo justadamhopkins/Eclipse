@@ -24,11 +24,6 @@ export const OffCanvasMenu = ({
         <ScrollArea.Root className={styles.offCanvasMenu__body}>
           <ScrollArea.Viewport className={styles.offCanvasMenu__viewport}>
             <ScrollArea.Content className={styles.offCanvasMenu__content}>
-              <Eyebrow
-                variant="primary"
-                size="lg"
-                label="Navigation"
-              />
               <nav className={styles.offCanvasMenu__navContainer}>
                 <ul>
                   <li>
@@ -57,16 +52,18 @@ export const OffCanvasMenu = ({
                   </li>
                 </ul>
               </nav>
-              <div>
-                <Eyebrow
-                  variant="primary"
-                  size="lg"
-                  label="Get in touch"
-                />
-                <p>adamhopkins87@gmail.com</p>
-              </div>
-              <div>
-                <p>social icons tbc</p>
+              <div className={styles.offCanvasMenu__contactSection}>
+                <div>
+                  <Eyebrow
+                    variant="primary"
+                    size="lg"
+                    label="Get in touch"
+                  />
+                  <p>adamhopkins87@gmail.com</p>
+                </div>
+                <div>
+                  <p>social icons tbc</p>
+                </div>
               </div>
             </ScrollArea.Content>
           </ScrollArea.Viewport>

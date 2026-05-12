@@ -13,15 +13,6 @@
     min-height: 0;
     overflow: hidden;
 
-    h3 {
-      font-family: var(--text-body-md-font);
-      font-size: var(--text-body-md-size);
-      font-weight: var(--text-body-md-weight);
-      line-height: var(--text-body-md-leading);
-      letter-spacing: var(--text-body-md-tracking);
-      color: var(--accent-subtle);
-    }
-
     &::before,
     &::after {
       content: '';
@@ -52,12 +43,18 @@
   &__content {
     display: flex;
     flex-direction: column;
+    justify-content: center;
     gap: var(--spacing-gap-extra-wide);
     padding: var(--spacing-padding-base);
     height: 100%;
   }
 
   &__navContainer {
+    flex: 1 1 auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-gap-extra-wide);
+    justify-content: center;
     ul {
       display: flex;
       flex-direction: column;
@@ -71,10 +68,17 @@
   &__navLink {
     padding: 0;
     color: var(--text-primary);
-    font-size: var(--text-h2-size);
-    line-height: var(--text-h2-leading);
-    letter-spacing: var(--text-h2-tracking);
-    font-family: var(--text-h2-font);
-    font-weight: var(--text-h2-weight);
+    font-size: var(--text-h1-size);
+    line-height: var(--text-h1-leading);
+    letter-spacing: var(--text-h1-tracking);
+    font-family: var(--text-h1-font);
+    font-weight: var(--text-h1-weight);
+  }
+
+  &__contactSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-gap-base);
+    justify-self: flex-end;
   }
 }
