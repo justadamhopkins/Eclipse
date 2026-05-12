@@ -1,16 +1,30 @@
 import { type TWithClassName } from '@typings/utils';
 import clsx from 'clsx';
-import { type FC } from 'react';
 
 import styles from './Eyebrow.module.css';
 
 interface IEyebrowProps {
   label: string;
+  size: 'sm' | 'md' | 'lg';
+  variant: 'primary';
 }
 
-export const Eyebrow: FC<IEyebrowProps> = ({
+export const Eyebrow = ({
   label,
+  size,
+  variant,
   className,
 }: TWithClassName<IEyebrowProps>) => {
-  return <span className={clsx(styles.eyebrow, className)}>{label}</span>;
+  return (
+    <span
+      className={clsx(
+        styles.eyebrow,
+        styles[`eyebrow--${size}`],
+        styles[`eyebrow--${variant}`],
+        className,
+      )}
+    >
+      {label}
+    </span>
+  );
 };

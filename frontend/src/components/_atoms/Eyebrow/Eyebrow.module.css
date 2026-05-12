@@ -2,6 +2,14 @@
   display: inline-block;
 
   &--sm {
+    font-family: var(--text-body-sm-font);
+    font-size: var(--text-body-sm-size);
+    font-weight: var(--text-body-sm-weight);
+    line-height: var(--text-body-sm-leading);
+    letter-spacing: var(--text-body-sm-tracking);
+  }
+
+  &--md {
     font-family: var(--text-body-md-font);
     font-size: var(--text-body-md-size);
     font-weight: var(--text-body-md-weight);
@@ -9,7 +17,15 @@
     letter-spacing: var(--text-body-md-tracking);
   }
 
+  &--lg {
+    font-family: var(--text-body-lg-font);
+    font-size: var(--text-body-lg-size);
+    font-weight: var(--text-body-lg-weight);
+    line-height: var(--text-body-lg-leading);
+    letter-spacing: var(--text-body-lg-tracking);
+  }
+
   &--primary {
-    color: var(--accent-primary);
+    color: var(--interactive-subtle);
   }
 }

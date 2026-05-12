@@ -1,4 +1,5 @@
 import { Button } from '@atoms/Button';
+import { Eyebrow } from '@atoms/Eyebrow';
 import clsx from 'clsx';
 import NextImage from 'next/image';
 
@@ -15,7 +16,11 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
     <section className={clsx([styles.coverHero])}>
       <div className={styles.coverHero__contentWrapper}>
         <div className={styles.coverHero__contentInner}>
-          <span className={styles.coverHero__label}>{label}</span>
+          <Eyebrow
+            variant="primary"
+            size="sm"
+            label={label}
+          />
           <h1>{title}</h1>
           <p>{subtitle}</p>
           <div className={styles.coverHero__ctaRow}>
