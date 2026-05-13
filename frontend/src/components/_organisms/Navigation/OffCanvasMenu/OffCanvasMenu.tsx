@@ -3,6 +3,7 @@ import { Eyebrow } from '@atoms/Eyebrow';
 import { NavigationLink } from '@atoms/Navigation/NavigationLink/NavigationLink';
 import { ScrollArea } from '@base-ui/react/scroll-area';
 import { Dialog, type IDrawerProps } from '@molecules/Dialog';
+import { TriangleRightIcon } from '@radix-ui/react-icons';
 
 import styles from './OffCanvasMenu.module.css';
 
@@ -34,7 +35,12 @@ export const OffCanvasMenu = ({
                           href="/"
                         >
                           Home
-                          <span>a</span>
+                          <span>
+                            <TriangleRightIcon
+                              width={28}
+                              height={28}
+                            />
+                          </span>
                         </NavigationLink>
                       </li>
                       <li>
@@ -43,7 +49,12 @@ export const OffCanvasMenu = ({
                           href="/about"
                         >
                           About
-                          <span>a</span>
+                          <span>
+                            <TriangleRightIcon
+                              width={28}
+                              height={28}
+                            />
+                          </span>
                         </NavigationLink>
                       </li>
                     </ul>
@@ -51,17 +62,15 @@ export const OffCanvasMenu = ({
                   <Button variant="secondary">Download CV</Button>
                 </div>
                 <div className={styles.offCanvasMenu__contactSection}>
-                  <div>
-                    <Eyebrow
-                      variant="primary"
-                      size="lg"
-                      label="Get in touch"
-                    />
-                    <p>adamhopkins87@gmail.com</p>
-                  </div>
-                  <div>
-                    <p>social icons tbc</p>
-                  </div>
+                  <Eyebrow
+                    variant="primary"
+                    size="lg"
+                    label="Get in touch"
+                  />
+                  <a href="mailto:adamhopkins87@gmail.com">
+                    adamhopkins87@gmail.com
+                  </a>
+                  <p>social icons tbc</p>
                 </div>
               </ScrollArea.Content>
             </ScrollArea.Viewport>

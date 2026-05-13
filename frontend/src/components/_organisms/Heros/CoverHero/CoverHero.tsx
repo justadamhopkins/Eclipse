@@ -18,7 +18,7 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
         <div className={styles.coverHero__contentInner}>
           <Eyebrow
             variant="primary"
-            size="sm"
+            size="md"
             label={label}
           />
           <h1>{title}</h1>

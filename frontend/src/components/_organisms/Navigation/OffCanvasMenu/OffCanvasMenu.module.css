@@ -62,7 +62,7 @@
     ul {
       display: flex;
       flex-direction: column;
-      gap: var(--spacing-gap-wide);
+      gap: var(--spacing-gap-base);
       list-style-type: none;
       padding: 0;
       justify-content: center;
@@ -70,7 +70,6 @@
   }
 
   &__navLink {
-    padding: 0;
     color: var(--text-primary);
     font-size: var(--text-h3-size);
     line-height: var(--text-h3-leading);
@@ -79,12 +78,23 @@
     font-weight: var(--text-h3-weight);
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding-inline: 0;
   }
 
   &__contactSection {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-gap-base);
+    gap: var(--spacing-gap-wide);
     justify-self: flex-end;
+
+    a {
+      color: var(--text-primary);
+      font-size: var(--text-body-lg-size);
+      line-height: var(--text-body-lg-leading);
+      letter-spacing: var(--text-body-lg-tracking);
+      font-family: var(--text-body-lg-font);
+      font-weight: var(--text-body-lg-weight);
+    }
   }
 }
