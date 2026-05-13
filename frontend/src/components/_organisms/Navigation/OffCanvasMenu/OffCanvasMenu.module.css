@@ -1,17 +1,13 @@
 .offCanvasMenu {
-  &__header {
-    display: flex;
-    justify-content: space-between;
-    border-bottom: 1px solid var(--interactive-hover);
-    margin-top: 10vh;
-  }
+  margin-top: 10vh;
+  flex: 1 1 auto;
 
   &__body {
     position: relative;
-    flex: 1 1 auto;
     display: flex;
     min-height: 0;
     overflow: hidden;
+    height: 100%;
 
     &::before,
     &::after {
@@ -49,8 +45,15 @@
     height: 100%;
   }
 
-  &__navContainer {
+  &__navSection {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-gap-extra-wide);
     flex: 1 1 auto;
+    justify-content: center;
+  }
+
+  &__navContainer {
     display: flex;
     flex-direction: column;
     gap: var(--spacing-gap-extra-wide);
@@ -59,7 +62,7 @@
     ul {
       display: flex;
       flex-direction: column;
-      gap: var(--spacing-gap-base);
+      gap: var(--spacing-gap-wide);
       list-style-type: none;
       padding: 0;
       justify-content: center;
@@ -69,11 +72,13 @@
   &__navLink {
     padding: 0;
     color: var(--text-primary);
-    font-size: var(--text-h1-size);
-    line-height: var(--text-h1-leading);
-    letter-spacing: var(--text-h1-tracking);
-    font-family: var(--text-h1-font);
-    font-weight: var(--text-h1-weight);
+    font-size: var(--text-h3-size);
+    line-height: var(--text-h3-leading);
+    letter-spacing: var(--text-h3-tracking);
+    font-family: var(--text-h3-font);
+    font-weight: var(--text-h3-weight);
+    display: flex;
+    justify-content: space-between;
   }
 
   &__contactSection {

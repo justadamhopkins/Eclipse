@@ -1,3 +1,4 @@
+import { Button } from '@atoms/Button';
 import { Eyebrow } from '@atoms/Eyebrow';
 import { NavigationLink } from '@atoms/Navigation/NavigationLink/NavigationLink';
 import { ScrollArea } from '@base-ui/react/scroll-area';
@@ -20,57 +21,55 @@ export const OffCanvasMenu = ({
       onOpenChange={onOpenChange}
     >
       <Dialog.Panel variant="right">
-        <div className={styles.offCanvasMenu__header}></div>
-        <ScrollArea.Root className={styles.offCanvasMenu__body}>
-          <ScrollArea.Viewport className={styles.offCanvasMenu__viewport}>
-            <ScrollArea.Content className={styles.offCanvasMenu__content}>
-              <nav className={styles.offCanvasMenu__navContainer}>
-                <ul>
-                  <li>
-                    <NavigationLink
-                      className={styles.offCanvasMenu__navLink}
-                      href="/"
-                    >
-                      Home
-                    </NavigationLink>
-                  </li>
-                  <li>
-                    <NavigationLink
-                      className={styles.offCanvasMenu__navLink}
-                      href="/about"
-                    >
-                      About
-                    </NavigationLink>
-                  </li>
-                  <li>
-                    <NavigationLink
-                      className={styles.offCanvasMenu__navLink}
-                      href="/about"
-                    >
-                      Download CV
-                    </NavigationLink>
-                  </li>
-                </ul>
-              </nav>
-              <div className={styles.offCanvasMenu__contactSection}>
-                <div>
-                  <Eyebrow
-                    variant="primary"
-                    size="lg"
-                    label="Get in touch"
-                  />
-                  <p>adamhopkins87@gmail.com</p>
+        <div className={styles.offCanvasMenu}>
+          <ScrollArea.Root className={styles.offCanvasMenu__body}>
+            <ScrollArea.Viewport className={styles.offCanvasMenu__viewport}>
+              <ScrollArea.Content className={styles.offCanvasMenu__content}>
+                <div className={styles.offCanvasMenu__navSection}>
+                  <nav className={styles.offCanvasMenu__navContainer}>
+                    <ul>
+                      <li>
+                        <NavigationLink
+                          className={styles.offCanvasMenu__navLink}
+                          href="/"
+                        >
+                          Home
+                          <span>a</span>
+                        </NavigationLink>
+                      </li>
+                      <li>
+                        <NavigationLink
+                          className={styles.offCanvasMenu__navLink}
+                          href="/about"
+                        >
+                          About
+                          <span>a</span>
+                        </NavigationLink>
+                      </li>
+                    </ul>
+                  </nav>
+                  <Button variant="secondary">Download CV</Button>
                 </div>
-                <div>
-                  <p>social icons tbc</p>
+                <div className={styles.offCanvasMenu__contactSection}>
+                  <div>
+                    <Eyebrow
+                      variant="primary"
+                      size="lg"
+                      label="Get in touch"
+                    />
+                    <p>adamhopkins87@gmail.com</p>
+                  </div>
+                  <div>
+                    <p>social icons tbc</p>
+                  </div>
                 </div>
-              </div>
-            </ScrollArea.Content>
-          </ScrollArea.Viewport>
-          <ScrollArea.Scrollbar className={styles.Scrollbar}>
-            <ScrollArea.Thumb className={styles.ScrollbarThumb} />
-          </ScrollArea.Scrollbar>
-        </ScrollArea.Root>
+              </ScrollArea.Content>
+            </ScrollArea.Viewport>
+            <ScrollArea.Scrollbar className={styles.Scrollbar}>
+              <ScrollArea.Thumb className={styles.ScrollbarThumb} />
+            </ScrollArea.Scrollbar>
+          </ScrollArea.Root>
+        </div>
       </Dialog.Panel>
     </Dialog>
   );
