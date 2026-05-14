@@ -70,7 +70,7 @@ export const OffCanvasMenu = ({
                   <a href="mailto:adamhopkins87@gmail.com">
                     adamhopkins87@gmail.com
                   </a>
-                  <p>social icons tbc</p>
+                  <p>social icons</p>
                 </div>
               </ScrollArea.Content>
             </ScrollArea.Viewport>
