@@ -29,6 +29,6 @@ export const Dialog = ({ children, open, onOpenChange }: IDrawerProps) => {
 
 Dialog.Trigger = DialogTrigger;
 Dialog.Title = DialogTitle;
-Dialog.Title = DialogDescription;
+Dialog.Description = DialogDescription;
 Dialog.Panel = DialogPanel;
 Dialog.CloseTrigger = DialogClose;
