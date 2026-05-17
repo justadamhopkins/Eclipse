@@ -7,10 +7,12 @@ import styles from './Button.module.css';
 type TButtonAsButton = {
   href?: never;
   variant?: 'primary' | 'secondary';
+  isFullWidth?: boolean;
 } & ComponentProps<'button'>;
 
 type TButtonAsLink = {
   variant?: 'primary' | 'secondary';
+  isFullWidth?: boolean;
 } & ComponentProps<typeof Link>;
 
 type TButtonProps = TButtonAsButton | TButtonAsLink;
@@ -18,9 +20,14 @@ type TButtonProps = TButtonAsButton | TButtonAsLink;
 export const Button = ({
   children,
   variant = 'primary',
+  isFullWidth = false,
   ...rest
 }: TButtonProps) => {
-  const className = clsx([styles.button, styles[`button__${variant}`]]);
+  const className = clsx([
+    styles.button,
+    styles[`button__${variant}`],
+    isFullWidth && styles['button--fullWidth'],
+  ]);
 
   if ('href' in rest && rest.href) {
     return (
