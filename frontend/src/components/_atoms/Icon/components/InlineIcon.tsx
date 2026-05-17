@@ -1,10 +1,14 @@
 import { omit } from '@utils/primitives/objetcs';
 import { type ComponentProps } from 'react';
 
+import githubLogo from '../icons/github_invertocat.inline.svg';
 import LickLogo from '../icons/lick_logo.inline.svg';
+import linkedInLogo from '../icons/linkedin-logo.inline.svg';
 
 const INLINE_ICON_MAP = {
   lickLogo: LickLogo,
+  githubLogo: githubLogo,
+  linkedInLogo: linkedInLogo,
 };
 
 export type TIconInlineProps = ComponentProps<'svg'> & {
