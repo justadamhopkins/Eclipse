@@ -5,7 +5,8 @@ import { type PropsWithChildren } from 'react';
 
 import styles from './JobCard.module.css';
 
-type TLogoProps = TWithClassName<{ name: TIconProps['name'] }>;
+type TImgIconProps = Extract<TIconProps, { isInline: false }>;
+type TLogoProps = TWithClassName<{ name: TImgIconProps['name'] }>;
 
 const Logo = ({ name, className }: TLogoProps) => (
   <div className={clsx(styles.jobCard__logo, className)}>
