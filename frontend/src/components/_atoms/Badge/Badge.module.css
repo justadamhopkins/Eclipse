@@ -5,8 +5,8 @@
   font-size: var(--text-md);
   font-weight: var(--text-caption-md-weight);
   line-height: var(--text-caption-md-leading);
-  letter-spacing: var(--text-caption-md-tracking);
   font-family: var(--text-caption-md-font);
+  letter-spacing: var(--text-caption-md-tracking);
 
   &--primary {
     color: var(--text-primary);
