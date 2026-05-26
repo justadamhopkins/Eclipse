@@ -21,6 +21,9 @@ export const SiteHeader = () => {
               <li>
                 <NavigationLink href="/about">About</NavigationLink>
               </li>
+              <li>
+                <NavigationLink href="/about">Contact</NavigationLink>
+              </li>
             </ul>
           </nav>
           <Button variant="secondary">Contact</Button>
