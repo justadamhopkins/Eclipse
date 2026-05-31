@@ -16,7 +16,7 @@ export const Eyebrow = ({
   className,
 }: TWithClassName<IEyebrowProps>) => {
   return (
-    <span
+    <p
       className={clsx(
         styles.eyebrow,
         styles[`eyebrow--${size}`],
@@ -25,6 +25,6 @@ export const Eyebrow = ({
       )}
     >
       {label}
-    </span>
+    </p>
   );
 };
