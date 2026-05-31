@@ -1,0 +1,1 @@
+export { AboutMeModule } from './AboutMeModule';
