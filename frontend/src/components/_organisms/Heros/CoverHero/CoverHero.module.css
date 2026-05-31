@@ -24,7 +24,6 @@
     align-items: start;
     padding: var(--spacing-padding-wide) var(--spacing-padding-base);
 
-
     @media (min-width: 64rem) {
       grid-column: span 8 / span 8;
       padding: var(--spacing-padding-wide);
@@ -45,15 +44,15 @@
       font-family: var(--text-display-xl-font);
       font-weight: var(--text-display-xl-weight);
     }
+  }
 
-    p {
-      color: var(--text-primary);
-      font-family: var(--text-body-lg-font);
-      font-size: var(--text-body-lg-size);
-      font-weight: var(--text-body-lg-weight);
-      line-height: var(--text-body-lg-leading);
-      letter-spacing: var(--text-body-lg-tracking);
-    }
+  &__subtitle {
+    color: var(--text-primary);
+    font-family: var(--text-body-lg-font);
+    font-size: var(--text-body-lg-size);
+    font-weight: var(--text-body-lg-weight);
+    line-height: var(--text-body-lg-leading);
+    letter-spacing: var(--text-body-lg-tracking);
   }
 
   &__imageWrapper {

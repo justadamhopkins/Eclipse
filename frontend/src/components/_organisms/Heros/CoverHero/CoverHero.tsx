@@ -22,7 +22,7 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
             label={label}
           />
           <h1>{title}</h1>
-          <p>{subtitle}</p>
+          <p className={styles.coverHero__subtitle}>{subtitle}</p>
           <div className={styles.coverHero__ctaRow}>
             <Button
               href="#footer"
