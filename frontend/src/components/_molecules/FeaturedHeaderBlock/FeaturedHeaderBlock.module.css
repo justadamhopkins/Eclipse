@@ -6,10 +6,10 @@
   }
 
   h2 {
-    margin-bottom: var(--spacing-gap-wide);
+    margin: var(--spacing-gap-base) 0 var(--spacing-gap-wide) 0;
 
     @media (min-width: 40rem) {
-      margin-bottom: var(--spacing-gap-extra-wide);
+      margin: var(--spacing-gap-base) 0 var(--spacing-gap-extra-wide) 0;
     }
   }
 }
