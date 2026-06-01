@@ -1,0 +1,119 @@
+.aboutMe {
+
+
+  &__introWrapper {
+    display: grid;
+    gap: var(--space-12);
+    grid-template-columns: 1fr;
+    margin-bottom: var(--space-12);
+
+    @media (min-width: 64rem) {
+      grid-template-columns: 1.1fr 0.9fr;
+    }
+  }
+
+  &__intro {
+    font-family: var(--text-body-md-font);
+    font-size: var(--text-body-md-size);
+    font-weight: var(--text-body-md-weight);
+    line-height: 1.75;
+    letter-spacing: var(--text-body-md-tracking);
+
+    p {
+      margin: 0 0 var(--space-5);
+
+      &:last-child {
+        margin: 0;
+      }
+    }
+  }
+
+  &__principlesLabel {
+    font-size: var(--text-caption-sm-size);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: var(--space-5);
+  }
+
+  &__principlesList {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-gap-wide);
+  }
+
+  &__principle {
+    border-left: var(--border-hairline) solid var(--accent-base);
+    padding-left: var(--spacing-gap-wide);
+  }
+
+  &__principleTitle {
+    font-weight: var(--font-weight-3);
+    font-size: 15px;
+    color: var(--text-primary);
+    margin-bottom: var(--space-1);
+  }
+
+  &__principleSub {
+    font-size: var(--text-body-sm-size);
+    color: var(--text-muted);
+  }
+
+  &__stack {
+    border-top: 1px solid var(--bg-raised);
+    padding-top: var(--space-7);
+  }
+
+  &__stackLabel {
+    font-size: var(--text-caption-sm-size);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-muted);
+    margin-bottom: var(--space-6);
+  }
+
+  &__stackRows {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-gap-wide);
+  }
+
+  &__stackRow {
+    display: flex;
+    align-items: baseline;
+    gap: var(--spacing-gap-wide);
+
+    @media (max-width: 37.5rem) {
+      flex-direction: column;
+      gap: var(--spacing-gap-base);
+    }
+  }
+
+  &__stackCategory {
+    font-size: 13px;
+    width: 110px;
+    flex-shrink: 0;
+    color: var(--text-muted);
+
+    @media (max-width: 37.5rem) {
+      width: auto;
+    }
+  }
+
+  &__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-gap-base);
+  }
+
+  &__tag {
+    padding: 5px 13px;
+    font-size: var(--text-body-sm-size);
+    border-radius: var(--radius-3);
+    border: 1px solid var(--bg-raised);
+    color: var(--text-secondary);
+  }
+}
