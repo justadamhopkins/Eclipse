@@ -8,5 +8,5 @@
   --spacing-padding-wide: var(--space-8);
   --spacing-section-gap: var(--space-8);
   --spacing-page-gutter: var(--space-6);
-  --container-max-width: 120rem;
+  --container-max-width: 80rem;
 }
