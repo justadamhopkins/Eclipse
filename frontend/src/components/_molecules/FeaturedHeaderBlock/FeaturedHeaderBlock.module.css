@@ -1,9 +1,4 @@
 .featuredHeaderBlock {
-  padding-block: var(--spacing-padding-base);
-
-  @media (min-width: 40rem) {
-    padding-block: var(--spacing-padding-wide);
-  }
 
   h2 {
     margin: var(--spacing-gap-base) 0 var(--spacing-gap-wide) 0;
