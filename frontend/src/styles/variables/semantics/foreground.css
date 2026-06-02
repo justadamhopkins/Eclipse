@@ -1,16 +1,41 @@
 :root {
   /* ── Text ───────────────────────────────────────────────────── */
-  --text-primary: var(--neutral-0); /* primary body / heading text */
-  --text-secondary: var(--neutral-600); /* supporting / descriptive    */
-  --text-tertiary: var(--neutral-950); /* supporting / descriptive    */
-  --text-muted: var(--neutral-500); /* placeholder / disabled      */
-  --text-accent: var(--purple-300); /* highlighted / linked text   */
-  --icon-base: var(--neutral-0); /* default icon fill           */
+  --text-primary: var(--neutral-50); /* primary body / heading text (#f2f4f8) */
+  --text-secondary: var(
+    --neutral-400
+  ); /* supporting / lead copy (#9aa4b4)    */
+  --text-muted: var(
+    --neutral-500
+  ); /* faint labels / placeholder (#69727f)    */
+  --text-tertiary: var(
+    --neutral-500
+  ); /* alias of muted — legacy              */
+  --text-accent: var(
+    --purple-300
+  ); /* highlighted / linked text — bright      */
+  --text-on-accent: var(
+    --neutral-950
+  ); /* text on solid accent backgrounds    */
+  --icon-base: var(
+    --neutral-50
+  ); /* default icon fill                         */
+  --icon-accent: var(
+    --purple-300
+  ); /* accent icon (chip / contact tile)       */
 
   /* ── Accent ─────────────────────────────────────────────────── */
-  --accent-subtle: var(--purple-100); /* badge / tag background      */
-  --accent-base: var(--purple-300); /* primary accent              */
-  --accent-strong: var(--purple-500); /* high-emphasis accent        */
+  --accent-subtle: var(
+    --purple-100
+  ); /* badge / tag / icon-tile background    */
+  --accent-base: var(
+    --purple-500
+  ); /* primary accent                          */
+  --accent-strong: var(
+    --purple-300
+  ); /* hover / focus highlight (bright)      */
+  --accent-line: var(
+    --purple-700
+  ); /* accent-coloured divider                 */
 
   /* ── Status ─────────────────────────────────────────────────── */
   --status-success: var(--success-500);

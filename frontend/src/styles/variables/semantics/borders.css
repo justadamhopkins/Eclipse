@@ -1,14 +1,20 @@
 :root {
-  --radius-button: var(--radius-3);
-  --radius-card: var(--radius-4);
-  --radius-input: var(--radius-2);
-  --radius-badge: var(--radius-7);
-  --radius-dialog: var(--radius-5);
+  /* Radii — semantic intent → primitive scale */
+  --radius-input: var(--radius-2); /* 4px  — inputs, small chips         */
+  --radius-button: var(--radius-3); /* 8px — buttons, sm cards (r-sm)    */
+  --radius-card: var(--radius-4); /* 12px — facts, mid cards (r-md)      */
+  --radius-card-lg: var(--radius-5); /* 18px — featured cards (r-lg)     */
+  --radius-card-xl: var(--radius-6); /* 26px — hero / form card (r-xl)   */
+  --radius-badge: var(--radius-7); /* pill — badges, nav links, chips    */
+  --radius-dialog: var(--radius-5); /* 18px — dialogs (r-lg)             */
 
-  --border-hairline: var(--border-width-1);
-  --border-thin: var(--border-width-2);
-  --border-thick: var(--border-width-3);
-  --border-heavy: var(--border-width-4);
+  /* Border widths */
+  --border-fine: var(--border-width-hairline); /* 1px — dividers, cards   */
+  --border-hairline: var(--border-width-1); /* 2px — accent bars          */
+  --border-thin: var(--border-width-2); /* 4px                            */
+  --border-thick: var(--border-width-3); /* 6px                           */
+  --border-heavy: var(--border-width-4); /* 8px                           */
 
-  --border-focus: var(--purple-300);
+  /* Focus ring */
+  --border-focus: var(--purple-500);
 }
