@@ -1,23 +1,52 @@
 :root {
-  /* ── Neutrals ───────────────────────────────────────────────── */
-  --neutral-0: oklch(100% 0 0); /* white       */
-  --neutral-50: oklch(94.91% 0.0001 263.28); /* light grey  */
-  --neutral-500: oklch(55% 0.014 262); /* mid grey / disabled text */
-  --neutral-600: oklch(44% 0.016 262); /* subtle text / icons      */
-  --neutral-800: oklch(33.17% 0.0174 262.26); /* dark grey   */
-  --neutral-900: oklch(27.49% 0.0188 258.38); /* near-black  */
-  --neutral-950: oklch(22% 0.018 260); /* page / canvas background */
-  --neutral-1000: oklch(0% 0 0); /* black       */
+  /* ── Accent hue knob ────────────────────────────────────────── */
+  /* Drives every accent token. Tweak to re-tint the whole theme:
+     277 = Periwinkle (default), 250 = Blue, 195 = Teal, 28 = Coral. */
+  --accent-h: 277;
 
-  /* ── Purple accent ─────────────────────────────────────────── */
-  --purple-100: oklch(88% 0.08 285); /* subtle highlight         */
-  --purple-300: oklch(72% 0.18 290); /* hover / active state     */
-  --purple-500: oklch(55% 0.22 290); /* primary interactive      */
-  --purple-700: oklch(40% 0.14 285); /* muted accent / borders   */
-  --purple-900: oklch(30% 0.08 280); /* deep tint background     */
+  /* ── Neutrals ───────────────────────────────────────────────── */
+  --neutral-0: oklch(100% 0 0); /* white                                    */
+  --neutral-50: #f2f4f8; /* text-primary on dark                            */
+  --neutral-400: #9aa4b4; /* muted text                                     */
+  --neutral-500: #69727f; /* faint text / labels                            */
+  --neutral-700: #18202e; /* raised surface (cards, hover-lifted)           */
+  --neutral-800: #131925; /* default surface                                */
+  --neutral-900: #0e131d; /* secondary page background                      */
+  --neutral-950: #0b0f17; /* page / canvas background                       */
+  --neutral-1000: oklch(0% 0 0); /* black                                   */
+
+  /* Hairlines — alpha white for borders & dividers on dark surfaces */
+  --line-faint: rgba(255, 255, 255, 0.07);
+  --line-soft: rgba(255, 255, 255, 0.12);
+
+  /* ── Purple accent (driven by --accent-h) ──────────────────── */
+  /* Solid scale (light → dark). Lower L = darker on dark themes. */
+  --purple-100: oklch(
+    0.88 0.08 var(--accent-h)
+  ); /* softest solid — subtle text / chip text   */
+  --purple-300: oklch(
+    0.8 0.13 var(--accent-h)
+  ); /* bright — hover / highlight text           */
+  --purple-500: oklch(
+    0.74 0.13 var(--accent-h)
+  ); /* base — primary interactive (the "accent") */
+  --purple-700: oklch(
+    0.74 0.13 var(--accent-h) / 0.4
+  ); /* line — accent border / divider     */
+  --purple-900: oklch(
+    0.3 0.08 var(--accent-h)
+  ); /* deep tint background                      */
+
+  /* Alpha variants — for tinted overlays, not scale positions */
+  --purple-soft-fill: oklch(
+    0.74 0.13 var(--accent-h) / 0.14
+  ); /* chip / icon-tile background   */
+  --purple-glow: oklch(
+    0.74 0.16 var(--accent-h) / 0.22
+  ); /* accent-coloured shadow glow        */
 
   /* ── Status ────────────────────────────────────────────────── */
-  --success-500: oklch(54% 0.18 155); /* success / positive       */
-  --warning-400: oklch(72% 0.18 62); /* warning / caution        */
-  --danger-500: oklch(55% 0.22 25); /* error / destructive      */
+  --success-500: oklch(0.78 0.16 150); /* success / live-dot         */
+  --warning-400: oklch(0.72 0.18 62); /* warning / caution          */
+  --danger-500: oklch(0.55 0.22 25); /* error / destructive        */
 }
