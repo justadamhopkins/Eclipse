@@ -3,9 +3,6 @@
   flex: 1 1 auto;
   min-height: 0;
 
-  &__srOnly {
-  }
-
   &__body {
     position: relative;
     display: flex;

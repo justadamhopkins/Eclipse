@@ -42,7 +42,7 @@
     overflow: hidden;
 
     &--right {
-      border-left: 1px solid var(--interactive-hover);
+      border-left: 1px solid var(--line-faint);
 
       &[data-starting-style],
       &[data-ending-style] {
