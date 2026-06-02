@@ -9,7 +9,7 @@ import styles from './SiteHeader.module.css';
 
 export const SiteHeader = () => {
   return (
-    <header className={clsx([styles.siteHeader])}>
+    <header className={styles.siteHeader}>
       <SiteContainer className={clsx([styles.siteHeader__container])}>
         <SiteLogo />
         <div className={styles.siteHeader__navWrapper}>
