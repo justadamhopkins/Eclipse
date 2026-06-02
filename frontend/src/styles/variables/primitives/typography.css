@@ -8,7 +8,8 @@
   --font-size-xs: 0.64rem; /* ~10px */
   --font-size-sm: 0.8rem; /* ~13px */
   --font-size-md: 1rem; /* 16px  */
-  --font-size-lg: 1.25rem; /* 20px  */
+  --font-size-lg: 1.125rem; /* 18px  */
+  --font-size-2lg: 1.25rem; /* 20px  */
   --font-size-xl: 1.563rem; /* 25px  */
   --font-size-2xl: 1.953rem; /* 31px  */
   --font-size-3xl: 2.441rem; /* 39px  */

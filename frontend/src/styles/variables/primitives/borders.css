@@ -6,7 +6,7 @@
   --radius-4: 0.75rem; /* 12px — md card / fact     */
   --radius-5: 1.125rem; /* 18px — lg card / dialog   */
   --radius-6: 1.625rem; /* 26px — xl card / hero     */
-  --radius-7: 9999px; /* pill                      */
+  --radius-7: 999px; /* pill                      */
 
   --border-width-hairline: 1px;
   --border-width-1: 2px;

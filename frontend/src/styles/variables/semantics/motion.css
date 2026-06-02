@@ -5,6 +5,8 @@
   --motion-slow: var(--duration-4);
   --motion-deliberate: var(--duration-5);
 
+  /* Design system */
+
   /* Easing — default to the design's signature curve */
   --motion-ease: var(--ease-out-expo);
   --motion-ease-emphasize: var(--ease-out-quad);

@@ -108,7 +108,7 @@
   --text-xs: var(--font-size-xs);
   --text-sm: var(--font-size-sm);
   --text-md: var(--font-size-md);
-  --text-lg: var(--font-size-lg);
+  --text-lg: var(--font-size-2lg);
   --text-xl: var(--font-size-xl);
   --text-2xl: var(--font-size-2xl);
   --text-3xl: var(--font-size-3xl);
@@ -121,6 +121,8 @@
   --text-overline-leading: var(--line-height-5);
   --text-overline-tracking: var(--letter-spacing-5);
   --text-overline-font: var(--text-font-body);
+
+  /* Design system */
 
   /* Mono kicker — uppercase mono label (design: 0.72rem, 0.22em tracking) */
   --text-kicker-size: var(--font-size-xs);
@@ -149,4 +151,54 @@
   --text-hero-sub-leading: var(--line-height-5);
   --text-hero-sub-tracking: 0;
   --text-hero-sub-font: var(--text-font-body);
+
+  /* ── UI / Interactive text ──────────────────────────────────── */
+  /* Default UI label — nav links, default interactive copy (design: 1.02rem, 500) */
+  --text-ui-md-size: var(--font-size-lg);
+  --text-ui-md-weight: var(--font-weight-3);
+  --text-ui-md-leading: var(--line-height-4);
+  --text-ui-md-tracking: var(--letter-spacing-1);
+  --text-ui-md-font: var(--text-font-body);
+
+  /* Small UI label — secondary nav, inline meta (design: 0.92-0.95rem, 500) */
+  --text-ui-sm-size: var(--font-size-sm);
+  --text-ui-sm-weight: var(--font-weight-3);
+  --text-ui-sm-leading: var(--line-height-4);
+  --text-ui-sm-tracking: var(--letter-spacing-1);
+  --text-ui-sm-font: var(--text-font-body);
+
+  /* Button — default CTA (design: 1rem, 600) */
+  --text-button-size: var(--font-size-md);
+  --text-button-weight: var(--font-weight-4);
+  --text-button-leading: var(--line-height-4);
+  --text-button-tracking: var(--letter-spacing-0);
+  --text-button-font: var(--text-font-body);
+
+  /* Button small — compact CTA (design: 0.95rem, 600) */
+  --text-button-sm-size: var(--font-size-sm);
+  --text-button-sm-weight: var(--font-weight-4);
+  --text-button-sm-leading: var(--line-height-4);
+  --text-button-sm-tracking: var(--letter-spacing-0);
+  --text-button-sm-font: var(--text-font-body);
+
+  /* Form input — text entry (design: 1rem, 400 — static, not fluid) */
+  --text-input-size: var(--font-size-md);
+  --text-input-weight: var(--font-weight-2);
+  --text-input-leading: var(--line-height-4);
+  --text-input-tracking: var(--letter-spacing-1);
+  --text-input-font: var(--text-font-body);
+
+  /* Chip / Tag — pill labels in chip groups (design: 0.92rem, 400-500) */
+  --text-chip-size: var(--font-size-sm);
+  --text-chip-weight: var(--font-weight-2);
+  --text-chip-leading: var(--line-height-4);
+  --text-chip-tracking: var(--letter-spacing-1);
+  --text-chip-font: var(--text-font-body);
+
+  /* Inline link — anchor inside body copy */
+  --text-link-size: inherit;
+  --text-link-weight: var(--font-weight-3);
+  --text-link-leading: inherit;
+  --text-link-tracking: inherit;
+  --text-link-font: inherit;
 }
