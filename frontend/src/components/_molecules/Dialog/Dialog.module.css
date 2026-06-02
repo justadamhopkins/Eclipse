@@ -53,7 +53,7 @@
 
   &__title {
     margin: 0;
-    font-size: var(--font-size-lg);
+    font-size: var(--font-size-2lg);
     font-weight: 700;
     line-height: 1.4;
     letter-spacing: -0.0025em;
