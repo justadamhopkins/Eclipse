@@ -1,7 +1,12 @@
 :root {
-    --motion-instant: var(--duration-1);
-    --motion-fast: var(--duration-2);
-    --motion-base: var(--duration-3);
-    --motion-slow: var(--duration-4);
-    --motion-deliberate: var(--duration-5);
+  --motion-instant: var(--duration-1);
+  --motion-fast: var(--duration-2);
+  --motion-base: var(--duration-3);
+  --motion-slow: var(--duration-4);
+  --motion-deliberate: var(--duration-5);
+
+  /* Easing — default to the design's signature curve */
+  --motion-ease: var(--ease-out-expo);
+  --motion-ease-emphasize: var(--ease-out-quad);
+  --motion-ease-standard: var(--ease-in-out);
 }
