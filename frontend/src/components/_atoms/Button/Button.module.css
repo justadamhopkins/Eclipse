@@ -30,12 +30,12 @@
 
   &__secondary {
     background-color: transparent;
+    border: 1px solid var(--text-primary);
     color: var(--text-primary);
-    border: 1px solid var(--accent-base);
 
     &:hover {
-      background-color: var(--interactive-accent);
       color: var(--text-primary);
+      background-color: rgba(255, 255, 255, 0.04);
     }
 
     &:focus-visible {

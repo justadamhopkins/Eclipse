@@ -1,15 +1,19 @@
 .navigationLink {
-  padding: var(--spacing-padding-tight) var(--spacing-padding-base);
-  border-radius: var(--radius-2);
+  padding: var(--spacing-padding-tight) var(--space-5);
+  border-radius: var(--radius-badge);
   color: var(--text-primary);
-  transition: background-color 0.2s ease-in-out;
+  transition: color var(--motion-base) var(--motion-ease-standard);
   min-width: 6rem;
-
+  font-size: var(--text-ui-md-size);
+  font-weight: var(--text-ui-md-weight);
+  line-height: var(--text-ui-md-leading);
+  letter-spacing: var(--text-ui-md-tracking);
+  font-family: var(--text-ui-md-font);
 
   &__primary {
     &:hover {
       color: var(--text-primary);
-      background-color: var(--interactive-hover);
+      background-color: var(--bg-accent-soft);
     }
 
     &:focus-visible {

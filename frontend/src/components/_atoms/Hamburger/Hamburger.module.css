@@ -54,7 +54,7 @@
   &__dot {
     width: 5px;
     height: 5px;
-    background-color: var(--accent-base);
+    background-color: var(--text-primary);
     display: block;
     border-radius: 50%;
     position: absolute;
