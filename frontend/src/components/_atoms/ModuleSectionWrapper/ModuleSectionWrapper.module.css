@@ -1,11 +1,7 @@
 .moduleSectionWrapper {
-  padding-inline: var(--spacing-padding-base);
-  padding-block: var(--spacing-padding-base);
-
-  @media (min-width: 40rem) {
-    padding-inline: var(--spacing-padding-wide);
-    padding-block: var(--spacing-padding-wide);
-  }
+  padding-top: clamp(40px, 5vw, 76px);
+  padding-bottom: clamp(60px, 7vw, 110px);
+  padding-inline: var(--element-gutter);
 
   &--fullBleed {
     padding-inline: 0;
