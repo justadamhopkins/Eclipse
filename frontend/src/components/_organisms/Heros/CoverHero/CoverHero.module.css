@@ -1,11 +1,11 @@
 .coverHero {
   min-height: 300px;
-  background-color: var(--bg-page);
   display: grid;
   grid-template-columns: 1fr;
+  gap: clamp(40px, 5vw, 88px);
 
   @media (min-width: 64rem) {
-    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-columns: repeat(2, 1fr);
   }
 
   &__label {
@@ -22,12 +22,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-    padding: var(--spacing-padding-wide) var(--spacing-padding-base);
 
-    @media (min-width: 64rem) {
-      grid-column: span 8 / span 8;
-      padding: var(--spacing-padding-wide);
-    }
   }
 
   &__contentInner {
@@ -55,24 +50,51 @@
     letter-spacing: var(--text-body-lg-tracking);
   }
 
+  &__imageContainer {
+    position: relative;
+
+  }
+
   &__imageWrapper {
-    aspect-ratio: 16 / 9;
-    height: 100%;
+    position: relative;
+    border-radius: var(--radius-card-xl);
+    overflow: hidden;
+    aspect-ratio: 1 / 1;
+    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5);
+    border: 1px solid var(--border-accent);
+  }
 
-    @media (min-width: 64rem) {
-      aspect-ratio: auto;
-      grid-column: span 4 / span 4;
-    }
-
-    @media (min-width: 80rem) {
-      aspect-ratio: auto;
-    }
+  &__imageFrame {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    background: rgba(0, 0, 0, .04);
 
     img {
+      position: absolute;
+      max-width: none;
+      transform: translate(-50%, -50%);
+      -webkit-user-drag: none;
+      user-select: none;
+      touch-action: none;
+      display: block;
       width: 100%;
       height: 100%;
+      left: 50%;
+      top: 50%;
       object-fit: cover;
+      object-position: 50% 50%;
     }
+  }
+
+  &__imageGlass {
+    position: absolute;
+    inset: -14px -14px auto auto;
+    width: 130px;
+    height: 130px;
+    border-radius: var(--radius-card-xl);
+    border: 1px solid var(--accent-line);
+    z-index: -1;
   }
 
   &__ctaRow {
