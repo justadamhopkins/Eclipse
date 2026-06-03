@@ -1,5 +1,5 @@
 .siteHeader {
-  padding: var(--spacing-padding-base);
+  padding-block: var(--spacing-padding-base);
   background-color: var(--bg-page);
   border-bottom: 1px solid var(--line-faint);
 
@@ -12,6 +12,7 @@
     align-items: center;
     justify-content: space-between;
     gap: var(--spacing-gap-wide);
+    padding-inline: var(--element-gutter);
   }
 
   &__navWrapper {
