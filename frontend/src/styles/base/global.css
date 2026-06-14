@@ -1,6 +1,6 @@
 :root {
-  --siteMaxWidth: 120rem;
   scroll-behavior: smooth;
+  --siteMaxWidth: 120rem;
 }
 
 body {
