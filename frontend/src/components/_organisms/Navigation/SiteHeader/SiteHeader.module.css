@@ -1,6 +1,6 @@
 .siteHeader {
-  padding-block: var(--spacing-padding-base);
   background-color: var(--bg-page);
+  padding-block: var(--spacing-padding-base);
   border-bottom: 1px solid var(--line-faint);
 
   @media (min-width: 40rem) {
@@ -46,6 +46,7 @@
 
   &__mobileNavWrapper {
     z-index: var(--z-toast);
+
     @media (min-width: 40rem) {
       display: none;
     }

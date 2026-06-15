@@ -1,7 +1,7 @@
 'use client';
 
 import { CoverHero } from '@organisms/Heros/CoverHero';
-import { AboutMeModule } from '@organisms/Modules/AboutMeModule';
+import { AboutMe } from '@organisms/Modules/AboutMe/AboutMe';
 import {
   type IWorkExperienceModuleProps,
   JobCardModule,
@@ -50,7 +50,12 @@ export const HomePage = () => {
         title="Hi, I'm Adam Hopkins"
         subtitle="London-based product-led senior software engineer crafting high-quality digital products with a focus on performance, accessibility, and long-term scalability."
       />
-      <AboutMeModule />
+      <AboutMe
+        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
+        blanditiis dicta, eius esse, eveniet fugit incidunt officia praesentium,
+        quas qui quis saepe sit soluta suscipit temporibus velit voluptatem.
+        Nihil, velit?. "
+      />
       <JobCardModule jobCards={MOCK_JOB_CARDS} />
     </>
   );

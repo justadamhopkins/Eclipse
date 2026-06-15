@@ -23,11 +23,11 @@ export const JobCardModule = ({ jobCards }: IWorkExperienceModuleProps) => {
         title="Where I've spent my time"
       >
         <div className={styles.jobCardModule}>
-          <div className={styles['jobCardModule__slideWrapper']}>
+          <div className={styles.jobCardModule__slideWrapper}>
             <ListRenderer
               items={jobCards}
               render={({ item }) => (
-                <JobCard className={styles['jobCardModule__slide']}>
+                <JobCard className={styles.jobCardModule__slide}>
                   <JobCard.Logo name="lickLogo" />
                   <JobCard.Title>{item.title}</JobCard.Title>
                   <JobCard.Meta>
