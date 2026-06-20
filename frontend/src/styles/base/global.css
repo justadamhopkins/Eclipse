@@ -5,8 +5,8 @@
 
 body {
   background: var(--bg-page);
-  color: var(--text-primary);
   font-family: var(--text-font-body);
+  color: var(--text-primary);
 
   &:before {
     content: '';
