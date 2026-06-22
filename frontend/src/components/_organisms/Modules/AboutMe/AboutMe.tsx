@@ -9,7 +9,10 @@ export interface IAboutMeProps {
 export const AboutMe = ({ description }: IAboutMeProps) => {
   return (
     <ModuleSectionWrapper>
-      <FeaturedHeaderBlock title="About me">
+      <FeaturedHeaderBlock
+        eyebrow="What i am about"
+        title="About me"
+      >
         <div className={styles.aboutMe}>
           <p>{description}</p>
         </div>
