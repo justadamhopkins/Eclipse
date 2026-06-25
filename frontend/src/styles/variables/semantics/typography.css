@@ -5,95 +5,101 @@
   --text-font-serif: var(--font-family-serif);
   --text-font-mono: var(--font-family-mono);
 
-  /* Hero h1 — design: clamp(2.8rem, 5.6vw, 5.2rem), 900 weight, lh 0.98, -0.035em */
-  --text-display-2xl-size: var(--font-size-fluid-5xl);
+  /* Hero h1 — design: clamp(2.8rem, 5.6vw, 5.2rem), 900 weight, lh 0.98, -0.035em
+     Repointed to --font-6 (45→83px). Was fluid-5xl, which is now --font-5 (55→61px). */
+  --text-display-2xl-size: var(--font-6);
   --text-display-2xl-weight: var(--font-weight-7);
   --text-display-2xl-leading: var(--line-height-tight);
   --text-display-2xl-tracking: var(--letter-spacing-tight-2);
   --text-display-2xl-font: var(--text-font-display);
 
-  /* Display-xl — large hero alt */
-  --text-display-xl-size: var(--font-size-fluid-5xl);
+  /* Display-xl — large hero alt (identical to display-2xl; consider --font-5 to differentiate) */
+  --text-display-xl-size: var(--font-6);
   --text-display-xl-weight: var(--font-weight-7);
   --text-display-xl-leading: var(--line-height-tight);
   --text-display-xl-tracking: var(--letter-spacing-tight-2);
   --text-display-xl-font: var(--text-font-display);
 
   /* Section headline — design: .h-section clamp(2rem, 3.4vw, 3.1rem), 800, -0.02em */
-  --text-display-lg-size: var(--font-size-fluid-3xl);
+  --text-display-lg-size: var(--font-3);
   --text-display-lg-weight: var(--font-weight-6);
   --text-display-lg-leading: var(--line-height-compact);
   --text-display-lg-tracking: var(--letter-spacing-tight-1);
   --text-display-lg-font: var(--text-font-display);
 
-  --text-display-md-size: var(--font-size-fluid-2xl);
+  --text-display-md-size: var(--font-2);
   --text-display-md-weight: var(--font-weight-6);
   --text-display-md-leading: var(--line-height-compact);
   --text-display-md-tracking: var(--letter-spacing-tight-1);
   --text-display-md-font: var(--text-font-display);
 
   /* Headings */
-  --text-h1-size: var(--font-size-fluid-3xl);
+  --text-h1-size: var(--font-3);
   --text-h1-weight: var(--font-weight-5);
   --text-h1-leading: var(--line-height-2);
   --text-h1-tracking: var(--letter-spacing-2);
   --text-h1-font: var(--text-font-display);
 
-  --text-h2-size: var(--font-size-fluid-2xl);
+  --text-h2-size: var(--font-2);
   --text-h2-weight: var(--font-weight-4);
   --text-h2-leading: var(--line-height-2);
   --text-h2-tracking: var(--letter-spacing-3);
   --text-h2-font: var(--text-font-display);
 
-  --text-h3-size: var(--font-size-fluid-xl);
+  --text-h3-size: var(--font-1);
   --text-h3-weight: var(--font-weight-4);
   --text-h3-leading: var(--line-height-2);
   --text-h3-tracking: var(--letter-spacing-3);
   --text-h3-font: var(--text-font-display);
 
-  --text-h4-size: var(--font-size-fluid-lg);
+  --text-h4-size: var(--font-0);
   --text-h4-weight: var(--font-weight-3);
   --text-h4-leading: var(--line-height-3);
   --text-h4-tracking: var(--letter-spacing-3);
   --text-h4-font: var(--text-font-display);
 
-  --text-h5-size: var(--font-size-fluid-md);
+  /* h5 — small heading (fixed 16px; fluid scaling not worth it at this size) */
+  --text-h5-size: var(--font-size-md);
   --text-h5-weight: var(--font-weight-3);
   --text-h5-leading: var(--line-height-3);
   --text-h5-tracking: var(--letter-spacing-4);
   --text-h5-font: var(--text-font-display);
 
-  --text-h6-size: var(--font-size-fluid-sm);
+  /* h6 — small heading (fixed 13px) */
+  --text-h6-size: var(--font-size-sm);
   --text-h6-weight: var(--font-weight-3);
   --text-h6-leading: var(--line-height-3);
   --text-h6-tracking: var(--letter-spacing-4);
   --text-h6-font: var(--text-font-display);
 
-  --text-body-sm-size: var(--font-size-fluid-sm);
+  /* body-sm — fixed 13px (avoids a too-small mobile floor) */
+  --text-body-sm-size: var(--font-size-sm);
   --text-body-sm-weight: var(--font-weight-2);
   --text-body-sm-leading: var(--line-height-5);
   --text-body-sm-tracking: var(--letter-spacing-5);
   --text-body-sm-font: var(--text-font-body);
 
-  --text-body-md-size: var(--font-size-fluid-md);
+  --text-body-md-size: var(--font--1);
   --text-body-md-weight: var(--font-weight-2);
   --text-body-md-leading: var(--line-height-4);
   --text-body-md-tracking: var(--letter-spacing-5);
   --text-body-md-font: var(--text-font-body);
 
-  --text-body-lg-size: var(--font-size-fluid-lg);
+  --text-body-lg-size: var(--font-0);
   --text-body-lg-weight: var(--font-weight-2);
   --text-body-lg-leading: var(--line-height-3);
   --text-body-lg-tracking: var(--letter-spacing-4);
   --text-body-lg-font: var(--text-font-body);
 
-  --text-caption-lg-size: var(--font-size-fluid-sm);
+  /* caption-lg — fixed 13px */
+  --text-caption-lg-size: var(--font-size-sm);
   --text-caption-lg-weight: var(--font-weight-2);
   --text-caption-lg-leading: var(--line-height-5);
   --text-caption-lg-tracking: var(--letter-spacing-5);
   --text-caption-lg-font: var(--text-font-body);
 
-  --text-caption-md-size: var(--font-size-fluid-xs);
+  /* caption-md — fixed 10px (fluid floor of 9.2px was too small) */
+  --text-caption-md-size: var(--font-size-xs);
   --text-caption-md-weight: var(--font-weight-2);
   --text-caption-md-leading: var(--line-height-5);
   --text-caption-md-tracking: var(--letter-spacing-5);
@@ -121,84 +127,4 @@
   --text-overline-leading: var(--line-height-5);
   --text-overline-tracking: var(--letter-spacing-5);
   --text-overline-font: var(--text-font-body);
-
-  /* Design system */
-
-  /* Mono kicker — uppercase mono label (design: 0.72rem, 0.22em tracking) */
-  --text-kicker-size: var(--font-size-xs);
-  --text-kicker-weight: var(--font-weight-2);
-  --text-kicker-leading: var(--line-height-4);
-  --text-kicker-tracking: var(--letter-spacing-mono-3);
-  --text-kicker-font: var(--text-font-mono);
-
-  /* Mono label — form / fact labels (design: 0.68-0.7rem, 0.14-0.18em) */
-  --text-mono-label-size: var(--font-size-xs);
-  --text-mono-label-weight: var(--font-weight-2);
-  --text-mono-label-leading: var(--line-height-4);
-  --text-mono-label-tracking: var(--letter-spacing-mono-1);
-  --text-mono-label-font: var(--text-font-mono);
-
-  /* Eyebrow — bright accent label above section headings (design: 0.95rem, 600) */
-  --text-eyebrow-size: var(--font-size-sm);
-  --text-eyebrow-weight: var(--font-weight-4);
-  --text-eyebrow-leading: var(--line-height-3);
-  --text-eyebrow-tracking: var(--letter-spacing-1);
-  --text-eyebrow-font: var(--text-font-body);
-
-  /* Hero subhead — design: clamp(1.1rem, 1.45vw, 1.4rem), lh 1.55 */
-  --text-hero-sub-size: var(--font-size-fluid-lg);
-  --text-hero-sub-weight: var(--font-weight-2);
-  --text-hero-sub-leading: var(--line-height-5);
-  --text-hero-sub-tracking: 0;
-  --text-hero-sub-font: var(--text-font-body);
-
-  /* ── UI / Interactive text ──────────────────────────────────── */
-  /* Default UI label — nav links, default interactive copy (design: 1.02rem, 500) */
-  --text-ui-md-size: var(--font-size-lg);
-  --text-ui-md-weight: var(--font-weight-3);
-  --text-ui-md-leading: var(--line-height-4);
-  --text-ui-md-tracking: var(--letter-spacing-1);
-  --text-ui-md-font: var(--text-font-body);
-
-  /* Small UI label — secondary nav, inline meta (design: 0.92-0.95rem, 500) */
-  --text-ui-sm-size: var(--font-size-sm);
-  --text-ui-sm-weight: var(--font-weight-3);
-  --text-ui-sm-leading: var(--line-height-4);
-  --text-ui-sm-tracking: var(--letter-spacing-1);
-  --text-ui-sm-font: var(--text-font-body);
-
-  /* Button — default CTA (design: 1rem, 600) */
-  --text-button-size: var(--font-size-md);
-  --text-button-weight: var(--font-weight-4);
-  --text-button-leading: var(--line-height-4);
-  --text-button-tracking: var(--letter-spacing-0);
-  --text-button-font: var(--text-font-body);
-
-  /* Button small — compact CTA (design: 0.95rem, 600) */
-  --text-button-sm-size: var(--font-size-sm);
-  --text-button-sm-weight: var(--font-weight-4);
-  --text-button-sm-leading: var(--line-height-4);
-  --text-button-sm-tracking: var(--letter-spacing-0);
-  --text-button-sm-font: var(--text-font-body);
-
-  /* Form input — text entry (design: 1rem, 400 — static, not fluid) */
-  --text-input-size: var(--font-size-md);
-  --text-input-weight: var(--font-weight-2);
-  --text-input-leading: var(--line-height-4);
-  --text-input-tracking: var(--letter-spacing-1);
-  --text-input-font: var(--text-font-body);
-
-  /* Chip / Tag — pill labels in chip groups (design: 0.92rem, 400-500) */
-  --text-chip-size: var(--font-size-sm);
-  --text-chip-weight: var(--font-weight-2);
-  --text-chip-leading: var(--line-height-4);
-  --text-chip-tracking: var(--letter-spacing-1);
-  --text-chip-font: var(--text-font-body);
-
-  /* Inline link — anchor inside body copy */
-  --text-link-size: inherit;
-  --text-link-weight: var(--font-weight-3);
-  --text-link-leading: inherit;
-  --text-link-tracking: inherit;
-  --text-link-font: inherit;
 }
