@@ -1,6 +1,6 @@
 .siteHeader {
-  background-color: var(--bg-page);
   padding-block: var(--spacing-padding-base);
+  background-color: var(--bg-page);
   border-bottom: 1px solid var(--line-faint);
 
   @media (min-width: 40rem) {
