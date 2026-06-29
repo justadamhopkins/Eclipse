@@ -1,8 +1,8 @@
 .siteFooter {
-    padding: var(--spacing-padding-tight) var(--spacing-padding-base);
-    border-top: 1px solid var(--surface-bright);
+  padding: var(--spacing-2xs) var(--spacing-xs);
+  border-top: 1px solid var(--surface-bright);
 
-    @media (min-width: 40rem) {
-        padding: var(--spacing-gap-wide) var(--spacing-padding-wide);
-    }
+  @media (min-width: 40rem) {
+    padding: var(--spacing-xs) var(--spacing-m);
+  }
 }

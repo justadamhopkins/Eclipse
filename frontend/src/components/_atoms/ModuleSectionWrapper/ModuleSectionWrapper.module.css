@@ -1,7 +1,6 @@
 .moduleSectionWrapper {
-  padding-top: clamp(40px, 5vw, 76px);
-  padding-bottom: clamp(60px, 7vw, 110px);
   padding-inline: var(--element-gutter);
+  padding-block: var(--app-vertical-rhythm);
 
   &--fullBleed {
     padding-inline: 0;

@@ -12,7 +12,7 @@
     flex-shrink: 0;
     width: 100%;
     align-items: stretch;
-    gap: var(--spacing-gap-wide);
+    gap: var(--spacing-xs);
     overflow-x: auto;
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth;
@@ -26,7 +26,7 @@
     @media (min-width: 80rem) {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: var(--spacing-gap-extra-wide);
+      gap: var(--spacing-s);
       overflow-x: visible;
     }
   }
@@ -34,7 +34,7 @@
   &__slide {
     scroll-snap-align: start;
     flex-shrink: 0;
-    width: calc(85% - var(--spacing-gap-wide));
+    width: calc(85% - var(--spacing-xs));
     max-width: 320px;
     position: relative;
 

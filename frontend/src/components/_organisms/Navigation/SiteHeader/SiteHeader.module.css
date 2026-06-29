@@ -1,18 +1,14 @@
 .siteHeader {
-  padding-block: var(--spacing-padding-base);
+  padding-block: var(--spacing-xs-s);
+  padding-inline: var(--element-gutter);
   background-color: var(--bg-page);
   border-bottom: 1px solid var(--line-faint);
-
-  @media (min-width: 40rem) {
-    padding: var(--spacing-padding-base) var(--spacing-padding-wide);
-  }
 
   &__container {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: var(--spacing-gap-wide);
-    padding-inline: var(--element-gutter);
+    gap: var(--space-2xs-xs);
   }
 
   &__navWrapper {
@@ -33,7 +29,7 @@
 
     ul {
       display: flex;
-      gap: var(--spacing-gap-wide);
+      gap: var(--space-2xs-xs);
       list-style-type: none;
       padding: 0;
     }

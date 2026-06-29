@@ -1,6 +1,6 @@
 .badge {
   border-radius: var(--radius-badge);
-  padding: var(--spacing-padding-tight) var(--spacing-padding-base);
+  padding: var(--spacing-2xs) var(--spacing-xs);
   display: inline-block;
   font-size: var(--text-md);
   font-weight: var(--text-caption-md-weight);

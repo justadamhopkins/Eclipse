@@ -2,19 +2,10 @@
   min-height: 300px;
   display: grid;
   grid-template-columns: 1fr;
-  gap: clamp(40px, 5vw, 88px);
+  gap: var(--spacing-xl-2xl);
 
   @media (min-width: 64rem) {
     grid-template-columns: repeat(2, 1fr);
-  }
-
-  &__label {
-    font-family: var(--text-body-md-font);
-    font-size: var(--text-body-md-size);
-    font-weight: var(--text-body-md-weight);
-    line-height: var(--text-body-md-leading);
-    letter-spacing: var(--text-body-md-tracking);
-    color: var(--accent-subtle);
   }
 
   &__contentWrapper {
@@ -22,14 +13,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: start;
-
   }
 
   &__contentInner {
     display: flex;
     flex-direction: column;
-    gap: var(--spacing-gap-wide);
-    width: min(100%, 60rem);
+    gap: var(--spacing-s-m);
+    width: min(100%, 80rem);
 
     h1 {
       color: var(--text-primary);
@@ -43,16 +33,15 @@
 
   &__subtitle {
     color: var(--text-primary);
-    font-family: var(--text-body-lg-font);
-    font-size: var(--text-body-lg-size);
-    font-weight: var(--text-body-lg-weight);
-    line-height: var(--text-body-lg-leading);
-    letter-spacing: var(--text-body-lg-tracking);
+    font-family: var(--text-heading-md-font);
+    font-size: var(--text-heading-md-size);
+    font-weight: var(--text-heading-md-weight);
+    line-height: var(--text-heading-md-leading);
+    letter-spacing: var(--text-heading-md-tracking);
   }
 
   &__imageContainer {
     position: relative;
-
   }
 
   &__imageWrapper {
@@ -68,7 +57,7 @@
     position: absolute;
     inset: 0;
     overflow: hidden;
-    background: rgba(0, 0, 0, .04);
+    background: rgba(0, 0, 0, 0.04);
 
     img {
       position: absolute;
@@ -99,7 +88,7 @@
 
   &__ctaRow {
     display: flex;
-    gap: var(--spacing-gap-wide);
+    gap: var(--spacing-xs);
     flex-wrap: wrap;
     align-items: center;
   }
