@@ -1,15 +1,25 @@
 .featuredHeaderBlock {
-  padding-block: var(--spacing-padding-base);
-
-  @media (min-width: 40rem) {
-    padding-block: var(--spacing-padding-wide);
+  &__header {
+    display: grid;
+    gap: var(--spacing-xs);
   }
 
-  h2 {
-    margin: var(--spacing-gap-base) 0 var(--spacing-gap-wide) 0;
+  &__heading {
+    color: var(--text-primary);
+    font-size: var(--text-heading-xl-size);
+    line-height: var(--text-heading-xl-leading);
+    letter-spacing: var(--text-heading-xl-tracking);
+    font-family: var(--text-heading-xl-font);
+    font-weight: var(--text-heading-xl-weight);
+    margin-bottom: var(--spacing-l);
+  }
 
-    @media (min-width: 40rem) {
-      margin: var(--spacing-gap-base) 0 var(--spacing-gap-extra-wide) 0;
-    }
+  &__bodyWrapper {
+    display: grid;
+    font-size: var(--text-body-lg-size);
+    line-height: var(--text-body-lg-leading);
+    letter-spacing: var(--text-body-lg-tracking);
+    font-family: var(--text-body-lg-font);
+    font-weight: var(--text-body-lg-weight);
   }
 }

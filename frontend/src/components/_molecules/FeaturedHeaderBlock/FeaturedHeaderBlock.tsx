@@ -1,6 +1,5 @@
 import { Eyebrow } from '@atoms/Eyebrow';
 import clsx from 'clsx';
-import { type PropsWithChildren } from 'react';
 
 import styles from './FeaturedHeaderBlock.module.css';
 
@@ -12,17 +11,44 @@ type TFeaturedHeaderBlockProps = {
 export const FeaturedHeaderBlock = ({
   title,
   eyebrow,
-  children,
-}: PropsWithChildren<TFeaturedHeaderBlockProps>) => {
+}: TFeaturedHeaderBlockProps) => {
   return (
     <div className={clsx([styles.featuredHeaderBlock])}>
-      <Eyebrow
-        label={eyebrow}
-        variant="primary"
-        size="md"
-      />
-      <h2>{title}</h2>
-      {children}
+      <header className={styles.featuredHeaderBlock__header}>
+        <Eyebrow
+          label={eyebrow}
+          variant="primary"
+          size="md"
+        />
+        <h2 className={styles.featuredHeaderBlock__heading}>{title}</h2>
+      </header>
+      <div
+        className={clsx([
+          'u-flow--s-m',
+          styles.featuredHeaderBlock__bodyWrapper,
+        ])}
+      >
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+          blanditiis, debitis explicabo impedit iusto perspiciatis placeat quo
+          voluptatem. Ab alias, eius enim minus molestias necessitatibus nulla
+          pariatur quibusdam rem sed.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+          blanditiis, debitis explicabo impedit iusto perspiciatis placeat quo
+          voluptatem. Ab alias, eius enim minus molestias necessitatibus nulla
+          pariatur quibusdam rem sed.
+        </p>
+
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+          blanditiis, debitis explicabo impedit iusto perspiciatis placeat quo
+          voluptatem. Ab alias, eius enim minus molestias necessitatibus nulla
+          pariatur quibusdam rem sed.
+        </p>
+      </div>
     </div>
   );
 };
