@@ -1,6 +1,5 @@
 :root {
   --accent-h: 277;
-
   --neutral-0: oklch(100% 0 0);
   --neutral-50: #f2f4f8;
   --neutral-400: #9aa4b4;
@@ -10,10 +9,8 @@
   --neutral-900: #0e131d;
   --neutral-950: #0b0f17;
   --neutral-1000: oklch(0% 0 0);
-
   --line-faint: rgba(255, 255, 255, 0.07);
   --line-soft: rgba(255, 255, 255, 0.12);
-
   --purple-100: oklch(0.88 0.08 var(--accent-h));
   --purple-300: oklch(0.8 0.13 var(--accent-h));
   --purple-500: oklch(0.74 0.13 var(--accent-h));

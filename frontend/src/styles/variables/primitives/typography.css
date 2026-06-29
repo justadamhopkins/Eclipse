@@ -17,59 +17,24 @@
   --font-size-5xl: 3.815rem; /* 61px   (step 5) */
   --font-size-6xl: 5.2rem; /* 83px — hero h1 max (custom, above scale) */
 
-  /* Fluid font sizes — Utopia 1.25 scale, 360px → 1536px viewport.
-     Named by Utopia step: --font-0 is body, negatives shrink, positives grow.
-     min = 18px × 1.25^n  (mobile),  max = 20px × 1.25^n  (desktop). */
-  --font--3: clamp(
-    0.576rem,
-    0.5564rem + 0.0871vw,
-    0.64rem
-  ); /* 9.2 → 10px   (was fluid-xs)  */
-  --font--2: clamp(
-    0.72rem,
-    0.6955rem + 0.1088vw,
-    0.8rem
-  ); /* 11.5 → 13px  (was fluid-sm)  */
-  --font--1: clamp(
-    0.9rem,
-    0.8694rem + 0.1361vw,
-    1rem
-  ); /* 14.4 → 16px  (was fluid-md)  */
-  --font-0: clamp(
-    1.125rem,
-    1.0867rem + 0.1701vw,
-    1.25rem
-  ); /* 18 → 20px  body  (was fluid-lg)  */
-  --font-1: clamp(
-    1.4062rem,
-    1.3584rem + 0.2126vw,
-    1.5625rem
-  ); /* 22.5 → 25px  (was fluid-xl)  */
-  --font-2: clamp(
-    1.7578rem,
-    1.698rem + 0.2657vw,
-    1.9531rem
-  ); /* 28 → 31px  (was fluid-2xl)  */
-  --font-3: clamp(
-    2.1973rem,
-    2.1225rem + 0.3322vw,
-    2.4414rem
-  ); /* 35 → 39px  h-section  (was fluid-3xl)  */
-  --font-4: clamp(
-    2.7466rem,
-    2.6532rem + 0.4152vw,
-    3.0518rem
-  ); /* 44 → 49px  (was fluid-4xl)  */
-  --font-5: clamp(
-    3.4332rem,
-    3.3165rem + 0.519vw,
-    3.8147rem
-  ); /* 55 → 61px  (was fluid-5xl)  */
-  --font-6: clamp(
-    2.8125rem,
-    2.0855rem + 3.2313vw,
-    5.1875rem
-  ); /* 45 → 83px  hero h1, intentionally aggressive  (was fluid-6xl)  */
+  /* Step -2: 10.24px → 12.8px */
+  --font--2: clamp(0.64rem, 0.591rem + 0.2177vw, 0.8rem);
+  /* Step -1: 12.8px → 16px */
+  --font--1: clamp(0.8rem, 0.7388rem + 0.2721vw, 1rem);
+  /* Step 0: 16px → 20px */
+  --font-0: clamp(1rem, 0.9235rem + 0.3401vw, 1.25rem);
+  /* Step 1: 20px → 25px */
+  --font-1: clamp(1.25rem, 1.1543rem + 0.4252vw, 1.5625rem);
+  /* Step 2: 25px → 31.25px */
+  --font-2: clamp(1.5625rem, 1.4429rem + 0.5315vw, 1.9531rem);
+  /* Step 3: 31.25px → 39.0625px */
+  --font-3: clamp(1.9531rem, 1.8037rem + 0.6643vw, 2.4414rem);
+  /* Step 4: 39.0625px → 48.8281px */
+  --font-4: clamp(2.4414rem, 2.2546rem + 0.8304vw, 3.0518rem);
+  /* Step 5: 48.8281px → 61.0352px */
+  --font-5: clamp(3.0518rem, 2.8182rem + 1.038vw, 3.8147rem);
+  /* Step 6: 61.0352px → 76.2939px */
+  --font-6: clamp(3.8147rem, 3.5228rem + 1.2975vw, 4.7684rem);
 
   /* Font weights */
   --font-weight-1: 300;
@@ -81,7 +46,6 @@
   --font-weight-7: 900;
 
   /* Line heights */
-  --line-height-tight: 0.98; /* big display headlines (hero h1)  */
   --line-height-compact: 1.05; /* section headlines               */
   --line-height-1: 1.2;
   --line-height-2: 1.3;
@@ -98,7 +62,5 @@
   --letter-spacing-3: 0.02em;
   --letter-spacing-4: 0.025em;
   --letter-spacing-5: 0.03em;
-  --letter-spacing-mono-1: 0.14em; /* form labels (mono uppercase) */
-  --letter-spacing-mono-2: 0.18em; /* fact keys                    */
-  --letter-spacing-mono-3: 0.22em; /* kicker (widest mono)         */
+  --letter-spacing-normal: 0em;
 }

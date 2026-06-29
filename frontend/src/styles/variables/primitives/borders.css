@@ -1,12 +1,12 @@
 :root {
   --radius-0: 0;
-  --radius-1: 0.125rem; /* 2px                       */
-  --radius-2: 0.25rem; /* 4px                       */
-  --radius-3: 0.5rem; /* 8px  — sm card / btn      */
-  --radius-4: 0.75rem; /* 12px — md card / fact     */
-  --radius-5: 1.125rem; /* 18px — lg card / dialog   */
-  --radius-6: 1.625rem; /* 26px — xl card / hero     */
-  --radius-7: 999px; /* pill                      */
+  --radius-1: 2px; /* 2px */
+  --radius-2: 4px; /* 4px */
+  --radius-3: 8px; /* 8px */
+  --radius-4: 12px; /* 12px */
+  --radius-5: 18px; /* 18px */
+  --radius-6: 26px; /* 26px */
+  --radius-7: 999px;
 
   --border-width-hairline: 1px;
   --border-width-1: 2px;
