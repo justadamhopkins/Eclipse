@@ -50,12 +50,7 @@ export const HomePage = () => {
         title="Hi, I'm Adam Hopkins"
         subtitle="London-based product-led senior software engineer crafting high-quality digital products with a focus on performance, accessibility, and long-term scalability."
       />
-      <AboutMe
-        description="Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae
-        blanditiis dicta, eius esse, eveniet fugit incidunt officia praesentium,
-        quas qui quis saepe sit soluta suscipit temporibus velit voluptatem.
-        Nihil, velit?. "
-      />
+      <AboutMe />
       <JobCardModule jobCards={MOCK_JOB_CARDS} />
     </>
   );
