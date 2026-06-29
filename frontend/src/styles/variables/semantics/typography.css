@@ -5,87 +5,46 @@
   --text-font-serif: var(--font-family-serif);
   --text-font-mono: var(--font-family-mono);
 
-  /* Hero h1 — design: clamp(2.8rem, 5.6vw, 5.2rem), 900 weight, lh 0.98, -0.035em
-     Repointed to --font-6 (45→83px). Was fluid-5xl, which is now --font-5 (55→61px). */
-  --text-display-2xl-size: var(--font-6);
-  --text-display-2xl-weight: var(--font-weight-7);
-  --text-display-2xl-leading: var(--line-height-tight);
-  --text-display-2xl-tracking: var(--letter-spacing-tight-2);
-  --text-display-2xl-font: var(--text-font-display);
-
   /* Display-xl — large hero alt (identical to display-2xl; consider --font-5 to differentiate) */
   --text-display-xl-size: var(--font-6);
   --text-display-xl-weight: var(--font-weight-7);
-  --text-display-xl-leading: var(--line-height-tight);
+  --text-display-xl-leading: var(--line-height-compact);
   --text-display-xl-tracking: var(--letter-spacing-tight-2);
   --text-display-xl-font: var(--text-font-display);
 
-  /* Section headline — design: .h-section clamp(2rem, 3.4vw, 3.1rem), 800, -0.02em */
-  --text-display-lg-size: var(--font-3);
+  --text-display-lg-size: var(--font-5);
   --text-display-lg-weight: var(--font-weight-6);
   --text-display-lg-leading: var(--line-height-compact);
-  --text-display-lg-tracking: var(--letter-spacing-tight-1);
+  --text-display-lg-tracking: var(--letter-spacing-tight-2);
   --text-display-lg-font: var(--text-font-display);
 
-  --text-display-md-size: var(--font-2);
+  /* Section headline — design: .h-section clamp(2rem, 3.4vw, 3.1rem), 800, -0.02em */
+  --text-display-md-size: var(--font-3);
   --text-display-md-weight: var(--font-weight-6);
   --text-display-md-leading: var(--line-height-compact);
   --text-display-md-tracking: var(--letter-spacing-tight-1);
   --text-display-md-font: var(--text-font-display);
 
   /* Headings */
-  --text-h1-size: var(--font-3);
-  --text-h1-weight: var(--font-weight-5);
-  --text-h1-leading: var(--line-height-2);
-  --text-h1-tracking: var(--letter-spacing-2);
-  --text-h1-font: var(--text-font-display);
+  --text-heading-xl-size: var(--font-4);
+  --text-heading-xl-weight: var(--font-weight-5);
+  --text-heading-xl-leading: var(--line-height-2);
+  --text-heading-xl-tracking: var(--letter-spacing-2);
+  --text-heading-xl-font: var(--text-font-display);
 
-  --text-h2-size: var(--font-2);
-  --text-h2-weight: var(--font-weight-4);
-  --text-h2-leading: var(--line-height-2);
-  --text-h2-tracking: var(--letter-spacing-3);
-  --text-h2-font: var(--text-font-display);
+  --text-heading-lg-size: var(--font-2);
+  --text-heading-lg-weight: var(--font-weight-4);
+  --text-heading-lg-leading: var(--line-height-2);
+  --text-heading-lg-tracking: var(--letter-spacing-3);
+  --text-heading-lg-font: var(--text-font-display);
 
-  --text-h3-size: var(--font-1);
-  --text-h3-weight: var(--font-weight-4);
-  --text-h3-leading: var(--line-height-2);
-  --text-h3-tracking: var(--letter-spacing-3);
-  --text-h3-font: var(--text-font-display);
+  --text-heading-md-size: var(--font-1);
+  --text-heading-md-weight: var(--font-weight-1);
+  --text-heading-md-leading: var(--line-height-2);
+  --text-heading-md-tracking: var(--letter-spacing-3);
+  --text-heading-md-font: var(--text-font-display);
 
-  --text-h4-size: var(--font-0);
-  --text-h4-weight: var(--font-weight-3);
-  --text-h4-leading: var(--line-height-3);
-  --text-h4-tracking: var(--letter-spacing-3);
-  --text-h4-font: var(--text-font-display);
-
-  /* h5 — small heading (fixed 16px; fluid scaling not worth it at this size) */
-  --text-h5-size: var(--font-size-md);
-  --text-h5-weight: var(--font-weight-3);
-  --text-h5-leading: var(--line-height-3);
-  --text-h5-tracking: var(--letter-spacing-4);
-  --text-h5-font: var(--text-font-display);
-
-  /* h6 — small heading (fixed 13px) */
-  --text-h6-size: var(--font-size-sm);
-  --text-h6-weight: var(--font-weight-3);
-  --text-h6-leading: var(--line-height-3);
-  --text-h6-tracking: var(--letter-spacing-4);
-  --text-h6-font: var(--text-font-display);
-
-  /* body-sm — fixed 13px (avoids a too-small mobile floor) */
-  --text-body-sm-size: var(--font-size-sm);
-  --text-body-sm-weight: var(--font-weight-2);
-  --text-body-sm-leading: var(--line-height-5);
-  --text-body-sm-tracking: var(--letter-spacing-5);
-  --text-body-sm-font: var(--text-font-body);
-
-  --text-body-md-size: var(--font--1);
-  --text-body-md-weight: var(--font-weight-2);
-  --text-body-md-leading: var(--line-height-4);
-  --text-body-md-tracking: var(--letter-spacing-5);
-  --text-body-md-font: var(--text-font-body);
-
-  --text-body-lg-size: var(--font-0);
+  --text-body-lg-size: var(--font-1);
   --text-body-lg-weight: var(--font-weight-2);
   --text-body-lg-leading: var(--line-height-3);
   --text-body-lg-tracking: var(--letter-spacing-4);
@@ -98,23 +57,16 @@
   --text-caption-lg-tracking: var(--letter-spacing-5);
   --text-caption-lg-font: var(--text-font-body);
 
-  /* caption-md — fixed 10px (fluid floor of 9.2px was too small) */
-  --text-caption-md-size: var(--font-size-xs);
-  --text-caption-md-weight: var(--font-weight-2);
-  --text-caption-md-leading: var(--line-height-5);
-  --text-caption-md-tracking: var(--letter-spacing-5);
-  --text-caption-md-font: var(--text-font-body);
-
-  --text-caption-sm-size: var(--font-size-xs);
-  --text-caption-sm-weight: var(--font-weight-1);
-  --text-caption-sm-leading: var(--line-height-5);
-  --text-caption-sm-tracking: var(--letter-spacing-5);
-  --text-caption-sm-font: var(--text-font-body);
+  --text-tiny-size: var(--font-size-xs);
+  --text-tiny-weight: var(--font-weight-2);
+  --text-tiny-leading: var(--line-height-5);
+  --text-tiny-tracking: var(--letter-spacing-5);
+  --text-tiny-font: var(--text-font-body);
 
   --text-xs: var(--font-size-xs);
   --text-sm: var(--font-size-sm);
   --text-md: var(--font-size-md);
-  --text-lg: var(--font-size-2lg);
+  --text-lg: var(--font-size-lg);
   --text-xl: var(--font-size-xl);
   --text-2xl: var(--font-size-2xl);
   --text-3xl: var(--font-size-3xl);
@@ -122,9 +74,31 @@
   --text-5xl: var(--font-size-5xl);
   --text-6xl: var(--font-size-6xl);
 
-  --text-overline-size: var(--font-size-xs);
-  --text-overline-weight: var(--font-weight-3);
-  --text-overline-leading: var(--line-height-5);
-  --text-overline-tracking: var(--letter-spacing-5);
-  --text-overline-font: var(--text-font-body);
+  /* Font weight — one-off scale */
+  --weight-light: var(--font-weight-1);
+  --weight-regular: var(--font-weight-2);
+  --weight-medium: var(--font-weight-3);
+  --weight-semibold: var(--font-weight-4);
+  --weight-bold: var(--font-weight-5);
+  --weight-extrabold: var(--font-weight-6);
+  --weight-black: var(--font-weight-7);
+
+  /* Tracking (letter-spacing) — one-off scale */
+  --tracking-tighter: var(--letter-spacing-tight-2);
+  --tracking-tight: var(--letter-spacing-tight-1);
+  --tracking-normal: var(--letter-spacing-normal);
+  --tracking-1: var(--letter-spacing-0);
+  --tracking-2: var(--letter-spacing-1);
+  --tracking-3: var(--letter-spacing-2);
+  --tracking-4: var(--letter-spacing-3);
+  --tracking-5: var(--letter-spacing-4);
+  --tracking-wide: var(--letter-spacing-5);
+
+  --leading-tight: var(--line-height-tight);
+  --leading-compact: var(--line-height-compact);
+  --leading-1: var(--line-height-1);
+  --leading-2: var(--line-height-2);
+  --leading-3: var(--line-height-3);
+  --leading-normal: var(--line-height-4);
+  --leading-loose: var(--line-height-5);
 }
