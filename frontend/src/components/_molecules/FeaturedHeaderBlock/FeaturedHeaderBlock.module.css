@@ -21,5 +21,9 @@
     letter-spacing: var(--text-body-lg-tracking);
     font-family: var(--text-body-lg-font);
     font-weight: var(--text-body-lg-weight);
+
+    p {
+      max-width: 60ch;
+    }
   }
 }

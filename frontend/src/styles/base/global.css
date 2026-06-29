@@ -59,13 +59,6 @@ h6 {
   letter-spacing: var(--text-heading-md-tracking);
 }
 
-p {
-  font-size: var(--text-body-lg-size);
-  font-weight: var(--text-body-lg-weight);
-  line-height: var(--text-body-lg-leading);
-  letter-spacing: var(--text-body-lg-tracking);
-}
-
 a {
   cursor: pointer;
   text-decoration: none;
