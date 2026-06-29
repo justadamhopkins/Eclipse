@@ -11,7 +11,7 @@ export const AboutMe = () => {
       <FeaturedHeaderBlock
         eyebrow="What i am about"
         title="About me"
-      ></FeaturedHeaderBlock>
+      />
     </ModuleSectionWrapper>
   );
 };
