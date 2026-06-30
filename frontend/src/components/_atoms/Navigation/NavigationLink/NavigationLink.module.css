@@ -4,10 +4,10 @@
   color: var(--text-primary);
   transition: color var(--motion-base) var(--motion-ease-standard);
   min-width: 6rem;
-  font-size: var(--text-body-lg-size);
-  font-weight: var(--text-body-lg-weight);
-  line-height: var(--text-body-lg-leading);
-  letter-spacing: var(--text-body-lg-tracking);
+  font-size: var(--text-body-md-size);
+  font-weight: var(--text-body-md-weight);
+  line-height: var(--text-body-md-leading);
+  letter-spacing: var(--text-body-md-tracking);
   font-family: var(--text-body-lg-font);
 
   &__primary {

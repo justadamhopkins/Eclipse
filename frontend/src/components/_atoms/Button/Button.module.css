@@ -6,10 +6,10 @@
   justify-content: center;
   transition: background-color 0.2s ease-in-out;
   min-width: 6rem;
-  font-size: var(--text-body-lg-size);
-  font-weight: var(--text-body-lg-weight);
-  line-height: var(--text-body-lg-leading);
-  letter-spacing: var(--text-body-lg-tracking);
+  font-size: var(--text-body-md-size);
+  font-weight: var(--text-body-md-weight);
+  line-height: var(--text-body-md-leading);
+  letter-spacing: var(--text-body-md-tracking);
   font-family: var(--text-body-lg-font);
 
   &--fullWidth {
