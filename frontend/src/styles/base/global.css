@@ -65,7 +65,7 @@ a {
   color: inherit;
   font-family: var(--text-font-body);
   font-size: var(--text-lg);
-  font-weight: var(--font-weight-2);
+  font-weight: var(--font-weight-400);
   line-height: var(--leading-normal);
   letter-spacing: var(--tracking-normal);
 }

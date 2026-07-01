@@ -3,8 +3,8 @@
   margin-inline: auto;
 
   p {
-    font-size: var(--font-size-fluid-lg);
-    font-weight: var(--font-weight-2);
+    font-size: var(--text-body-lg-size);
+    font-weight: var(--font-weight-400);
     line-height: var(--line-height-3);
     letter-spacing: var(--letter-spacing-4);
     font-family: var(--text-font-body);

@@ -7,64 +7,64 @@
 
   /* Display-xl — large hero alt (identical to display-2xl; consider --font-5 to differentiate) */
   --text-display-xl-size: var(--font-6);
-  --text-display-xl-weight: var(--font-weight-7);
+  --text-display-xl-weight: var(--font-weight-900);
   --text-display-xl-leading: var(--line-height-compact);
   --text-display-xl-tracking: var(--letter-spacing-tight-2);
   --text-display-xl-font: var(--text-font-display);
 
   --text-display-lg-size: var(--font-5);
-  --text-display-lg-weight: var(--font-weight-6);
+  --text-display-lg-weight: var(--font-weight-800);
   --text-display-lg-leading: var(--line-height-compact);
   --text-display-lg-tracking: var(--letter-spacing-tight-2);
   --text-display-lg-font: var(--text-font-display);
 
   /* Section headline — design: .h-section clamp(2rem, 3.4vw, 3.1rem), 800, -0.02em */
   --text-display-md-size: var(--font-3);
-  --text-display-md-weight: var(--font-weight-6);
+  --text-display-md-weight: var(--font-weight-800);
   --text-display-md-leading: var(--line-height-compact);
   --text-display-md-tracking: var(--letter-spacing-tight-1);
   --text-display-md-font: var(--text-font-display);
 
   /* Headings */
   --text-heading-xl-size: var(--font-4);
-  --text-heading-xl-weight: var(--font-weight-5);
+  --text-heading-xl-weight: var(--font-weight-700);
   --text-heading-xl-leading: var(--line-height-2);
   --text-heading-xl-tracking: var(--letter-spacing-2);
   --text-heading-xl-font: var(--text-font-display);
 
   --text-heading-lg-size: var(--font-2);
-  --text-heading-lg-weight: var(--font-weight-4);
+  --text-heading-lg-weight: var(--font-weight-600);
   --text-heading-lg-leading: var(--line-height-2);
   --text-heading-lg-tracking: var(--letter-spacing-3);
   --text-heading-lg-font: var(--text-font-display);
 
   --text-heading-md-size: var(--font-1);
-  --text-heading-md-weight: var(--font-weight-1);
+  --text-heading-md-weight: var(--font-weight-300);
   --text-heading-md-leading: var(--line-height-2);
   --text-heading-md-tracking: var(--letter-spacing-3);
   --text-heading-md-font: var(--text-font-display);
 
   --text-body-lg-size: var(--font-1);
-  --text-body-lg-weight: var(--font-weight-2);
+  --text-body-lg-weight: var(--font-weight-400);
   --text-body-lg-leading: var(--line-height-4);
   --text-body-lg-tracking: var(--letter-spacing-4);
   --text-body-lg-font: var(--text-font-body);
 
   --text-body-md-size: var(--font-0);
-  --text-body-md-weight: var(--font-weight-2);
+  --text-body-md-weight: var(--font-weight-400);
   --text-body-md-leading: var(--line-height-3);
   --text-body-md-tracking: var(--letter-spacing-4);
   --text-body-md-font: var(--text-font-body);
 
   /* caption-lg — fixed 13px */
   --text-caption-lg-size: var(--font-size-sm);
-  --text-caption-lg-weight: var(--font-weight-2);
+  --text-caption-lg-weight: var(--font-weight-400);
   --text-caption-lg-leading: var(--line-height-5);
   --text-caption-lg-tracking: var(--letter-spacing-5);
   --text-caption-lg-font: var(--text-font-body);
 
   --text-tiny-size: var(--font-size-xs);
-  --text-tiny-weight: var(--font-weight-2);
+  --text-tiny-weight: var(--font-weight-400);
   --text-tiny-leading: var(--line-height-5);
   --text-tiny-tracking: var(--letter-spacing-5);
   --text-tiny-font: var(--text-font-body);
@@ -81,13 +81,13 @@
   --text-6xl: var(--font-size-6xl);
 
   /* Font weight — one-off scale */
-  --weight-light: var(--font-weight-1);
-  --weight-regular: var(--font-weight-2);
-  --weight-medium: var(--font-weight-3);
-  --weight-semibold: var(--font-weight-4);
-  --weight-bold: var(--font-weight-5);
-  --weight-extrabold: var(--font-weight-6);
-  --weight-black: var(--font-weight-7);
+  --weight-light: var(--font-weight-300);
+  --weight-regular: var(--font-weight-400);
+  --weight-medium: var(--font-weight-500);
+  --weight-semibold: var(--font-weight-600);
+  --weight-bold: var(--font-weight-700);
+  --weight-extrabold: var(--font-weight-800);
+  --weight-black: var(--font-weight-900);
 
   /* Tracking (letter-spacing) — one-off scale */
   --tracking-tighter: var(--letter-spacing-tight-2);
