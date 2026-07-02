@@ -32,7 +32,7 @@
   }
 
   &__subtitle {
-    color: var(--text-primary);
+    color: var(--text-secondary);
     font-family: var(--text-heading-md-font);
     font-size: var(--text-heading-md-size);
     font-weight: var(--text-heading-md-weight);
