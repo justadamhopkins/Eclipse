@@ -1,0 +1,8 @@
+.factBox {
+  display: grid;
+  grid-template-columns: 1fr;
+  background: var(--line-faint);
+  border: 1px solid var(--line-faint);
+  border-radius: var(--radius-card);
+  overflow: hidden;
+}
