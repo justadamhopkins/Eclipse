@@ -13,17 +13,4 @@
     font-weight: var(--text-heading-xl-weight);
     margin-bottom: var(--spacing-l);
   }
-
-  &__bodyWrapper {
-    display: grid;
-    font-size: var(--text-body-lg-size);
-    line-height: var(--text-body-lg-leading);
-    letter-spacing: var(--text-body-lg-tracking);
-    font-family: var(--text-body-lg-font);
-    font-weight: var(--text-body-lg-weight);
-
-    p {
-      max-width: 60ch;
-    }
-  }
 }

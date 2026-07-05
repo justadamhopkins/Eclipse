@@ -5,4 +5,10 @@
   border: 1px solid var(--line-faint);
   border-radius: var(--radius-card);
   overflow: hidden;
+  place-items: center;
+
+  @media (min-width: 40rem) {
+    grid-template-columns: repeat(2, 1fr);
+    gap: var(--space-l);
+  }
 }
