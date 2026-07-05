@@ -24,35 +24,7 @@ export const FeaturedHeaderBlock = ({
         />
         <h2 className={styles.featuredHeaderBlock__heading}>{title}</h2>
       </header>
-      {children || (
-        <div
-          className={clsx([
-            'u-flow--s-m',
-            styles.featuredHeaderBlock__bodyWrapper,
-          ])}
-        >
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-            blanditiis, debitis explicabo impedit iusto perspiciatis placeat quo
-            voluptatem. Ab alias, eius enim minus molestias necessitatibus nulla
-            pariatur quibusdam rem sed.
-          </p>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-            blanditiis, debitis explicabo impedit iusto perspiciatis placeat quo
-            voluptatem. Ab alias, eius enim minus molestias necessitatibus nulla
-            pariatur quibusdam rem sed.
-          </p>
-
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-            blanditiis, debitis explicabo impedit iusto perspiciatis placeat quo
-            voluptatem. Ab alias, eius enim minus molestias necessitatibus nulla
-            pariatur quibusdam rem sed.
-          </p>
-        </div>
-      )}
+      {children}
     </div>
   );
 };
