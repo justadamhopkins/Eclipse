@@ -33,10 +33,10 @@ export const AboutMe = () => {
           </div>
           <FactBox
             facts={[
-              { title: 'Based in', value: 'London' },
-              { title: 'Focus', value: 'London' },
+              { title: 'Based in', value: 'London, UK' },
+              { title: 'Focus', value: 'Full stack' },
               { title: 'Availability', value: 'Open to roles' },
-              { title: 'Timezone', value: 'Gmt / Bst' },
+              { title: 'Timezone', value: 'GMT / BST' },
             ]}
           />
         </div>

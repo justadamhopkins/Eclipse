@@ -1,14 +1,47 @@
 .factBox {
   display: grid;
   grid-template-columns: 1fr;
-  background: var(--line-faint);
+  background: transparent;
   border: 1px solid var(--line-faint);
   border-radius: var(--radius-card);
   overflow: hidden;
-  place-items: center;
 
-  @media (min-width: 40rem) {
+  @media (min-width: 48rem) {
     grid-template-columns: repeat(2, 1fr);
-    gap: var(--space-l);
+  }
+
+  &__factItem {
+    padding: var(--space-s);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3xs);
+    border-bottom: 1px solid var(--line-faint);
+
+    @media (min-width: 40rem) {
+      &:nth-child(odd) {
+        border-right: 1px solid var(--line-faint);
+      }
+    }
+
+    &:last-child {
+      border-bottom: none;
+    }
+  }
+
+  &__factItemTitle {
+    font-size: var(--text-md);
+    color: var(--text-secondary);
+    line-height: var(--text-caption-lg-leading);
+    letter-spacing: var(--text-caption-lg-tracking);
+    font-family: var(--text-font-mono);
+    font-weight: var(--text-caption-lg-weight);
+  }
+
+  &__factItemValue {
+    font-size: var(--text-lg);
+    line-height: var(--text-caption-lg-leading);
+    letter-spacing: var(--text-caption-lg-tracking);
+    font-family: var(--text-caption-lg-font);
+    font-weight: var(--text-caption-lg-weight);
   }
 }

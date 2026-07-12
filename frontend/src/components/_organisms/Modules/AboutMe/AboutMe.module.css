@@ -1,24 +1,24 @@
 .aboutMe {
   &__contentWrapper {
     display: grid;
-    gap: var(--space-m);
+    gap: var(--spacing-l-xl);
 
-    @media (min-width: 40rem) {
+    @media (min-width: 48rem) {
       grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-l);
+      gap: var(--spacing-xl-2xl);
     }
   }
 
   &__bodyWrapper {
     display: grid;
-    font-size: var(--text-body-lg-size);
-    line-height: var(--text-body-lg-leading);
-    letter-spacing: var(--text-body-lg-tracking);
-    font-family: var(--text-body-lg-font);
-    font-weight: var(--text-body-lg-weight);
+    font-size: var(--text-2lg);
+    line-height: var(--text-body-md-leading);
+    letter-spacing: var(--text-body-md-tracking);
+    font-family: var(--text-body-md-font);
+    font-weight: var(--text-body-md-weight);
 
     p {
-      max-width: 60ch;
+      max-width: 75ch;
     }
   }
 }

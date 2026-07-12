@@ -13,9 +13,12 @@ export const FactBox: FC<IFactBoxProps> = ({ facts }) => {
       <ListRenderer
         items={facts}
         render={({ item }) => (
-          <div key={item.title}>
-            <h3>{item.title}</h3>
-            <p>{item.value}</p>
+          <div
+            key={item.title}
+            className={styles.factBox__factItem}
+          >
+            <h3 className={styles.factBox__factItemTitle}>{item.title}</h3>
+            <p className={styles.factBox__factItemValue}>{item.value}</p>
           </div>
         )}
       />
