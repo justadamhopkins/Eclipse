@@ -1,13 +1,24 @@
 .factBox {
-  display: grid;
-  grid-template-columns: 1fr;
-  background: transparent;
-  border: 1px solid var(--line-faint);
-  border-radius: var(--radius-card);
-  overflow: hidden;
+  h3 {
+    font-size: var(--text-caption-lg-size);
+    color: var(--text-secondary);
+    line-height: var(--text-caption-lg-leading);
+    letter-spacing: var(--text-caption-lg-tracking);
+    font-family: var(--text-font-mono);
+    font-weight: var(--text-caption-lg-weight);
+  }
 
-  @media (min-width: 48rem) {
-    grid-template-columns: repeat(2, 1fr);
+  &__factList {
+    display: grid;
+    grid-template-columns: 1fr;
+    background: transparent;
+    border: 1px solid var(--line-faint);
+    border-radius: var(--radius-card);
+    overflow: hidden;
+
+    @media (min-width: 64rem) {
+      grid-template-columns: repeat(2, 1fr);
+    }
   }
 
   &__factItem {
@@ -17,7 +28,7 @@
     gap: var(--space-3xs);
     border-bottom: 1px solid var(--line-faint);
 
-    @media (min-width: 40rem) {
+    @media (min-width: 64rem) {
       &:nth-child(odd) {
         border-right: 1px solid var(--line-faint);
       }

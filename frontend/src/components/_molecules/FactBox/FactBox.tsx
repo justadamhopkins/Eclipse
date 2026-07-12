@@ -1,4 +1,5 @@
 import { ListRenderer } from '@utilities/ListRenderer';
+import clsx from 'clsx';
 import { type FC } from 'react';
 
 import styles from './FactBox.module.css';
@@ -9,19 +10,22 @@ export interface IFactBoxProps {
 
 export const FactBox: FC<IFactBoxProps> = ({ facts }) => {
   return (
-    <article className={styles.factBox}>
-      <ListRenderer
-        items={facts}
-        render={({ item }) => (
-          <div
-            key={item.title}
-            className={styles.factBox__factItem}
-          >
-            <h3 className={styles.factBox__factItemTitle}>{item.title}</h3>
-            <p className={styles.factBox__factItemValue}>{item.value}</p>
-          </div>
-        )}
-      />
+    <article className={clsx(['u-flow--xs-s', styles.factBox])}>
+      <h3>Quick facts</h3>
+      <div className={styles.factBox__factList}>
+        <ListRenderer
+          items={facts}
+          render={({ item }) => (
+            <div
+              key={item.title}
+              className={styles.factBox__factItem}
+            >
+              <dt className={styles.factBox__factItemTitle}>{item.title}:</dt>
+              <dd className={styles.factBox__factItemValue}>{item.value}</dd>
+            </div>
+          )}
+        />
+      </div>
     </article>
   );
 };

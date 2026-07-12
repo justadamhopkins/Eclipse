@@ -23,7 +23,6 @@ export const AboutMe = () => {
               quo voluptatem. Ab alias, eius enim minus molestias necessitatibus
               nulla pariatur quibusdam rem sed.
             </p>
-
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
               blanditiis, debitis explicabo impedit iusto perspiciatis placeat
@@ -31,6 +30,7 @@ export const AboutMe = () => {
               nulla pariatur quibusdam rem sed.
             </p>
           </div>
+          <hr className={styles.aboutMe__divider} />
           <FactBox
             facts={[
               { title: 'Based in', value: 'London, UK' },

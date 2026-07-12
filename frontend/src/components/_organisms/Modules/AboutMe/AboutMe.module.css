@@ -9,8 +9,16 @@
     }
   }
 
+  &__divider {
+    border: none;
+    border-top: 1px solid var(--line-faint);
+
+    @media (min-width: 48rem) {
+      display: none;
+    }
+  }
+
   &__bodyWrapper {
-    display: grid;
     font-size: var(--text-2lg);
     line-height: var(--text-body-md-leading);
     letter-spacing: var(--text-body-md-tracking);
@@ -18,7 +26,7 @@
     font-weight: var(--text-body-md-weight);
 
     p {
-      max-width: 75ch;
+      max-width: 65ch;
     }
   }
 }
