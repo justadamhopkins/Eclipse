@@ -1,6 +1,6 @@
 import { ModuleSectionWrapper } from '@atoms/ModuleSectionWrapper';
+import { JobCard } from '@molecules/Cards/JobCard';
 import { FeaturedHeaderBlock } from '@molecules/FeaturedHeaderBlock';
-import { JobCard } from '@molecules/JobCard';
 import { ListRenderer } from '@utilities/ListRenderer';
 
 import styles from './JobCardModule.module.css';
