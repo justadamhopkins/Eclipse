@@ -10,7 +10,7 @@ export interface IFactBoxProps {
 
 export const FactBox: FC<IFactBoxProps> = ({ facts }) => {
   return (
-    <article className={clsx(['u-flow--xs-s', styles.factBox])}>
+    <article className={clsx(['u-flow--s', styles.factBox])}>
       <h3>Quick facts</h3>
       <div className={styles.factBox__factList}>
         <ListRenderer

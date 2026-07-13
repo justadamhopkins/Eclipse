@@ -1,1 +1,1 @@
-export { AboutMeModule } from './AboutMeModule';
+export { AboutMeModule, type IAboutMeModuleProps } from './AboutMeModule';
