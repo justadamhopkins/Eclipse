@@ -1,0 +1,12 @@
+.containedIconShell {
+  color: var(--accent-strong);
+  display: grid;
+  place-items: center;
+  background-color: var(--bg-accent-soft);
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-button);
+
+  &__sm {
+    width: 34px;
+  }
+}
