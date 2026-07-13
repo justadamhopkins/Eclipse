@@ -1,11 +1,12 @@
 'use client';
 
 import { CoverHero } from '@organisms/Heros/CoverHero';
-import { AboutMe } from '@organisms/Modules/AboutMe/AboutMe';
+import { AboutMeModule } from '@organisms/Modules/AboutMeModule/AboutMeModule';
 import {
   type IWorkExperienceModuleProps,
   JobCardModule,
 } from '@organisms/Modules/JobCardModule';
+import { TechStackModule } from '@organisms/Modules/TechStackModule';
 
 export const MOCK_JOB_CARDS = [
   {
@@ -50,7 +51,8 @@ export const HomePage = () => {
         title="Hi, I'm Adam Hopkins"
         subtitle="London-based product-led senior software engineer crafting high-quality digital products with a focus on performance, accessibility, and long-term scalability."
       />
-      <AboutMe />
+      <AboutMeModule />
+      <TechStackModule />
       <JobCardModule jobCards={MOCK_JOB_CARDS} />
     </>
   );
