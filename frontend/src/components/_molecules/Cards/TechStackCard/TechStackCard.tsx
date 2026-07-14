@@ -1,24 +1,35 @@
 import { CardShell } from '@atoms/CardShell';
+import { Chip, type IChipProps } from '@atoms/Chip';
 import { ContainedIconShell } from '@atoms/ContainedIconShell';
 import { type TWithClassName } from '@typings/utils';
+import { ListRenderer } from '@utilities/ListRenderer';
 import clsx from 'clsx';
 import { type PropsWithChildren } from 'react';
-import { type IconType } from 'react-icons';
-import { PiStackSimple } from 'react-icons/pi';
+import {
+  PiStackSimple,
+  PiBracketsAngleBold,
+  PiFrameCornersLight,
+  PiArrowsInCardinal,
+} from 'react-icons/pi';
+
+import styles from './TechStackCard.module.css';
+
+const CATEGORIES = {
+  tooling: PiArrowsInCardinal,
+  infrastructure: PiStackSimple,
+  languages: PiBracketsAngleBold,
+  frameworks: PiFrameCornersLight,
+};
 
 interface IHeaderProps {
-  category: string;
+  category: keyof typeof CATEGORIES;
 }
-
-const CATEGORIES: Record<string, IconType> = {
-  tooling: PiStackSimple,
-};
 
 const Header = ({ category, children }: PropsWithChildren<IHeaderProps>) => {
   const ContainedIcon = CATEGORIES[category];
 
   return (
-    <div>
+    <div className={styles.techStackCard__header}>
       <ContainedIconShell>
         <ContainedIcon size={18} />
       </ContainedIconShell>
@@ -27,15 +38,24 @@ const Header = ({ category, children }: PropsWithChildren<IHeaderProps>) => {
   );
 };
 
-const Meta = ({ children, className }: TWithClassName<PropsWithChildren>) => (
-  <span className={clsx(className)}>{children}</span>
-);
+interface IListBodyProps {
+  tags: IChipProps[];
+}
 
-const Description = ({
-  children,
-  className,
-}: TWithClassName<PropsWithChildren>) => (
-  <p className={clsx(className)}>{children}</p>
+const ListBody = ({ tags }: IListBodyProps) => (
+  <ul className={styles.techStackCard__listBody}>
+    <ListRenderer
+      items={tags}
+      render={({ item }) => (
+        <li>
+          <Chip
+            key={item.label}
+            label={item.label}
+          />
+        </li>
+      )}
+    />
+  </ul>
 );
 
 export const TechStackCard = ({
@@ -43,11 +63,10 @@ export const TechStackCard = ({
 }: TWithClassName<PropsWithChildren>) => {
   return (
     <CardShell>
-      <div>{children}</div>
+      <div className={clsx(['u-flow--s-m'])}>{children}</div>
     </CardShell>
   );
 };
 
 TechStackCard.Header = Header;
-TechStackCard.Meta = Meta;
-TechStackCard.Description = Description;
+TechStackCard.ListBody = ListBody;

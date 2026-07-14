@@ -1,0 +1,19 @@
+.techStackCard {
+  &__header {
+    display: flex;
+    gap: var(--spacing-2xs);
+    align-items: center;
+
+    h3 {
+      font-size: var(--text-lg);
+    }
+  }
+
+  &__listBody {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--spacing-2xs);
+  }
+}

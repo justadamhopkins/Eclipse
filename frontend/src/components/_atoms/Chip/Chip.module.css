@@ -1,0 +1,12 @@
+.chip {
+  padding: 8px 12px;
+  border-radius: var(--radius-badge);
+  color: var(--text-muted);
+  border: 1px solid var(--line-faint);
+  background-color: var(--bg-raised);
+
+  &:hover {
+    border-color: var(--accent-line);
+    color: var(--accent-strong);
+  }
+}
