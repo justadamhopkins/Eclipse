@@ -14,6 +14,6 @@
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    gap: var(--spacing-2xs);
+    gap: var(--space-xs);
   }
 }

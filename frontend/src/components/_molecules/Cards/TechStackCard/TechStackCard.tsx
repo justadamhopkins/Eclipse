@@ -6,10 +6,10 @@ import { ListRenderer } from '@utilities/ListRenderer';
 import clsx from 'clsx';
 import { type PropsWithChildren } from 'react';
 import {
-  PiStackSimple,
+  PiArrowsInCardinal,
   PiBracketsAngleBold,
   PiFrameCornersLight,
-  PiArrowsInCardinal,
+  PiStackSimple,
 } from 'react-icons/pi';
 
 import styles from './TechStackCard.module.css';
@@ -63,7 +63,7 @@ export const TechStackCard = ({
 }: TWithClassName<PropsWithChildren>) => {
   return (
     <CardShell>
-      <div className={clsx(['u-flow--s-m'])}>{children}</div>
+      <div className={clsx(['u-flow--m'])}>{children}</div>
     </CardShell>
   );
 };
