@@ -1,0 +1,12 @@
+.techStackModule {
+  display: grid;
+  gap: var(--space-s);
+
+  @media (min-width: 40rem) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (min-width: 64rem) {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

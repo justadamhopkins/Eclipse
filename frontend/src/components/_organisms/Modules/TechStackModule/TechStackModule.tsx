@@ -2,20 +2,16 @@ import { ModuleSectionWrapper } from '@atoms/ModuleSectionWrapper';
 import { TechStackCard } from '@molecules/Cards/TechStackCard';
 import { FeaturedHeaderBlock } from '@molecules/FeaturedHeaderBlock';
 
+import styles from './TechStackModule.module.css';
+
 export const TechStackModule = () => {
   return (
     <ModuleSectionWrapper>
       <FeaturedHeaderBlock
         eyebrow="Tech Stack"
-        title="Tools i reach for"
+        title="Tooling"
       >
-        <div
-          style={{
-            display: 'grid',
-            gridTemplateColumns: 'repeat(auto-fit, minmax(320px, 1fr)',
-            gap: '20px',
-          }}
-        >
+        <div className={styles.techStackModule}>
           <TechStackCard>
             <TechStackCard.Header category="tooling">
               Tooling
