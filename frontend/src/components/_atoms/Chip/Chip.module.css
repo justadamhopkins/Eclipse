@@ -4,6 +4,7 @@
   color: var(--text-muted);
   border: 1px solid var(--line-faint);
   background-color: var(--bg-raised);
+  display: inline-block;
 
   &:hover {
     border-color: var(--accent-line);
