@@ -7,7 +7,7 @@
   display: inline-block;
 
   &:hover {
-    border-color: var(--accent-line);
     color: var(--accent-strong);
+    border-color: var(--accent-line);
   }
 }
