@@ -81,7 +81,6 @@
   --text-5xl: var(--font-size-5xl);
   --text-6xl: var(--font-size-6xl);
 
-  /* Font weight — one-off scale */
   --weight-light: var(--font-weight-300);
   --weight-regular: var(--font-weight-400);
   --weight-medium: var(--font-weight-500);
@@ -90,7 +89,6 @@
   --weight-extrabold: var(--font-weight-800);
   --weight-black: var(--font-weight-900);
 
-  /* Tracking (letter-spacing) — one-off scale */
   --tracking-tighter: var(--letter-spacing-tight-2);
   --tracking-tight: var(--letter-spacing-tight-1);
   --tracking-normal: var(--letter-spacing-normal);
