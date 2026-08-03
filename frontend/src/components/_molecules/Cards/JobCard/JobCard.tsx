@@ -37,8 +37,8 @@ export const JobCard = ({
   className,
 }: TWithClassName<PropsWithChildren>) => {
   return (
-    <article className={clsx(styles.jobCard, className)}>
-      <div className={styles.jobCard__inner}>{children}</div>
+    <article className={clsx(styles.jobCard, 'u-flow--xs', className)}>
+      {children}
     </article>
   );
 };
