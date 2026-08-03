@@ -20,7 +20,7 @@ export const JobCardModule = ({ jobCards }: IWorkExperienceModuleProps) => {
     <ModuleSectionWrapper>
       <FeaturedHeaderBlock
         eyebrow="Experience"
-        title="Where I've spent my time"
+        title="My journey"
       >
         <div className={styles.jobCardModule}>
           <div className={styles.jobCardModule__slideWrapper}>
