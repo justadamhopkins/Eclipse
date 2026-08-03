@@ -1,5 +1,5 @@
 .cardShell {
-  padding: 20px;
+  padding: var(--space-s-m);
   border-radius: var(--radius-card);
   background-color: var(--bg-card);
   border: 1px solid var(--line-faint);
