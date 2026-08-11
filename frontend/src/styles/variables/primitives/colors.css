@@ -21,4 +21,37 @@
   --success-500: oklch(0.78 0.16 150);
   --warning-400: oklch(0.72 0.18 62);
   --danger-500: oklch(0.55 0.22 25);
+
+  /* New system */
+
+  --grey-000: oklch(
+    0.9619 0.0011 17.18
+  ); /* page ground; also text colour on the red field */
+  --grey-100: oklch(0.9348 0.0011 17.18); /* hero and Tools bands */
+  --grey-600: oklch(0.4811 0.0038 17.29); /* muted labels, copyright */
+  --grey-900: oklch(0.2369 0.0036 48.57); /* all ink */
+
+  --red-500: oklch(
+    0.6112 0.2252 31.45
+  ); /* primary button, contact field, hover borders, focus ring */
+  --red-600: oklch(0.5807 0.2152 31.47); /* primary button pressed */
+  --red-700: oklch(0.4806 0.185 31.42); /* all red text at body size */
+
+  --color-bg: var(
+    --grey-000
+  ); /* page ground; also text colour on the red field */
+  --color-surface: var(--grey-100); /* hero and Tools bands */
+  --color-text: var(--grey-900); /* all ink */
+  --color-divider: color-mix(
+    in srgb,
+    var(--color-text) 40%,
+    transparent
+  ); /* 2px section rules, 1px chip borders */
+
+  --color-accent: var(
+    --red-500
+  ); /* primary button, contact field, hover borders, focus ring */
+  --color-accent-600: var(--red-600); /* primary button pressed */
+  --color-accent-700: var(--red-700); /* all red text at body size */
+  --color-neutral-700: var(--grey-600); /* muted labels, copyright */
 }
