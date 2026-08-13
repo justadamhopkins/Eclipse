@@ -112,9 +112,6 @@ a {
 .u-flow--2xl > * + * {
   margin-top: var(--spacing-2xl);
 }
-.u-flow--3xl > * + * {
-  margin-top: var(--spacing-3xl);
-}
 
 .u-flow--3xs-2xs > * + * {
   margin-top: var(--spacing-3xs-2xs);
@@ -136,7 +133,4 @@ a {
 }
 .u-flow--xl-2xl > * + * {
   margin-top: var(--spacing-xl-2xl);
-}
-.u-flow--2xl-3xl > * + * {
-  margin-top: var(--spacing-2xl-3xl);
 }
