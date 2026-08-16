@@ -5,12 +5,12 @@
   }
 
   &__heading {
+    margin-bottom: var(--spacing-l);
     color: var(--text-primary);
+    font-weight: var(--text-heading-xl-weight);
     font-size: var(--text-heading-xl-size);
+    font-family: var(--text-heading-xl-font);
     line-height: var(--text-heading-xl-leading);
     letter-spacing: var(--text-heading-xl-tracking);
-    font-family: var(--text-heading-xl-font);
-    font-weight: var(--text-heading-xl-weight);
-    margin-bottom: var(--spacing-l);
   }
 }

@@ -2,7 +2,7 @@
   padding: var(--spacing-2xs) var(--spacing-xs);
   border-top: 1px solid var(--surface-bright);
 
-  @media (min-width: 40rem) {
+  @media (width >= 40rem) {
     padding: var(--spacing-xs) var(--spacing-m);
   }
 }

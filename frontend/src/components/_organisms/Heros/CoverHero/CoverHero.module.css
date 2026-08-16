@@ -1,18 +1,18 @@
 .coverHero {
-  min-height: 300px;
   display: grid;
   grid-template-columns: 1fr;
   gap: var(--spacing-xl-2xl);
+  min-height: 300px;
 
-  @media (min-width: 64rem) {
+  @media (width >= 64rem) {
     grid-template-columns: repeat(2, 1fr);
   }
 
   &__contentWrapper {
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: start;
+    justify-content: center;
   }
 
   &__contentInner {
@@ -23,19 +23,19 @@
 
     h1 {
       color: var(--text-primary);
+      font-weight: var(--text-display-xl-weight);
       font-size: var(--text-display-xl-size);
+      font-family: var(--text-display-xl-font);
       line-height: var(--text-display-xl-leading);
       letter-spacing: var(--text-display-xl-tracking);
-      font-family: var(--text-display-xl-font);
-      font-weight: var(--text-display-xl-weight);
     }
   }
 
   &__subtitle {
     color: var(--text-secondary);
-    font-family: var(--text-heading-md-font);
-    font-size: var(--text-heading-md-size);
     font-weight: var(--text-heading-md-weight);
+    font-size: var(--text-heading-md-size);
+    font-family: var(--text-heading-md-font);
     line-height: var(--text-heading-md-leading);
     letter-spacing: var(--text-heading-md-tracking);
   }
@@ -46,50 +46,50 @@
 
   &__imageWrapper {
     position: relative;
-    border-radius: var(--radius-card-xl);
     overflow: hidden;
-    aspect-ratio: 1 / 1;
-    box-shadow: 0 40px 90px rgba(0, 0, 0, 0.5);
     border: 1px solid var(--border-accent);
+    border-radius: var(--radius-card-xl);
+    box-shadow: 0 40px 90px rgb(0 0 0 / 50%);
+    aspect-ratio: 1 / 1;
   }
 
   &__imageFrame {
     position: absolute;
-    inset: 0;
     overflow: hidden;
-    background: rgba(0, 0, 0, 0.04);
+    background: rgb(0 0 0 / 4%);
+    inset: 0;
 
     img {
       position: absolute;
-      max-width: none;
-      transform: translate(-50%, -50%);
-      -webkit-user-drag: none;
-      user-select: none;
-      touch-action: none;
+      top: 50%;
+      left: 50%;
       display: block;
       width: 100%;
+      max-width: none;
       height: 100%;
-      left: 50%;
-      top: 50%;
       object-fit: cover;
       object-position: 50% 50%;
+      transform: translate(-50%, -50%);
+      user-select: none;
+      touch-action: none;
+      -webkit-user-drag: none;
     }
   }
 
   &__imageGlass {
     position: absolute;
-    inset: -14px -14px auto auto;
+    z-index: -1;
     width: 130px;
     height: 130px;
-    border-radius: var(--radius-card-xl);
     border: 1px solid var(--accent-line);
-    z-index: -1;
+    border-radius: var(--radius-card-xl);
+    inset: -14px -14px auto auto;
   }
 
   &__ctaRow {
     display: flex;
-    gap: var(--spacing-xs);
     flex-wrap: wrap;
+    gap: var(--spacing-xs);
     align-items: center;
   }
 }

@@ -1,14 +1,14 @@
 .navigationLink {
-  padding: var(--spacing-2xs) var(--space-5);
-  border-radius: var(--radius-badge);
-  color: var(--text-primary);
-  transition: color var(--motion-base) var(--motion-ease-standard);
   min-width: 6rem;
-  font-size: var(--text-body-md-size);
+  padding: var(--spacing-2xs) var(--space-5);
+  color: var(--text-primary);
   font-weight: var(--text-body-md-weight);
+  font-size: var(--text-body-md-size);
+  font-family: var(--text-body-lg-font);
   line-height: var(--text-body-md-leading);
   letter-spacing: var(--text-body-md-tracking);
-  font-family: var(--text-body-lg-font);
+  border-radius: var(--radius-badge);
+  transition: color var(--motion-base) var(--motion-ease-standard);
 
   &__primary {
     &:hover {

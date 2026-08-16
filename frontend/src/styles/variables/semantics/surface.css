@@ -3,15 +3,19 @@
   --bg-page: var(
     --neutral-950
   ); /* darkest — page / canvas (#0b0f17)            */
+
   --bg-subtle: var(
     --neutral-900
   ); /* tinted page section (#0e131d)              */
+
   --bg-surface: var(
     --neutral-800
   ); /* default card / panel surface (#131925)    */
+
   --bg-raised: var(
     --neutral-700
   ); /* elevated / hover-lifted surface (#18202e)  */
+
   --bg-card: var(
     --neutral-800
   ); /* default card fill                            */
@@ -20,6 +24,7 @@
   --bg-accent-soft: var(
     --purple-soft-fill
   ); /* chip / badge / icon-tile bg       */
+
   --bg-accent-strong: var(
     --purple-500
   ); /* filled accent button bg              */
@@ -28,9 +33,11 @@
   --border-subtle: var(
     --line-faint
   ); /* faintest hairline (7% alpha)          */
+
   --border-default: var(
     --line-soft
   ); /* default hairline (12% alpha)          */
+
   --border-accent: var(
     --purple-700
   ); /* accent-tinted divider                 */
@@ -39,12 +46,15 @@
   --interactive-default: var(
     --neutral-50
   ); /* light-on-dark primary button     */
+
   --interactive-hover: var(
     --purple-300
   ); /* hover — bright accent              */
+
   --interactive-subtle: var(
     --purple-100
   ); /* ghost / subtle hover              */
+
   --interactive-accent: var(
     --purple-500
   ); /* solid accent fill                 */

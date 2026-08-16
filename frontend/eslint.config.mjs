@@ -31,6 +31,7 @@ export default [
       'commitlint.config.mjs',
       'eslint.config.mjs',
       'prettier.config.mjs',
+      'stylelint.config.mjs',
       'prettier.base.mjs',
       'tsconfig.json',
       'tsconfig.prod.json',

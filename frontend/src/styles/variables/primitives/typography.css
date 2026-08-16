@@ -16,21 +16,29 @@
   --fs-6xl: 5.2rem; /* 83px — hero h1 max (custom, above scale) */
 
   /* Step -2: 10.24px → 12.8px */
-  --fs--2: clamp(0.64rem, 0.591rem + 0.2177vw, 0.8rem);
+  --fs-2xs: clamp(0.64rem, 0.591rem + 0.2177vw, 0.8rem);
+
   /* Step -1: 12.8px → 16px */
-  --fs--1: clamp(0.8rem, 0.7388rem + 0.2721vw, 1rem);
+  --fs-1xs: clamp(0.8rem, 0.7388rem + 0.2721vw, 1rem);
+
   /* Step 0: 16px → 20px */
   --fs-0: clamp(1rem, 0.9235rem + 0.3401vw, 1.25rem);
+
   /* Step 1: 20px → 25px */
   --fs-1: clamp(1.25rem, 1.1543rem + 0.4252vw, 1.5625rem);
+
   /* Step 2: 25px → 31.25px */
   --fs-2: clamp(1.5625rem, 1.4429rem + 0.5315vw, 1.9531rem);
+
   /* Step 3: 31.25px → 39.0625px */
   --fs-3: clamp(1.9531rem, 1.8037rem + 0.6643vw, 2.4414rem);
+
   /* Step 4: 39.0625px → 48.8281px */
   --fs-4: clamp(2.4414rem, 2.2546rem + 0.8304vw, 3.0518rem);
+
   /* Step 5: 48.8281px → 61.0352px */
   --fs-5: clamp(3.0518rem, 2.8182rem + 1.038vw, 3.8147rem);
+
   /* Step 6: 61.0352px → 76.2939px */
   --fs-6: clamp(3.8147rem, 3.5228rem + 1.2975vw, 4.7684rem);
 

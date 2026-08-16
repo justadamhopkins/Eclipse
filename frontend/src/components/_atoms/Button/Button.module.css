@@ -1,24 +1,24 @@
 .button {
-  color: var(--text-secondary);
-  padding: var(--spacing-2xs) var(--spacing-xs);
-  border-radius: var(--radius-2);
   display: inline-flex;
   justify-content: center;
-  transition: background-color 0.2s ease-in-out;
   min-width: 6rem;
-  font-size: var(--text-body-md-size);
+  padding: var(--spacing-2xs) var(--spacing-xs);
+  color: var(--text-secondary);
   font-weight: var(--text-body-md-weight);
+  font-size: var(--text-body-md-size);
+  font-family: var(--text-body-lg-font);
   line-height: var(--text-body-md-leading);
   letter-spacing: var(--text-body-md-tracking);
-  font-family: var(--text-body-lg-font);
+  border-radius: var(--radius-2);
+  transition: background-color 0.2s ease-in-out;
 
   &--fullWidth {
     width: 100%;
   }
 
   &__primary {
-    background-color: var(--interactive-default);
     color: var(--text-tertiary);
+    background-color: var(--interactive-default);
 
     &:hover {
       color: var(--text-primary);
@@ -32,13 +32,13 @@
   }
 
   &__secondary {
+    color: var(--text-primary);
     background-color: transparent;
     border: 1px solid var(--text-primary);
-    color: var(--text-primary);
 
     &:hover {
       color: var(--text-primary);
-      background-color: rgba(255, 255, 255, 0.04);
+      background-color: rgb(255 255 255 / 4%);
     }
 
     &:focus-visible {

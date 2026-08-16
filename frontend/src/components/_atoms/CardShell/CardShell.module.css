@@ -1,14 +1,14 @@
 .cardShell {
   padding: var(--space-s-m);
-  border-radius: var(--radius-card);
   background-color: var(--bg-card);
   border: 1px solid var(--line-faint);
+  border-radius: var(--radius-card);
   transition:
     border-color 0.2s ease,
     background-color 0.2s ease;
 
   &:hover {
-    border-color: var(--accent-line);
     background: var(--bg-raised);
+    border-color: var(--accent-line);
   }
 }

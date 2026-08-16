@@ -33,10 +33,10 @@
 
   &__primary {
     display: flex;
+    flex: 1 1 auto;
     flex-direction: column;
     gap: var(--spacing-s);
     justify-content: center;
-    flex: 1 1 auto;
   }
 
   &__navSection {
@@ -44,64 +44,64 @@
       display: flex;
       flex-direction: column;
       gap: var(--spacing-2xs);
-      list-style-type: none;
       margin: 0;
       padding: 0;
+      list-style-type: none;
     }
   }
 
   &__navLink {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     color: var(--text-primary);
+    font-weight: var(--text-h3-weight);
     font-size: var(--text-h3-size);
+    font-family: var(--text-h3-font);
     line-height: var(--text-h3-leading);
     letter-spacing: var(--text-h3-tracking);
-    font-family: var(--text-h3-font);
-    font-weight: var(--text-h3-weight);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     padding-inline: 0;
   }
 
   &__contactSection {
-    margin-top: auto;
     display: flex;
     flex-direction: column;
     gap: var(--spacing-xs);
+    margin-top: auto;
 
     a {
+      display: inline-block;
+      margin-top: var(--spacing-2xs);
       color: var(--text-primary);
+      font-weight: var(--text-body-lg-weight);
       font-size: var(--text-body-lg-size);
+      font-family: var(--text-body-lg-font);
       line-height: var(--text-body-lg-leading);
       letter-spacing: var(--text-body-lg-tracking);
-      font-family: var(--text-body-lg-font);
-      font-weight: var(--text-body-lg-weight);
-      margin-top: var(--spacing-2xs);
-      display: inline-block;
     }
   }
 
   &__socialBar {
     display: flex;
-    gap: var(--spacing-xs);
     flex-flow: row wrap;
+    gap: var(--spacing-xs);
 
     a {
       position: relative;
-      width: 32px;
-      aspect-ratio: 1 / 1;
       display: inline-block;
-      padding: 0;
+      width: 32px;
       margin: 0;
+      padding: 0;
+      aspect-ratio: 1 / 1;
 
       &::after {
-        content: '';
         position: absolute;
         top: 50%;
         left: 50%;
-        transform: translate(-50%, -50%);
         width: 48px;
         height: 48px;
+        transform: translate(-50%, -50%);
+        content: '';
       }
     }
 
@@ -114,8 +114,8 @@
     display: flex;
     justify-content: center;
     width: 0.25rem;
-    border-radius: 0.375rem;
     margin: 0.5rem;
+    border-radius: 0.375rem;
     opacity: 0;
     transition: opacity 150ms;
     pointer-events: none;
@@ -133,7 +133,7 @@
 
   &__scrollbarThumb {
     width: 100%;
-    border-radius: inherit;
     background-color: var(--text-muted);
+    border-radius: inherit;
   }
 }

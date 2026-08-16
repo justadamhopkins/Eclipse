@@ -10,10 +10,10 @@
   }
 
   &__listBody {
-    list-style: none;
-    padding: 0;
     display: flex;
     flex-wrap: wrap;
     gap: var(--space-xs);
+    padding: 0;
+    list-style: none;
   }
 }

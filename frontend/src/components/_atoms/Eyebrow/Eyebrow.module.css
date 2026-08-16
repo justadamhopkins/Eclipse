@@ -1,16 +1,16 @@
 .eyebrow {
-  font-size: var(--font-size-lg);
-  font-weight: 600;
-  letter-spacing: var(--tracking-normal);
   display: inline-flex;
-  align-items: center;
   gap: 10px;
+  align-items: center;
+  font-weight: 600;
+  font-size: var(--font-size-lg);
+  letter-spacing: var(--tracking-normal);
 
-  &:before {
-    content: '';
+  &::before {
     width: 26px;
     height: 2px;
     background: var(--accent-line);
+    content: '';
   }
 
   &--primary {

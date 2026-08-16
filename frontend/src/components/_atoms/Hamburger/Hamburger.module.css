@@ -1,22 +1,22 @@
 .hamburger {
+  position: relative;
+  display: inline-block;
   width: 30px;
   height: 30px;
-  position: relative;
-  transition: 0.1s;
-  cursor: pointer;
-  display: inline-block;
+  padding: 0;
   background: none;
   border: none;
-  padding: 0;
+  cursor: pointer;
+  transition: 0.1s;
 
   &::after {
-    content: '';
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     width: 48px;
     height: 48px;
+    transform: translate(-50%, -50%);
+    content: '';
   }
 
   &:hover .hamburger__dot {
@@ -28,69 +28,80 @@
     transform: rotate(180deg);
     transition: 0.2s cubic-bezier(0.8, 0.5, 0.2, 1.4);
 
-    & .hamburger__dot {
-      transition-delay: 200ms;
+    &.hamburger__dot {
       transition: 0.5s cubic-bezier(0.8, 0.5, 0.2, 1.4);
+      transition-delay: 200ms;
 
       &:nth-child(2) {
-        left: 6px;
         top: 6px;
+        left: 6px;
       }
+
       &:nth-child(4) {
-        left: 6px;
         top: 18px;
+        left: 6px;
       }
+
       &:nth-child(6) {
-        right: 6px;
         top: 6px;
+        right: 6px;
       }
+
       &:nth-child(8) {
-        left: 18px;
         bottom: 6px;
+        left: 18px;
       }
     }
   }
 
   &__dot {
+    position: absolute;
+    display: block;
     width: 5px;
     height: 5px;
     background-color: var(--text-primary);
-    display: block;
     border-radius: 50%;
-    position: absolute;
 
     &:nth-child(1) {
-      left: 0;
       top: 0;
+      left: 0;
     }
+
     &:nth-child(2) {
-      left: 12px;
       top: 0;
+      left: 12px;
     }
+
     &:nth-child(3) {
-      right: 0;
       top: 0;
-    }
-    &:nth-child(4) {
-      left: 0;
-      top: 12px;
-    }
-    &:nth-child(5) {
-      left: 12px;
-      top: 12px;
-    }
-    &:nth-child(6) {
       right: 0;
+    }
+
+    &:nth-child(4) {
       top: 12px;
-    }
-    &:nth-child(7) {
       left: 0;
-      bottom: 0;
     }
-    &:nth-child(8) {
+
+    &:nth-child(5) {
+      top: 12px;
       left: 12px;
-      bottom: 0;
     }
+
+    &:nth-child(6) {
+      top: 12px;
+      right: 0;
+    }
+
+    &:nth-child(7) {
+      bottom: 0;
+      left: 0;
+    }
+
+    &:nth-child(8) {
+      bottom: 0;
+      left: 12px;
+    }
+
     &:nth-child(9) {
       right: 0;
       bottom: 0;

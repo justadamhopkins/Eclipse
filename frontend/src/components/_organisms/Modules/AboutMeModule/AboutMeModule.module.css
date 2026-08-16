@@ -3,7 +3,7 @@
     display: grid;
     gap: var(--spacing-l-xl);
 
-    @media (min-width: 48rem) {
+    @media (width >= 48rem) {
       grid-template-columns: repeat(2, 1fr);
       gap: var(--spacing-xl-2xl);
     }
@@ -13,17 +13,17 @@
     border: none;
     border-top: 1px solid var(--line-faint);
 
-    @media (min-width: 48rem) {
+    @media (width >= 48rem) {
       display: none;
     }
   }
 
   &__bodyWrapper {
+    font-weight: var(--text-body-md-weight);
     font-size: var(--text-2lg);
+    font-family: var(--text-body-md-font);
     line-height: var(--text-body-md-leading);
     letter-spacing: var(--text-body-md-tracking);
-    font-family: var(--text-body-md-font);
-    font-weight: var(--text-body-md-weight);
 
     p {
       max-width: 65ch;

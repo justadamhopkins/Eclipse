@@ -4,21 +4,27 @@
   --text-secondary: var(
     --neutral-400
   ); /* supporting / lead copy (#9aa4b4)    */
+
   --text-muted: var(
     --neutral-500
   ); /* faint labels / placeholder (#69727f)    */
+
   --text-tertiary: var(
     --neutral-500
   ); /* alias of muted — legacy              */
+
   --text-accent: var(
     --purple-300
   ); /* highlighted / linked text — bright      */
+
   --text-on-accent: var(
     --neutral-950
   ); /* text on solid accent backgrounds    */
+
   --icon-base: var(
     --neutral-50
   ); /* default icon fill                         */
+
   --icon-accent: var(
     --purple-300
   ); /* accent icon (chip / contact tile)       */
@@ -27,12 +33,15 @@
   --accent-subtle: var(
     --purple-100
   ); /* badge / tag / icon-tile background    */
+
   --accent-base: var(
     --purple-500
   ); /* primary accent                          */
+
   --accent-strong: var(
     --purple-300
   ); /* hover / focus highlight (bright)      */
+
   --accent-line: var(
     --purple-700
   ); /* accent-coloured divider                 */

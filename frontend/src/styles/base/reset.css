@@ -49,6 +49,7 @@ h6 {
 p {
   text-wrap: pretty;
 }
+
 h1,
 h2,
 h3,
@@ -59,18 +60,19 @@ h6 {
 }
 
 button {
-  -webkit-appearance: none;
-  border-radius: 0;
-  text-align: inherit;
-  background: none;
-  box-shadow: none;
   padding: 0;
-  cursor: pointer;
-  border: none;
   color: inherit;
   font: inherit;
+  text-align: inherit;
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  cursor: pointer;
+  appearance: none;
 }
 
+/* stylelint-disable */
 #root,
 #__next {
   isolation: isolate;
