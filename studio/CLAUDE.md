@@ -1348,7 +1348,7 @@ For manual workflows, implement a single script:
 - Can cause merge conflicts
 
 **Option B: Generate in CI (Recommended for larger teams)**
-Add to `.gitignore`:
+Add to `../.gitignore`:
 
 ```gitignore
 # Sanity TypeGen (generated)

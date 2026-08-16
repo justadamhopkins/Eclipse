@@ -125,7 +125,7 @@ Pre-commit runs `lint-staged` which applies Prettier + ESLint auto-fix to staged
 
 ## Sanity Best Practice Rules
 
-Extended Sanity development rules (schema, GROQ, Next.js integration, TypeGen, Visual Editing, Studio Structure, images, Portable Text, project structure) are stored in `CLAUDE-sanity.md` at the repo root. Consult that file when working on any Sanity-related code./
+Extended Sanity development rules (schema, GROQ, Next.js integration, TypeGen, Visual Editing, Studio Structure, images, Portable Text, project structure) are stored in `studio/CLAUDE.md` at the repo root. Consult that file when working on any Sanity-related code./
 
 ## Git Commit Guidelines
 
