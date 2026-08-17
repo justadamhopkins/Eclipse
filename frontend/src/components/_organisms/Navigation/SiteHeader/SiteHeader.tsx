@@ -1,19 +1,17 @@
-import { Button } from '@atoms/Button';
 import { NavigationLink } from '@atoms/Navigation/NavigationLink/NavigationLink';
 import { SiteContainer } from '@atoms/SiteContainer';
 import { SiteLogo } from '@atoms/SiteLogo';
 import { SiteHeaderClient } from '@organisms/Navigation/SiteHeader/SiteHeaderClient';
-import clsx from 'clsx';
 
 import styles from './SiteHeader.module.css';
 
 export const SiteHeader = () => {
   return (
     <header className={styles.siteHeader}>
-      <SiteContainer className={clsx([styles.siteHeader__container])}>
+      <SiteContainer className={styles.container}>
         <SiteLogo />
-        <div className={styles.siteHeader__navWrapper}>
-          <nav className={clsx([styles.siteHeader__navContainer])}>
+        <div className={styles.navOuterContainer}>
+          <nav className={styles.navInnerContainer}>
             <ul>
               <li>
                 <NavigationLink href="/">Home</NavigationLink>
@@ -26,9 +24,8 @@ export const SiteHeader = () => {
               </li>
             </ul>
           </nav>
-          <Button variant="secondary">Contact</Button>
         </div>
-        <div className={styles.siteHeader__mobileNavWrapper}>
+        <div className={styles.mobileNavContainer}>
           <SiteHeaderClient />
         </div>
       </SiteContainer>
