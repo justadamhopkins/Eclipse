@@ -3,7 +3,7 @@ import { AppContainer } from '@core/AppContainer';
 import { PageWrapper } from '@core/PageWrapper';
 import { SiteFooter } from '@organisms/Navigation/SiteFooter';
 import { SiteHeader } from '@organisms/Navigation/SiteHeader';
-import { FONT_ARCHIVO } from '@styles/typography/fonts';
+import { FONT_ARCHIVO, FONT_ARCHIVO_BLACK } from '@styles/typography/fonts';
 
 import '@styles/index.css';
 
@@ -13,7 +13,7 @@ const RootLayout = ({ children }) => {
   return (
     <html
       lang="en"
-      className={`${FONT_ARCHIVO.variable}`}
+      className={`${FONT_ARCHIVO.variable} ${FONT_ARCHIVO_BLACK.variable}`}
     >
       <body>
         <Providers>
