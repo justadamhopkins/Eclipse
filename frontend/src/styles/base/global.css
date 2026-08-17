@@ -1,26 +1,7 @@
 body {
   color: var(--text-primary);
-  font-family: var(--text-font-body);
+  font-family: var(--text-font-primary);
   background: var(--bg-page);
-
-  &::before {
-    position: fixed;
-    z-index: 0;
-    background:
-      radial-gradient(
-        1100px 700px at 88% -8%,
-        var(--purple-glow),
-        transparent 60%
-      ),
-      radial-gradient(
-        900px 600px at -5% 32%,
-        oklch(74% 0.13 var(--accent-h) / 7%),
-        transparent 55%
-      );
-    content: '';
-    pointer-events: none;
-    inset: 0;
-  }
 }
 
 h1,

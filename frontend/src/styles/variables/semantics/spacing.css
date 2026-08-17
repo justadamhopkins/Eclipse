@@ -1,5 +1,5 @@
 :root {
-  --container-max-width: 120rem;
+  --container-max-width: 75rem;
 
   /* T-shirt scale — mirrors the utopia steps in primitives/spacing.css */
   --spacing-3xs: var(--space-3xs);
@@ -10,7 +10,6 @@
   --spacing-l: var(--space-l);
   --spacing-xl: var(--space-xl);
   --spacing-2xl: var(--space-2xl);
-  --spacing-3xl: var(--space-3xl);
 
   /* One-up pairs — elastic between two steps */
   --spacing-3xs-2xs: var(--space-3xs-2xs);
@@ -20,7 +19,7 @@
   --spacing-m-l: var(--space-m-l);
   --spacing-l-xl: var(--space-l-xl);
   --spacing-xl-2xl: var(--space-xl-2xl);
-  --spacing-2xl-3xl: var(--space-2xl-3xl);
+
   --spacing-1: var(--space-1);
   --spacing-2: var(--space-2);
   --spacing-3: var(--space-3);
@@ -44,6 +43,6 @@
   --spacing-32: var(--space-32);
   --spacing-36: var(--space-36);
   --spacing-40: var(--space-40);
-  --element-gutter: var(--space-m-l);
+  --element-gutter: var(--space-s-m);
   --app-vertical-rhythm: var(--space-l-xl);
 }

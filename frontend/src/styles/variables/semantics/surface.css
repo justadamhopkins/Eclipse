@@ -1,8 +1,5 @@
 :root {
-  /* ── Backgrounds ────────────────────────────────────────────── */
-  --bg-page: var(
-    --neutral-950
-  ); /* darkest — page / canvas (#0b0f17)            */
+  --bg-page: var(--grey-000);
 
   --bg-subtle: var(
     --neutral-900

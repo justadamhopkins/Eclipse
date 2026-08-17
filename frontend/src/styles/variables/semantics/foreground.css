@@ -1,6 +1,6 @@
 :root {
   /* ── Text ───────────────────────────────────────────────────── */
-  --text-primary: var(--neutral-50); /* primary body / heading text (#f2f4f8) */
+  --text-primary: var(--color-text); /* primary body / heading text (#f2f4f8) */
   --text-secondary: var(
     --neutral-400
   ); /* supporting / lead copy (#9aa4b4)    */
