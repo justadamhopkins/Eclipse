@@ -3,14 +3,17 @@
   --text-font-heading: var(--ff-archivo);
   --text-font-body: var(--ff-archivo);
   --text-font-display: var(--ff-archivo-black);
-  --leading-tight: var(--lh-1); /* display and headings */
-  --leading-snug: var(--lh-2); /* lead, h4, buttons */
+
+  --leading-tight: var(--lh-1);  /* display and headings */
+  --leading-snug: var(--lh-2);    /* lead, h4, buttons */
   --leading-body: var(--lh-4);
+
   --tracking-display: var(--ls-tight-1);
   --tracking-heading: var(--ls-0);
-  --tracking-label: var(--ls-1); /* uppercase labels and nav */
+  --tracking-label: var(--ls-1);   /* uppercase labels and nav */
   --tracking-chip: var(--ls-2);
   --tracking-body: var(--ls-normal);
+
   --weight-light: var(--fw-300);
   --weight-regular: var(--fw-400);
   --weight-medium: var(--fw-500);
@@ -18,19 +21,23 @@
   --weight-bold: var(--fw-700);
   --weight-extrabold: var(--fw-800);
   --weight-black: var(--fw-900);
+
   --text-display-fs: var(--fs-4);
   --text-display-fw: var(--weight-regular);
   --text-display-lh: var(--leading-tight);
   --text-display-ls: var(--tracking-display);
   --text-display-ff: var(--text-font-display);
+
   --text-heading-fs-md: var(--fs-0);
   --text-heading-fs-lg: var(--fs-1);
   --text-heading-fs-xl: var(--fs-2);
   --text-heading-fs-2xl: var(--fs-3);
+
   --text-heading-fw: var(--weight-extrabold);
   --text-heading-lh: var(--leading-tight);
   --text-heading-ls: var(--tracking-heading);
   --text-heading-ff: var(--text-font-heading);
+
   --text-body-fs: var(--fs-0);
   --text-body-fw: var(--weight-regular);
   --text-body-lh: var(--leading-body);
