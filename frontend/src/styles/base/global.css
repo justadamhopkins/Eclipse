@@ -1,54 +1,46 @@
 body {
   color: var(--text-primary);
-  font-family: var(--text-font-primary);
+  font-family: var(--text-font-body);
   background: var(--bg-page);
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: var(--text-font-display);
-}
-
-h1 {
-  font-weight: var(--text-heading-lg-weight);
-  font-size: var(--text-heading-lg-size);
-  line-height: var(--text-heading-lg-leading);
-  letter-spacing: var(--text-heading-lg-tracking);
-}
-
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-weight: var(--text-heading-md-weight);
-  font-size: var(--text-heading-md-size);
-  line-height: var(--text-heading-md-leading);
-  letter-spacing: var(--text-heading-md-tracking);
-}
-
-h4,
-h5,
-h6 {
-  font-weight: var(--text-heading-md-weight);
-  font-size: var(--text-heading-md-size);
-  line-height: var(--text-heading-md-leading);
-  letter-spacing: var(--text-heading-md-tracking);
 }
 
 a {
   color: inherit;
-  font-weight: var(--font-weight-400);
+  font-weight: var(--weight-regular);
   font-size: var(--text-lg);
   font-family: var(--text-font-body);
-  line-height: var(--leading-normal);
-  letter-spacing: var(--tracking-normal);
+  line-height: var(--leading-body);
+  letter-spacing: var(--tracking-body);
   text-decoration: none;
   cursor: pointer;
+}
+
+.display {
+  font-size: var(--text-display-fs);
+  font-weight: var(--text-display-fw);
+  line-height: var(--text-display-lh);
+  letter-spacing: var(--text-display-ls);
+  font-family: var(--text-display-ff);
+}
+
+.heading {
+  font-weight: var(--text-heading-fw);
+  line-height: var(--text-heading-lh);
+  letter-spacing: var(--text-heading-ls);
+  font-family: var(--text-heading-ff);
+}
+
+.headingMd { font-size: var(--text-heading-fs-md); }
+.headingLg { font-size: var(--text-heading-fs-lg); }
+.headingXl { font-size: var(--text-heading-fs-xl); }
+.heading2xl { font-size: var(--text-heading-fs-2xl); }
+
+.body {
+  font-size: var(--text-body-fs);
+  font-weight: var(--text-body-fw);
+  line-height: var(--text-body-lh);
+  letter-spacing: var(--text-body-ls);
+  font-family: var(--text-body-ff);
 }
 
 .sr-only {
