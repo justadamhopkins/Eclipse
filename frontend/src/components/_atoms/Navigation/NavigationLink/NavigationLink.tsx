@@ -5,10 +5,13 @@ import { type PropsWithChildren } from 'react';
 
 import styles from './NavigationLink.module.css';
 
-type TNavigationLinkProps = TWithClassName<LinkProps>;
+type TNavigationLinkProps = TWithClassName<
+  LinkProps & { variant?: 'primary' | 'secondary' }
+>;
 
 export const NavigationLink = ({
   children,
+  variant = 'primary',
   className,
   ...rest
 }: PropsWithChildren<TNavigationLinkProps>) => {
@@ -17,7 +20,7 @@ export const NavigationLink = ({
       {...rest}
       className={clsx([
         styles.navigationLink,
-        styles['navigationLink__primary'],
+        variant && styles[variant],
         className,
       ])}
     >
