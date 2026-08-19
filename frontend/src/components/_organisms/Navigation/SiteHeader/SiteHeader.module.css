@@ -2,7 +2,7 @@
   padding-block: var(--spacing-2xs-xs);
   padding-inline: var(--element-gutter);
   background-color: var(--bg-page);
-  border-bottom: 1px solid var(--line-faint);
+  border-bottom: 2px solid var(--border-divider);
 }
 
 .container {
@@ -27,7 +27,7 @@
 .navInnerContainer {
   ul {
     display: flex;
-    gap: var(--space-2xs-xs);
+    gap: var(--spacing-s-m);
     justify-content: flex-end;
     padding: 0;
     list-style-type: none;
