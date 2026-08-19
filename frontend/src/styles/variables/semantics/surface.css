@@ -1,6 +1,5 @@
 :root {
   --bg-page: var(--grey-000);
-
   --bg-subtle: var(
     --neutral-900
   ); /* tinted page section (#0e131d)              */
@@ -40,10 +39,6 @@
   ); /* accent-tinted divider                 */
 
   /* ── Interactive ────────────────────────────────────────────── */
-  --interactive-default: var(
-    --neutral-50
-  ); /* light-on-dark primary button     */
-
   --interactive-hover: var(
     --purple-300
   ); /* hover — bright accent              */
@@ -60,4 +55,8 @@
   --glow-accent: var(
     --purple-glow
   ); /* soft accent-coloured shadow glow        */
+
+  --border-divider: var(--color-divider);
+  --interactive-default: var(--color-accent);
+  --interactive-text: var(--color-accent-700);
 }

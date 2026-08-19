@@ -16,5 +16,5 @@
   --border-heavy: var(--border-width-4); /* 8px                           */
 
   /* Focus ring */
-  --border-focus: var(--purple-500);
+  --border-focus: var(--interactive-default);
 }
