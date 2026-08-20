@@ -1,3 +1,4 @@
+import { Text } from '@atoms/Text';
 import { type TWithClassName } from '@typings/utils';
 import clsx from 'clsx';
 import NextLink, { type LinkProps } from 'next/link';
@@ -16,8 +17,10 @@ export const NavigationLink = ({
   ...rest
 }: PropsWithChildren<TNavigationLinkProps>) => {
   return (
-    <NextLink
+    <Text
       {...rest}
+      variant="headingMd"
+      as={NextLink}
       className={clsx([
         styles.navigationLink,
         variant && styles[variant],
@@ -25,6 +28,6 @@ export const NavigationLink = ({
       ])}
     >
       {children}
-    </NextLink>
+    </Text>
   );
 };
