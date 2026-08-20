@@ -29,8 +29,7 @@
 .secondary {
   color: var(--text-primary);
   background-color: transparent;
-  border: 1px solid var(--text-primary);
-  border-color: var(--border-divider);
+  border: 1px solid var(--border-divider);
 
   &:hover {
     color: var(--text-primary);
