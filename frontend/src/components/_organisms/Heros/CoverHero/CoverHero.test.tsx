@@ -16,9 +16,16 @@ describe('CoverHero', () => {
     expect(link).toHaveAttribute('href', '#footer');
   });
 
-  it('renders a "Get in touch" link to the contact page', () => {
+  it('renders a "Github" link to the contact page', () => {
     render(<CoverHero {...defaultProps} />);
-    const link = screen.getByRole('link', { name: 'Get in touch' });
+    const link = screen.getByRole('link', { name: 'Github' });
+    expect(link).toBeInTheDocument();
+    expect(link).toHaveAttribute('href', '/contact');
+  });
+
+  it('renders a "Linked in" link to the contact page', () => {
+    render(<CoverHero {...defaultProps} />);
+    const link = screen.getByRole('link', { name: 'Linked in' });
     expect(link).toBeInTheDocument();
     expect(link).toHaveAttribute('href', '/contact');
   });

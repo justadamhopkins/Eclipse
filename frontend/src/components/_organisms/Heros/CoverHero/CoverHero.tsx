@@ -3,6 +3,7 @@ import { Eyebrow } from '@atoms/Eyebrow';
 import { ModuleSectionWrapper } from '@atoms/ModuleSectionWrapper';
 import { Text } from '@atoms/Text';
 import NextImage from 'next/image';
+import NextLink from 'next/link';
 
 import styles from './CoverHero.module.css';
 
@@ -32,16 +33,25 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
             </Text>
             <div className={styles.ctaRow}>
               <Button
+                as={NextLink}
                 href="#footer"
                 variant="primary"
               >
                 View my work
               </Button>
               <Button
+                as={NextLink}
                 href="/contact"
                 variant="secondary"
               >
-                Get in touch
+                Github
+              </Button>
+              <Button
+                as={NextLink}
+                href="/contact"
+                variant="secondary"
+              >
+                Linked in
               </Button>
             </div>
           </div>
