@@ -10,10 +10,11 @@
   letter-spacing: var(--text-heading-ls);
   border: 1px solid transparent;
   transition: background-color 0.2s ease-in-out;
-}
 
-.fullWidth {
-  width: 100%;
+  &:focus-visible {
+    outline: 2px solid var(--border-accent);
+    outline-offset: 3px;
+  }
 }
 
 .primary {
@@ -23,25 +24,20 @@
   &:hover {
     background-color: var(--bg-accent-pressed);
   }
-
-  &:focus-visible {
-    outline: 2px solid var(--border-accent);
-    outline-offset: 3px;
-  }
 }
 
 .secondary {
   color: var(--text-primary);
   background-color: transparent;
   border: 1px solid var(--text-primary);
+  border-color: var(--border-divider);
 
   &:hover {
     color: var(--text-primary);
-    background-color: rgb(255 255 255 / 4%);
+    background-color: color-mix(in srgb, var(--grey-900) 7%, transparent);
   }
+}
 
-  &:focus-visible {
-    outline: 2px solid var(--border-focus);
-    outline-offset: 3px;
-  }
+.fullWidth {
+  width: 100%;
 }
