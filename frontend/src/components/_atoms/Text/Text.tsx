@@ -1,6 +1,7 @@
+import { type TPolymorphicProps } from '@typings/polymorphism';
 import { type TWithClassName } from '@typings/utils';
 import clsx from 'clsx';
-import { type JSX, type PropsWithChildren } from 'react';
+import { type ElementType, type JSX, type PropsWithChildren } from 'react';
 
 const VARIANTS = {
   display: 'display',
@@ -18,21 +19,25 @@ const DEFAULT_TAGS = {
   headingXl: 'h2',
   heading2xl: 'h1',
   body: 'p',
-} as const;
+} as const satisfies Record<keyof typeof VARIANTS, keyof JSX.IntrinsicElements>;
 
 interface ITextProps {
   variant?: keyof typeof VARIANTS;
-  as?: keyof JSX.IntrinsicElements;
 }
 
-export const Text = ({
+type TTextProps<C extends ElementType> = TPolymorphicProps<
+  C,
+  TWithClassName<PropsWithChildren<ITextProps>>
+>;
+
+export const Text = <C extends ElementType = 'p'>({
   variant = 'body',
   as,
   className,
   children,
   ...props
-}: TWithClassName<PropsWithChildren<ITextProps>>) => {
-  const Tag = as || DEFAULT_TAGS[variant];
+}: TTextProps<C>) => {
+  const Tag = (as || DEFAULT_TAGS[variant]) as ElementType;
 
   return (
     <Tag
