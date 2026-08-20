@@ -1,49 +1,47 @@
 .button {
   display: inline-flex;
   justify-content: center;
-  min-width: 6rem;
-  padding: var(--spacing-2xs) var(--spacing-xs);
-  color: var(--text-secondary);
-  font-weight: var(--text-body-md-weight);
-  font-size: var(--text-body-md-size);
-  font-family: var(--text-body-lg-font);
-  line-height: var(--text-body-md-leading);
-  letter-spacing: var(--text-body-md-tracking);
-  border-radius: var(--radius-2);
+  min-width: 96px;
+  padding: 0.75em 1em;
+  font-weight: var(--text-heading-fw);
+  font-size: 1rem;
+  font-family: var(--text-heading-ff);
+  line-height: var(--text-heading-lh);
+  letter-spacing: var(--text-heading-ls);
+  border: 1px solid transparent;
   transition: background-color 0.2s ease-in-out;
+}
 
-  &--fullWidth {
-    width: 100%;
+.fullWidth {
+  width: 100%;
+}
+
+.primary {
+  color: var(--text-on-accent);
+  background-color: var(--bg-accent);
+
+  &:hover {
+    background-color: var(--bg-accent-pressed);
   }
 
-  &__primary {
-    color: var(--text-tertiary);
-    background-color: var(--interactive-default);
-
-    &:hover {
-      color: var(--text-primary);
-      background-color: var(--interactive-hover);
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--border-focus);
-      outline-offset: 3px;
-    }
+  &:focus-visible {
+    outline: 2px solid var(--border-accent);
+    outline-offset: 3px;
   }
+}
 
-  &__secondary {
+.secondary {
+  color: var(--text-primary);
+  background-color: transparent;
+  border: 1px solid var(--text-primary);
+
+  &:hover {
     color: var(--text-primary);
-    background-color: transparent;
-    border: 1px solid var(--text-primary);
+    background-color: rgb(255 255 255 / 4%);
+  }
 
-    &:hover {
-      color: var(--text-primary);
-      background-color: rgb(255 255 255 / 4%);
-    }
-
-    &:focus-visible {
-      outline: 2px solid var(--border-focus);
-      outline-offset: 3px;
-    }
+  &:focus-visible {
+    outline: 2px solid var(--border-focus);
+    outline-offset: 3px;
   }
 }

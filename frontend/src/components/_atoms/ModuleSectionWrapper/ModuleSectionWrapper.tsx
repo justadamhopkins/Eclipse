@@ -17,7 +17,7 @@ export const ModuleSectionWrapper = ({
     <section
       className={clsx(
         styles.moduleSectionWrapper,
-        isFullBleed && styles['moduleSectionWrapper--fullBleed'],
+        isFullBleed && styles.fullBleed,
         className,
       )}
     >

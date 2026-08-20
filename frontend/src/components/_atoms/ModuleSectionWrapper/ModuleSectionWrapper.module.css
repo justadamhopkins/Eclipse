@@ -1,8 +1,8 @@
 .moduleSectionWrapper {
   padding-inline: var(--element-gutter);
   padding-block: var(--app-vertical-rhythm);
+}
 
-  &--fullBleed {
-    padding-inline: 0;
-  }
+.fullBleed {
+  padding-inline: 0;
 }

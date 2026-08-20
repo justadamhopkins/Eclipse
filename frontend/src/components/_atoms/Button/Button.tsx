@@ -25,8 +25,8 @@ export const Button = ({
 }: TButtonProps) => {
   const className = clsx([
     styles.button,
-    styles[`button__${variant}`],
-    isFullWidth && styles['button--fullWidth'],
+    styles[variant],
+    isFullWidth && styles.fullWidth,
   ]);
 
   if ('href' in rest && rest.href) {
