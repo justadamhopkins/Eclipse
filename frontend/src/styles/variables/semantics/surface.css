@@ -1,62 +1,32 @@
 :root {
-  --bg-page: var(--grey-000);
-  --bg-subtle: var(
-    --neutral-900
-  ); /* tinted page section (#0e131d)              */
+  /* ── Backgrounds ────────────────────────────────────────────── */
+  --bg-page: var(--grey-000); /* page ground (About / Experience bands) */
+  --bg-surface: var(--grey-100); /* raised bands (Hero / Tools) */
+  --bg-accent: var(--red-500); /* contact field, primary button */
+  --bg-accent-pressed: var(--red-600); /* primary button pressed */
 
-  --bg-surface: var(
-    --neutral-800
-  ); /* default card / panel surface (#131925)    */
+  /* Legacy surface aliases — point at the new bands */
+  --bg-subtle: var(--grey-100);
+  --bg-card: var(--grey-100);
+  --bg-raised: var(--grey-100);
+  --bg-accent-soft: var(--grey-100);
+  --bg-accent-strong: var(--red-500);
 
-  --bg-raised: var(
-    --neutral-700
-  ); /* elevated / hover-lifted surface (#18202e)  */
+  /* ── Borders / dividers ─────────────────────────────────────── */
+  --border-divider: color-mix(
+    in srgb,
+    var(--grey-900) 40%,
+    transparent
+  ); /* 2px section rules, 1px chip borders */
 
-  --bg-card: var(
-    --neutral-800
-  ); /* default card fill                            */
-
-  /* Accent-tinted surfaces (alpha-blended over current bg) */
-  --bg-accent-soft: var(
-    --purple-soft-fill
-  ); /* chip / badge / icon-tile bg       */
-
-  --bg-accent-strong: var(
-    --purple-500
-  ); /* filled accent button bg              */
-
-  /* Hairlines & dividers — use these instead of solid neutrals for borders */
-  --border-subtle: var(
-    --line-faint
-  ); /* faintest hairline (7% alpha)          */
-
-  --border-default: var(
-    --line-soft
-  ); /* default hairline (12% alpha)          */
-
-  --border-accent: var(
-    --purple-700
-  ); /* accent-tinted divider                 */
+  --border-subtle: var(--border-divider);
+  --border-default: var(--border-divider);
+  --border-accent: var(--red-500); /* hover / focus border */
 
   /* ── Interactive ────────────────────────────────────────────── */
-  --interactive-hover: var(
-    --purple-300
-  ); /* hover — bright accent              */
-
-  --interactive-subtle: var(
-    --purple-100
-  ); /* ghost / subtle hover              */
-
-  --interactive-accent: var(
-    --purple-500
-  ); /* solid accent fill                 */
-
-  /* ── Glow / shadow accent ──────────────────────────────────── */
-  --glow-accent: var(
-    --purple-glow
-  ); /* soft accent-coloured shadow glow        */
-
-  --border-divider: var(--color-divider);
-  --interactive-default: var(--color-accent);
-  --interactive-text: var(--color-accent-700);
+  --interactive-default: var(--red-500); /* primary button, focus ring */
+  --interactive-hover: var(--red-600); /* pressed / hover fill */
+  --interactive-subtle: var(--grey-100); /* ghost / subtle hover */
+  --interactive-accent: var(--red-500);
+  --interactive-text: var(--red-700); /* red text at body size */
 }

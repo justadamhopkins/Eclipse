@@ -1,53 +1,19 @@
 :root {
   /* ── Text ───────────────────────────────────────────────────── */
-  --text-primary: var(--color-text); /* primary body / heading text (#f2f4f8) */
-  --text-secondary: var(
-    --neutral-400
-  ); /* supporting / lead copy (#9aa4b4)    */
+  --text-primary: var(--grey-900); /* all ink — body + headings */
+  --text-secondary: var(--grey-600); /* supporting copy */
+  --text-muted: var(--grey-600); /* muted labels, copyright */
+  --text-tertiary: var(--grey-600); /* alias of muted */
+  --text-accent: var(--red-700); /* red text at body size */
+  --text-on-accent: var(--grey-000); /* text on the red contact field */
 
-  --text-muted: var(
-    --neutral-500
-  ); /* faint labels / placeholder (#69727f)    */
-
-  --text-tertiary: var(
-    --neutral-500
-  ); /* alias of muted — legacy              */
-
-  --text-accent: var(
-    --purple-300
-  ); /* highlighted / linked text — bright      */
-
-  --text-on-accent: var(
-    --neutral-950
-  ); /* text on solid accent backgrounds    */
-
-  --icon-base: var(
-    --neutral-50
-  ); /* default icon fill                         */
-
-  --icon-accent: var(
-    --purple-300
-  ); /* accent icon (chip / contact tile)       */
+  /* ── Icons ──────────────────────────────────────────────────── */
+  --icon-base: var(--grey-900);
+  --icon-accent: var(--red-700);
 
   /* ── Accent ─────────────────────────────────────────────────── */
-  --accent-subtle: var(
-    --purple-100
-  ); /* badge / tag / icon-tile background    */
-
-  --accent-base: var(
-    --purple-500
-  ); /* primary accent                          */
-
-  --accent-strong: var(
-    --purple-300
-  ); /* hover / focus highlight (bright)      */
-
-  --accent-line: var(
-    --purple-700
-  ); /* accent-coloured divider                 */
-
-  /* ── Status ─────────────────────────────────────────────────── */
-  --status-success: var(--success-500);
-  --status-warning: var(--warning-400);
-  --status-danger: var(--danger-500);
+  --accent-subtle: var(--grey-100);
+  --accent-base: var(--red-500);
+  --accent-strong: var(--red-700);
+  --accent-line: var(--red-500);
 }

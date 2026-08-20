@@ -1,59 +1,9 @@
 :root {
-  --accent-h: 277;
-  --neutral-0: oklch(100% 0 0deg);
-  --neutral-50: #f2f4f8;
-  --neutral-400: #9aa4b4;
-  --neutral-500: #69727f;
-  --neutral-700: #18202e;
-  --neutral-800: #131925;
-  --neutral-900: #0e131d;
-  --neutral-950: #0b0f17;
-  --neutral-1000: oklch(0% 0 0deg);
-  --line-faint: rgb(255 255 255 / 7%);
-  --line-soft: rgb(255 255 255 / 12%);
-  --purple-100: oklch(88% 0.08 var(--accent-h));
-  --purple-300: oklch(80% 0.13 var(--accent-h));
-  --purple-500: oklch(74% 0.13 var(--accent-h));
-  --purple-700: oklch(74% 0.13 var(--accent-h) / 40%);
-  --purple-900: oklch(30% 0.08 var(--accent-h));
-  --purple-soft-fill: oklch(74% 0.13 var(--accent-h) / 14%);
-  --purple-glow: oklch(74% 0.16 var(--accent-h) / 22%);
-  --success-500: oklch(78% 0.16 150deg);
-  --warning-400: oklch(72% 0.18 62deg);
-  --danger-500: oklch(55% 0.22 25deg);
-
-  /* New system */
-
-  --grey-000: oklch(
-    96.19% 0.0011 17.18deg
-  ); /* page ground; also text colour on the red field */
-
-  --grey-100: oklch(93.48% 0.0011 17.18deg); /* hero and Tools bands */
-  --grey-600: oklch(48.11% 0.0038 17.29deg); /* muted labels, copyright */
-  --grey-900: oklch(23.69% 0.0036 48.57deg); /* all ink */
-  --red-500: oklch(
-    61.12% 0.2252 31.45deg
-  ); /* primary button, contact field, hover borders, focus ring */
-
-  --red-600: oklch(58.07% 0.2152 31.47deg); /* primary button pressed */
-  --red-700: oklch(48.06% 0.185 31.42deg); /* all red text at body size */
-  --color-bg: var(
-    --grey-000
-  ); /* page ground; also text colour on the red field */
-
-  --color-surface: var(--grey-100); /* hero and Tools bands */
-  --color-text: var(--grey-900); /* all ink */
-  --color-divider: color-mix(
-    in srgb,
-    var(--color-text) 40%,
-    transparent
-  ); /* 2px section rules, 1px chip borders */
-
-  --color-accent: var(
-    --red-500
-  ); /* primary button, contact field, hover borders, focus ring */
-
-  --color-accent-600: var(--red-600); /* primary button pressed */
-  --color-accent-700: var(--red-700); /* all red text at body size */
-  --color-neutral-700: var(--grey-600); /* muted labels, copyright */
+  --grey-000: oklch(96.19% 0.0011 17.18deg);
+  --grey-100: oklch(93.48% 0.0011 17.18deg);
+  --grey-600: oklch(48.11% 0.0038 17.29deg);
+  --grey-900: oklch(23.69% 0.0036 48.57deg);
+  --red-500: oklch(61.12% 0.2252 31.45deg);
+  --red-600: oklch(58.07% 0.2152 31.47deg);
+  --red-700: oklch(48.06% 0.185 31.42deg);
 }
