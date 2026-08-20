@@ -3,7 +3,7 @@
   padding: 8px 12px;
   color: var(--text-muted);
   background-color: var(--bg-raised);
-  border: 1px solid var(--line-faint);
+  border: 1px solid var(--border-divider);
   border-radius: var(--radius-badge);
 
   &:hover {

@@ -19,7 +19,7 @@
     grid-template-columns: 1fr;
     overflow: hidden;
     background: transparent;
-    border: 1px solid var(--line-faint);
+    border: 1px solid var(--border-divider);
     border-radius: var(--radius-card);
 
     @container (min-width: 30rem) {
@@ -32,7 +32,7 @@
     flex-direction: column;
     gap: var(--space-3xs);
     padding: var(--space-s);
-    border-bottom: 1px solid var(--line-faint);
+    border-bottom: 1px solid var(--border-divider);
     transition: background-color 0.2s ease;
 
     &:hover {
@@ -41,7 +41,7 @@
 
     @container (min-width: 30rem) {
       &:nth-child(odd) {
-        border-right: 1px solid var(--line-faint);
+        border-right: 1px solid var(--border-divider);
       }
     }
 

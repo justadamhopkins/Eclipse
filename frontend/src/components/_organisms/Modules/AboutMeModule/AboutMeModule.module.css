@@ -11,7 +11,7 @@
 
   &__divider {
     border: none;
-    border-top: 1px solid var(--line-faint);
+    border-top: 1px solid var(--border-divider);
 
     @media (width >= 48rem) {
       display: none;

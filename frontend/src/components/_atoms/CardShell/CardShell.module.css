@@ -1,7 +1,7 @@
 .cardShell {
   padding: var(--space-s-m);
   background-color: var(--bg-card);
-  border: 1px solid var(--line-faint);
+  border: 1px solid var(--border-divider);
   border-radius: var(--radius-card);
   transition:
     border-color 0.2s ease,
