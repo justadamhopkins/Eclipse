@@ -16,31 +16,50 @@ a {
 }
 
 .display {
-  font-size: var(--text-display-fs);
   font-weight: var(--text-display-fw);
+  font-size: var(--text-display-fs);
+  font-family: var(--text-display-ff);
   line-height: var(--text-display-lh);
   letter-spacing: var(--text-display-ls);
-  font-family: var(--text-display-ff);
 }
 
 .heading {
   font-weight: var(--text-heading-fw);
+  font-family: var(--text-heading-ff);
   line-height: var(--text-heading-lh);
   letter-spacing: var(--text-heading-ls);
-  font-family: var(--text-heading-ff);
 }
 
-.headingMd { font-size: var(--text-heading-fs-md); }
-.headingLg { font-size: var(--text-heading-fs-lg); }
-.headingXl { font-size: var(--text-heading-fs-xl); }
-.heading2xl { font-size: var(--text-heading-fs-2xl); }
+.headingMd {
+  font-size: var(--text-heading-fs-md);
+}
+
+.headingLg {
+  font-size: var(--text-heading-fs-lg);
+}
+
+.headingXl {
+  font-size: var(--text-heading-fs-xl);
+}
+
+.heading2xl {
+  font-size: var(--text-heading-fs-2xl);
+}
 
 .body {
-  font-size: var(--text-body-fs);
   font-weight: var(--text-body-fw);
+  font-size: var(--text-body-fs);
+  font-family: var(--text-body-ff);
   line-height: var(--text-body-lh);
   letter-spacing: var(--text-body-ls);
-  font-family: var(--text-body-ff);
+}
+
+.label {
+  font-weight: var(--text-label-fw);
+  font-family: var(--text-label-ff);
+  line-height: var(--text-label-lh);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
 }
 
 .sr-only {
