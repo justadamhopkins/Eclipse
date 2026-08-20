@@ -1,6 +1,7 @@
 import { Button } from '@atoms/Button';
 import { Eyebrow } from '@atoms/Eyebrow';
 import { ModuleSectionWrapper } from '@atoms/ModuleSectionWrapper';
+import { Text } from '@atoms/Text';
 import NextImage from 'next/image';
 
 import styles from './CoverHero.module.css';
@@ -15,16 +16,21 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
   return (
     <ModuleSectionWrapper>
       <div className={styles.coverHero}>
-        <div className={styles.coverHero__contentWrapper}>
-          <div className={styles.coverHero__contentInner}>
+        <div className={styles.contentWrapper}>
+          <div className={styles.contentInner}>
             <Eyebrow
               variant="primary"
               size="md"
               label={label}
             />
-            <h1>{title}</h1>
-            <p className={styles.coverHero__subtitle}>{subtitle}</p>
-            <div className={styles.coverHero__ctaRow}>
+            <Text variant="heading2xl">{title}</Text>
+            <Text
+              as="p"
+              variant="headingXl"
+            >
+              {subtitle}
+            </Text>
+            <div className={styles.ctaRow}>
               <Button
                 href="#footer"
                 variant="primary"
@@ -40,18 +46,13 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
             </div>
           </div>
         </div>
-        <div className={styles.coverHero__imageContainer}>
-          <div className={styles.coverHero__imageGlass} />
-          <div className={styles.coverHero__imageWrapper}>
-            <div className={styles.coverHero__imageFrame}>
-              <NextImage
-                src="/adam.png"
-                alt="adam hopkins"
-                width={400}
-                height={400}
-              />
-            </div>
-          </div>
+        <div className={styles.imageContainer}>
+          <NextImage
+            src="/adam.png"
+            alt="adam hopkins"
+            width={400}
+            height={400}
+          />
         </div>
       </div>
     </ModuleSectionWrapper>

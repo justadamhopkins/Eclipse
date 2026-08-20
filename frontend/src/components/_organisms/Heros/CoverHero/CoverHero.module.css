@@ -1,95 +1,41 @@
 .coverHero {
   display: grid;
   grid-template-columns: 1fr;
-  gap: var(--spacing-xl-2xl);
+  gap: 24px;
   min-height: 300px;
 
   @media (width >= 64rem) {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: minmax(0, 2fr) 1fr;
+    gap: 40px;
   }
+}
 
-  &__contentWrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
+.contentWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+}
+
+.contentInner {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-s-m);
+  width: min(100%, 80rem);
+}
+
+.imageContainer {
+  position: relative;
+
+  img {
+    width: 100%;
+    height: auto;
   }
+}
 
-  &__contentInner {
-    display: flex;
-    flex-direction: column;
-    gap: var(--spacing-s-m);
-    width: min(100%, 80rem);
-
-    h1 {
-      color: var(--text-primary);
-      font-weight: var(--text-display-xl-weight);
-      font-size: var(--text-display-xl-size);
-      font-family: var(--text-display-xl-font);
-      line-height: var(--text-display-xl-leading);
-      letter-spacing: var(--text-display-xl-tracking);
-    }
-  }
-
-  &__subtitle {
-    color: var(--text-secondary);
-    font-weight: var(--text-heading-md-weight);
-    font-size: var(--text-heading-md-size);
-    font-family: var(--text-heading-md-font);
-    line-height: var(--text-heading-md-leading);
-    letter-spacing: var(--text-heading-md-tracking);
-  }
-
-  &__imageContainer {
-    position: relative;
-  }
-
-  &__imageWrapper {
-    position: relative;
-    overflow: hidden;
-    border: 1px solid var(--border-accent);
-    border-radius: var(--radius-card-xl);
-    box-shadow: 0 40px 90px rgb(0 0 0 / 50%);
-    aspect-ratio: 1 / 1;
-  }
-
-  &__imageFrame {
-    position: absolute;
-    overflow: hidden;
-    background: rgb(0 0 0 / 4%);
-    inset: 0;
-
-    img {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      display: block;
-      width: 100%;
-      max-width: none;
-      height: 100%;
-      object-fit: cover;
-      object-position: 50% 50%;
-      transform: translate(-50%, -50%);
-      user-select: none;
-      touch-action: none;
-      -webkit-user-drag: none;
-    }
-  }
-
-  &__imageGlass {
-    position: absolute;
-    z-index: -1;
-    width: 130px;
-    height: 130px;
-    border: 1px solid var(--accent-line);
-    border-radius: var(--radius-card-xl);
-    inset: -14px -14px auto auto;
-  }
-
-  &__ctaRow {
-    display: flex;
-    flex-wrap: wrap;
-    gap: var(--spacing-xs);
-    align-items: center;
-  }
+.ctaRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+  align-items: center;
 }

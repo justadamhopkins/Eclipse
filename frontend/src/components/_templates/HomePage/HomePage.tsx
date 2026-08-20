@@ -48,7 +48,7 @@ export const HomePage = () => {
     <>
       <CoverHero
         label="Senior Software engineer"
-        title="Hi, I'm Adam Hopkins"
+        title="Adam Hopkins"
         subtitle="London-based product-led senior software engineer crafting high-quality digital products with a focus on performance, accessibility, and long-term scalability."
       />
       <AboutMeModule />
