@@ -11,20 +11,12 @@ interface IEyebrowProps {
 
 export const Eyebrow = ({
   label,
-  size,
   variant,
   className,
 }: TWithClassName<IEyebrowProps>) => {
   return (
-    <p
-      className={clsx(
-        styles.eyebrow,
-        styles[`eyebrow--${size}`],
-        styles[`eyebrow--${variant}`],
-        className,
-      )}
-    >
+    <span className={clsx(styles.eyebrow, styles[variant], 'label', className)}>
       {label}
-    </p>
+    </span>
   );
 };

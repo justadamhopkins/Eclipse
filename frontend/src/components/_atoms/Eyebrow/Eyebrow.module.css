@@ -2,18 +2,15 @@
   display: inline-flex;
   gap: 10px;
   align-items: center;
-  font-weight: 600;
-  font-size: var(--font-size-lg);
-  letter-spacing: var(--tracking-normal);
 
   &::before {
     width: 26px;
     height: 2px;
-    background: var(--accent-line);
+    background: var(--accent-strong);
     content: '';
   }
+}
 
-  &--primary {
-    color: var(--bg-accent-strong);
-  }
+.primary {
+  color: var(--accent-strong);
 }
