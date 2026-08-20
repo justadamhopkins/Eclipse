@@ -1,52 +1,41 @@
+import { type TPolymorphicProps } from '@typings/polymorphism';
 import clsx from 'clsx';
-import Link from 'next/link';
-import { type ComponentProps } from 'react';
+import { type ElementType, type PropsWithChildren } from 'react';
 
 import styles from './Button.module.css';
 
-type TButtonAsButton = {
-  href?: never;
+interface IButtonProps {
   variant?: 'primary' | 'secondary';
   isFullWidth?: boolean;
-} & ComponentProps<'button'>;
+}
 
-type TButtonAsLink = {
-  variant?: 'primary' | 'secondary';
-  isFullWidth?: boolean;
-} & ComponentProps<typeof Link>;
+type TButtonProps<C extends ElementType> = TPolymorphicProps<
+  C,
+  PropsWithChildren<IButtonProps>
+>;
 
-type TButtonProps = TButtonAsButton | TButtonAsLink;
-
-export const Button = ({
+export const Button = <C extends ElementType = 'button'>({
+  as,
   children,
   variant = 'primary',
   isFullWidth = false,
+  className,
   ...rest
-}: TButtonProps) => {
-  const className = clsx([
-    styles.button,
-    styles[variant],
-    isFullWidth && styles.fullWidth,
-  ]);
-
-  if ('href' in rest && rest.href) {
-    return (
-      <Link
-        {...(rest as Omit<TButtonAsLink, 'variant'>)}
-        className={className}
-      >
-        {children}
-      </Link>
-    );
-  }
+}: TButtonProps<C>) => {
+  const Tag = as ?? 'button';
 
   return (
-    <button
-      type="button"
-      className={className}
-      {...(rest as Omit<TButtonAsButton, 'variant'>)}
+    <Tag
+      {...(Tag === 'button' && { type: 'button' })}
+      className={clsx([
+        styles.button,
+        styles[variant],
+        isFullWidth && styles.fullWidth,
+        className,
+      ])}
+      {...rest}
     >
       {children}
-    </button>
+    </Tag>
   );
 };
