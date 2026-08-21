@@ -56,6 +56,7 @@ a {
 
 .label {
   font-weight: var(--text-label-fw);
+  font-size: var(--text-label-fs);
   font-family: var(--text-label-ff);
   line-height: var(--text-label-lh);
   letter-spacing: var(--tracking-label);

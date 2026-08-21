@@ -1,12 +1,11 @@
 :root {
   /* Font families — bound at runtime by next/font in fonts.ts */
   --ff-archivo: var(--font-archivo), system-ui, sans-serif;
-  --ff-archivo-black:
-    var(--font-archivo-black), var(--ff-archivo), system-ui, sans-serif;
+  --ff-archivo-black: var(--font-archivo-black), system-ui, sans-serif;
 
   /* Font sizes — desktop end of a Utopia 1.25 scale (20px × 1.25^n) */
-  --fs-xs: 0.64rem; /* ~10px  (step -3) */
-  --fs-sm: 0.8rem; /* ~13px  (step -2) */
+  --fs-xs: 0.8rem; /* ~13px  (step -2) */
+  --fs-sm: 0.875rem; /* 14px   (step -2) */
   --fs-md: 1rem; /* 16px   (step -1) */
   --fs-lg: 1.125rem; /* 18px   (step 0 min) */
   --fs-2lg: 1.25rem; /* 20px   (step 0) */

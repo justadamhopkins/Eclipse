@@ -18,7 +18,7 @@
   --weight-bold: var(--fw-700);
   --weight-extrabold: var(--fw-800);
   --weight-black: var(--fw-900);
-  --text-display-fs: var(--fs-4);
+  --text-display-fs: var(--fs-5);
   --text-display-fw: var(--weight-regular);
   --text-display-lh: var(--leading-tight);
   --text-display-ls: var(--tracking-display);
