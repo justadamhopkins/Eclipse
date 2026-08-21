@@ -16,13 +16,13 @@ export const FeaturedHeaderBlock = ({
 }: TFeaturedHeaderBlockProps) => {
   return (
     <div className={clsx([styles.featuredHeaderBlock])}>
-      <header className={styles.featuredHeaderBlock__header}>
+      <header className={styles.header}>
         <Eyebrow
           label={eyebrow}
           variant="primary"
           size="md"
         />
-        <h2 className={styles.featuredHeaderBlock__heading}>{title}</h2>
+        <h2 className={styles.heading}>{title}</h2>
       </header>
       {children}
     </div>
