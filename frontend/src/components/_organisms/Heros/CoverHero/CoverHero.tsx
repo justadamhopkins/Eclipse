@@ -4,6 +4,8 @@ import { ModuleSectionWrapper } from '@atoms/ModuleSectionWrapper';
 import { Text } from '@atoms/Text';
 import NextImage from 'next/image';
 import NextLink from 'next/link';
+import { LuLinkedin } from 'react-icons/lu';
+import { RiGithubLine } from 'react-icons/ri';
 
 import styles from './CoverHero.module.css';
 
@@ -24,7 +26,7 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
               size="md"
               label={label}
             />
-            <Text variant="heading2xl">{title}</Text>
+            <Text variant="display">{title}</Text>
             <Text
               as="p"
               variant="headingXl"
@@ -37,21 +39,25 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
                 href="#footer"
                 variant="primary"
               >
-                View my work
+                Email me
               </Button>
               <Button
                 as={NextLink}
                 href="/contact"
                 variant="secondary"
+                isLabelHiddenOnMobile={true}
+                startIcon={<RiGithubLine size={18} />}
               >
-                Github
+                GitHub
               </Button>
               <Button
                 as={NextLink}
                 href="/contact"
                 variant="secondary"
+                isLabelHiddenOnMobile={true}
+                startIcon={<LuLinkedin size={18} />}
               >
-                Linked in
+                LinkedIn
               </Button>
             </div>
           </div>
