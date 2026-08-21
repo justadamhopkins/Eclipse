@@ -1,3 +1,4 @@
+import { SiteContainer } from '@atoms/SiteContainer';
 import { type TWithClassName } from '@typings/utils';
 import clsx from 'clsx';
 import { type PropsWithChildren } from 'react';
@@ -21,7 +22,7 @@ export const ModuleSectionWrapper = ({
         className,
       )}
     >
-      {children}
+      <SiteContainer>{children}</SiteContainer>
     </section>
   );
 };

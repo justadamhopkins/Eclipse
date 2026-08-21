@@ -1,4 +1,3 @@
-import { SiteContainer } from '@atoms/SiteContainer';
 import { AppContainer } from '@core/AppContainer';
 import { PageWrapper } from '@core/PageWrapper';
 import { SiteFooter } from '@organisms/Navigation/SiteFooter';
@@ -19,9 +18,7 @@ const RootLayout = ({ children }) => {
         <Providers>
           <PageWrapper>
             <SiteHeader />
-            <AppContainer>
-              <SiteContainer>{children}</SiteContainer>
-            </AppContainer>
+            <AppContainer>{children}</AppContainer>
             <SiteFooter />
           </PageWrapper>
         </Providers>

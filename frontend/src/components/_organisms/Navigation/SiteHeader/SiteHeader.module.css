@@ -1,6 +1,5 @@
 .siteHeader {
   padding-block: var(--spacing-2xs-xs);
-  padding-inline: var(--element-gutter);
   background-color: var(--bg-page);
   border-bottom: 2px solid var(--border-divider);
 }
@@ -10,6 +9,7 @@
   gap: var(--space-2xs-xs);
   align-items: center;
   justify-content: space-between;
+  padding-inline: var(--element-gutter);
 }
 
 .navOuterContainer {
