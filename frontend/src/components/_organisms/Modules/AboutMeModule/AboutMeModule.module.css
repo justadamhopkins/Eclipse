@@ -1,13 +1,4 @@
 .aboutMe {
-  &__divider {
-    border: none;
-    border-top: 1px solid var(--border-divider);
-
-    @media (width >= 48rem) {
-      display: none;
-    }
-  }
-
   &__bodyWrapper {
     font-weight: var(--text-body-md-weight);
     font-size: var(--text-2lg);
