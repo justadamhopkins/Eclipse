@@ -1,12 +1,18 @@
 import { type TPolymorphicProps } from '@typings/polymorphism';
 import clsx from 'clsx';
-import { type ElementType, type PropsWithChildren } from 'react';
+import {
+  type ElementType,
+  type PropsWithChildren,
+  type ReactNode,
+} from 'react';
 
 import styles from './Button.module.css';
 
 interface IButtonProps {
   variant?: 'primary' | 'secondary';
   isFullWidth?: boolean;
+  startIcon?: ReactNode;
+  endIcon?: ReactNode;
 }
 
 type TButtonProps<C extends ElementType> = TPolymorphicProps<
@@ -19,6 +25,8 @@ export const Button = <C extends ElementType = 'button'>({
   children,
   variant = 'primary',
   isFullWidth = false,
+  startIcon,
+  endIcon,
   className,
   ...rest
 }: TButtonProps<C>) => {
@@ -35,7 +43,23 @@ export const Button = <C extends ElementType = 'button'>({
       ])}
       {...rest}
     >
+      {startIcon && (
+        <span
+          className={styles.icon}
+          aria-hidden="true"
+        >
+          {startIcon}
+        </span>
+      )}
       {children}
+      {endIcon && (
+        <span
+          className={styles.icon}
+          aria-hidden="true"
+        >
+          {endIcon}
+        </span>
+      )}
     </Tag>
   );
 };

@@ -1,5 +1,7 @@
 .button {
   display: inline-flex;
+  gap: var(--spacing-2);
+  align-items: center;
   justify-content: center;
   min-width: 96px;
   padding: 0.75em 1em;
@@ -9,6 +11,7 @@
   line-height: var(--text-heading-lh);
   letter-spacing: var(--text-heading-ls);
   border: 1px solid transparent;
+  border-radius: var(--radius-button);
   transition: background-color 0.2s ease-in-out;
 
   &:focus-visible {
@@ -34,6 +37,18 @@
   &:hover {
     color: var(--text-primary);
     background-color: color-mix(in srgb, var(--grey-900) 7%, transparent);
+  }
+}
+
+.icon {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+
+  & svg {
+    display: block;
+    block-size: 1.2em;
+    inline-size: auto;
   }
 }
 
