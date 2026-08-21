@@ -1,9 +1,11 @@
 .button {
+  --button-min-width: 96px;
+
   display: inline-flex;
   gap: var(--spacing-2);
   align-items: center;
   justify-content: center;
-  min-width: 96px;
+  min-width: var(--button-min-width);
   padding: 0.75em 1em;
   font-weight: var(--text-heading-fw);
   font-size: 1rem;
@@ -49,6 +51,39 @@
     display: block;
     block-size: 1.2em;
     inline-size: auto;
+  }
+}
+
+/* Collapses to an icon-only button, revealing the label from 40rem up. The
+   label is hidden with the .sr-only technique rather than display:none so it
+   stays in the button's accessible name at every width. */
+.labelHiddenOnMobile {
+  --button-min-width: 0px;
+
+  padding: 0.75em;
+
+  & .label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    white-space: nowrap;
+    clip-path: inset(50%);
+  }
+
+  @media (width >= 30rem) {
+    --button-min-width: 96px;
+
+    padding: 0.75em 1em;
+
+    & .label {
+      position: static;
+      width: auto;
+      height: auto;
+      overflow: visible;
+      white-space: normal;
+      clip-path: none;
+    }
   }
 }
 

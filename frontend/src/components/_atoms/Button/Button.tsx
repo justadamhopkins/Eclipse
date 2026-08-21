@@ -13,6 +13,7 @@ interface IButtonProps {
   isFullWidth?: boolean;
   startIcon?: ReactNode;
   endIcon?: ReactNode;
+  isLabelHiddenOnMobile?: boolean;
 }
 
 type TButtonProps<C extends ElementType> = TPolymorphicProps<
@@ -27,6 +28,7 @@ export const Button = <C extends ElementType = 'button'>({
   isFullWidth = false,
   startIcon,
   endIcon,
+  isLabelHiddenOnMobile = false,
   className,
   ...rest
 }: TButtonProps<C>) => {
@@ -39,6 +41,7 @@ export const Button = <C extends ElementType = 'button'>({
         styles.button,
         styles[variant],
         isFullWidth && styles.fullWidth,
+        isLabelHiddenOnMobile && styles.labelHiddenOnMobile,
         className,
       ])}
       {...rest}
@@ -51,7 +54,11 @@ export const Button = <C extends ElementType = 'button'>({
           {startIcon}
         </span>
       )}
-      {children}
+      {isLabelHiddenOnMobile ? (
+        <span className={styles.label}>{children}</span>
+      ) : (
+        children
+      )}
       {endIcon && (
         <span
           className={styles.icon}
