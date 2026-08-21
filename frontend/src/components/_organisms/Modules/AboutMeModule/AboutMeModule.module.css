@@ -1,14 +1,4 @@
 .aboutMe {
-  &__contentWrapper {
-    display: grid;
-    gap: var(--spacing-l-xl);
-
-    @media (width >= 48rem) {
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--spacing-xl-2xl);
-    }
-  }
-
   &__divider {
     border: none;
     border-top: 1px solid var(--border-divider);

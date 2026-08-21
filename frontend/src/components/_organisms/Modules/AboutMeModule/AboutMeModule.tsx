@@ -1,5 +1,4 @@
 import { ModuleSectionWrapper } from '@atoms/ModuleSectionWrapper';
-import { FactBox } from '@molecules/FactBox';
 import { FeaturedHeaderBlock } from '@molecules/FeaturedHeaderBlock';
 import clsx from 'clsx';
 
@@ -16,7 +15,7 @@ export const AboutMeModule = () => {
         eyebrow="My Story"
         title="About me"
       >
-        <div className={styles.aboutMe__contentWrapper}>
+        <div>
           <div className={clsx(['u-flow--s', styles.aboutMe__bodyWrapper])}>
             <p>
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
@@ -31,15 +30,6 @@ export const AboutMeModule = () => {
               nulla pariatur quibusdam rem sed.
             </p>
           </div>
-          <hr className={styles.aboutMe__divider} />
-          <FactBox
-            facts={[
-              { title: 'Based in', value: 'London, UK' },
-              { title: 'Focus', value: 'Full stack' },
-              { title: 'Availability', value: 'Open to roles' },
-              { title: 'Timezone', value: 'GMT / BST' },
-            ]}
-          />
         </div>
       </FeaturedHeaderBlock>
     </ModuleSectionWrapper>
