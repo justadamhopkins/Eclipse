@@ -6,6 +6,13 @@ const testConfig = defineConfig({
   resolve: {
     alias: [
       {
+        find: /^.*\.inline\.svg$/,
+        replacement: path.resolve(
+          __dirname,
+          './src/tests/mocks/inlineSvgMock.tsx',
+        ),
+      },
+      {
         find: '@atoms',
         replacement: path.resolve(__dirname, './src/components/_atoms'),
       },
