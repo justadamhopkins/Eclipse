@@ -1,6 +1,7 @@
 .moduleSectionWrapper {
   padding-inline: var(--element-gutter);
   padding-block: var(--app-vertical-rhythm);
+  border-bottom: 2px solid var(--border-divider);
 }
 
 .fullBleed {
