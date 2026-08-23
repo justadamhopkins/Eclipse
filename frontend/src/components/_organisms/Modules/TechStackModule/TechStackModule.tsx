@@ -7,10 +7,7 @@ import styles from './TechStackModule.module.css';
 export const TechStackModule = () => {
   return (
     <ModuleSectionWrapper>
-      <FeaturedHeaderBlock
-        eyebrow="Tech Stack"
-        title="Tooling"
-      >
+      <FeaturedHeaderBlock title="Tooling">
         <div className={styles.techStackModule}>
           <TechStackCard>
             <TechStackCard.Header category="tooling">

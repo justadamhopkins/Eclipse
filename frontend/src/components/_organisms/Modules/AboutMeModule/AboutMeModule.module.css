@@ -1,13 +1,9 @@
 .aboutMe {
-  &__bodyWrapper {
-    font-weight: var(--text-body-md-weight);
-    font-size: var(--text-2lg);
-    font-family: var(--text-body-md-font);
-    line-height: var(--text-body-md-leading);
-    letter-spacing: var(--text-body-md-tracking);
+  p {
+    max-width: 75ch;
 
-    p {
-      max-width: 65ch;
+    &:not(:last-child) {
+      margin-bottom: 1lh;
     }
   }
 }

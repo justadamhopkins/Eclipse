@@ -18,10 +18,7 @@ export interface IWorkExperienceModuleProps {
 export const JobCardModule = ({ jobCards }: IWorkExperienceModuleProps) => {
   return (
     <ModuleSectionWrapper>
-      <FeaturedHeaderBlock
-        eyebrow="Experience"
-        title="My journey"
-      >
+      <FeaturedHeaderBlock title="My journey">
         <div className={styles.jobCardModule}>
           <div className={styles.jobCardModule__slideWrapper}>
             <ListRenderer

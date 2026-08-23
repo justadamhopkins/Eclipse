@@ -1,6 +1,6 @@
 import { ModuleSectionWrapper } from '@atoms/ModuleSectionWrapper';
+import { Text } from '@atoms/Text';
 import { FeaturedHeaderBlock } from '@molecules/FeaturedHeaderBlock';
-import clsx from 'clsx';
 
 import styles from './AboutMeModule.module.css';
 
@@ -11,25 +11,20 @@ export interface IAboutMeModuleProps {
 export const AboutMeModule = () => {
   return (
     <ModuleSectionWrapper>
-      <FeaturedHeaderBlock
-        eyebrow="My Story"
-        title="About me"
-      >
-        <div>
-          <div className={clsx(['u-flow--s', styles.aboutMe__bodyWrapper])}>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-              blanditiis, debitis explicabo impedit iusto perspiciatis placeat
-              quo voluptatem. Ab alias, eius enim minus molestias necessitatibus
-              nulla pariatur quibusdam rem sed.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
-              blanditiis, debitis explicabo impedit iusto perspiciatis placeat
-              quo voluptatem. Ab alias, eius enim minus molestias necessitatibus
-              nulla pariatur quibusdam rem sed.
-            </p>
-          </div>
+      <FeaturedHeaderBlock title="About me">
+        <div className={styles.aboutMe}>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+            blanditiis, debitis explicabo impedit iusto perspiciatis placeat quo
+            voluptatem. Ab alias, eius enim minus molestias necessitatibus nulla
+            pariatur quibusdam rem sed.
+          </Text>
+          <Text>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi
+            blanditiis, debitis explicabo impedit iusto perspiciatis placeat quo
+            voluptatem. Ab alias, eius enim minus molestias necessitatibus nulla
+            pariatur quibusdam rem sed.
+          </Text>
         </div>
       </FeaturedHeaderBlock>
     </ModuleSectionWrapper>
