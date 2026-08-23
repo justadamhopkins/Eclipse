@@ -7,18 +7,3 @@
     grid-template-columns: 1fr 2fr;
   }
 }
-
-.header {
-  display: grid;
-  gap: var(--spacing-xs);
-}
-
-.heading {
-  margin-bottom: var(--spacing-l);
-  color: var(--text-primary);
-  font-weight: var(--text-heading-xl-weight);
-  font-size: var(--text-heading-xl-size);
-  font-family: var(--text-heading-xl-font);
-  line-height: var(--text-heading-xl-leading);
-  letter-spacing: var(--text-heading-xl-tracking);
-}
