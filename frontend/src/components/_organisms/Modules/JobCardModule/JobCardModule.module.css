@@ -1,46 +1,7 @@
 .jobCardModule {
-  display: flex;
-  width: 100%;
-  overflow-x: auto;
-
-  &::-webkit-scrollbar {
-    display: none;
-  }
-
-  &__slideWrapper {
-    display: flex;
-    flex-shrink: 0;
-    gap: var(--spacing-xs);
-    align-items: stretch;
-    width: 100%;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    scroll-behavior: smooth;
-    -webkit-overflow-scrolling: touch;
-    scrollbar-width: none;
-
-    &::-webkit-scrollbar {
-      display: none;
-    }
-
-    @media (width >= 80rem) {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: var(--spacing-s);
-      overflow-x: visible;
-    }
-  }
-
-  &__slide {
-    position: relative;
-    flex-shrink: 0;
-    width: calc(85% - var(--spacing-xs));
-    max-width: 320px;
-    scroll-snap-align: start;
-
-    @media (width >= 80rem) {
-      width: 100%;
-      max-width: none;
-    }
-  }
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  padding: 0;
+  list-style-type: none;
 }

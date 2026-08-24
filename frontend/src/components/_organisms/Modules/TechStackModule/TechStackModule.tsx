@@ -12,21 +12,24 @@ export const TechStackModule = () => {
         <ul className={styles.techStackModule}>
           <ListRenderer
             items={[
-              { label: 'Next.js' },
-              { label: 'React' },
               { label: 'TypeScript' },
-              { label: 'Next.js' },
               { label: 'React' },
-              { label: 'TypeScript' },
               { label: 'Next.js' },
-              { label: 'React' },
-              { label: 'TypeScript' },
-              { label: 'Next.js' },
-              { label: 'React' },
-              { label: 'TypeScript' },
-              { label: 'Next.js' },
-              { label: 'React' },
-              { label: 'TypeScript' },
+              { label: 'Node.js' },
+              { label: 'GraphQL' },
+              { label: 'AWS Lambda' },
+              { label: 'DynamoDB' },
+              { label: 'PostgreSQL' },
+              { label: 'Prisma' },
+              { label: 'Serverless' },
+              { label: 'Turborepo' },
+              { label: 'Sanity' },
+              { label: 'Shopify' },
+              { label: 'Vitest' },
+              { label: 'Jest' },
+              { label: 'Cypress' },
+              { label: 'Storybook' },
+              { label: 'Datadog' },
             ]}
             render={({ item }) => (
               <li>

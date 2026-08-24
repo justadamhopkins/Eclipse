@@ -13,33 +13,37 @@ export const MOCK_JOB_CARDS = [
     startDate: 'Jan 2023',
     endDate: 'Dec 2024',
     description:
-      'Developed and maintained core features using React and TypeScript.',
+      'Senior Software Engineer. Founding engineer on a greenfield legacy migration. Led a multi-brand design system built on design tokens and the move to a headless Sanity CMS.',
     isCurrentRole: false,
-    title: 'Senior Frontend Engineer',
+    companyTitle: 'Travelex',
+    jobTitle: 'Senior Frontend Engineer',
   },
   {
     startDate: 'Jun 2024',
     // endDate omitted because this is current role
     description:
-      'Leading frontend architecture and mentoring junior developers.',
+      'Senior Software Engineer. Founding engineer on a greenfield legacy migration. Led a multi-brand design system built on design tokens and the move to a headless Sanity CMS.',
     isCurrentRole: true,
-    title: 'Tech Lead - Frontend',
+    companyTitle: 'Travelex',
+    jobTitle: 'Tech Lead - Frontend',
   },
   {
     startDate: 'Mar 2021',
     endDate: 'Dec 2022',
     description:
-      'Built and shipped multiple user-facing features with focus on performance.',
+      'Senior Software Engineer. Founding engineer on a greenfield legacy migration. Led a multi-brand design system built on design tokens and the move to a headless Sanity CMS.',
+    companyTitle: 'Travelex',
     isCurrentRole: false,
-    title: 'Frontend Engineer',
+    jobTitle: 'Frontend Engineer',
   },
   {
     startDate: 'Mar 2021',
     endDate: 'Dec 2022',
     description:
-      'Built and shipped multiple user-facing features with focus on performance.',
+      'Senior Software Engineer. Founding engineer on a greenfield legacy migration. Led a multi-brand design system built on design tokens and the move to a headless Sanity CMS.',
     isCurrentRole: false,
-    title: 'Frontend Engineer',
+    companyTitle: 'Travelex',
+    jobTitle: 'Frontend Engineer',
   },
 ] satisfies IWorkExperienceModuleProps['jobCards'];
 
@@ -52,8 +56,8 @@ export const HomePage = () => {
         subtitle="London-based product-led senior software engineer crafting high-quality digital products with a focus on performance, accessibility, and long-term scalability."
       />
       <AboutMeModule />
-      <TechStackModule />
       <JobCardModule jobCards={MOCK_JOB_CARDS} />
+      <TechStackModule />
     </>
   );
 };
