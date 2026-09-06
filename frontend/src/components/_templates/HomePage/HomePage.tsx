@@ -2,6 +2,7 @@
 
 import { CoverHero } from '@organisms/Heros/CoverHero';
 import { AboutMeModule } from '@organisms/Modules/AboutMeModule/AboutMeModule';
+import { ContactModule } from '@organisms/Modules/ContactModule';
 import {
   type IWorkExperienceModuleProps,
   JobCardModule,
@@ -58,6 +59,7 @@ export const HomePage = () => {
       <AboutMeModule />
       <JobCardModule jobCards={MOCK_JOB_CARDS} />
       <TechStackModule />
+      <ContactModule />
     </>
   );
 };
