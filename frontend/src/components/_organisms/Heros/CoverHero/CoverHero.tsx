@@ -1,5 +1,6 @@
 import { Button } from '@atoms/Button';
 import { Eyebrow } from '@atoms/Eyebrow';
+import { IconButton } from '@atoms/IconButton';
 import { ModuleSectionWrapper } from '@atoms/ModuleSectionWrapper';
 import { Text } from '@atoms/Text';
 import NextImage from 'next/image';
@@ -33,33 +34,37 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
             >
               {subtitle}
             </Text>
-            <div className={styles.ctaRow}>
-              <Button
-                as={NextLink}
-                href="#footer"
-                variant="primary"
-              >
-                Email me
-              </Button>
-              <Button
-                as={NextLink}
-                href="/contact"
-                variant="secondary"
-                isLabelHiddenOnMobile={true}
-                startIcon={<RiGithubLine size={18} />}
-              >
-                GitHub
-              </Button>
-              <Button
-                as={NextLink}
-                href="/contact"
-                variant="secondary"
-                isLabelHiddenOnMobile={true}
-                startIcon={<LuLinkedin size={18} />}
-              >
-                LinkedIn
-              </Button>
-            </div>
+            <ul className={styles.ctaRow}>
+              <li>
+                <Button
+                  as={NextLink}
+                  href="#footer"
+                  variant="primary"
+                >
+                  Email me
+                </Button>
+              </li>
+              <li>
+                <IconButton
+                  as={NextLink}
+                  href="/contact"
+                  variant="secondary"
+                  icon={<RiGithubLine size={18} />}
+                >
+                  GitHub
+                </IconButton>
+              </li>
+              <li>
+                <IconButton
+                  as={NextLink}
+                  href="/contact"
+                  variant="secondary"
+                  icon={<LuLinkedin size={18} />}
+                >
+                  LinkedIn
+                </IconButton>
+              </li>
+            </ul>
           </div>
         </div>
         <div className={styles.imageContainer}>
