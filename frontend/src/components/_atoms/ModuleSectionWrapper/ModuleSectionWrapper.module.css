@@ -7,3 +7,11 @@
 .fullBleed {
   padding-inline: 0;
 }
+
+.primary {
+  background-color: transparent;
+}
+
+.secondary {
+  background-color: var(--bg-accent);
+}

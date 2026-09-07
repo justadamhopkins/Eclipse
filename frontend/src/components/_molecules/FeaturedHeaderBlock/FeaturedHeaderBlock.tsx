@@ -1,18 +1,26 @@
 import { Text } from '@atoms/Text';
+import { type TVariants, type TWithClassName } from '@typings/utils';
+import clsx from 'clsx';
+import { type ReactNode } from 'react';
 
 import styles from './FeaturedHeaderBlock.module.css';
 
 type TFeaturedHeaderBlockProps = {
   title: string;
-  children?: React.ReactNode;
+  children?: ReactNode;
+  variant?: Extract<TVariants, 'primary' | 'secondary'>;
 };
 
 export const FeaturedHeaderBlock = ({
   title,
   children,
-}: TFeaturedHeaderBlockProps) => {
+  variant = 'primary',
+  className,
+}: TWithClassName<TFeaturedHeaderBlockProps>) => {
   return (
-    <div className={styles.featuredHeaderBlock}>
+    <div
+      className={clsx([styles.featuredHeaderBlock, styles[variant], className])}
+    >
       <header>
         <Text
           variant="headingMd"
