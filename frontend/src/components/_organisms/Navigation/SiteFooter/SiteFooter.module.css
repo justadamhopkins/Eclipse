@@ -1,8 +1,4 @@
 .siteFooter {
-  padding: var(--spacing-2xs) var(--spacing-xs);
-  border-top: 1px solid var(--surface-bright);
-
-  @media (width >= 40rem) {
-    padding: var(--spacing-xs) var(--spacing-m);
-  }
+  padding-block: 32px;
+  padding-inline: var(--element-gutter);
 }
