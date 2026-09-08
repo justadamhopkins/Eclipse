@@ -26,6 +26,7 @@ export const JobDescription = ({
           <Text>{jobTitle}</Text>
         </div>
         <Text
+          className={styles.date}
           as="span"
           variant="headingMd"
         >{`${startDate} - ${isCurrentRole ? 'Present' : endDate}`}</Text>

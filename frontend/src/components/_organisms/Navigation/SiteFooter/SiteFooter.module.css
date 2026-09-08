@@ -2,3 +2,29 @@
   padding-block: 32px;
   padding-inline: var(--element-gutter);
 }
+
+.topContainer {
+  padding-bottom: 32px;
+  border-bottom: 1px solid var(--border-divider);
+
+}
+
+.actionsContainer {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.bottomContainer {
+  padding-top: 32px;
+  font-size:20px;
+  text-align: center;
+}
+
+.socialLinksContainer {
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  list-style-type: none;
+}

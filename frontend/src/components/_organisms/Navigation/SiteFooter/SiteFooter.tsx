@@ -16,30 +16,31 @@ export const SiteFooter = () => {
     >
       <SiteContainer>
         <SiteLogo />
-        <div>
-          <span>London, UK</span>
-          <ul>
-            <li>
-              {' '}
-              <IconButton
-                as={NextLink}
-                href="/contact"
-                variant="secondary"
-                icon={<RiGithubLine size={18} />}
-              />
-            </li>
-            <li>
-              <IconButton
-                as={NextLink}
-                href="/contact"
-                variant="secondary"
-                icon={<LuLinkedin size={18} />}
-              />
-            </li>
-          </ul>
+        <div className={styles.topContainer}>
+          <div className={styles.actionsContainer}>
+            <span>London, UK</span>
+            <ul className={styles.socialLinksContainer}>
+              <li>
+                <IconButton
+                  as={NextLink}
+                  href="/contact"
+                  variant="secondary"
+                  icon={<RiGithubLine size={18} />}
+                />
+              </li>
+              <li>
+                <IconButton
+                  as={NextLink}
+                  href="/contact"
+                  variant="secondary"
+                  icon={<LuLinkedin size={18} />}
+                />
+              </li>
+            </ul>
+          </div>
         </div>
-        <div>
-          <small>{new Date().getFullYear()}</small>
+        <div className={styles.bottomContainer}>
+          <small>&copy; {new Date().getFullYear()} Adam Hopkins</small>
         </div>
       </SiteContainer>
     </footer>
