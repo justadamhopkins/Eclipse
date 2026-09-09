@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   min-width: var(--button-min-width, 96px);
-  padding: var(--button-padding, 0.75em 1em);
+  padding: 1em;
   font-weight: var(--text-heading-fw);
   font-size: 1rem;
   font-family: var(--text-heading-ff);
@@ -48,6 +48,18 @@
   &:hover {
     color: var(--accent-strong);
     background-color: var(--interactive-subtle);
+  }
+}
+
+.brand {
+  color: var(--text-primary);
+  background-color: transparent;
+  border: 1px solid var(--border-divider);
+
+  &:hover {
+    color: var(--accent-strong);
+    background-color: var(--interactive-subtle);
+    fill: var(--accent-strong);
   }
 }
 

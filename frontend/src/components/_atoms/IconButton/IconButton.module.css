@@ -1,18 +1,16 @@
 .icon {
-  display: inline-flex;
+  display: inline-block;
   flex-shrink: 0;
   align-items: center;
 
   & svg {
     display: block;
-    block-size: 1.2em;
     inline-size: auto;
   }
 }
 
 .labelHiddenOnMobile {
   --button-min-width: 0px;
-  --button-padding: 0.75em;
 
   & .label {
     position: absolute;
@@ -24,9 +22,6 @@
   }
 
   @media (width >= 30rem) {
-    --button-min-width: initial;
-    --button-padding: initial;
-
     & .label {
       position: static;
       width: auto;

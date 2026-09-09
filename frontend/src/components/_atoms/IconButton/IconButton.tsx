@@ -43,6 +43,6 @@ export const IconButton = <C extends ElementType = 'button'>({
     >
       {icon}
     </span>
-    <span className={styles.label}>{children}</span>
+    {children && <span className={styles.label}>{children}</span>}
   </ButtonBase>
 );

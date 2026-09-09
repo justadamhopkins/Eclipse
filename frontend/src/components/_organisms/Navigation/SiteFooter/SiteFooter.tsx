@@ -1,6 +1,7 @@
 import { IconButton } from '@atoms/IconButton';
 import { SiteContainer } from '@atoms/SiteContainer';
 import { SiteLogo } from '@atoms/SiteLogo';
+import { Text } from '@atoms/Text';
 import clsx from 'clsx';
 import NextLink from 'next/link';
 import { LuLinkedin } from 'react-icons/lu';
@@ -18,22 +19,22 @@ export const SiteFooter = () => {
         <SiteLogo />
         <div className={styles.topContainer}>
           <div className={styles.actionsContainer}>
-            <span>London, UK</span>
+            <Text>London, UK</Text>
             <ul className={styles.socialLinksContainer}>
               <li>
                 <IconButton
+                  variant="brand"
                   as={NextLink}
                   href="/contact"
-                  variant="secondary"
-                  icon={<RiGithubLine size={18} />}
+                  icon={<RiGithubLine size={24} />}
                 />
               </li>
               <li>
                 <IconButton
+                  variant="brand"
                   as={NextLink}
                   href="/contact"
-                  variant="secondary"
-                  icon={<LuLinkedin size={18} />}
+                  icon={<LuLinkedin size={24} />}
                 />
               </li>
             </ul>
