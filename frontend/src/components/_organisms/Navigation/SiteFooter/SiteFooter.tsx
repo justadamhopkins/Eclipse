@@ -16,10 +16,9 @@ export const SiteFooter = () => {
       className={clsx([styles.siteFooter])}
     >
       <SiteContainer>
-        <SiteLogo />
         <div className={styles.topContainer}>
+          <SiteLogo />
           <div className={styles.actionsContainer}>
-            <Text>London, UK</Text>
             <ul className={styles.socialLinksContainer}>
               <li>
                 <IconButton
@@ -41,6 +40,9 @@ export const SiteFooter = () => {
           </div>
         </div>
         <div className={styles.bottomContainer}>
+          <div>
+            <Text as="span">London, UK</Text>
+          </div>
           <small>&copy; {new Date().getFullYear()} Adam Hopkins</small>
         </div>
       </SiteContainer>
