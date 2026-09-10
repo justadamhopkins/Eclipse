@@ -23,6 +23,14 @@ a {
   letter-spacing: var(--text-display-ls);
 }
 
+.displayXl {
+  font-weight: var(--text-display-fw);
+  font-size: var(--text-display-fs-xl);
+  font-family: var(--text-display-ff);
+  line-height: var(--text-display-lh);
+  letter-spacing: var(--text-display-ls);
+}
+
 .heading {
   font-weight: var(--text-heading-fw);
   font-family: var(--text-heading-ff);

@@ -43,6 +43,9 @@
   /* Step 6: 61.0352px → 76.2939px */
   --fs-6: clamp(3.8147rem, 3.5228rem + 1.2975vw, 4.7684rem);
 
+  /* Step 7: 76.2939px → 220px */
+  --fs-7: clamp(8.75rem, 7.4342rem + 5.614vw, 13.75rem);
+
   /* Font weights */
   --fw-300: 300;
   --fw-400: 400;

@@ -1,0 +1,18 @@
+.container {
+  padding-inline: var(--element-gutter);
+}
+
+:where(.topContainer, .bottomContainer) {
+  padding-block: var(--space-m-l);
+}
+
+.topContainer {
+  border-block-end: 2px solid var(--border-divider);
+}
+
+.bottomContainer {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-s-m);
+  align-items: flex-start;
+}

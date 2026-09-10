@@ -4,6 +4,7 @@ import clsx from 'clsx';
 import { type ElementType, type JSX, type PropsWithChildren } from 'react';
 
 const VARIANTS = {
+  displayXl: 'displayXl',
   display: 'display',
   headingMd: 'heading headingMd',
   headingLg: 'heading headingLg',
@@ -13,6 +14,7 @@ const VARIANTS = {
 } as const;
 
 const DEFAULT_TAGS = {
+  displayXl: 'h1',
   display: 'h1',
   headingMd: 'h3',
   headingLg: 'h2',
