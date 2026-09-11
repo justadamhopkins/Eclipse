@@ -10,9 +10,15 @@ interface IErrorPageProps {
   status: number;
   title: string;
   message: string;
+  handleRetry?: () => void;
 }
 
-export const ErrorPage = ({ status, title, message }: IErrorPageProps) => {
+export const ErrorPage = ({
+  status,
+  title,
+  message,
+  handleRetry,
+}: IErrorPageProps) => {
   return (
     <div className={styles.container}>
       <SiteContainer>
@@ -26,12 +32,24 @@ export const ErrorPage = ({ status, title, message }: IErrorPageProps) => {
         >
           <Text variant="headingXl">{title}</Text>
           <Text>{message}</Text>
-          <Button
-            as={NextLink}
-            href="/"
-          >
-            Back to home
-          </Button>
+          <ul className={styles.actionsContainer}>
+            <li>
+              <Button
+                as={NextLink}
+                href="/"
+              >
+                Back to home
+              </Button>
+              {handleRetry && (
+                <Button
+                  variant="secondary"
+                  onClick={handleRetry}
+                >
+                  Retry
+                </Button>
+              )}
+            </li>
+          </ul>
         </section>
       </SiteContainer>
     </div>

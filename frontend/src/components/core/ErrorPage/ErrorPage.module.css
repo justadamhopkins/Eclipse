@@ -16,3 +16,12 @@
   gap: var(--space-s-m);
   align-items: flex-start;
 }
+
+.actionsContainer {
+  display: flex;
+  gap: var(--space-s-m);
+  align-items: center;
+  justify-content: flex-start;
+  padding: 0;
+  list-style-type: none;
+}
