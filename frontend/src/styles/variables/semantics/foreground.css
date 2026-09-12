@@ -8,7 +8,7 @@
   --text-on-accent: var(--grey-000); /* text on the red contact field */
 
   /* ── Icons ──────────────────────────────────────────────────── */
-  --icon-base: var(--grey-900);
+  --icon-base: var(--grey-600);
   --icon-accent: var(--red-700);
 
   /* ── Accent ─────────────────────────────────────────────────── */
