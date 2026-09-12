@@ -17,12 +17,17 @@ export const TechStackModule = () => {
               { label: 'Next.js' },
               { label: 'Node.js' },
               { label: 'GraphQL' },
+              { label: 'Redux' },
+              { label: 'React Query' },
               { label: 'AWS Lambda' },
               { label: 'DynamoDB' },
+              { label: 'SQS' },
               { label: 'PostgreSQL' },
               { label: 'Prisma' },
+              { label: 'MongoDB' },
               { label: 'Serverless' },
               { label: 'Turborepo' },
+              { label: 'Docker' },
               { label: 'Sanity' },
               { label: 'Shopify' },
               { label: 'Vitest' },
@@ -30,6 +35,7 @@ export const TechStackModule = () => {
               { label: 'Cypress' },
               { label: 'Storybook' },
               { label: 'Datadog' },
+              { label: 'Claude Code' },
             ]}
             render={({ item }) => (
               <li>
