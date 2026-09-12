@@ -9,25 +9,25 @@ interface IHamburgerProps {
   onToggle?: () => void;
 }
 
-export const Hamburger = ({ isOpen, onToggle }: IHamburgerProps) => {
+export const Hamburger = ({ isOpen = false, onToggle }: IHamburgerProps) => {
   return (
     <button
       className={clsx(styles.hamburger, {
-        [styles['hamburger--open']]: isOpen,
+        [styles.open]: isOpen,
       })}
       onClick={onToggle}
       aria-label={isOpen ? 'Close menu' : 'Open menu'}
       aria-expanded={isOpen}
     >
-      <span className={styles.hamburger__dot}></span>
-      <span className={styles.hamburger__dot}></span>
-      <span className={styles.hamburger__dot}></span>
-      <span className={styles.hamburger__dot}></span>
-      <span className={styles.hamburger__dot}></span>
-      <span className={styles.hamburger__dot}></span>
-      <span className={styles.hamburger__dot}></span>
-      <span className={styles.hamburger__dot}></span>
-      <span className={styles.hamburger__dot}></span>
+      <span className={styles.dot} />
+      <span className={styles.dot} />
+      <span className={styles.dot} />
+      <span className={styles.dot} />
+      <span className={styles.dot} />
+      <span className={styles.dot} />
+      <span className={styles.dot} />
+      <span className={styles.dot} />
+      <span className={styles.dot} />
     </button>
   );
 };

@@ -14,19 +14,10 @@ export const DialogPanel = ({
 }: PropsWithChildren<IDrawerPanelProps>) => {
   return (
     <Dialog.Portal>
-      <Dialog.Backdrop className={styles.dialog__backdrop} />
-      <Dialog.Viewport
-        className={clsx([
-          styles.dialog__viewport,
-          styles[`dialog__viewport--${variant}`],
-        ])}
-      >
-        <Dialog.Popup
-          className={clsx([
-            styles.dialog__popup,
-            styles[`dialog__popup--${variant}`],
-          ])}
-        >
+      <Dialog.Backdrop className={styles.backdrop} />
+
+      <Dialog.Viewport className={clsx(styles.viewport, styles[variant])}>
+        <Dialog.Popup className={clsx(styles.popup, styles[variant])}>
           {children}
         </Dialog.Popup>
       </Dialog.Viewport>

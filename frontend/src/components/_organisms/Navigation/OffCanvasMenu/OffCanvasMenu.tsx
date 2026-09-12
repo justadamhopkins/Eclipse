@@ -1,7 +1,9 @@
 import { Button } from '@atoms/Button';
 import { Eyebrow } from '@atoms/Eyebrow';
+import { Hamburger } from '@atoms/Hamburger';
 import { Icon } from '@atoms/Icon';
 import { NavigationLink } from '@atoms/Navigation/NavigationLink/NavigationLink';
+import { SiteLogo } from '@atoms/SiteLogo';
 import { ScrollArea } from '@base-ui/react/scroll-area';
 import { Dialog, type IDrawerProps } from '@molecules/Dialog';
 import { TriangleRightIcon } from '@radix-ui/react-icons';
@@ -12,6 +14,11 @@ interface IOffCanvasMenuProps {
   isOpen: boolean;
   onOpenChange: IDrawerProps['onOpenChange'];
 }
+
+const navigationItems = [
+  { label: 'Home', href: '/' },
+  { label: 'About', href: '/about' },
+];
 
 export const OffCanvasMenu = ({
   isOpen,
@@ -24,42 +31,38 @@ export const OffCanvasMenu = ({
     >
       <Dialog.Panel variant="right">
         <Dialog.Title className="sr-only">Site navigation</Dialog.Title>
-        <div className={styles.offCanvasMenu}>
-          <ScrollArea.Root className={styles.offCanvasMenu__body}>
-            <ScrollArea.Viewport className={styles.offCanvasMenu__viewport}>
-              <ScrollArea.Content className={styles.offCanvasMenu__content}>
-                <div className={styles.offCanvasMenu__primary}>
+
+        <div className={styles.menu}>
+          <ScrollArea.Root className={styles.scrollArea}>
+            <ScrollArea.Viewport className={styles.viewport}>
+              <ScrollArea.Content className={styles.content}>
+                <header className={styles.header}>
+                  <SiteLogo />
+                  <Hamburger />
+                </header>
+                <div className={styles.primary}>
                   <nav
-                    className={styles.offCanvasMenu__navSection}
+                    className={styles.navigation}
                     aria-label="Primary"
                   >
                     <ul>
-                      <li>
-                        <NavigationLink
-                          className={styles.offCanvasMenu__navLink}
-                          href="/"
-                        >
-                          Home
-                          <TriangleRightIcon
-                            width={28}
-                            height={28}
-                          />
-                        </NavigationLink>
-                      </li>
-                      <li>
-                        <NavigationLink
-                          className={styles.offCanvasMenu__navLink}
-                          href="/about"
-                        >
-                          About
-                          <TriangleRightIcon
-                            width={28}
-                            height={28}
-                          />
-                        </NavigationLink>
-                      </li>
+                      {navigationItems.map(({ label, href }) => (
+                        <li key={href}>
+                          <NavigationLink
+                            className={styles.navigationLink}
+                            href={href}
+                          >
+                            {label}
+                            <TriangleRightIcon
+                              width={28}
+                              height={28}
+                            />
+                          </NavigationLink>
+                        </li>
+                      ))}
                     </ul>
                   </nav>
+
                   <Button
                     isFullWidth={true}
                     variant="secondary"
@@ -67,20 +70,23 @@ export const OffCanvasMenu = ({
                     Download CV
                   </Button>
                 </div>
-                <div className={styles.offCanvasMenu__contactSection}>
+
+                <div className={styles.contact}>
                   <div>
                     <Eyebrow
                       variant="primary"
                       size="lg"
                       label="Get in touch"
                     />
+
                     <a href="mailto:adamhopkins87@gmail.com">
                       adamhopkins87@gmail.com
                     </a>
                   </div>
-                  <div className={styles.offCanvasMenu__socialBar}>
+
+                  <div className={styles.social}>
                     <a
-                      href="mailto:adamhopkins87@gmail.com"
+                      href="https://github.com/"
                       aria-label="GitHub"
                     >
                       <Icon
@@ -88,8 +94,9 @@ export const OffCanvasMenu = ({
                         name="githubLogo"
                       />
                     </a>
+
                     <a
-                      href="mailto:adamhopkins87@gmail.com"
+                      href="https://linkedin.com/"
                       aria-label="LinkedIn"
                     >
                       <Icon
@@ -101,10 +108,9 @@ export const OffCanvasMenu = ({
                 </div>
               </ScrollArea.Content>
             </ScrollArea.Viewport>
-            <ScrollArea.Scrollbar className={styles.offCanvasMenu__scrollbar}>
-              <ScrollArea.Thumb
-                className={styles.offCanvasMenu__scrollbarThumb}
-              />
+
+            <ScrollArea.Scrollbar className={styles.scrollbar}>
+              <ScrollArea.Thumb className={styles.scrollbarThumb} />
             </ScrollArea.Scrollbar>
           </ScrollArea.Root>
         </div>
