@@ -6,8 +6,10 @@ import NextLink from 'next/link';
 
 import styles from './ErrorPage.module.css';
 
+type TErrorStatus = 400 | 401 | 403 | 404 | 500 | 502 | 503;
+
 interface IErrorPageProps {
-  status: number;
+  status: TErrorStatus;
   title: string;
   message: string;
   handleRetry?: () => void;

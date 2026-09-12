@@ -1,6 +1,7 @@
 .siteFooter {
   padding-block: 32px;
   padding-inline: var(--element-gutter);
+  border-top: 2px solid var(--border-divider);
 }
 
 .topContainer {
