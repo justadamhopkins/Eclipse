@@ -1,12 +1,15 @@
 import { Button } from '@atoms/Button';
 import { Eyebrow } from '@atoms/Eyebrow';
 import { Hamburger } from '@atoms/Hamburger';
-import { Icon } from '@atoms/Icon';
-import { NavigationLink } from '@atoms/Navigation/NavigationLink/NavigationLink';
+import { IconButton } from '@atoms/IconButton';
 import { SiteLogo } from '@atoms/SiteLogo';
+import { Text } from '@atoms/Text';
 import { ScrollArea } from '@base-ui/react/scroll-area';
 import { Dialog, type IDrawerProps } from '@molecules/Dialog';
-import { TriangleRightIcon } from '@radix-ui/react-icons';
+import NextLink from 'next/link';
+import { IoIosArrowForward } from 'react-icons/io';
+import { LuLinkedin } from 'react-icons/lu';
+import { RiGithubLine } from 'react-icons/ri';
 
 import styles from './OffCanvasMenu.module.css';
 
@@ -17,7 +20,10 @@ interface IOffCanvasMenuProps {
 
 const navigationItems = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' },
+  { label: 'About', href: '/' },
+  { label: 'Experience', href: '/' },
+  { label: 'Tools', href: '/' },
+  { label: 'Contact', href: '/' },
 ];
 
 export const OffCanvasMenu = ({
@@ -38,7 +44,10 @@ export const OffCanvasMenu = ({
               <ScrollArea.Content className={styles.content}>
                 <header className={styles.header}>
                   <SiteLogo />
-                  <Hamburger />
+                  <Hamburger
+                    isOpen={isOpen}
+                    onToggle={onOpenChange}
+                  />
                 </header>
                 <div className={styles.primary}>
                   <nav
@@ -48,21 +57,25 @@ export const OffCanvasMenu = ({
                     <ul>
                       {navigationItems.map(({ label, href }) => (
                         <li key={href}>
-                          <NavigationLink
+                          <Text
+                            variant="headingLg"
+                            as={NextLink}
                             className={styles.navigationLink}
                             href={href}
                           >
                             {label}
-                            <TriangleRightIcon
+                            <IoIosArrowForward
                               width={28}
                               height={28}
                             />
-                          </NavigationLink>
+                          </Text>
                         </li>
                       ))}
                     </ul>
                   </nav>
+                </div>
 
+                <div className={styles.actionContainer}>
                   <Button
                     isFullWidth={true}
                     variant="secondary"
@@ -70,41 +83,41 @@ export const OffCanvasMenu = ({
                     Download CV
                   </Button>
                 </div>
+                <div className={styles.contactContainer}>
+                  <Eyebrow
+                    variant="primary"
+                    size="lg"
+                    label="Get in touch"
+                  />
 
-                <div className={styles.contact}>
-                  <div>
-                    <Eyebrow
-                      variant="primary"
-                      size="lg"
-                      label="Get in touch"
-                    />
-
-                    <a href="mailto:adamhopkins87@gmail.com">
-                      adamhopkins87@gmail.com
-                    </a>
-                  </div>
-
-                  <div className={styles.social}>
-                    <a
-                      href="https://github.com/"
-                      aria-label="GitHub"
-                    >
-                      <Icon
-                        isInline={true}
-                        name="githubLogo"
+                  <ul className={styles.ctaRow}>
+                    <li>
+                      <Button
+                        as={NextLink}
+                        href="#footer"
+                        variant="primary"
+                        isFullWidth={true}
+                      >
+                        Email me
+                      </Button>
+                    </li>
+                    <li>
+                      <IconButton
+                        as={NextLink}
+                        href="/contact"
+                        variant="secondary"
+                        icon={<RiGithubLine size={18} />}
                       />
-                    </a>
-
-                    <a
-                      href="https://linkedin.com/"
-                      aria-label="LinkedIn"
-                    >
-                      <Icon
-                        isInline={true}
-                        name="linkedInLogo"
+                    </li>
+                    <li>
+                      <IconButton
+                        as={NextLink}
+                        href="/contact"
+                        variant="secondary"
+                        icon={<LuLinkedin size={18} />}
                       />
-                    </a>
-                  </div>
+                    </li>
+                  </ul>
                 </div>
               </ScrollArea.Content>
             </ScrollArea.Viewport>

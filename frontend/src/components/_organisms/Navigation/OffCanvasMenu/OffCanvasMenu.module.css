@@ -39,83 +39,72 @@
 
 .primary {
   display: flex;
-  flex: 1 1 auto;
   flex-direction: column;
   gap: var(--spacing-s);
   justify-content: flex-start;
 }
 
-.navigation > ul {
-  display: flex;
-  flex-direction: column;
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
+.navigation {
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
 
-.navigation li {
-  padding: var(--spacing-xs);
-  border-bottom: 1px solid var(--border-divider);
+  li {
+    border-bottom: 1px solid var(--border-divider);
+  }
 }
 
 .navigationLink {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-inline: 0;
+  padding: var(--spacing-s);
   color: var(--text-primary);
-  font-weight: var(--text-h3-weight);
-  font-size: var(--text-h3-size);
-  font-family: var(--text-h3-font);
-  line-height: var(--text-h3-leading);
-  letter-spacing: var(--text-h3-tracking);
+  transition: color var(--motion-base) var(--motion-ease-standard);
+
+  svg {
+    transition: transform var(--motion-base) var(--motion-ease-standard);
+    fill: currentcolor;
+  }
+
+  &:hover {
+    color: var(--accent-strong);
+
+    svg {
+      transform: scale(1.2);
+    }
+  }
 }
 
-.contact {
+.actionContainer,
+.contactContainer {
+  padding: var(--spacing-m) var(--spacing-s);
+}
+
+.contactContainer {
   display: flex;
   flex-direction: column;
-  gap: var(--spacing-xs);
+  gap: var(--spacing-s-m);
   margin-top: auto;
+  border-top: 2px solid var(--border-divider);
 }
 
-.contact a {
-  display: inline-block;
-  margin-top: var(--spacing-2xs);
-  color: var(--text-primary);
-  font-weight: var(--text-body-lg-weight);
-  font-size: var(--text-body-lg-size);
-  font-family: var(--text-body-lg-font);
-  line-height: var(--text-body-lg-leading);
-  letter-spacing: var(--text-body-lg-tracking);
-}
-
-.social {
+.ctaRow {
   display: flex;
-  flex-flow: row wrap;
-  gap: var(--spacing-xs);
-}
-
-.social a {
-  position: relative;
-  display: inline-block;
-  width: 32px;
-  margin: 0;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+  width: 100%;
   padding: 0;
-  aspect-ratio: 1;
-}
+  list-style-type: none;
 
-.social a::after {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 48px;
-  height: 48px;
-  transform: translate(-50%, -50%);
-  content: '';
-}
-
-.social svg {
-  fill: var(--icon-base);
+  > li:first-of-type {
+    flex: 1;
+  }
 }
 
 .scrollbar {
