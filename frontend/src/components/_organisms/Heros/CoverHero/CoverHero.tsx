@@ -47,7 +47,7 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
               <li>
                 <IconButton
                   as={NextLink}
-                  href="/contact"
+                  href="https://github.com/justadamhopkins"
                   variant="secondary"
                   icon={<RiGithubLine size={18} />}
                 >
@@ -57,7 +57,7 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
               <li>
                 <IconButton
                   as={NextLink}
-                  href="/contact"
+                  href="https://www.linkedin.com/in/adamhopkins1989/"
                   variant="secondary"
                   icon={<LuLinkedin size={18} />}
                 >

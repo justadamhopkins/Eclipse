@@ -24,7 +24,7 @@ export const SiteFooter = () => {
                 <IconButton
                   variant="brand"
                   as={NextLink}
-                  href="/contact"
+                  href="https://github.com/justadamhopkins"
                   icon={<RiGithubLine size={24} />}
                 />
               </li>
@@ -32,7 +32,7 @@ export const SiteFooter = () => {
                 <IconButton
                   variant="brand"
                   as={NextLink}
-                  href="/contact"
+                  href="https://www.linkedin.com/in/adamhopkins1989/"
                   icon={<LuLinkedin size={24} />}
                 />
               </li>
