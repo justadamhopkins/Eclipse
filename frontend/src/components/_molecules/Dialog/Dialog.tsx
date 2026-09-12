@@ -13,7 +13,7 @@ import { DialogTrigger } from './components/Trigger';
 export interface IDrawerProps {
   children: ReactNode;
   open: boolean;
-  onOpenChange: DialogRootProps['onOpenChange'];
+  onOpenChange?: DialogRootProps['onOpenChange'];
 }
 
 export const Dialog = ({ children, open, onOpenChange }: IDrawerProps) => {

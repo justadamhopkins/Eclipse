@@ -5,7 +5,8 @@ import { IconButton } from '@atoms/IconButton';
 import { SiteLogo } from '@atoms/SiteLogo';
 import { Text } from '@atoms/Text';
 import { ScrollArea } from '@base-ui/react/scroll-area';
-import { Dialog, type IDrawerProps } from '@molecules/Dialog';
+import { Dialog } from '@molecules/Dialog';
+import { ListRenderer } from '@utilities/ListRenderer';
 import NextLink from 'next/link';
 import { IoIosArrowForward } from 'react-icons/io';
 import { LuLinkedin } from 'react-icons/lu';
@@ -15,7 +16,7 @@ import styles from './OffCanvasMenu.module.css';
 
 interface IOffCanvasMenuProps {
   isOpen: boolean;
-  onOpenChange: IDrawerProps['onOpenChange'];
+  handleMenuToggle: () => void;
 }
 
 const navigationItems = [
@@ -28,13 +29,10 @@ const navigationItems = [
 
 export const OffCanvasMenu = ({
   isOpen,
-  onOpenChange,
+  handleMenuToggle,
 }: IOffCanvasMenuProps) => {
   return (
-    <Dialog
-      open={isOpen}
-      onOpenChange={onOpenChange}
-    >
+    <Dialog open={isOpen}>
       <Dialog.Panel variant="right">
         <Dialog.Title className="sr-only">Site navigation</Dialog.Title>
 
@@ -44,7 +42,10 @@ export const OffCanvasMenu = ({
               <ScrollArea.Content className={styles.content}>
                 <header className={styles.header}>
                   <SiteLogo />
-                  <Hamburger isOpen={isOpen} />
+                  <Hamburger
+                    isOpen={isOpen}
+                    onToggle={handleMenuToggle}
+                  />
                 </header>
                 <div className={styles.primary}>
                   <nav
@@ -52,32 +53,38 @@ export const OffCanvasMenu = ({
                     aria-label="Primary"
                   >
                     <ul>
-                      {navigationItems.map(({ label, href }) => (
-                        <li key={href}>
-                          <Text
-                            variant="headingLg"
-                            as={NextLink}
-                            className={styles.navigationLink}
-                            href={href}
-                          >
-                            {label}
-                            <IoIosArrowForward
-                              width={28}
-                              height={28}
-                            />
-                          </Text>
-                        </li>
-                      ))}
+                      <ListRenderer
+                        items={navigationItems}
+                        render={({ item }) => (
+                          <li key={item.href}>
+                            <Text
+                              variant="headingLg"
+                              as={NextLink}
+                              className={styles.navigationLink}
+                              href={item.href}
+                            >
+                              {item.label}
+                              <IoIosArrowForward
+                                width={28}
+                                height={28}
+                              />
+                            </Text>
+                          </li>
+                        )}
+                      />
                     </ul>
                   </nav>
                 </div>
 
                 <div className={styles.actionContainer}>
                   <Button
+                    as={NextLink}
+                    href="/documents/Adam_Hopkins_CV.pdf"
+                    target="_blank"
                     isFullWidth={true}
                     variant="secondary"
                   >
-                    Download CV
+                    View CV
                   </Button>
                 </div>
                 <div className={styles.contactContainer}>
@@ -101,7 +108,7 @@ export const OffCanvasMenu = ({
                     <li>
                       <IconButton
                         as={NextLink}
-                        href="/contact"
+                        href="https://github.com/justadamhopkins"
                         variant="secondary"
                         icon={<RiGithubLine size={18} />}
                       />
@@ -109,7 +116,7 @@ export const OffCanvasMenu = ({
                     <li>
                       <IconButton
                         as={NextLink}
-                        href="/contact"
+                        href="https://www.linkedin.com/in/adamhopkins1989/"
                         variant="secondary"
                         icon={<LuLinkedin size={18} />}
                       />
