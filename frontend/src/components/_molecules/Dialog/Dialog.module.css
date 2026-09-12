@@ -1,69 +1,72 @@
 .dialog {
-  &__backdrop {
-    position: fixed;
-    background-color: var(--bg-page);
-    opacity: var(--opacity-3);
-    transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
-    transition-duration: 300ms;
-    transition-property: opacity;
-    inset: 0;
+  /* component styles, if any */
+}
 
-    /* iOS 26+: Ensure the backdrop covers the entire visible viewport. */
-    @supports (-webkit-touch-callout: none) {
-      position: absolute;
-    }
+.backdrop {
+  position: fixed;
+  inset: 0;
+  background-color: var(--bg-surface-overlay);
+  opacity: var(--opacity-4);
+  transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+  transition-duration: 300ms;
+  transition-property: opacity;
+}
 
-    &[data-starting-style],
-    &[data-ending-style] {
-      opacity: 0;
-    }
+@supports (-webkit-touch-callout: none) {
+  .backdrop {
+    position: absolute;
   }
+}
 
-  &__viewport {
-    position: fixed;
-    inset: 0;
-    display: flex;
-    align-items: stretch;
+.backdrop[data-starting-style],
+.backdrop[data-ending-style] {
+  opacity: 0;
+}
 
-    &--right {
-      justify-content: flex-end;
-    }
-  }
+.viewport {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  align-items: stretch;
+}
 
-  &__popup {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: min(320px, 100vw);
-    overflow: hidden;
-    color: var(--text-primary);
-    background-color: var(--bg-surface);
-    outline: 1px solid var(--bg-raised);
-    transition: transform 500ms cubic-bezier(0.25, 0.1, 0.25, 1);
+.viewport.right {
+  justify-content: flex-end;
+}
 
-    &--right {
-      border-left: 1px solid var(--border-divider);
+.popup {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: min(320px, 100vw);
+  overflow: hidden;
+  color: var(--text-primary);
+  background-color: var(--bg-surface);
+  outline: 1px solid var(--bg-raised);
+  transition: transform 500ms cubic-bezier(0.25, 0.1, 0.25, 1);
+}
 
-      &[data-starting-style],
-      &[data-ending-style] {
-        transform: translateX(100%);
-      }
-    }
-  }
+.popup.right {
+  border-left: 1px solid var(--border-divider);
+}
 
-  &__title {
-    margin: 0;
-    color: var(--text-primary);
-    font-weight: 700;
-    font-size: var(--font-size-2lg);
-    line-height: 1.4;
-    letter-spacing: -0.0025em;
-  }
+.popup.right[data-starting-style],
+.popup.right[data-ending-style] {
+  transform: translateX(100%);
+}
 
-  &__description {
-    margin: 0;
-    color: var(--text-secondary);
-    font-size: var(--font-size-md);
-    line-height: 1.5;
-  }
+.title {
+  margin: 0;
+  color: var(--text-primary);
+  font-weight: 700;
+  font-size: var(--font-size-2lg);
+  line-height: 1.4;
+  letter-spacing: -0.0025em;
+}
+
+.description {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-md);
+  line-height: 1.5;
 }

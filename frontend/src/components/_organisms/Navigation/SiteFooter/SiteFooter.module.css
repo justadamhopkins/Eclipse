@@ -1,5 +1,5 @@
 .siteFooter {
-  padding-block: 32px;
+  padding-block: var(--app-vertical-rhythm);
   padding-inline: var(--element-gutter);
   border-top: 2px solid var(--border-divider);
 }

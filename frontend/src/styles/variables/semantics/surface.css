@@ -2,6 +2,7 @@
   /* ── Backgrounds ────────────────────────────────────────────── */
   --bg-page: var(--grey-000); /* page ground (About / Experience bands) */
   --bg-surface: var(--grey-100); /* raised bands (Hero / Tools) */
+  --bg-surface-overlay: var(--grey-900); /* raised bands (Hero / Tools) */
   --bg-accent: var(--red-500); /* contact field, primary button */
   --bg-accent-pressed: var(--red-600); /* primary button pressed */
 
