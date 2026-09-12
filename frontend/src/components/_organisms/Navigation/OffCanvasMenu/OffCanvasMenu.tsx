@@ -44,10 +44,7 @@ export const OffCanvasMenu = ({
               <ScrollArea.Content className={styles.content}>
                 <header className={styles.header}>
                   <SiteLogo />
-                  <Hamburger
-                    isOpen={isOpen}
-                    onToggle={onOpenChange}
-                  />
+                  <Hamburger isOpen={isOpen} />
                 </header>
                 <div className={styles.primary}>
                   <nav
