@@ -9,9 +9,13 @@
 }
 
 .primary {
-  color: var(--text-primary);
+  color: var(--text-secondary);
 }
 
 .secondary {
+  color: var(--text-on-accent);
+}
+
+.tertiary {
   color: var(--text-on-accent);
 }
