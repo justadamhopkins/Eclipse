@@ -27,4 +27,5 @@
 
 .date {
   color: var(--text-accent);
+  font-size: var(--fs-md);
 }
