@@ -6,7 +6,23 @@
 
 .header {
   display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2);
   justify-content: space-between;
+
+  @media (width >= 30rem) {
+    flex-direction: row;
+  }
+
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: var(--spacing-2);
+
+    span {
+      color: var(--text-secondary);
+    }
+  }
 }
 
 .date {

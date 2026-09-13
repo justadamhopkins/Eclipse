@@ -23,7 +23,12 @@ export const JobDescription = ({
       <div className={styles.header}>
         <div>
           <Text variant="headingMd">{companyTitle}</Text>
-          <Text>{jobTitle}</Text>
+          <Text
+            as="span"
+            variant="headingMd"
+          >
+            {jobTitle}
+          </Text>
         </div>
         <Text
           className={styles.date}
