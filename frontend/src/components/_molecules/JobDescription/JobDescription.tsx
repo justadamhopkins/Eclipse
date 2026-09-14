@@ -1,6 +1,7 @@
 import { Text } from '@atoms/Text';
 
 import styles from './JobDescription.module.css';
+
 export interface IJobDescriptionProps {
   companyTitle: string;
   isCurrentRole: boolean;
@@ -25,7 +26,7 @@ export const JobDescription = ({
           <Text variant="headingMd">{companyTitle}</Text>
           <Text
             as="span"
-            variant="headingMd"
+            variant="label"
           >
             {jobTitle}
           </Text>
@@ -33,10 +34,10 @@ export const JobDescription = ({
         <Text
           className={styles.date}
           as="span"
-          variant="headingMd"
+          variant="label"
         >{`${startDate} - ${isCurrentRole ? 'Present' : endDate}`}</Text>
       </div>
-      <Text>{description}</Text>
+      <Text className={styles.body}>{description}</Text>
     </div>
   );
 };
