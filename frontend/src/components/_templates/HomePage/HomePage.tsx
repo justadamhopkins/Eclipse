@@ -9,6 +9,8 @@ import {
 } from '@organisms/Modules/JobCardModule';
 import { TechStackModule } from '@organisms/Modules/TechStackModule';
 
+import { useScrollCtx } from '../../contexts/ScrollProvider/ScrollProvider';
+
 export const JOB_CARDS = [
   {
     startDate: 'Aug 2024',
@@ -49,6 +51,7 @@ export const JOB_CARDS = [
 ] satisfies IWorkExperienceModuleProps['jobCards'];
 
 export const HomePage = () => {
+  const { setRef } = useScrollCtx();
   return (
     <>
       <CoverHero
@@ -56,10 +59,13 @@ export const HomePage = () => {
         title="Adam Hopkins"
         subtitle="London-based product-led senior software engineer crafting high-quality digital products with a focus on performance, accessibility, and long-term scalability."
       />
-      <AboutMeModule />
-      <JobCardModule jobCards={JOB_CARDS} />
-      <TechStackModule />
-      <ContactModule />
+      <AboutMeModule ref={setRef(1)} />
+      <JobCardModule
+        ref={setRef(2)}
+        jobCards={JOB_CARDS}
+      />
+      <TechStackModule ref={setRef(3)} />
+      <ContactModule ref={setRef(4)} />
     </>
   );
 };
