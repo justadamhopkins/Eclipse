@@ -7,6 +7,7 @@ import { type PropsWithChildren, useCallback, useRef } from 'react';
 const [ScrollCtx, useContext] = createContext<{
   setRef: (index: number) => (element: TMaybe<HTMLElement>) => void;
   scrollTo: (index: number) => void;
+  refs: HTMLElement[];
 }>('ScrollProvider');
 
 export const useScrollCtx = () => useContext('ScrollProvider');
@@ -32,6 +33,7 @@ export const ScrollProvider = ({ children }: PropsWithChildren) => {
 
   return (
     <ScrollCtx
+      refs={refs}
       setRef={setRef}
       scrollTo={scrollTo}
     >
