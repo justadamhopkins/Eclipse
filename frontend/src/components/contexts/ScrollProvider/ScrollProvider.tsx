@@ -2,12 +2,17 @@
 
 import { type TMaybe } from '@typings/utils';
 import { createContext } from '@utilities/create-context';
-import { type PropsWithChildren, useCallback, useRef } from 'react';
+import {
+  type PropsWithChildren,
+  type RefObject,
+  useCallback,
+  useRef,
+} from 'react';
 
 const [ScrollCtx, useContext] = createContext<{
   setRef: (index: number) => (element: TMaybe<HTMLElement>) => void;
   scrollTo: (index: number) => void;
-  refs: HTMLElement[];
+  refs: RefObject<HTMLElement[]>;
 }>('ScrollProvider');
 
 export const useScrollCtx = () => useContext('ScrollProvider');
