@@ -46,10 +46,6 @@
   transition: transform 500ms cubic-bezier(0.25, 0.1, 0.25, 1);
 }
 
-.popup.right {
-  border-left: 1px solid var(--border-divider);
-}
-
 .popup.right[data-starting-style],
 .popup.right[data-ending-style] {
   transform: translateX(100%);
