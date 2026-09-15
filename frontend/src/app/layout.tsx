@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     },
   ],
   other: {
-    'apple-mobile-web-app-title': 'Speech hoppy',
+    'apple-mobile-web-app-title': 'Adam Hopkins portfolio',
   },
 };
 
