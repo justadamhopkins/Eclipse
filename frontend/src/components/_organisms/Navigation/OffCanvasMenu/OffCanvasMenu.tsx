@@ -12,6 +12,8 @@ import { IoIosArrowForward } from 'react-icons/io';
 import { LuLinkedin } from 'react-icons/lu';
 import { RiGithubLine } from 'react-icons/ri';
 
+import { useScrollCtx } from '../../../contexts/ScrollProvider';
+
 import styles from './OffCanvasMenu.module.css';
 
 interface IOffCanvasMenuProps {
@@ -20,7 +22,6 @@ interface IOffCanvasMenuProps {
 }
 
 const navigationItems = [
-  { label: 'Home', href: '/' },
   { label: 'About', href: '/' },
   { label: 'Experience', href: '/' },
   { label: 'Tools', href: '/' },
@@ -31,6 +32,12 @@ export const OffCanvasMenu = ({
   isOpen,
   handleMenuToggle,
 }: IOffCanvasMenuProps) => {
+  const { scrollTo } = useScrollCtx();
+
+  const handleNavigationItemClick = (index: number) => {
+    handleMenuToggle();
+    scrollTo(index + 1);
+  };
   return (
     <Dialog open={isOpen}>
       <Dialog.Panel variant="right">
@@ -55,13 +62,13 @@ export const OffCanvasMenu = ({
                     <ul>
                       <ListRenderer
                         items={navigationItems}
-                        render={({ item }) => (
+                        render={({ item, index }) => (
                           <li key={item.href}>
                             <Text
                               variant="headingLg"
-                              as={NextLink}
+                              as="button"
+                              onClick={() => handleNavigationItemClick(index)}
                               className={styles.navigationLink}
-                              href={item.href}
                             >
                               {item.label}
                               <IoIosArrowForward

@@ -8,9 +8,9 @@ export interface IAboutMeModuleProps {
   description: string;
 }
 
-export const AboutMeModule = () => {
+export const AboutMeModule = ({ ...rest }) => {
   return (
-    <ModuleSectionWrapper>
+    <ModuleSectionWrapper {...rest}>
       <FeaturedHeaderBlock title="About me">
         <div className={styles.aboutMe}>
           <Text>

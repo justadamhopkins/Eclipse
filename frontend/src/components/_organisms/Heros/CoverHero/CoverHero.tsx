@@ -69,7 +69,7 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
         </div>
         <div className={styles.imageContainer}>
           <NextImage
-            src="/adam.png"
+            src="/adam.webp"
             alt="adam hopkins"
             width={400}
             height={400}

@@ -1,26 +1,29 @@
 import { Text } from '@atoms/Text';
-import { type TWithClassName } from '@typings/utils';
+import { type TPolymorphicProps } from '@typings/polymorphism';
 import clsx from 'clsx';
-import NextLink, { type LinkProps } from 'next/link';
-import { type PropsWithChildren } from 'react';
+import NextLink from 'next/link';
+import { type ElementType, type PropsWithChildren } from 'react';
 
 import styles from './NavigationLink.module.css';
 
-type TNavigationLinkProps = TWithClassName<
-  LinkProps & { variant?: 'primary' | 'secondary' }
+type TNavigationLinkProps<C extends ElementType = 'a'> = TPolymorphicProps<
+  C,
+  { variant?: 'primary' | 'secondary' }
 >;
 
-export const NavigationLink = ({
+export const NavigationLink = <C extends ElementType = 'a'>({
   children,
   variant = 'primary',
   className,
+  as,
   ...rest
-}: PropsWithChildren<TNavigationLinkProps>) => {
+}: PropsWithChildren<TNavigationLinkProps<C>>) => {
   return (
+    // @ts-expect-error err
     <Text
       {...rest}
       variant="headingMd"
-      as={NextLink}
+      as={as ?? NextLink}
       className={clsx([
         styles.navigationLink,
         variant && styles[variant],

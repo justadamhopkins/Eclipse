@@ -7,9 +7,12 @@ import { MdOutlineEmail } from 'react-icons/md';
 
 import styles from './ContactModule.module.css';
 
-export const ContactModule = () => {
+export const ContactModule = ({ ...rest }) => {
   return (
-    <ModuleSectionWrapper variant="secondary">
+    <ModuleSectionWrapper
+      variant="secondary"
+      {...rest}
+    >
       <FeaturedHeaderBlock
         title="Contact"
         variant="secondary"

@@ -4,17 +4,23 @@ import {
   type IJobDescriptionProps,
   JobDescription,
 } from '@molecules/JobDescription';
+import { type TMaybe } from '@typings/utils';
 import { ListRenderer } from '@utilities/ListRenderer';
+import { type PropsWithChildren } from 'react';
 
 import styles from './JobCardModule.module.css';
 
 export interface IWorkExperienceModuleProps {
   jobCards: IJobDescriptionProps[];
+  ref: (element: TMaybe<HTMLElement>) => void;
 }
 
-export const JobCardModule = ({ jobCards }: IWorkExperienceModuleProps) => {
+export const JobCardModule = ({
+  jobCards,
+  ...rest
+}: PropsWithChildren<IWorkExperienceModuleProps>) => {
   return (
-    <ModuleSectionWrapper>
+    <ModuleSectionWrapper {...rest}>
       <FeaturedHeaderBlock title="Experience">
         <ul className={styles.jobCardModule}>
           <ListRenderer

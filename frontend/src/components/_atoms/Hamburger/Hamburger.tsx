@@ -1,7 +1,4 @@
 'use client';
-
-import clsx from 'clsx';
-
 import styles from './Hamburger.module.css';
 
 interface IHamburgerProps {
@@ -11,23 +8,27 @@ interface IHamburgerProps {
 
 export const Hamburger = ({ isOpen = false, onToggle }: IHamburgerProps) => {
   return (
-    <button
-      className={clsx(styles.hamburger, {
-        [styles.open]: isOpen,
-      })}
-      onClick={onToggle}
-      aria-label={isOpen ? 'Close menu' : 'Open menu'}
-      aria-expanded={isOpen}
-    >
-      <span className={styles.dot} />
-      <span className={styles.dot} />
-      <span className={styles.dot} />
-      <span className={styles.dot} />
-      <span className={styles.dot} />
-      <span className={styles.dot} />
-      <span className={styles.dot} />
-      <span className={styles.dot} />
-      <span className={styles.dot} />
-    </button>
+    <div className={styles.hamburgerWrapper}>
+      <input
+        type="checkbox"
+        checked={isOpen}
+        onChange={onToggle}
+        id="hamburger-toggle"
+        aria-label="hamburger"
+        aria-controls="menu"
+        aria-expanded="false"
+        className={styles.hamburgerToggle}
+      />
+      <label
+        htmlFor="hamburger-toggle"
+        className={styles.hamburger}
+        aria-hidden="true"
+      >
+        <span className={styles.slice}></span>
+        <span className={styles.slice}></span>
+        <span className={styles.slice}></span>
+        <span className="sr-only">{isOpen ? 'Menu open' : 'Menu closed'}</span>
+      </label>
+    </div>
   );
 };

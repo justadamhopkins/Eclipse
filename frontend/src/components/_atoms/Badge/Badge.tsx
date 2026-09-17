@@ -1,3 +1,4 @@
+import { Text } from '@atoms/Text';
 import { type TWithClassName } from '@typings/utils';
 import clsx from 'clsx';
 
@@ -10,10 +11,12 @@ type TBadgeProps = TWithClassName<{
 
 export const Badge = ({ label, variant, className }: TBadgeProps) => {
   return (
-    <span
-      className={clsx([styles.badge, styles[`badge--${variant}`], className])}
+    <Text
+      as="span"
+      variant="label"
+      className={clsx([styles.badge, styles[variant], className])}
     >
       {label}
-    </span>
+    </Text>
   );
 };

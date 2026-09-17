@@ -5,9 +5,9 @@ import { ListRenderer } from '@utilities/ListRenderer';
 
 import styles from './TechStackModule.module.css';
 
-export const TechStackModule = () => {
+export const TechStackModule = ({ ...rest }) => {
   return (
-    <ModuleSectionWrapper>
+    <ModuleSectionWrapper {...rest}>
       <FeaturedHeaderBlock title="Tooling">
         <ul className={styles.techStackModule}>
           <ListRenderer

@@ -68,7 +68,6 @@ a {
   font-family: var(--text-label-ff);
   line-height: var(--text-label-lh);
   letter-spacing: var(--tracking-label);
-  text-transform: uppercase;
 }
 
 .sr-only {

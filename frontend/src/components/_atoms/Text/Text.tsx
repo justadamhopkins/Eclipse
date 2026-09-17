@@ -11,6 +11,7 @@ const VARIANTS = {
   headingXl: 'heading headingXl',
   heading2xl: 'heading heading2xl',
   body: 'body',
+  label: 'label',
 } as const;
 
 const DEFAULT_TAGS = {
@@ -21,6 +22,7 @@ const DEFAULT_TAGS = {
   headingXl: 'h2',
   heading2xl: 'h1',
   body: 'p',
+  label: 'span',
 } as const satisfies Record<keyof typeof VARIANTS, keyof JSX.IntrinsicElements>;
 
 interface ITextProps {

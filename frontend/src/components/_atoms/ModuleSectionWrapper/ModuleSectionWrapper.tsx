@@ -15,9 +15,11 @@ export const ModuleSectionWrapper = ({
   className,
   isFullBleed = false,
   variant = 'primary',
+  ...rest
 }: PropsWithChildren<TModuleSectionWrapperProps>) => {
   return (
     <section
+      {...rest}
       className={clsx(
         styles.moduleSectionWrapper,
         isFullBleed && styles.fullBleed,
