@@ -1,6 +1,6 @@
 # Eclipse
 
-> A personal portfolio site for Adam Hopkins. It can be found at www.adamhopkins.dev.
+> A personal portfolio site for Adam Hopkins. It can be found at www.adamhopkins.dev
 
 ## Overview
 
