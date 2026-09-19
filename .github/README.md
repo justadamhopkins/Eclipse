@@ -1,6 +1,6 @@
 # Eclipse
 
-> **Work in progress** — personal portfolio site for Adam Hopkins.
+> A personal portfolio site for Adam Hopkins. It can be found at www.adamhopkins.dev
 
 ## Overview
 
