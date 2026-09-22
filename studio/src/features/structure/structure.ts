@@ -9,7 +9,21 @@ export const baseStructure: StructureResolver = (S: StructureBuilder) =>
     .items([
       S.listItem()
         .title('Pages')
-        .child(S.documentTypeList('page').title('Page list')),
+        .child(
+          S.list()
+            .title('Pages list')
+            .items([
+              S.listItem()
+                .title('Pages')
+                .child(S.documentTypeList('page').title('Page list')),
+              S.listItem()
+                .title('Templates')
+                .child(
+                  S.documentTypeList('pageTemplate').title('Template list'),
+                ),
+            ]),
+        ),
+
       S.listItem()
         .title('Navigation')
         .child(
@@ -23,6 +37,7 @@ export const baseStructure: StructureResolver = (S: StructureBuilder) =>
         ),
 
       ...S.documentTypeListItems().filter(
-        listItem => !['page', 'link'].includes(<string>listItem.getId()),
+        listItem =>
+          !['page', 'pageTemplate', 'link'].includes(<string>listItem.getId()),
       ),
     ]);
