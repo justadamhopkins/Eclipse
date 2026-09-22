@@ -16,7 +16,7 @@
     "typecheck": "tsc --noEmit",
     "prettier:fix": "prettier --write \"**/*.{ts,js,tsx}\"",
     "prettier:check": "prettier --check .",
-    "schema:extract": "sanity schema extract --enforce-required-fields --path ../sanity.schema.json"
+    "schema:extract": "sanity schema extract --enforce-required-fields --path ../sanity.schema.json --force"
   },
   "keywords": [
     "sanity"
