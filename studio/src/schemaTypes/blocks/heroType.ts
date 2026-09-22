@@ -1,17 +1,31 @@
 import { defineField, defineType } from 'sanity';
-import { RocketIcon } from '@sanity/icons';
+import { RocketIcon } from '@sanity/icons/Rocket';
 
 export const heroType = defineType({
   name: 'hero',
   title: 'Hero',
   type: 'object',
+  description: 'A simple hero for adding to a page.',
   icon: RocketIcon,
+  preview: {
+    select: {
+      title: 'headline',
+      media: 'image',
+    },
+    prepare({ title, media }) {
+      return {
+        title: title || 'Untitled Hero',
+        subtitle: 'Hero',
+        media: media ?? RocketIcon,
+      };
+    },
+  },
   fields: [
     defineField({
       name: 'headline',
       title: 'Headline',
       type: 'string',
-      validation: rule => rule.required(),
+      validation: Rule => [Rule.required()],
     }),
     defineField({
       name: 'subheadline',
@@ -60,17 +74,4 @@ export const heroType = defineType({
       ],
     }),
   ],
-  preview: {
-    select: {
-      title: 'headline',
-      media: 'image',
-    },
-    prepare({ title, media }) {
-      return {
-        title: title || 'Untitled Hero',
-        subtitle: 'Hero',
-        media: media ?? RocketIcon,
-      };
-    },
-  },
 });

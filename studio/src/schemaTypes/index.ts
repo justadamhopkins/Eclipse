@@ -1,6 +1,6 @@
-import { aboutPage } from './documents/about-page';
-import { homePage } from './documents/home-page';
+import { page } from './documents/page';
+import { link } from './documents/navigation/link';
 import { heroType } from './blocks/heroType';
-import { pageBuilderType } from './pageBuilderType';
+import { seoBlock } from './objects/seoBlock';
 
-export const schemaTypes = [homePage, aboutPage, pageBuilderType, heroType];
+export const schemaTypes = [page, link, heroType, seoBlock];
