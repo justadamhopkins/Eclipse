@@ -1,4 +1,4 @@
-import { defineArrayMember, defineField, defineType } from 'sanity';
+import { defineField, defineType } from 'sanity';
 import { HomeIcon } from '@sanity/icons/Home';
 
 export const page = defineType({
@@ -24,11 +24,12 @@ export const page = defineType({
       description: 'The slug for this page',
       validation: Rule => [Rule.required()],
     }),
-    defineType({
-      name: 'pageBuilder',
-      description: 'A set of configurable modules to structure a page.',
-      type: 'array',
-      of: [defineArrayMember({ name: 'hero', type: 'hero' })],
+    defineField({
+      name: 'template',
+      description: 'A reusable module template for this page.',
+      type: 'reference',
+      to: [{ name: 'pageTemplate', type: 'pageTemplate' }],
+      validation: Rule => [Rule.required()],
     }),
     defineField({
       name: 'seoBlock',

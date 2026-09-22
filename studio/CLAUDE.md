@@ -94,7 +94,7 @@ Every item in a Sanity array automatically gets a `_key` property. This is **cri
 
 ```groq
 *[_type == "page"][0]{
-  pageBuilder[]{
+  pageTemplate[]{
     _key,  // Always include _key in queries
     _type,
     ...
@@ -463,7 +463,7 @@ When building a Page Builder query, expand all potential component types.
 
 ```typescript
 const pageBuilderExpansion = /* groq */ `
-  pageBuilder[] {
+  pageTemplate[] {
     ...,
     _type == "hero" => {
       ...,
@@ -1182,7 +1182,7 @@ export const HERO_PRESENTATION_QUERY = defineQuery(`
   *[_id == $documentId][0]{
     _id,
     _type,
-    "heroBlock": pageBuilder[_key == $blockKey && _type == "hero"][0]{
+    "heroBlock": pageTemplate[_key == $blockKey && _type == "hero"][0]{
       title,
       subtitle,
       image,
@@ -1765,7 +1765,7 @@ You get:
 
 ```groq
 *[_id == $documentId][0]{
-  "heroBlock": pageBuilder[_key == $blockKey && _type == "hero"][0]{
+  "heroBlock": pageTemplate[_key == $blockKey && _type == "hero"][0]{
     title, subtitle, image
   }
 }
