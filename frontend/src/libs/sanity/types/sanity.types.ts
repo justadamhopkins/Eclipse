@@ -12,7 +12,14 @@
  * ---------------------------------------------------------------------------------
  */
 
+export declare const internalGroqTypeReferenceTo: unique symbol;
+
 // Source: ../sanity.schema.json
+export type Cta = {
+  label?: string;
+  url?: string;
+};
+
 export type SanityImageAssetReference = {
   _ref: string;
   _type: 'reference';
@@ -20,15 +27,11 @@ export type SanityImageAssetReference = {
   [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
 };
 
-export type PageAbout = {
-  _id: string;
-  _type: 'page.about';
-  _createdAt: string;
-  _updatedAt: string;
-  _rev: string;
-  headline: string;
-  slug: Slug;
-  profileImage?: {
+export type SeoBlock = {
+  _type: 'seoBlock';
+  title?: string;
+  description?: string;
+  image?: {
     asset?: SanityImageAssetReference;
     media?: unknown;
     hotspot?: SanityImageHotspot;
@@ -36,25 +39,58 @@ export type PageAbout = {
     alt: string;
     _type: 'image';
   };
-  bio?: Array<{
-    children?: Array<{
-      marks?: Array<string>;
-      text?: string;
-      _type: 'span';
+  noIndex?: boolean;
+};
+
+export type Hero = {
+  _type: 'hero';
+  headline: string;
+  subheadline?: string;
+  cta?: Cta;
+  image?: {
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: 'image';
+  };
+};
+
+export type PageReference = {
+  _ref: string;
+  _type: 'reference';
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: 'page';
+};
+
+export type Link = {
+  _id: string;
+  _type: 'link';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  label: string;
+  type: 'INTERNAL' | 'EXTERNAL';
+  internalLink?: PageReference;
+  externalUrl?: string;
+  openInNewTab?: boolean;
+};
+
+export type Page = {
+  _id: string;
+  _type: 'page';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  identifier: string;
+  slug: Slug;
+  pageBuilder?: Array<
+    {
       _key: string;
-    }>;
-    style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote';
-    listItem?: 'bullet' | 'number';
-    markDefs?: Array<{
-      href?: string;
-      _type: 'link';
-      _key: string;
-    }>;
-    level?: number;
-    _type: 'block';
-    _key: string;
-  }>;
-  skills?: Array<string>;
+    } & Hero
+  >;
+  seoBlock?: SeoBlock;
 };
 
 export type SanityImageCrop = {
@@ -77,24 +113,6 @@ export type Slug = {
   _type: 'slug';
   current: string;
   source?: string;
-};
-
-export type PageHome = {
-  _id: string;
-  _type: 'page.home';
-  _createdAt: string;
-  _updatedAt: string;
-  _rev: string;
-  slug: Slug;
-  hero?: {
-    headline: string;
-    subheadline?: string;
-    cta?: {
-      label?: string;
-      url?: string;
-    };
-  };
-  intro?: string;
 };
 
 export type SanityImagePaletteSwatch = {
@@ -146,14 +164,14 @@ export type SanityFileAsset = {
   title?: string;
   description?: string;
   altText?: string;
-  sha1hash?: string;
-  extension?: string;
-  mimeType?: string;
-  size?: number;
-  assetId?: string;
+  sha1hash: string;
+  extension: string;
+  mimeType: string;
+  size: number;
+  assetId: string;
   uploadId?: string;
-  path?: string;
-  url?: string;
+  path: string;
+  url: string;
   source?: SanityAssetSourceData;
 };
 
@@ -175,14 +193,14 @@ export type SanityImageAsset = {
   title?: string;
   description?: string;
   altText?: string;
-  sha1hash?: string;
-  extension?: string;
-  mimeType?: string;
-  size?: number;
-  assetId?: string;
+  sha1hash: string;
+  extension: string;
+  mimeType: string;
+  size: number;
+  assetId: string;
   uploadId?: string;
-  path?: string;
-  url?: string;
+  path: string;
+  url: string;
   metadata?: SanityImageMetadata;
   source?: SanityAssetSourceData;
 };
@@ -195,12 +213,16 @@ export type Geopoint = {
 };
 
 export type AllSanitySchemaTypes =
+  | Cta
   | SanityImageAssetReference
-  | PageAbout
+  | SeoBlock
+  | Hero
+  | PageReference
+  | Link
+  | Page
   | SanityImageCrop
   | SanityImageHotspot
   | Slug
-  | PageHome
   | SanityImagePaletteSwatch
   | SanityImagePalette
   | SanityImageDimensions
@@ -210,17 +232,19 @@ export type AllSanitySchemaTypes =
   | SanityImageAsset
   | Geopoint;
 
-export declare const internalGroqTypeReferenceTo: unique symbol;
-
 // Source: src/libs/sanity/queries/queries.ts
 // Variable: postPagesSlugs
 // Query: *[_type == "post" && defined(slug.current)]  {"slug": slug.current}
 export type PostPagesSlugsResult = Array<never>;
 
 // Query TypeMap
-import '@sanity/client';
-declare module '@sanity/client' {
+declare global {
   interface SanityQueries {
     '\n  *[_type == "post" && defined(slug.current)]\n  {"slug": slug.current}\n': PostPagesSlugsResult;
   }
+}
+// Lets @sanity/client releases that predate the global registry read it too
+import '@sanity/client';
+declare module '@sanity/client' {
+  interface SanityQueries extends globalThis.SanityQueries {}
 }
