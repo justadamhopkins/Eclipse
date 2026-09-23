@@ -38,6 +38,8 @@ export const baseStructure: StructureResolver = (S: StructureBuilder) =>
 
       ...S.documentTypeListItems().filter(
         listItem =>
-          !['page', 'pageTemplate', 'link'].includes(<string>listItem.getId()),
+          !['page', 'pageTemplate', 'link', 'hero'].includes(
+            <string>listItem.getId(),
+          ),
       ),
     ]);

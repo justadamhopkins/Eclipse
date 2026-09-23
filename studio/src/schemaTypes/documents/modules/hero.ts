@@ -1,7 +1,7 @@
-import { defineField, defineType } from 'sanity';
+import { defineArrayMember, defineField, defineType } from 'sanity';
 import { RocketIcon } from '@sanity/icons/Rocket';
 
-export const heroType = defineType({
+export const hero = defineType({
   name: 'hero',
   title: 'Hero',
   type: 'object',
@@ -25,43 +25,51 @@ export const heroType = defineType({
       name: 'headline',
       title: 'Headline',
       type: 'string',
-      validation: Rule => [Rule.required()],
+      description: 'The main, large heading displayed in the hero section.',
+      validation: Rule => [
+        Rule.required(),
+        Rule.max(60).error('At most 60 characters long'),
+      ],
     }),
     defineField({
       name: 'subheadline',
       title: 'Subheadline',
       type: 'text',
       rows: 2,
-    }),
-    defineField({
-      name: 'cta',
-      title: 'Call to Action',
-      type: 'object',
-      fields: [
-        defineField({
-          name: 'label',
-          title: 'Label',
-          type: 'string',
-        }),
-        defineField({
-          name: 'url',
-          title: 'URL',
-          type: 'string',
-          description:
-            'Use a full URL (https://...) for external links, or a path (/projects) for internal links.',
-        }),
+      description:
+        'Supporting copy displayed below the headline, providing additional context.',
+      validation: Rule => [
+        Rule.required(),
+        Rule.max(150).error('At most 60 characters long'),
       ],
     }),
+    defineField({
+      name: 'callToActions',
+      title: 'Call to Actions',
+      type: 'array',
+      description:
+        'Exactly 3 unique call to action items (social profile links or links) displayed in the hero section.',
+      of: [
+        defineArrayMember({ name: 'socialProfile', type: 'socialProfile' }),
+        defineArrayMember({ name: 'link', type: 'link' }),
+      ],
+      validation: rule => [rule.required(), rule.unique(), rule.length(3)],
+    }),
+    defineField({ name: 'eyebrow', type: 'eyebrow' }),
     defineField({
       name: 'image',
       title: 'Image',
       type: 'image',
+      description:
+        'An optional hero image displayed alongside the headline and copy.',
       options: { hotspot: true },
       fields: [
         defineField({
           name: 'alt',
           title: 'Alt Text',
           type: 'string',
+          description:
+            'A description of the image for accessibility and SEO. Required whenever an image is provided.',
           validation: rule =>
             rule.custom((value, context) => {
               const parent = context.parent as { asset?: unknown };
