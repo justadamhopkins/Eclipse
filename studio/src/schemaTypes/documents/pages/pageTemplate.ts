@@ -19,7 +19,10 @@ export const pageTemplate = defineType({
     defineField({
       name: 'modules',
       type: 'array',
-      of: [defineArrayMember({ name: 'hero', type: 'hero' })],
+      of: [
+        defineArrayMember({ name: 'hero', type: 'hero' }),
+        defineArrayMember({ name: 'textBlock', type: 'textBlock' }),
+      ],
       validation: rule => [rule.required(), rule.unique()],
     }),
   ],
