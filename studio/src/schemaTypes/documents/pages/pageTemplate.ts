@@ -30,6 +30,10 @@ export const pageTemplate = defineType({
           name: 'toolingModule',
           type: 'toolingModule',
         }),
+        defineArrayMember({
+          name: 'contactModule',
+          type: 'contactModule',
+        }),
       ],
       validation: rule => [rule.required(), rule.unique()],
     }),
