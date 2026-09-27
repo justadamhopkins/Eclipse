@@ -22,6 +22,10 @@ export const pageTemplate = defineType({
       of: [
         defineArrayMember({ name: 'hero', type: 'hero' }),
         defineArrayMember({ name: 'textModule', type: 'textModule' }),
+        defineArrayMember({
+          name: 'experienceModule',
+          type: 'experienceModule',
+        }),
       ],
       validation: rule => [rule.required(), rule.unique()],
     }),
