@@ -26,6 +26,10 @@ export const pageTemplate = defineType({
           name: 'experienceModule',
           type: 'experienceModule',
         }),
+        defineArrayMember({
+          name: 'toolingModule',
+          type: 'toolingModule',
+        }),
       ],
       validation: rule => [rule.required(), rule.unique()],
     }),
