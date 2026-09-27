@@ -15,9 +15,72 @@
 export declare const internalGroqTypeReferenceTo: unique symbol;
 
 // Source: ../sanity.schema.json
-export type Cta = {
-  label?: string;
-  url?: string;
+export type PageReference = {
+  _ref: string;
+  _type: 'reference';
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: 'page';
+};
+
+export type ContactModule = {
+  _type: 'contactModule';
+  title: string;
+  heading: string;
+  actions: Array<{
+    label: string;
+    type: 'INTERNAL' | 'EXTERNAL';
+    internalLink?: PageReference;
+    externalUrl?: string;
+    openInNewTab?: boolean;
+    _type: 'link';
+    _key: string;
+  }>;
+};
+
+export type ToolingModule = {
+  _type: 'toolingModule';
+  title: string;
+  tags: Tags;
+};
+
+export type ExperienceModule = {
+  _type: 'experienceModule';
+  title: string;
+  experienceBlocks: Array<
+    {
+      _key: string;
+    } & ExperienceBlock
+  >;
+};
+
+export type TextModule = {
+  _type: 'textModule';
+  title: string;
+  text?: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: 'span';
+      _key: string;
+    }>;
+    style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote';
+    listItem?: 'bullet' | 'number';
+    markDefs?: Array<{
+      href?: string;
+      _type: 'link';
+      _key: string;
+    }>;
+    level?: number;
+    _type: 'block';
+    _key: string;
+  }>;
+};
+
+export type LinkReference = {
+  _ref: string;
+  _type: 'reference';
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: 'link';
 };
 
 export type SanityImageAssetReference = {
@@ -26,6 +89,41 @@ export type SanityImageAssetReference = {
   _weak?: boolean;
   [internalGroqTypeReferenceTo]?: 'sanity.imageAsset';
 };
+
+export type Hero = {
+  _type: 'hero';
+  headline: string;
+  subheadline: string;
+  callToActions: Array<
+    | {
+        platform: 'GITHUB' | 'LINKEDIN';
+        link: LinkReference;
+        name: string;
+        _type: 'socialProfile';
+        _key: string;
+      }
+    | {
+        label: string;
+        type: 'INTERNAL' | 'EXTERNAL';
+        internalLink?: PageReference;
+        externalUrl?: string;
+        openInNewTab?: boolean;
+        _type: 'link';
+        _key: string;
+      }
+  >;
+  eyebrow: Eyebrow;
+  image?: {
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt?: string;
+    _type: 'image';
+  };
+};
+
+export type Eyebrow = string;
 
 export type SeoBlock = {
   _type: 'seoBlock';
@@ -42,26 +140,41 @@ export type SeoBlock = {
   noIndex?: boolean;
 };
 
-export type Hero = {
-  _type: 'hero';
-  headline: string;
-  subheadline?: string;
-  cta?: Cta;
-  image?: {
-    asset?: SanityImageAssetReference;
-    media?: unknown;
-    hotspot?: SanityImageHotspot;
-    crop?: SanityImageCrop;
-    alt?: string;
-    _type: 'image';
-  };
+export type ExperienceBlock = {
+  _type: 'experienceBlock';
+  company: string;
+  role: string;
+  startDate: string;
+  endDate?: string;
+  body: Array<{
+    children?: Array<{
+      marks?: Array<string>;
+      text?: string;
+      _type: 'span';
+      _key: string;
+    }>;
+    style?: 'normal' | 'h1' | 'h2' | 'h3' | 'h4' | 'h5' | 'h6' | 'blockquote';
+    listItem?: 'bullet' | 'number';
+    markDefs?: Array<{
+      href?: string;
+      _type: 'link';
+      _key: string;
+    }>;
+    level?: number;
+    _type: 'block';
+    _key: string;
+  }>;
 };
 
-export type PageReference = {
-  _ref: string;
-  _type: 'reference';
-  _weak?: boolean;
-  [internalGroqTypeReferenceTo]?: 'page';
+export type SocialProfile = {
+  _id: string;
+  _type: 'socialProfile';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  platform: 'GITHUB' | 'LINKEDIN';
+  link: LinkReference;
+  name: string;
 };
 
 export type Link = {
@@ -77,6 +190,13 @@ export type Link = {
   openInNewTab?: boolean;
 };
 
+export type PageTemplateReference = {
+  _ref: string;
+  _type: 'reference';
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: 'pageTemplate';
+};
+
 export type Page = {
   _id: string;
   _type: 'page';
@@ -85,11 +205,7 @@ export type Page = {
   _rev: string;
   identifier: string;
   slug: Slug;
-  pageBuilder?: Array<
-    {
-      _key: string;
-    } & Hero
-  >;
+  template: PageTemplateReference;
   seoBlock?: SeoBlock;
 };
 
@@ -109,10 +225,48 @@ export type SanityImageHotspot = {
   width: number;
 };
 
+export type PageTemplate = {
+  _id: string;
+  _type: 'pageTemplate';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  identifier: string;
+  modules: Array<
+    | ({
+        _key: string;
+      } & Hero)
+    | ({
+        _key: string;
+      } & TextModule)
+    | ({
+        _key: string;
+      } & ExperienceModule)
+    | ({
+        _key: string;
+      } & ToolingModule)
+    | ({
+        _key: string;
+      } & ContactModule)
+  >;
+};
+
+export type Tags = Array<
+  {
+    _key: string;
+  } & Tag
+>;
+
 export type Slug = {
   _type: 'slug';
   current: string;
   source?: string;
+};
+
+export type Tag = {
+  _type: 'tag';
+  value?: string;
+  label?: string;
 };
 
 export type SanityImagePaletteSwatch = {
@@ -213,16 +367,27 @@ export type Geopoint = {
 };
 
 export type AllSanitySchemaTypes =
-  | Cta
-  | SanityImageAssetReference
-  | SeoBlock
-  | Hero
   | PageReference
+  | ContactModule
+  | ToolingModule
+  | ExperienceModule
+  | TextModule
+  | LinkReference
+  | SanityImageAssetReference
+  | Hero
+  | Eyebrow
+  | SeoBlock
+  | ExperienceBlock
+  | SocialProfile
   | Link
+  | PageTemplateReference
   | Page
   | SanityImageCrop
   | SanityImageHotspot
+  | PageTemplate
+  | Tags
   | Slug
+  | Tag
   | SanityImagePaletteSwatch
   | SanityImagePalette
   | SanityImageDimensions
@@ -244,7 +409,6 @@ declare global {
   }
 }
 // Lets @sanity/client releases that predate the global registry read it too
-import '@sanity/client';
 declare module '@sanity/client' {
   interface SanityQueries extends globalThis.SanityQueries {}
 }
