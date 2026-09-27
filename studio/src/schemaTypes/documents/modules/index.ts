@@ -1,4 +1,4 @@
 import { hero } from './hero';
-import { textBlock } from './textBlock';
+import { textModule } from './textModule';
 
-export const moduleSchemas = [hero, textBlock];
+export const moduleSchemas = [hero, textModule];

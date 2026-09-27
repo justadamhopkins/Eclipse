@@ -1,15 +1,10 @@
-import {
-  defineArrayMember,
-  defineField,
-  defineType,
-  type PortableTextBlock,
-  type PortableTextSpan,
-} from 'sanity';
+import { defineArrayMember, defineField, defineType } from 'sanity';
 import { TextIcon } from '@sanity/icons/Text';
+import { toPlainText } from '@portabletext/toolkit';
 
-export const textBlock = defineType({
-  name: 'textBlock',
-  title: 'Text Block',
+export const textModule = defineType({
+  name: 'textModule',
+  title: 'Text Module',
   type: 'object',
   description: 'A simple text block for adding to a page.',
   icon: TextIcon,
@@ -19,18 +14,9 @@ export const textBlock = defineType({
       text: 'text',
     },
     prepare({ title, text }) {
-      const block = (text || []).find(
-        (block: PortableTextBlock) => block._type === 'block',
-      );
-      const plainText =
-        block?.children
-          ?.map((child: PortableTextSpan) => {
-            return child.text;
-          })
-          .join('') || 'No content';
       return {
         title: title,
-        subtitle: plainText,
+        subtitle: toPlainText(text),
         media: TextIcon,
       };
     },

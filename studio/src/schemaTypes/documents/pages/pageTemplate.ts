@@ -21,7 +21,7 @@ export const pageTemplate = defineType({
       type: 'array',
       of: [
         defineArrayMember({ name: 'hero', type: 'hero' }),
-        defineArrayMember({ name: 'textBlock', type: 'textBlock' }),
+        defineArrayMember({ name: 'textModule', type: 'textModule' }),
       ],
       validation: rule => [rule.required(), rule.unique()],
     }),
