@@ -3,8 +3,8 @@ import { PageWrapper } from '@core/PageWrapper';
 import { SiteFooter } from '@organisms/Navigation/SiteFooter';
 import { SiteHeader } from '@organisms/Navigation/SiteHeader';
 import { FONT_ARCHIVO, FONT_ARCHIVO_BLACK } from '@styles/typography/fonts';
+import { Analytics } from '@vercel/analytics/next';
 import { type Metadata } from 'next';
-
 import '@styles/index.css';
 
 import Providers from './providers';
@@ -70,6 +70,7 @@ const RootLayout = ({ children }) => {
             <AppContainer>{children}</AppContainer>
             <SiteFooter />
           </PageWrapper>
+          <Analytics />
         </Providers>
       </body>
     </html>
