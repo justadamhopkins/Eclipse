@@ -3,6 +3,7 @@ import { structureTool } from 'sanity/structure';
 import { visionTool } from '@sanity/vision';
 import { schemaTypes } from './src/schemaTypes';
 import { baseStructure } from '@features/structure/structure';
+import { tags } from 'sanity-plugin-tags-v4';
 
 export default defineConfig({
   name: 'eclipse_content_studio',
@@ -14,6 +15,7 @@ export default defineConfig({
       structure: baseStructure,
     }),
     visionTool(),
+    tags({}),
   ],
   schema: {
     types: schemaTypes,
