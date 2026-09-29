@@ -13,6 +13,13 @@ const testConfig = defineConfig({
         ),
       },
       {
+        find: /^.*(?<!\.inline)\.svg$/,
+        replacement: path.resolve(
+          __dirname,
+          './src/tests/mocks/staticImageMock.ts',
+        ),
+      },
+      {
         find: '@atoms',
         replacement: path.resolve(__dirname, './src/components/_atoms'),
       },
