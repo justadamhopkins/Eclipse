@@ -1,5 +1,6 @@
 import { page } from './documents/pages/page';
 import { link } from './documents/navigation/link';
+import { headerNavigation } from './documents/navigation/headerNavigation';
 import { pageTemplate } from './documents/pages/pageTemplate';
 import { socialProfile } from './documents/settings/socialProfile';
 import { fields } from './fields';
@@ -10,6 +11,7 @@ export const schemaTypes = [
   page,
   pageTemplate,
   link,
+  headerNavigation,
   socialProfile,
   ...objectSchemas,
   ...fields,

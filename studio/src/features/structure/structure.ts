@@ -31,6 +31,13 @@ export const baseStructure: StructureResolver = (S: StructureBuilder) =>
             .title('Navigation list')
             .items([
               S.listItem()
+                .title('Header Navigation')
+                .child(
+                  S.documentTypeList('headerNavigation').title(
+                    'Header Navigation',
+                  ),
+                ),
+              S.listItem()
                 .title('Links')
                 .child(S.documentTypeList('link').title('Link list')),
             ]),
@@ -38,8 +45,12 @@ export const baseStructure: StructureResolver = (S: StructureBuilder) =>
 
       ...S.documentTypeListItems().filter(
         listItem =>
-          !['page', 'pageTemplate', 'link', 'hero'].includes(
-            <string>listItem.getId(),
-          ),
+          ![
+            'page',
+            'pageTemplate',
+            'link',
+            'headerNavigation',
+            'hero',
+          ].includes(<string>listItem.getId()),
       ),
     ]);
