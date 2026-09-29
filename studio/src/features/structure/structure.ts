@@ -38,6 +38,9 @@ export const baseStructure: StructureResolver = (S: StructureBuilder) =>
                   ),
                 ),
               S.listItem()
+                .title('Footer')
+                .child(S.documentTypeList('footer').title('Footer')),
+              S.listItem()
                 .title('Links')
                 .child(S.documentTypeList('link').title('Link list')),
             ]),
@@ -50,6 +53,7 @@ export const baseStructure: StructureResolver = (S: StructureBuilder) =>
             'pageTemplate',
             'link',
             'headerNavigation',
+            'footer',
             'hero',
           ].includes(<string>listItem.getId()),
       ),
