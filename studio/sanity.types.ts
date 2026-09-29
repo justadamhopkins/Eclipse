@@ -177,6 +177,43 @@ export type SocialProfile = {
   name: string;
 };
 
+export type Navigation = {
+  _id: string;
+  _type: 'navigation';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  logo: {
+    asset?: SanityImageAssetReference;
+    media?: unknown;
+    hotspot?: SanityImageHotspot;
+    crop?: SanityImageCrop;
+    alt: string;
+    _type: 'image';
+  };
+  links?: Array<
+    {
+      _key: string;
+    } & LinkReference
+  >;
+};
+
+export type SanityImageCrop = {
+  _type: 'sanity.imageCrop';
+  top: number;
+  bottom: number;
+  left: number;
+  right: number;
+};
+
+export type SanityImageHotspot = {
+  _type: 'sanity.imageHotspot';
+  x: number;
+  y: number;
+  height: number;
+  width: number;
+};
+
 export type Link = {
   _id: string;
   _type: 'link';
@@ -207,22 +244,6 @@ export type Page = {
   slug: Slug;
   template: PageTemplateReference;
   seoBlock?: SeoBlock;
-};
-
-export type SanityImageCrop = {
-  _type: 'sanity.imageCrop';
-  top: number;
-  bottom: number;
-  left: number;
-  right: number;
-};
-
-export type SanityImageHotspot = {
-  _type: 'sanity.imageHotspot';
-  x: number;
-  y: number;
-  height: number;
-  width: number;
 };
 
 export type PageTemplate = {
@@ -379,11 +400,12 @@ export type AllSanitySchemaTypes =
   | SeoBlock
   | ExperienceBlock
   | SocialProfile
+  | Navigation
+  | SanityImageCrop
+  | SanityImageHotspot
   | Link
   | PageTemplateReference
   | Page
-  | SanityImageCrop
-  | SanityImageHotspot
   | PageTemplate
   | Tags
   | Slug
