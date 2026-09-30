@@ -24,7 +24,8 @@
     "stylelint": "17.14.1",
     "stylelint-config-rational-order": "0.1.2",
     "stylelint-config-standard": "40.0.0",
-    "stylelint-selector-bem-pattern": "5.0.0"
+    "stylelint-selector-bem-pattern": "5.0.0",
+    "varlock": "1.21.1"
   },
   "dependencies": {
     "es-toolkit": "1.52.0"
