@@ -5,18 +5,18 @@
   "main": "package.json",
   "license": "UNLICENSED",
   "scripts": {
-    "dev": "sanity dev",
-    "start": "sanity start",
-    "build": "sanity build",
-    "deploy": "sanity deploy",
-    "deploy-graphql": "sanity graphql deploy",
+    "dev": "varlock run -- sanity dev",
+    "start": "varlock run -- sanity start",
+    "build": "varlock run -- sanity build",
+    "deploy": "varlock run -- sanity deploy",
+    "deploy-graphql": "varlock run -- sanity graphql deploy",
     "typegen": "sanity typegen generate",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "typecheck": "tsc --noEmit",
     "prettier:fix": "prettier --write \"**/*.{ts,js,tsx}\"",
     "prettier:check": "prettier --check .",
-    "schema:extract": "sanity schema extract --enforce-required-fields --path ../sanity.schema.json --force"
+    "schema:extract": "varlock run -- sanity schema extract --enforce-required-fields --path ../sanity.schema.json --force"
   },
   "keywords": [
     "sanity"
@@ -36,6 +36,7 @@
     "@types/react": "19.3.0",
     "eslint": "9.39.3",
     "prettier": "3.9.8",
-    "typescript": "5.9.3"
+    "typescript": "5.9.3",
+    "varlock": "1.21.1"
   }
 }
