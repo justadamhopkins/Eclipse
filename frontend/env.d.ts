@@ -35,6 +35,12 @@ export type CoercedEnvSchema = {
   SANITY_READ_TOKEN: string;
   
   /**
+   * **SECRET_KEY** 🔐 _sensitive_  
+   * ![icon](data:image/svg+xml;utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2032%2032%22%3E%3Cpath%20fill%3D%22%23808080%22%20d%3D%22M29%2022h-5a2.003%202.003%200%200%201-2-2v-6a2%202%200%200%201%202-2h5v2h-5v6h5ZM18%2012h-4V8h-2v14h6a2.003%202.003%200%200%200%202-2v-6a2%202%200%200%200-2-2m-4%208v-6h4v6Zm-6-8H3v2h5v2H4a2%202%200%200%200-2%202v2a2%202%200%200%200%202%202h6v-8a2%202%200%200%200-2-2m0%208H4v-2h4Z%22%2F%3E%3C%2Fsvg%3E)   
+   */
+  SECRET_KEY?: string;
+  
+  /**
    * **VERCEL_ENV**  
    * Injected by Vercel on deploys - not set locally  
    * ![icon](data:image/svg+xml;utf-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2220%22%20height%3D%2220%22%20viewBox%3D%220%200%2024%2024%22%3E%3Cpath%20fill%3D%22%23808080%22%20d%3D%22M7.885%2010.23L12%203.463l4.116%206.769zm9.606%2011q-1.558%200-2.64-1.081t-1.082-2.64t1.082-2.649t2.64-1.09t2.649%201.09t1.09%202.649t-1.09%202.64t-2.649%201.082m-13.722-.5v-6.462h6.462v6.462z%22%2F%3E%3C%2Fsvg%3E)   
@@ -67,11 +73,11 @@ export type CoercedEnvSchema = {
   
 };
 
-type _CoercedEnvSchema_0f2e728e = CoercedEnvSchema;
+type _CoercedEnvSchema_045333f0 = CoercedEnvSchema;
 
 declare module 'varlock/env' {
-  export interface TypedEnvSchema extends Readonly<_CoercedEnvSchema_0f2e728e> {}
-  export interface PublicTypedEnvSchema extends Readonly<Pick<_CoercedEnvSchema_0f2e728e, 'NEXT_PUBLIC_SANITY_PROJECT_ID' | 'NEXT_PUBLIC_SANITY_DATASET' | 'NEXT_PUBLIC_SANITY_API_VERSION' | 'VERCEL_ENV' | 'APP_ENV' | 'SANITY_PROJECT_ID' | 'SANITY_DATASET'>> {}
+  export interface TypedEnvSchema extends Readonly<_CoercedEnvSchema_045333f0> {}
+  export interface PublicTypedEnvSchema extends Readonly<Pick<_CoercedEnvSchema_045333f0, 'NEXT_PUBLIC_SANITY_PROJECT_ID' | 'NEXT_PUBLIC_SANITY_DATASET' | 'NEXT_PUBLIC_SANITY_API_VERSION' | 'VERCEL_ENV' | 'APP_ENV' | 'SANITY_PROJECT_ID' | 'SANITY_DATASET'>> {}
 }
 
 
@@ -81,17 +87,17 @@ export type EnvSchemaAsStrings = {
       : (NonNullable<CoercedEnvSchema[Property]> extends boolean ? ('true' | 'false') : string)
 };
 
-type _EnvSchemaAsStrings_0f2e728e = EnvSchemaAsStrings;
+type _EnvSchemaAsStrings_045333f0 = EnvSchemaAsStrings;
 declare global {
 
   // add types for global import.meta.env
-  interface ImportMetaEnv extends _EnvSchemaAsStrings_0f2e728e {}
+  interface ImportMetaEnv extends _EnvSchemaAsStrings_045333f0 {}
   interface ImportMeta {
     readonly env: ImportMetaEnv;
   }
 
   // add types for global process.env
   namespace NodeJS {
-    interface ProcessEnv extends _EnvSchemaAsStrings_0f2e728e {}
+    interface ProcessEnv extends _EnvSchemaAsStrings_045333f0 {}
   }
 }
