@@ -1,6 +1,7 @@
 // @ts-check
 
 import path from 'path';
+import { varlockNextConfigPlugin } from '@varlock/nextjs-integration/plugin';
 import svgoConfig from './svgo.config.ts';
 
 /**
@@ -25,4 +26,6 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+const withVarlock = varlockNextConfigPlugin();
+
+export default withVarlock(nextConfig);

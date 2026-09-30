@@ -4,6 +4,9 @@ settings:
   autoInstallPeers: true
   excludeLinksFromLockfile: false
 
+overrides:
+  '@next/env': npm:@varlock/nextjs-integration@1.2.3
+
 importers:
 
   .:
@@ -33,6 +36,9 @@ importers:
       stylelint-selector-bem-pattern:
         specifier: 5.0.0
         version: 5.0.0(stylelint@17.14.1(typescript@5.9.3))
+      varlock:
+        specifier: 1.21.1
+        version: 1.21.1
 
   frontend:
     dependencies:
@@ -60,9 +66,12 @@ importers:
       '@tanstack/react-query-devtools':
         specifier: 5.91.2
         version: 5.91.2(@tanstack/react-query@5.90.19(react@19.3.0))(react@19.3.0)
+      '@varlock/nextjs-integration':
+        specifier: 1.2.3
+        version: 1.2.3(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(varlock@1.21.1)
       '@vercel/analytics':
         specifier: 2.0.1
-        version: 2.0.1(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)
+        version: 2.0.1(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(react@19.3.0)
       clsx:
         specifier: 2.1.1
         version: 2.1.1
@@ -71,10 +80,10 @@ importers:
         version: 6.16.0
       next:
         specifier: 16.3.6
-        version: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+        version: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1)
       next-sanity:
         specifier: 12.1.0
-        version: 12.1.0(@sanity/client@7.15.0)(@sanity/types@6.17.0(@types/react@19.3.0)(vitest@4.0.17(@types/node@25.0.9)(jiti@2.7.0)(jsdom@26.1.0)(lightningcss@1.33.0)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(tsx@4.21.0)(yaml@2.9.1)))(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(styled-components@6.5.3(css-to-react-native@3.2.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)
+        version: 12.1.0(@sanity/client@7.15.0)(@sanity/types@6.17.0(@types/react@19.3.0)(vitest@4.0.17(@types/node@25.0.9)(jiti@2.7.0)(jsdom@26.1.0)(lightningcss@1.33.0)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(tsx@4.21.0)(yaml@2.9.1)))(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(styled-components@6.5.3(css-to-react-native@3.2.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)
       react:
         specifier: 19.3.0
         version: 19.3.0
@@ -87,6 +96,9 @@ importers:
       ts-extras:
         specifier: 1.3.0
         version: 1.3.0
+      varlock:
+        specifier: 1.21.1
+        version: 1.21.1
       zod:
         specifier: 4.3.5
         version: 4.3.5
@@ -105,7 +117,7 @@ importers:
         version: 8.12.0(@babel/core@7.29.7)(@babel/runtime@7.29.7)(@noble/hashes@2.4.0)(@rolldown/plugin-babel@0.2.4(@babel/core@7.29.7)(@babel/runtime@7.29.7)(rolldown@1.2.11)(vite@8.3.0(@types/node@25.0.9)(esbuild@0.27.3)(jiti@2.7.0)(tsx@4.21.0)(yaml@2.9.1)))(@types/node@25.0.9)(@types/react@19.3.0)(babel-plugin-react-compiler@1.0.0)(esbuild@0.27.3)(jiti@2.7.0)(react@19.3.0)(rolldown@1.2.11)(tsx@4.21.0)(typescript@5.9.3)(vitest@4.0.17(@types/node@25.0.9)(jiti@2.7.0)(jsdom@26.1.0)(lightningcss@1.33.0)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(tsx@4.21.0)(yaml@2.9.1))(xstate@5.28.0)
       '@storybook/nextjs-vite':
         specifier: 10.1.11
-        version: 10.1.11(@babel/core@7.29.7)(esbuild@0.27.3)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rollup@4.57.1)(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)(vite@7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1))
+        version: 10.1.11(@babel/core@7.29.7)(esbuild@0.27.3)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rollup@4.57.1)(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)(varlock@1.21.1)(vite@7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1))
       '@stylistic/eslint-plugin':
         specifier: 5.7.0
         version: 5.7.0(eslint@9.26.0(jiti@2.7.0))
@@ -281,6 +293,9 @@ importers:
       typescript:
         specifier: 5.9.3
         version: 5.9.3
+      varlock:
+        specifier: 1.21.1
+        version: 1.21.1
 
 packages:
 
@@ -2623,12 +2638,6 @@ packages:
   '@mux/playback-core@0.35.4':
     resolution: {integrity: sha512-MxetTf+BpobrSWFUdnQSodKdClPbsOcacEug8EqPefv76rxyTQF64l7RTTF1bUdVlvy6ooqsyEKdR2jK+VS5UQ==}
 
-  '@next/env@16.0.0':
-    resolution: {integrity: sha512-s5j2iFGp38QsG1LWRQaE2iUY3h1jc014/melHFfLdrsMJPqxqDQwWNwyQTcNoUSGZlCVZuM7t7JDMmSyRilsnA==}
-
-  '@next/env@16.3.6':
-    resolution: {integrity: sha512-x9Vblze1EbtltQYnNH38xCPWU3TVfBd1eXqA3+w9+BTpedkkdNpAaltXlGQ/nsc1+E0mVTNrtcbX3GoO09zeLQ==}
-
   '@next/swc-darwin-arm64@16.3.6':
     resolution: {integrity: sha512-E/7GEqaUkt8mk/T8v9lAnrhzR06kdq1ZBkC12F8tAMkdIadwNp3H1KqHynDHrpcTlGCUdq/qu6vUL2aYVyYBdw==}
     engines: {node: '>= 10'}
@@ -3444,12 +3453,6 @@ packages:
 
   '@sanity/icons@5.2.2':
     resolution: {integrity: sha512-v+5dMjYJ6pC4x8IS/4O/GvQBet5GqsXsqJxBiiS6WHZt21EgntpW+q5hxU3dO4q/njiyR8O1JsdLAs3NranoXA==}
-    engines: {node: '>=20.19 <22 || >=22.12'}
-    peerDependencies:
-      react: ^18 || ^19
-
-  '@sanity/icons@5.2.3':
-    resolution: {integrity: sha512-10nE7IiuXIPIf6ufSKyNwnOE75wghEollUYzkjPUAX+5oenyE5qDFUrMD5MeC+8gxZ8KS61o8sH1mpmhpWx++w==}
     engines: {node: '>=20.19 <22 || >=22.12'}
     peerDependencies:
       react: ^18 || ^19
@@ -4376,6 +4379,31 @@ packages:
 
   '@vanilla-extract/private@1.0.9':
     resolution: {integrity: sha512-gT2jbfZuaaCLrAxwXbRgIhGhcXbRZCG3v4TTUnjw0EJ7ArdBRxkq4msNJkbuRkCgfIK5ATmprB5t9ljvLeFDEA==}
+
+  '@varlock/native-helper-darwin@1.21.1':
+    resolution: {integrity: sha512-hh7lB6cO/qEVJTgPY5ebVicwnbM7ROkIWjOkZ+k6PYWaoyj+UrUTymF5nHkqzg0TaZ+EA5z/eboFoZhrbsOHGw==}
+    os: [darwin]
+
+  '@varlock/native-helper-linux-arm64@1.21.1':
+    resolution: {integrity: sha512-ppN2UIrJKDVALBzZwVXzIokAch8j2eyeABEHZn5LkMS3auXBVdVVkqN9QPIe7/Ii91LIV5mwWMeVJrV1paTI5Q==}
+    cpu: [arm64]
+    os: [linux]
+
+  '@varlock/native-helper-linux-x64@1.21.1':
+    resolution: {integrity: sha512-jAbIyjBJ0gyyg4C95P7KXufXtCR/K624Gib/6CUasO6dBnYVJ0SpbK2Ym41jgDYlJuYgkLKJuUHSrGNcAflzcA==}
+    cpu: [x64]
+    os: [linux]
+
+  '@varlock/native-helper-win32-x64@1.21.1':
+    resolution: {integrity: sha512-HaEry0HnJPY+opHiNUgQvpQ1yFZMMIVmpLZExTinQXu9Im81aovoR1By6LQsx1H4qFDyeEqcq2glV74WzHCNyA==}
+    os: [win32, linux]
+
+  '@varlock/nextjs-integration@1.2.3':
+    resolution: {integrity: sha512-FQs9UBcmCS8pv75x6LCAFa2izUKuaAJlli/3mjjdgVg3wkvOgfsygLM8Mxs/xTF2Pd34irtAYSaVLCczbeMoHg==}
+    engines: {node: '>=22'}
+    peerDependencies:
+      next: '>=14'
+      varlock: ^1.21.1
 
   '@vercel/analytics@2.0.1':
     resolution: {integrity: sha512-MTQG6V9qQrt1tsDeF+2Uoo5aPjqbVPys1xvnIftXSJYG2SrwXRHnqEvVoYID7BTruDz4lCd2Z7rM1BdkUehk2g==}
@@ -9595,6 +9623,11 @@ packages:
   validate-npm-package-license@3.0.4:
     resolution: {integrity: sha512-DpKm2Ui/xN7/HQKCtpZxoRWBhZ9Z0kqtygG8XCgNQ8ZlDnxuQmWhj566j8fN4Cu3/JmbhsDo7fcAJq4s9h27Ew==}
 
+  varlock@1.21.1:
+    resolution: {integrity: sha512-Qfy8/3DBEDlPcfQ8gR/Qs7YA5ERmUT2g0GqMPwz/uL00UqP8/heAAUGrwoBO8H6l4tWjPG35Ews680I78Ci0Aw==}
+    engines: {bun: '>=1.3.3', node: '>=22.3.0'}
+    hasBin: true
+
   vary@1.1.2:
     resolution: {integrity: sha512-BNGbWLfd0eUPabhkXUVm0j8uuvREyTh5ovRa/dyow/BqAbZJyC+5fU+IzQOzmAKzYqYRAISoRhdQr3eIZ/PXqg==}
     engines: {node: '>= 0.8'}
@@ -13056,10 +13089,6 @@ snapshots:
       hls.js: 1.7.3
       mux-embed: 5.18.1
 
-  '@next/env@16.0.0': {}
-
-  '@next/env@16.3.6': {}
-
   '@next/swc-darwin-arm64@16.3.6':
     optional: true
 
@@ -14237,7 +14266,7 @@ snapshots:
     dependencies:
       react: 19.2.4
 
-  '@sanity/icons@5.2.3(react@19.3.0)':
+  '@sanity/icons@5.2.2(react@19.3.0)':
     dependencies:
       react: 19.3.0
 
@@ -14762,7 +14791,7 @@ snapshots:
       '@floating-ui/react-dom': 2.1.9(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       '@juggle/resize-observer': 3.4.0
       '@sanity/color': 3.0.9
-      '@sanity/icons': 5.2.3(react@19.3.0)
+      '@sanity/icons': 5.2.2(react@19.3.0)
       csstype: 3.2.3
       motion: 13.4.6(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       react: 19.3.0
@@ -14920,7 +14949,7 @@ snapshots:
     optionalDependencies:
       '@sanity/types': 6.17.0(@types/react@19.3.0)(vitest@4.0.17(@types/node@25.3.3)(jiti@2.7.0)(jsdom@29.1.1(@noble/hashes@2.4.0))(lightningcss@1.33.0)(msw@2.12.7(@types/node@25.3.3)(typescript@5.9.3))(tsx@4.21.0)(yaml@2.9.1))
 
-  '@sanity/visual-editing@5.2.1(@sanity/client@7.15.0)(@sanity/types@6.17.0(@types/react@19.3.0)(vitest@4.0.17(@types/node@25.0.9)(jiti@2.7.0)(jsdom@26.1.0)(lightningcss@1.33.0)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(tsx@4.21.0)(yaml@2.9.1)))(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(styled-components@6.5.3(css-to-react-native@3.2.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)':
+  '@sanity/visual-editing@5.2.1(@sanity/client@7.15.0)(@sanity/types@6.17.0(@types/react@19.3.0)(vitest@4.0.17(@types/node@25.0.9)(jiti@2.7.0)(jsdom@26.1.0)(lightningcss@1.33.0)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(tsx@4.21.0)(yaml@2.9.1)))(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(styled-components@6.5.3(css-to-react-native@3.2.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)':
     dependencies:
       '@sanity/comlink': 4.0.1
       '@sanity/icons': 3.8.0(react@19.3.0)
@@ -14939,7 +14968,7 @@ snapshots:
       xstate: 5.28.0
     optionalDependencies:
       '@sanity/client': 7.15.0
-      next: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      next: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1)
     transitivePeerDependencies:
       - '@sanity/types'
       - debug
@@ -15183,18 +15212,18 @@ snapshots:
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
 
-  '@storybook/nextjs-vite@10.1.11(@babel/core@7.29.7)(esbuild@0.27.3)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rollup@4.57.1)(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)(vite@7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1))':
+  '@storybook/nextjs-vite@10.1.11(@babel/core@7.29.7)(esbuild@0.27.3)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rollup@4.57.1)(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)(varlock@1.21.1)(vite@7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1))':
     dependencies:
       '@storybook/builder-vite': 10.1.11(esbuild@0.27.3)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(rollup@4.57.1)(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(vite@7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1))
       '@storybook/react': 10.1.11(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)
       '@storybook/react-vite': 10.1.11(esbuild@0.27.3)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(rollup@4.57.1)(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)(vite@7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1))
-      next: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      next: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1)
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
       storybook: 10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       styled-jsx: 5.1.6(@babel/core@7.29.7)(react@19.3.0)
       vite: 7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1)
-      vite-plugin-storybook-nextjs: 3.1.12(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)(vite@7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1))
+      vite-plugin-storybook-nextjs: 3.1.12(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)(varlock@1.21.1)(vite@7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1))
     optionalDependencies:
       typescript: 5.9.3
     transitivePeerDependencies:
@@ -15204,6 +15233,7 @@ snapshots:
       - msw
       - rollup
       - supports-color
+      - varlock
       - webpack
 
   '@storybook/react-dom-shim@10.1.11(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))':
@@ -15873,9 +15903,26 @@ snapshots:
 
   '@vanilla-extract/private@1.0.9': {}
 
-  '@vercel/analytics@2.0.1(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react@19.3.0)':
+  '@varlock/native-helper-darwin@1.21.1':
+    optional: true
+
+  '@varlock/native-helper-linux-arm64@1.21.1':
+    optional: true
+
+  '@varlock/native-helper-linux-x64@1.21.1':
+    optional: true
+
+  '@varlock/native-helper-win32-x64@1.21.1':
+    optional: true
+
+  '@varlock/nextjs-integration@1.2.3(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(varlock@1.21.1)':
+    dependencies:
+      next: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1)
+      varlock: 1.21.1
+
+  '@vercel/analytics@2.0.1(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(react@19.3.0)':
     optionalDependencies:
-      next: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      next: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1)
       react: 19.3.0
 
   '@vercel/error-utils@2.2.0': {}
@@ -19464,19 +19511,19 @@ snapshots:
 
   negotiator@1.0.0: {}
 
-  next-sanity@12.1.0(@sanity/client@7.15.0)(@sanity/types@6.17.0(@types/react@19.3.0)(vitest@4.0.17(@types/node@25.0.9)(jiti@2.7.0)(jsdom@26.1.0)(lightningcss@1.33.0)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(tsx@4.21.0)(yaml@2.9.1)))(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(styled-components@6.5.3(css-to-react-native@3.2.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3):
+  next-sanity@12.1.0(@sanity/client@7.15.0)(@sanity/types@6.17.0(@types/react@19.3.0)(vitest@4.0.17(@types/node@25.0.9)(jiti@2.7.0)(jsdom@26.1.0)(lightningcss@1.33.0)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(tsx@4.21.0)(yaml@2.9.1)))(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(styled-components@6.5.3(css-to-react-native@3.2.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3):
     dependencies:
       '@portabletext/react': 6.0.2(react@19.3.0)
       '@sanity/client': 7.15.0
       '@sanity/comlink': 4.0.1
       '@sanity/presentation-comlink': 2.0.1(@sanity/client@7.15.0)(@sanity/types@6.17.0(@types/react@19.3.0)(vitest@4.0.17(@types/node@25.0.9)(jiti@2.7.0)(jsdom@26.1.0)(lightningcss@1.33.0)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(tsx@4.21.0)(yaml@2.9.1)))
       '@sanity/preview-url-secret': 4.0.3(@sanity/client@7.15.0)
-      '@sanity/visual-editing': 5.2.1(@sanity/client@7.15.0)(@sanity/types@6.17.0(@types/react@19.3.0)(vitest@4.0.17(@types/node@25.0.9)(jiti@2.7.0)(jsdom@26.1.0)(lightningcss@1.33.0)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(tsx@4.21.0)(yaml@2.9.1)))(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(styled-components@6.5.3(css-to-react-native@3.2.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)
+      '@sanity/visual-editing': 5.2.1(@sanity/client@7.15.0)(@sanity/types@6.17.0(@types/react@19.3.0)(vitest@4.0.17(@types/node@25.0.9)(jiti@2.7.0)(jsdom@26.1.0)(lightningcss@1.33.0)(msw@2.12.7(@types/node@25.0.9)(typescript@5.9.3))(tsx@4.21.0)(yaml@2.9.1)))(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(styled-components@6.5.3(css-to-react-native@3.2.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)
       '@sanity/webhook': 4.0.4
       dequal: 2.0.3
       groq: 5.11.0
       history: 5.3.0
-      next: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      next: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1)
       react: 19.3.0
       react-dom: 19.3.0(react@19.3.0)
       server-only: 0.0.1
@@ -19489,9 +19536,9 @@ snapshots:
       - svelte
       - typescript
 
-  next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0):
+  next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1):
     dependencies:
-      '@next/env': 16.3.6
+      '@next/env': '@varlock/nextjs-integration@1.2.3(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(varlock@1.21.1)'
       '@swc/helpers': 0.5.23
       baseline-browser-mapping: 2.11.25
       caniuse-lite: 1.0.30001770
@@ -19514,6 +19561,7 @@ snapshots:
       - '@babel/core'
       - '@types/node'
       - babel-plugin-macros
+      - varlock
 
   no-case@3.0.4:
     dependencies:
@@ -21875,6 +21923,13 @@ snapshots:
       spdx-correct: 3.2.0
       spdx-expression-parse: 3.0.1
 
+  varlock@1.21.1:
+    optionalDependencies:
+      '@varlock/native-helper-darwin': 1.21.1
+      '@varlock/native-helper-linux-arm64': 1.21.1
+      '@varlock/native-helper-linux-x64': 1.21.1
+      '@varlock/native-helper-win32-x64': 1.21.1
+
   vary@1.1.2: {}
 
   vfile-location@2.0.6: {}
@@ -21895,13 +21950,13 @@ snapshots:
       unist-util-stringify-position: 1.1.2
       vfile-message: 1.1.1
 
-  vite-plugin-storybook-nextjs@3.1.12(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)(vite@7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1)):
+  vite-plugin-storybook-nextjs@3.1.12(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(storybook@10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0))(typescript@5.9.3)(varlock@1.21.1)(vite@7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1)):
     dependencies:
-      '@next/env': 16.0.0
+      '@next/env': '@varlock/nextjs-integration@1.2.3(next@16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1))(varlock@1.21.1)'
       image-size: 2.0.2
       magic-string: 0.30.21
       module-alias: 2.3.4
-      next: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
+      next: 16.3.6(@babel/core@7.29.7)(@types/node@25.0.9)(babel-plugin-react-compiler@1.0.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)(varlock@1.21.1)
       storybook: 10.1.11(@testing-library/dom@10.4.1)(prettier@3.8.0)(react-dom@19.3.0(react@19.3.0))(react@19.3.0)
       ts-dedent: 2.2.0
       vite: 7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1)
@@ -21909,6 +21964,7 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+      - varlock
 
   vite-tsconfig-paths@5.1.4(typescript@5.9.3)(vite@7.3.1(@types/node@25.0.9)(jiti@2.7.0)(lightningcss@1.33.0)(tsx@4.21.0)(yaml@2.9.1)):
     dependencies:

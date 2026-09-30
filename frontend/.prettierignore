@@ -3,3 +3,4 @@ public/
 build/
 .next/
 .vscode/
+env.d.ts
