@@ -1,11 +1,11 @@
-import { envConfig } from '@constants/environment';
 import { createClient, type QueryParams } from 'next-sanity';
+import { ENV } from 'varlock/env';
 
 export const client = createClient({
-  projectId: envConfig.sanityProjectId,
-  dataset: envConfig.sanityDataset,
-  apiVersion: envConfig.sanityApiVersion,
-  token: envConfig.sanityReadToken,
+  projectId: ENV.NEXT_PUBLIC_SANITY_PROJECT_ID,
+  dataset: ENV.SANITY_DATASET,
+  apiVersion: ENV.NEXT_PUBLIC_SANITY_API_VERSION,
+  token: ENV.SANITY_READ_TOKEN,
   useCdn: true,
 });
 
