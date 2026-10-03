@@ -34,6 +34,7 @@
   "devDependencies": {
     "@sanity/eslint-config-studio": "6.0.0",
     "@types/react": "19.3.0",
+    "@varlock/vite-integration": "1.5.2",
     "eslint": "9.39.3",
     "prettier": "3.9.8",
     "typescript": "5.9.3",
