@@ -1,13 +1,11 @@
 import { BASE_SITE_DOMAIN } from '@constants/app';
 import { type MetadataRoute } from 'next';
+import { ENV } from 'varlock/env';
 
 const NO_INDEX_PATHS = [] as const;
 
 export default function robots(): MetadataRoute.Robots {
-  if (
-    process.env.VERCEL_ENV !== 'production' ||
-    process.env.NODE_ENV !== 'production'
-  ) {
+  if (ENV.VERCEL_ENV !== 'production') {
     return {
       rules: [
         {
