@@ -33,3 +33,4 @@ next-env.d.ts
 
 !.env.schema
 frontend/.env.local
+.env*.local
