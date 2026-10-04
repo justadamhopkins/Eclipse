@@ -1,6 +1,6 @@
 'use client';
 
-import { CoverHero } from '@organisms/Heros/CoverHero';
+import { type PAGE_QUERY_RESULT } from '@libs/sanity/types/sanity.types';
 import { AboutMeModule } from '@organisms/Modules/AboutMeModule/AboutMeModule';
 import { ContactModule } from '@organisms/Modules/ContactModule';
 import {
@@ -8,6 +8,7 @@ import {
   JobCardModule,
 } from '@organisms/Modules/JobCardModule';
 import { TechStackModule } from '@organisms/Modules/TechStackModule';
+import { PageModuleRenderer } from '@organisms/PageRenderer';
 
 import { useScrollCtx } from '../../contexts/ScrollProvider/ScrollProvider';
 
@@ -50,15 +51,17 @@ export const JOB_CARDS = [
   },
 ] satisfies IWorkExperienceModuleProps['jobCards'];
 
-export const HomePage = () => {
+type THomePageProps = {
+  data: NonNullable<PAGE_QUERY_RESULT>;
+};
+
+export const HomePage = ({ data }: THomePageProps) => {
   const { setRef } = useScrollCtx();
+
   return (
     <>
-      <CoverHero
-        label="Senior Software engineer"
-        title="Adam Hopkins"
-        subtitle="London-based product-led senior software engineer crafting high-quality digital products with a focus on performance, accessibility, and long-term scalability."
-      />
+      <PageModuleRenderer data={data} />
+
       <AboutMeModule ref={setRef(1)} />
       <JobCardModule
         ref={setRef(2)}
