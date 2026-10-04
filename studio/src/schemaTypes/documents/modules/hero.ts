@@ -40,7 +40,7 @@ export const hero = defineType({
         'Supporting copy displayed below the headline, providing additional context.',
       validation: Rule => [
         Rule.required(),
-        Rule.max(150).error('At most 60 characters long'),
+        Rule.max(450).error('At most 450 characters long'),
       ],
     }),
     defineField({
