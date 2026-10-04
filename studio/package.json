@@ -28,6 +28,7 @@
     "react": "19.2.4",
     "react-dom": "19.2.4",
     "sanity": "6.17.0",
+    "sanity-plugin-media": "^6.3.2",
     "sanity-plugin-tags-v4": "1.0.22",
     "styled-components": "6.5.3"
   },
