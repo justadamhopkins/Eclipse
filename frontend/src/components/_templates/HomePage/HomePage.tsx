@@ -52,6 +52,7 @@ export const JOB_CARDS = [
 
 export const HomePage = () => {
   const { setRef } = useScrollCtx();
+
   return (
     <>
       <CoverHero
