@@ -18,7 +18,7 @@ export const PageModuleRenderer = ({ modules }: IPageModuleRendererProps) => {
               // @ts-expect-error
               <CoverHero
                 key={item._key}
-                {...module}
+                {...item}
               />
             );
 
