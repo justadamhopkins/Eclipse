@@ -38,7 +38,7 @@ export const ActionRowItem = ({ item }: { item: TActionRowItem }) => {
       return (
         <IconButton
           as={NextLink}
-          href={item.url}
+          href={item.href}
           variant="secondary"
           icon={icon}
           target="_blank"

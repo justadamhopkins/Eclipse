@@ -12,5 +12,5 @@ export type TSocialLinkItem = {
   type: 'socialProfile';
   platform: TSocialPlatform;
   label: string;
-  url: string;
+  href: string;
 };

@@ -31,9 +31,10 @@ const renderCallToAction = (
     case 'socialProfile':
       return {
         id: cta._key,
-        type: 'link',
+        type: 'socialProfile',
         label: cta.link.label,
         href: cta.link.href ?? '',
+        platform: cta.platform,
       };
     default:
       return assertNever(cta);
