@@ -466,9 +466,29 @@ export type AllSanitySchemaTypes =
   | SanityImageAsset
   | Geopoint;
 
+// Source: src/libs/sanity/fragments/base.ts
+// Variable: IMAGE_FRAGMENT
+// Query: {    alt,    hotspot,    crop,    "asset": asset->{      _id,      url,      metadata {        lqip,        dimensions { width, height, aspectRatio }      }    }  }
+export type IMAGE_FRAGMENT_RESULT = {
+  alt: never;
+  hotspot: never;
+  crop: never;
+  asset: never;
+};
+
+// Source: src/libs/sanity/fragments/base.ts
+// Variable: LINK_FRAGMENT
+// Query: {    label,    type,    "href": select(      type == 'INTERNAL' => internalLink->slug.current,      type == 'EXTERNAL' => externalUrl    ),    "openInNewTab": select(      type == 'EXTERNAL' => coalesce(openInNewTab, false),      false    )  }
+export type LINK_FRAGMENT_RESULT = {
+  label: never;
+  type: never;
+  href: null;
+  openInNewTab: false;
+};
+
 // Source: src/libs/sanity/fragments/modules/hero.ts
 // Variable: HERO_FRAGMENT
-// Query: {    _key,    _type,    eyebrow,    headline,    subheadline,    image {      ...,      asset->    },    callToActions[]{      ...    }  }
+// Query: {    _key,    _type,    eyebrow,    headline,    subheadline,    image   {    alt,    hotspot,    crop,    "asset": asset->{      _id,      url,      metadata {        lqip,        dimensions { width, height, aspectRatio }      }    }  },    callToActions[]{      _key,      _type,      _type == 'link' =>   {    label,    type,    "href": select(      type == 'INTERNAL' => internalLink->slug.current,      type == 'EXTERNAL' => externalUrl    ),    "openInNewTab": select(      type == 'EXTERNAL' => coalesce(openInNewTab, false),      false    )  },      _type == 'socialProfile' => {        platform,        name,        link->  {    label,    type,    "href": select(      type == 'INTERNAL' => internalLink->slug.current,      type == 'EXTERNAL' => externalUrl    ),    "openInNewTab": select(      type == 'EXTERNAL' => coalesce(openInNewTab, false),      false    )  }      }    }  }
 export type HERO_FRAGMENT_RESULT = {
   _key: never;
   _type: never;
@@ -481,7 +501,7 @@ export type HERO_FRAGMENT_RESULT = {
 
 // Source: src/libs/sanity/queries/page.ts
 // Variable: PAGE_QUERY
-// Query: *[_type == "page" && slug.current == $slug][0]{    _id,    title,    "modules": template->modules[]{      _key,      _type,      _type == "hero" =>   {    _key,    _type,    eyebrow,    headline,    subheadline,    image {      ...,      asset->    },    callToActions[]{      ...    }  }    }  }
+// Query: *[_type == "page" && slug.current == $slug][0]{    _id,    title,    "modules": template->modules[]{      _key,      _type,      _type == "hero" =>   {    _key,    _type,    eyebrow,    headline,    subheadline,    image   {    alt,    hotspot,    crop,    "asset": asset->{      _id,      url,      metadata {        lqip,        dimensions { width, height, aspectRatio }      }    }  },    callToActions[]{      _key,      _type,      _type == 'link' =>   {    label,    type,    "href": select(      type == 'INTERNAL' => internalLink->slug.current,      type == 'EXTERNAL' => externalUrl    ),    "openInNewTab": select(      type == 'EXTERNAL' => coalesce(openInNewTab, false),      false    )  },      _type == 'socialProfile' => {        platform,        name,        link->  {    label,    type,    "href": select(      type == 'INTERNAL' => internalLink->slug.current,      type == 'EXTERNAL' => externalUrl    ),    "openInNewTab": select(      type == 'EXTERNAL' => coalesce(openInNewTab, false),      false    )  }      }    }  }    }  }
 export type PAGE_QUERY_RESULT = {
   _id: string;
   title: null;
@@ -501,50 +521,42 @@ export type PAGE_QUERY_RESULT = {
         headline: string;
         subheadline: string;
         image: {
+          alt: string | null;
+          hotspot: SanityImageHotspot | null;
+          crop: SanityImageCrop | null;
           asset: {
             _id: string;
-            _type: 'sanity.imageAsset';
-            _createdAt: string;
-            _updatedAt: string;
-            _rev: string;
-            originalFilename?: string;
-            label?: string;
-            title?: string;
-            description?: string;
-            altText?: string;
-            sha1hash: string;
-            extension: string;
-            mimeType: string;
-            size: number;
-            assetId: string;
-            uploadId?: string;
-            path: string;
             url: string;
-            metadata?: SanityImageMetadata;
-            source?: SanityAssetSourceData;
+            metadata: {
+              lqip: string | null;
+              dimensions: {
+                width: number;
+                height: number;
+                aspectRatio: number;
+              } | null;
+            } | null;
           } | null;
-          media?: unknown;
-          hotspot?: SanityImageHotspot;
-          crop?: SanityImageCrop;
-          alt?: string;
-          _type: 'image';
         } | null;
         callToActions: Array<
           | {
+              _key: string;
+              _type: 'link';
               label: string;
               type: 'EXTERNAL' | 'INTERNAL';
-              internalLink?: PageReference;
-              externalUrl?: string;
-              openInNewTab?: boolean;
-              _type: 'link';
-              _key: string;
+              href: string | null;
+              openInNewTab: boolean | false;
             }
           | {
-              platform: 'GITHUB' | 'LINKEDIN';
-              link: LinkReference;
-              name: string;
-              _type: 'socialProfile';
               _key: string;
+              _type: 'socialProfile';
+              platform: 'GITHUB' | 'LINKEDIN';
+              name: string;
+              link: {
+                label: string;
+                type: 'EXTERNAL' | 'INTERNAL';
+                href: string | null;
+                openInNewTab: boolean | false;
+              };
             }
         >;
       }
@@ -562,8 +574,10 @@ export type PAGE_QUERY_RESULT = {
 // Query TypeMap
 declare global {
   interface SanityQueries {
-    '\n  {\n    _key,\n    _type,\n    eyebrow,\n    headline,\n    subheadline,\n\n    image {\n      ...,\n      asset->\n    },\n\n    callToActions[]{\n      ...\n    }\n  }\n': HERO_FRAGMENT_RESULT;
-    '*[_type == "page" && slug.current == $slug][0]{\n    _id,\n    title,\n    "modules": template->modules[]{\n      _key,\n      _type,\n\n      _type == "hero" => \n  {\n    _key,\n    _type,\n    eyebrow,\n    headline,\n    subheadline,\n\n    image {\n      ...,\n      asset->\n    },\n\n    callToActions[]{\n      ...\n    }\n  }\n\n    }\n  }': PAGE_QUERY_RESULT;
+    '\n  {\n    alt,\n    hotspot,\n    crop,\n    "asset": asset->{\n      _id,\n      url,\n      metadata {\n        lqip,\n        dimensions { width, height, aspectRatio }\n      }\n    }\n  }\n': IMAGE_FRAGMENT_RESULT;
+    "\n  {\n    label,\n    type,\n    \"href\": select(\n      type == 'INTERNAL' => internalLink->slug.current,\n      type == 'EXTERNAL' => externalUrl\n    ),\n    \"openInNewTab\": select(\n      type == 'EXTERNAL' => coalesce(openInNewTab, false),\n      false\n    )\n  }\n": LINK_FRAGMENT_RESULT;
+    "\n  {\n    _key,\n    _type,\n    eyebrow,\n    headline,\n    subheadline,\n    image \n  {\n    alt,\n    hotspot,\n    crop,\n    \"asset\": asset->{\n      _id,\n      url,\n      metadata {\n        lqip,\n        dimensions { width, height, aspectRatio }\n      }\n    }\n  }\n,\n    callToActions[]{\n      _key,\n      _type,\n      _type == 'link' => \n  {\n    label,\n    type,\n    \"href\": select(\n      type == 'INTERNAL' => internalLink->slug.current,\n      type == 'EXTERNAL' => externalUrl\n    ),\n    \"openInNewTab\": select(\n      type == 'EXTERNAL' => coalesce(openInNewTab, false),\n      false\n    )\n  }\n,\n      _type == 'socialProfile' => {\n        platform,\n        name,\n        link->\n  {\n    label,\n    type,\n    \"href\": select(\n      type == 'INTERNAL' => internalLink->slug.current,\n      type == 'EXTERNAL' => externalUrl\n    ),\n    \"openInNewTab\": select(\n      type == 'EXTERNAL' => coalesce(openInNewTab, false),\n      false\n    )\n  }\n\n      }\n    }\n  }\n": HERO_FRAGMENT_RESULT;
+    '*[_type == "page" && slug.current == $slug][0]{\n    _id,\n    title,\n    "modules": template->modules[]{\n      _key,\n      _type,\n\n      _type == "hero" => \n  {\n    _key,\n    _type,\n    eyebrow,\n    headline,\n    subheadline,\n    image \n  {\n    alt,\n    hotspot,\n    crop,\n    "asset": asset->{\n      _id,\n      url,\n      metadata {\n        lqip,\n        dimensions { width, height, aspectRatio }\n      }\n    }\n  }\n,\n    callToActions[]{\n      _key,\n      _type,\n      _type == \'link\' => \n  {\n    label,\n    type,\n    "href": select(\n      type == \'INTERNAL\' => internalLink->slug.current,\n      type == \'EXTERNAL\' => externalUrl\n    ),\n    "openInNewTab": select(\n      type == \'EXTERNAL\' => coalesce(openInNewTab, false),\n      false\n    )\n  }\n,\n      _type == \'socialProfile\' => {\n        platform,\n        name,\n        link->\n  {\n    label,\n    type,\n    "href": select(\n      type == \'INTERNAL\' => internalLink->slug.current,\n      type == \'EXTERNAL\' => externalUrl\n    ),\n    "openInNewTab": select(\n      type == \'EXTERNAL\' => coalesce(openInNewTab, false),\n      false\n    )\n  }\n\n      }\n    }\n  }\n\n    }\n  }': PAGE_QUERY_RESULT;
   }
 }
 // Lets @sanity/client releases that predate the global registry read it too
