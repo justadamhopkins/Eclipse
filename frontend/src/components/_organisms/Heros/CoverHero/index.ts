@@ -1,1 +1,1 @@
-export { CoverHero } from './CoverHero';
+export { CoverHero, type ICoverHeroProps } from './CoverHero';

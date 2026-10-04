@@ -1,24 +1,23 @@
+import { toCoverHero } from '@helpers/adapters/toCoverHero';
 import { type PAGE_QUERY_RESULT } from '@libs/sanity/types/sanity.types';
 import { CoverHero } from '@organisms/Heros/CoverHero';
 import { ListRenderer } from '@utilities/ListRenderer';
 
 export interface IPageModuleRendererProps {
-  modules: NonNullable<PAGE_QUERY_RESULT>['modules'];
+  data: NonNullable<PAGE_QUERY_RESULT>;
 }
 
-export const PageModuleRenderer = ({ modules }: IPageModuleRendererProps) => {
+export const PageModuleRenderer = ({ data }: IPageModuleRendererProps) => {
   return (
     <ListRenderer
-      items={modules}
+      items={data.modules}
       render={({ item }) => {
         switch (item._type) {
           case 'hero':
             return (
-              // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-              // @ts-expect-error
               <CoverHero
                 key={item._key}
-                {...item}
+                {...toCoverHero(item)}
               />
             );
 

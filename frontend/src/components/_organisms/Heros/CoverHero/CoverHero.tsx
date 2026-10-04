@@ -1,22 +1,27 @@
-import { Button } from '@atoms/Button';
 import { Eyebrow } from '@atoms/Eyebrow';
-import { IconButton } from '@atoms/IconButton';
 import { ModuleSectionWrapper } from '@atoms/ModuleSectionWrapper';
 import { Text } from '@atoms/Text';
+import {
+  ActionRow,
+  type TActionRowItem,
+} from '@organisms/Heros/CoverHero/components/ActionRow/ActionRow';
 import NextImage from 'next/image';
-import NextLink from 'next/link';
-import { LuLinkedin } from 'react-icons/lu';
-import { RiGithubLine } from 'react-icons/ri';
 
 import styles from './CoverHero.module.css';
 
-interface ICoverHeroProps {
+export interface ICoverHeroProps {
   title: string;
   subtitle: string;
-  label: string;
+  eyebrow: string;
+  actions: TActionRowItem[];
 }
 
-export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
+export const CoverHero = ({
+  title,
+  eyebrow,
+  subtitle,
+  actions,
+}: ICoverHeroProps) => {
   return (
     <ModuleSectionWrapper>
       <div className={styles.coverHero}>
@@ -25,7 +30,7 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
             <Eyebrow
               variant="primary"
               size="md"
-              label={label}
+              label={eyebrow}
             />
             <Text variant="display">{title}</Text>
             <Text
@@ -34,37 +39,7 @@ export const CoverHero = ({ title, label, subtitle }: ICoverHeroProps) => {
             >
               {subtitle}
             </Text>
-            <ul className={styles.ctaRow}>
-              <li>
-                <Button
-                  as={NextLink}
-                  href="#footer"
-                  variant="primary"
-                >
-                  Email me
-                </Button>
-              </li>
-              <li>
-                <IconButton
-                  as={NextLink}
-                  href="https://github.com/justadamhopkins"
-                  variant="secondary"
-                  icon={<RiGithubLine size={18} />}
-                >
-                  GitHub
-                </IconButton>
-              </li>
-              <li>
-                <IconButton
-                  as={NextLink}
-                  href="https://www.linkedin.com/in/adamhopkins1989/"
-                  variant="secondary"
-                  icon={<LuLinkedin size={18} />}
-                >
-                  LinkedIn
-                </IconButton>
-              </li>
-            </ul>
+            <ActionRow items={actions} />
           </div>
         </div>
         <div className={styles.imageContainer}>
