@@ -306,6 +306,32 @@ export type Tag = {
   label?: string;
 };
 
+export type MediaFolderReference = {
+  _ref: string;
+  _type: 'reference';
+  _weak?: boolean;
+  [internalGroqTypeReferenceTo]?: 'media.folder';
+};
+
+export type MediaFolder = {
+  _id: string;
+  _type: 'media.folder';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  name?: string;
+  parent?: MediaFolderReference;
+};
+
+export type MediaTag = {
+  _id: string;
+  _type: 'media.tag';
+  _createdAt: string;
+  _updatedAt: string;
+  _rev: string;
+  name?: Slug;
+};
+
 export type SanityImagePaletteSwatch = {
   _type: 'sanity.imagePaletteSwatch';
   background?: string;
@@ -428,6 +454,9 @@ export type AllSanitySchemaTypes =
   | Tags
   | Slug
   | Tag
+  | MediaFolderReference
+  | MediaFolder
+  | MediaTag
   | SanityImagePaletteSwatch
   | SanityImagePalette
   | SanityImageDimensions
@@ -437,15 +466,104 @@ export type AllSanitySchemaTypes =
   | SanityImageAsset
   | Geopoint;
 
-// Source: src/libs/sanity/queries/queries.ts
-// Variable: postPagesSlugs
-// Query: *[_type == "post" && defined(slug.current)]  {"slug": slug.current}
-export type PostPagesSlugsResult = Array<never>;
+// Source: src/libs/sanity/fragments/modules/hero.ts
+// Variable: HERO_FRAGMENT
+// Query: {    _key,    _type,    eyebrow,    headline,    subheadline,    image {      ...,      asset->    },    callToActions[]{      ...    }  }
+export type HERO_FRAGMENT_RESULT = {
+  _key: never;
+  _type: never;
+  eyebrow: never;
+  headline: never;
+  subheadline: never;
+  image: never;
+  callToActions: never;
+};
+
+// Source: src/libs/sanity/queries/page.ts
+// Variable: PAGE_QUERY
+// Query: *[_type == "page" && slug.current == $slug][0]{    _id,    title,    "modules": template->modules[]{      _key,      _type,      _type == "hero" =>   {    _key,    _type,    eyebrow,    headline,    subheadline,    image {      ...,      asset->    },    callToActions[]{      ...    }  }    }  }
+export type PAGE_QUERY_RESULT = {
+  _id: string;
+  title: null;
+  modules: Array<
+    | {
+        _key: string;
+        _type: 'contactModule';
+      }
+    | {
+        _key: string;
+        _type: 'experienceModule';
+      }
+    | {
+        _key: string;
+        _type: 'hero';
+        eyebrow: Eyebrow;
+        headline: string;
+        subheadline: string;
+        image: {
+          asset: {
+            _id: string;
+            _type: 'sanity.imageAsset';
+            _createdAt: string;
+            _updatedAt: string;
+            _rev: string;
+            originalFilename?: string;
+            label?: string;
+            title?: string;
+            description?: string;
+            altText?: string;
+            sha1hash: string;
+            extension: string;
+            mimeType: string;
+            size: number;
+            assetId: string;
+            uploadId?: string;
+            path: string;
+            url: string;
+            metadata?: SanityImageMetadata;
+            source?: SanityAssetSourceData;
+          } | null;
+          media?: unknown;
+          hotspot?: SanityImageHotspot;
+          crop?: SanityImageCrop;
+          alt?: string;
+          _type: 'image';
+        } | null;
+        callToActions: Array<
+          | {
+              label: string;
+              type: 'EXTERNAL' | 'INTERNAL';
+              internalLink?: PageReference;
+              externalUrl?: string;
+              openInNewTab?: boolean;
+              _type: 'link';
+              _key: string;
+            }
+          | {
+              platform: 'GITHUB' | 'LINKEDIN';
+              link: LinkReference;
+              name: string;
+              _type: 'socialProfile';
+              _key: string;
+            }
+        >;
+      }
+    | {
+        _key: string;
+        _type: 'textModule';
+      }
+    | {
+        _key: string;
+        _type: 'toolingModule';
+      }
+  >;
+} | null;
 
 // Query TypeMap
 declare global {
   interface SanityQueries {
-    '\n  *[_type == "post" && defined(slug.current)]\n  {"slug": slug.current}\n': PostPagesSlugsResult;
+    '\n  {\n    _key,\n    _type,\n    eyebrow,\n    headline,\n    subheadline,\n\n    image {\n      ...,\n      asset->\n    },\n\n    callToActions[]{\n      ...\n    }\n  }\n': HERO_FRAGMENT_RESULT;
+    '*[_type == "page" && slug.current == $slug][0]{\n    _id,\n    title,\n    "modules": template->modules[]{\n      _key,\n      _type,\n\n      _type == "hero" => \n  {\n    _key,\n    _type,\n    eyebrow,\n    headline,\n    subheadline,\n\n    image {\n      ...,\n      asset->\n    },\n\n    callToActions[]{\n      ...\n    }\n  }\n\n    }\n  }': PAGE_QUERY_RESULT;
   }
 }
 // Lets @sanity/client releases that predate the global registry read it too
