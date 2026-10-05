@@ -1,3 +1,5 @@
+import { type SanityImageSource } from '@sanity/image-url';
+
 export type TSocialPlatform = 'GITHUB' | 'LINKEDIN';
 
 export type TLinkItem = {
@@ -13,4 +15,16 @@ export type TSocialLinkItem = {
   platform: TSocialPlatform;
   label: string;
   href: string;
+};
+
+export type TSanityImage = SanityImageSource & {
+  alt: string;
+  asset: {
+    _id: string;
+    _type: 'sanity.imageAsset';
+    metadata: {
+      lqip: string;
+      dimensions: { aspectRatio?: number };
+    };
+  };
 };

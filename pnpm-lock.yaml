@@ -270,6 +270,9 @@ importers:
       '@eslint/js':
         specifier: 9.39.2
         version: 9.39.2
+      '@portabletext/types':
+        specifier: ^4.0.2
+        version: 4.0.2
       '@sanity/cli':
         specifier: 8.12.0
         version: 8.12.0(096f9dc9f536eb040bb6d2ccdc6b3177)
