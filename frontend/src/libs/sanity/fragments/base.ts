@@ -2,16 +2,11 @@ import { defineQuery } from 'next-sanity';
 
 export const IMAGE_FRAGMENT = defineQuery(`
   {
-    alt,
-    hotspot,
-    crop,
-    "asset": asset->{
-      _id,
-      url,
-      metadata {
-        lqip,
-        dimensions { width, height, aspectRatio }
-      }
+  ...,
+    asset->{
+    _id,
+    _type,
+        metadata { lqip, dimensions { aspectRatio } }
     }
   }
 `);

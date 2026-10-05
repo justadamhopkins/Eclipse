@@ -21,3 +21,8 @@ export const HERO_FRAGMENT = defineQuery(`
     }
   }
 `);
+
+export const TEXT_MODULE_FRAGMENT = defineQuery(`{
+  title,
+  text
+}`);
