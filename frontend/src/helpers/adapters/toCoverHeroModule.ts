@@ -1,6 +1,7 @@
 import { type PAGE_QUERY_RESULT } from '@libs/sanity/types/sanity.types';
 import { type ICoverHeroProps } from '@organisms/Heros/CoverHero';
 import { type TActionRowItem } from '@organisms/Heros/CoverHero/components/ActionRow/ActionRow';
+import { type TSanityImage } from '@typings/client';
 import { assertNever } from 'ts-extras';
 
 type THeroPayload = Extract<
@@ -8,12 +9,13 @@ type THeroPayload = Extract<
   { _type: 'hero' }
 >;
 
-export const toCoverHero = (payload: THeroPayload): ICoverHeroProps => {
+export const toCoverHeroModule = (payload: THeroPayload): ICoverHeroProps => {
   return {
     title: payload.headline,
     subtitle: payload.subheadline,
     eyebrow: payload.eyebrow,
     actions: payload.callToActions.map(renderCallToAction),
+    image: payload.image as TSanityImage,
   };
 };
 

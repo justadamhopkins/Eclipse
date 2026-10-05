@@ -1,4 +1,8 @@
 .siteLogo {
-    display: inline-block;
-    width: min(100%, 6.25rem);
+  display: inline-block;
+  width: min(100%, 6.25rem);
+
+  & img {
+    height: auto;
+  }
 }

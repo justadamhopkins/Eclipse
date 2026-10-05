@@ -1,7 +1,6 @@
 'use client';
 
 import { type PAGE_QUERY_RESULT } from '@libs/sanity/types/sanity.types';
-import { AboutMeModule } from '@organisms/Modules/AboutMeModule/AboutMeModule';
 import { ContactModule } from '@organisms/Modules/ContactModule';
 import {
   type IWorkExperienceModuleProps,
@@ -62,7 +61,6 @@ export const HomePage = ({ data }: THomePageProps) => {
     <>
       <PageModuleRenderer data={data} />
 
-      <AboutMeModule ref={setRef(1)} />
       <JobCardModule
         ref={setRef(2)}
         jobCards={JOB_CARDS}

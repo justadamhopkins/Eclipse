@@ -1,11 +1,13 @@
 import { Eyebrow } from '@atoms/Eyebrow';
 import { ModuleSectionWrapper } from '@atoms/ModuleSectionWrapper';
 import { Text } from '@atoms/Text';
+import { urlFor } from '@libs/sanity/assets/image';
 import {
   ActionRow,
   type TActionRowItem,
 } from '@organisms/Heros/CoverHero/components/ActionRow/ActionRow';
-import NextImage from 'next/image';
+import { type TSanityImage } from '@typings/client';
+import { Image } from 'next-sanity/image';
 
 import styles from './CoverHero.module.css';
 
@@ -14,6 +16,7 @@ export interface ICoverHeroProps {
   subtitle: string;
   eyebrow: string;
   actions: TActionRowItem[];
+  image: TSanityImage;
 }
 
 export const CoverHero = ({
@@ -21,6 +24,7 @@ export const CoverHero = ({
   eyebrow,
   subtitle,
   actions,
+  image,
 }: ICoverHeroProps) => {
   return (
     <ModuleSectionWrapper>
@@ -43,11 +47,18 @@ export const CoverHero = ({
           </div>
         </div>
         <div className={styles.imageContainer}>
-          <NextImage
-            src="/adam.webp"
+          <Image
+            src={urlFor(image)
+              .width(800)
+              .height(800)
+              .fit('crop')
+              .auto('format')
+              .quality(80)
+              .url()}
             alt="adam hopkins"
-            width={400}
-            height={400}
+            width={800}
+            height={800}
+            blurDataURL={image.asset.metadata.lqip}
           />
         </div>
       </div>
