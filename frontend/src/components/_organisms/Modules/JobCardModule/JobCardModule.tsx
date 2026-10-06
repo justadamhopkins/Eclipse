@@ -11,17 +11,19 @@ import { type PropsWithChildren } from 'react';
 import styles from './JobCardModule.module.css';
 
 export interface IWorkExperienceModuleProps {
+  title: string;
   jobCards: IJobDescriptionProps[];
   ref: (element: TMaybe<HTMLElement>) => void;
 }
 
 export const JobCardModule = ({
+  title,
   jobCards,
   ...rest
 }: PropsWithChildren<IWorkExperienceModuleProps>) => {
   return (
     <ModuleSectionWrapper {...rest}>
-      <FeaturedHeaderBlock title="Experience">
+      <FeaturedHeaderBlock title={title}>
         <ul className={styles.jobCardModule}>
           <ListRenderer
             items={jobCards}

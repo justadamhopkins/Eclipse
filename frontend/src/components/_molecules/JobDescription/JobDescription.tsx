@@ -1,4 +1,6 @@
 import { Text } from '@atoms/Text';
+import { PortableText } from '@portabletext/react';
+import { type PortableTextBlock } from '@portabletext/types';
 
 import styles from './JobDescription.module.css';
 
@@ -6,7 +8,7 @@ export interface IJobDescriptionProps {
   companyTitle: string;
   isCurrentRole: boolean;
   jobTitle: string;
-  description: string;
+  description: PortableTextBlock[];
   startDate: string;
   endDate?: string;
 }
@@ -37,7 +39,14 @@ export const JobDescription = ({
           variant="label"
         >{`${startDate} - ${isCurrentRole ? 'Present' : endDate}`}</Text>
       </div>
-      <Text className={styles.body}>{description}</Text>
+      <PortableText
+        value={description}
+        components={{
+          block: {
+            normal: ({ children }) => <Text>{children}</Text>,
+          },
+        }}
+      />
     </div>
   );
 };

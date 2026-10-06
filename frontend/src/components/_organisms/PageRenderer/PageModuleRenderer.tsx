@@ -1,8 +1,10 @@
 import { toCoverHeroModule } from '@helpers/adapters/toCoverHeroModule';
+import { toExperienceBlockModule } from '@helpers/adapters/toExperienceModule';
 import { toTextHeroModule } from '@helpers/adapters/toTextModule';
 import { type PAGE_QUERY_RESULT } from '@libs/sanity/types/sanity.types';
 import { CoverHero } from '@organisms/Heros/CoverHero';
 import { AboutMeModule } from '@organisms/Modules/AboutMeModule';
+import { JobCardModule } from '@organisms/Modules/JobCardModule';
 import { ListRenderer } from '@utilities/ListRenderer';
 
 import { useScrollCtx } from '../../contexts/ScrollProvider';
@@ -34,7 +36,14 @@ export const PageModuleRenderer = ({ data }: IPageModuleRendererProps) => {
                 key={item._key}
               />
             );
-
+          case 'experienceModule':
+            return (
+              <JobCardModule
+                {...toExperienceBlockModule(item)}
+                ref={setRef(2)}
+                key={item._key}
+              />
+            );
           default:
             return null;
         }
