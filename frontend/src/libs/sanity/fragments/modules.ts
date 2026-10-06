@@ -26,3 +26,7 @@ export const TEXT_MODULE_FRAGMENT = defineQuery(`{
   title,
   text
 }`);
+
+export const EXPERIENCE_MODULE_FRAGMENT = defineQuery(
+  `{ title, experienceBlocks[]{ _key, _type, company, role, startDate, endDate, body } }`,
+);

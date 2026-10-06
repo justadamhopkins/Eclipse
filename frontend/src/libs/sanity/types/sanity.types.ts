@@ -502,9 +502,17 @@ export type TEXT_MODULE_FRAGMENT_RESULT = {
   text: never;
 };
 
+// Source: src/libs/sanity/fragments/modules.ts
+// Variable: EXPERIENCE_MODULE_FRAGMENT
+// Query: { title, experienceBlocks[]{ _key, _type, company, role, startDate, endDate, body } }
+export type EXPERIENCE_MODULE_FRAGMENT_RESULT = {
+  title: never;
+  experienceBlocks: never;
+};
+
 // Source: src/libs/sanity/queries/page.ts
 // Variable: PAGE_QUERY
-// Query: *[_type == "page" && slug.current == $slug][0]{    _id,    title,    "modules": template->modules[]{      _key,      _type,      _type == "hero" =>   {    _key,    _type,    eyebrow,    headline,    subheadline,    image   {  ...,    asset->{    _id,    _type,        metadata { lqip, dimensions { aspectRatio } }    }  },    callToActions[]{      _key,      _type,      _type == 'link' =>   {    label,    type,    "href": select(      type == 'INTERNAL' => internalLink->slug.current,      type == 'EXTERNAL' => externalUrl    ),    "openInNewTab": select(      type == 'EXTERNAL' => coalesce(openInNewTab, false),      false    )  },      _type == 'socialProfile' => {        platform,        name,        link->  {    label,    type,    "href": select(      type == 'INTERNAL' => internalLink->slug.current,      type == 'EXTERNAL' => externalUrl    ),    "openInNewTab": select(      type == 'EXTERNAL' => coalesce(openInNewTab, false),      false    )  }      }    }  },      _type == "textModule" => {  title,  text}    }  }
+// Query: *[_type == "page" && slug.current == $slug][0]{    _id,    title,    "modules": template->modules[]{      _key,      _type,      _type == "hero" =>   {    _key,    _type,    eyebrow,    headline,    subheadline,    image   {  ...,    asset->{    _id,    _type,        metadata { lqip, dimensions { aspectRatio } }    }  },    callToActions[]{      _key,      _type,      _type == 'link' =>   {    label,    type,    "href": select(      type == 'INTERNAL' => internalLink->slug.current,      type == 'EXTERNAL' => externalUrl    ),    "openInNewTab": select(      type == 'EXTERNAL' => coalesce(openInNewTab, false),      false    )  },      _type == 'socialProfile' => {        platform,        name,        link->  {    label,    type,    "href": select(      type == 'INTERNAL' => internalLink->slug.current,      type == 'EXTERNAL' => externalUrl    ),    "openInNewTab": select(      type == 'EXTERNAL' => coalesce(openInNewTab, false),      false    )  }      }    }  },      _type == "textModule" => {  title,  text},      _type == "experienceModule" => { title, experienceBlocks[]{ _key, _type, company, role, startDate, endDate, body } }    }  }
 export type PAGE_QUERY_RESULT = {
   _id: string;
   title: null;
@@ -516,6 +524,41 @@ export type PAGE_QUERY_RESULT = {
     | {
         _key: string;
         _type: 'experienceModule';
+        title: string;
+        experienceBlocks: Array<{
+          _key: string;
+          _type: 'experienceBlock';
+          company: string;
+          role: string;
+          startDate: string;
+          endDate: string | null;
+          body: Array<{
+            children?: Array<{
+              marks?: Array<string>;
+              text?: string;
+              _type: 'span';
+              _key: string;
+            }>;
+            style?:
+              | 'blockquote'
+              | 'h1'
+              | 'h2'
+              | 'h3'
+              | 'h4'
+              | 'h5'
+              | 'h6'
+              | 'normal';
+            listItem?: 'bullet' | 'number';
+            markDefs?: Array<{
+              href?: string;
+              _type: 'link';
+              _key: string;
+            }>;
+            level?: number;
+            _type: 'block';
+            _key: string;
+          }>;
+        }>;
       }
     | {
         _key: string;
@@ -608,7 +651,8 @@ declare global {
     "\n  {\n    label,\n    type,\n    \"href\": select(\n      type == 'INTERNAL' => internalLink->slug.current,\n      type == 'EXTERNAL' => externalUrl\n    ),\n    \"openInNewTab\": select(\n      type == 'EXTERNAL' => coalesce(openInNewTab, false),\n      false\n    )\n  }\n": LINK_FRAGMENT_RESULT;
     "\n  {\n    _key,\n    _type,\n    eyebrow,\n    headline,\n    subheadline,\n    image \n  {\n  ...,\n    asset->{\n    _id,\n    _type,\n        metadata { lqip, dimensions { aspectRatio } }\n    }\n  }\n,\n    callToActions[]{\n      _key,\n      _type,\n      _type == 'link' => \n  {\n    label,\n    type,\n    \"href\": select(\n      type == 'INTERNAL' => internalLink->slug.current,\n      type == 'EXTERNAL' => externalUrl\n    ),\n    \"openInNewTab\": select(\n      type == 'EXTERNAL' => coalesce(openInNewTab, false),\n      false\n    )\n  }\n,\n      _type == 'socialProfile' => {\n        platform,\n        name,\n        link->\n  {\n    label,\n    type,\n    \"href\": select(\n      type == 'INTERNAL' => internalLink->slug.current,\n      type == 'EXTERNAL' => externalUrl\n    ),\n    \"openInNewTab\": select(\n      type == 'EXTERNAL' => coalesce(openInNewTab, false),\n      false\n    )\n  }\n\n      }\n    }\n  }\n": HERO_FRAGMENT_RESULT;
     '{\n  title,\n  text\n}': TEXT_MODULE_FRAGMENT_RESULT;
-    '*[_type == "page" && slug.current == $slug][0]{\n    _id,\n    title,\n    "modules": template->modules[]{\n      _key,\n      _type,\n\n      _type == "hero" => \n  {\n    _key,\n    _type,\n    eyebrow,\n    headline,\n    subheadline,\n    image \n  {\n  ...,\n    asset->{\n    _id,\n    _type,\n        metadata { lqip, dimensions { aspectRatio } }\n    }\n  }\n,\n    callToActions[]{\n      _key,\n      _type,\n      _type == \'link\' => \n  {\n    label,\n    type,\n    "href": select(\n      type == \'INTERNAL\' => internalLink->slug.current,\n      type == \'EXTERNAL\' => externalUrl\n    ),\n    "openInNewTab": select(\n      type == \'EXTERNAL\' => coalesce(openInNewTab, false),\n      false\n    )\n  }\n,\n      _type == \'socialProfile\' => {\n        platform,\n        name,\n        link->\n  {\n    label,\n    type,\n    "href": select(\n      type == \'INTERNAL\' => internalLink->slug.current,\n      type == \'EXTERNAL\' => externalUrl\n    ),\n    "openInNewTab": select(\n      type == \'EXTERNAL\' => coalesce(openInNewTab, false),\n      false\n    )\n  }\n\n      }\n    }\n  }\n,\n      _type == "textModule" => {\n  title,\n  text\n}\n    }\n  }': PAGE_QUERY_RESULT;
+    '{ title, experienceBlocks[]{ _key, _type, company, role, startDate, endDate, body } }': EXPERIENCE_MODULE_FRAGMENT_RESULT;
+    '*[_type == "page" && slug.current == $slug][0]{\n    _id,\n    title,\n    "modules": template->modules[]{\n      _key,\n      _type,\n\n      _type == "hero" => \n  {\n    _key,\n    _type,\n    eyebrow,\n    headline,\n    subheadline,\n    image \n  {\n  ...,\n    asset->{\n    _id,\n    _type,\n        metadata { lqip, dimensions { aspectRatio } }\n    }\n  }\n,\n    callToActions[]{\n      _key,\n      _type,\n      _type == \'link\' => \n  {\n    label,\n    type,\n    "href": select(\n      type == \'INTERNAL\' => internalLink->slug.current,\n      type == \'EXTERNAL\' => externalUrl\n    ),\n    "openInNewTab": select(\n      type == \'EXTERNAL\' => coalesce(openInNewTab, false),\n      false\n    )\n  }\n,\n      _type == \'socialProfile\' => {\n        platform,\n        name,\n        link->\n  {\n    label,\n    type,\n    "href": select(\n      type == \'INTERNAL\' => internalLink->slug.current,\n      type == \'EXTERNAL\' => externalUrl\n    ),\n    "openInNewTab": select(\n      type == \'EXTERNAL\' => coalesce(openInNewTab, false),\n      false\n    )\n  }\n\n      }\n    }\n  }\n,\n      _type == "textModule" => {\n  title,\n  text\n},\n      _type == "experienceModule" => { title, experienceBlocks[]{ _key, _type, company, role, startDate, endDate, body } }\n    }\n  }': PAGE_QUERY_RESULT;
   }
 }
 // Lets @sanity/client releases that predate the global registry read it too
