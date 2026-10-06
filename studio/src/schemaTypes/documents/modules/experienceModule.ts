@@ -40,7 +40,12 @@ export const experienceModule = defineType({
       type: 'array',
       description:
         'The list of work experience entries, ordered most recent first.',
-      of: [defineArrayMember({ type: 'experienceBlock' })],
+      of: [
+        defineArrayMember({
+          type: 'experienceBlock',
+          name: 'experienceBlocks',
+        }),
+      ],
       validation: Rule => [Rule.required().min(1)],
     }),
   ],
