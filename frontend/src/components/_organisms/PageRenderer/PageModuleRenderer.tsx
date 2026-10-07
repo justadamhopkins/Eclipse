@@ -4,7 +4,9 @@ import { toTextHeroModule } from '@helpers/adapters/toTextModule';
 import { type PAGE_QUERY_RESULT } from '@libs/sanity/types/sanity.types';
 import { CoverHero } from '@organisms/Heros/CoverHero';
 import { AboutMeModule } from '@organisms/Modules/AboutMeModule';
+import { ContactModule } from '@organisms/Modules/ContactModule';
 import { JobCardModule } from '@organisms/Modules/JobCardModule';
+import { TechStackModule } from '@organisms/Modules/TechStackModule';
 import { ListRenderer } from '@utilities/ListRenderer';
 
 import { useScrollCtx } from '../../contexts/ScrollProvider';
@@ -44,6 +46,10 @@ export const PageModuleRenderer = ({ data }: IPageModuleRendererProps) => {
                 key={item._key}
               />
             );
+          case 'toolingModule':
+            return <TechStackModule ref={setRef(3)} />;
+          case 'contactModule':
+            return <ContactModule ref={setRef(4)} />;
           default:
             return null;
         }
