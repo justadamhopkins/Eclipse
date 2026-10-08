@@ -58,6 +58,7 @@ export const CoverHero = ({
             alt="adam hopkins"
             width={800}
             height={800}
+            placeholder="blur"
             blurDataURL={image.asset.metadata.lqip}
           />
         </div>
