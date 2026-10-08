@@ -1,6 +1,8 @@
+import { toContactModule } from '@helpers/adapters/toContactModule';
 import { toCoverHeroModule } from '@helpers/adapters/toCoverHeroModule';
 import { toExperienceBlockModule } from '@helpers/adapters/toExperienceModule';
 import { toTextHeroModule } from '@helpers/adapters/toTextModule';
+import { toToolingModule } from '@helpers/adapters/toToolingModule';
 import { type PAGE_QUERY_RESULT } from '@libs/sanity/types/sanity.types';
 import { CoverHero } from '@organisms/Heros/CoverHero';
 import { AboutMeModule } from '@organisms/Modules/AboutMeModule';
@@ -47,9 +49,21 @@ export const PageModuleRenderer = ({ data }: IPageModuleRendererProps) => {
               />
             );
           case 'toolingModule':
-            return <TechStackModule ref={setRef(3)} />;
+            return (
+              <TechStackModule
+                {...toToolingModule(item)}
+                key={item._key}
+                ref={setRef(3)}
+              />
+            );
           case 'contactModule':
-            return <ContactModule ref={setRef(4)} />;
+            return (
+              <ContactModule
+                {...toContactModule(item)}
+                key={item._key}
+                ref={setRef(4)}
+              />
+            );
           default:
             return null;
         }
