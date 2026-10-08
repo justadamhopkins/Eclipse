@@ -1,7 +1,7 @@
 [
   {
     "type": "type",
-    "name": "page.reference",
+    "name": "link.reference",
     "value": {
       "type": "object",
       "attributes": {
@@ -26,7 +26,7 @@
           "optional": true
         }
       },
-      "dereferencesTo": "page"
+      "dereferencesTo": "link"
     }
   },
   {
@@ -63,70 +63,16 @@
             "of": {
               "type": "object",
               "attributes": {
-                "label": {
+                "_key": {
                   "type": "objectAttribute",
                   "value": {
                     "type": "string"
-                  },
-                  "optional": false
-                },
-                "type": {
-                  "type": "objectAttribute",
-                  "value": {
-                    "type": "union",
-                    "of": [
-                      {
-                        "type": "string",
-                        "value": "INTERNAL"
-                      },
-                      {
-                        "type": "string",
-                        "value": "EXTERNAL"
-                      }
-                    ]
-                  },
-                  "optional": false
-                },
-                "internalLink": {
-                  "type": "objectAttribute",
-                  "value": {
-                    "type": "inline",
-                    "name": "page.reference"
-                  },
-                  "optional": true
-                },
-                "externalUrl": {
-                  "type": "objectAttribute",
-                  "value": {
-                    "type": "string"
-                  },
-                  "optional": true
-                },
-                "openInNewTab": {
-                  "type": "objectAttribute",
-                  "value": {
-                    "type": "boolean"
-                  },
-                  "optional": true
-                },
-                "_type": {
-                  "type": "objectAttribute",
-                  "value": {
-                    "type": "string",
-                    "value": "link"
                   }
                 }
               },
               "rest": {
-                "type": "object",
-                "attributes": {
-                  "_key": {
-                    "type": "objectAttribute",
-                    "value": {
-                      "type": "string"
-                    }
-                  }
-                }
+                "type": "inline",
+                "name": "link.reference"
               }
             }
           },
@@ -415,7 +361,7 @@
   },
   {
     "type": "type",
-    "name": "link.reference",
+    "name": "page.reference",
     "value": {
       "type": "object",
       "attributes": {
@@ -440,7 +386,7 @@
           "optional": true
         }
       },
-      "dereferencesTo": "link"
+      "dereferencesTo": "page"
     }
   },
   {

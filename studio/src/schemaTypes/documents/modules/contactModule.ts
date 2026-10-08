@@ -47,7 +47,13 @@ export const contactModule = defineType({
       type: 'array',
       description:
         'A set of navigational actions to help users interact with the contact module.',
-      of: [defineArrayMember({ name: 'link', type: 'link' })],
+      of: [
+        defineArrayMember({
+          name: 'link',
+          type: 'reference',
+          to: [{ type: 'link' }],
+        }),
+      ],
       validation: Rule => [Rule.required().max(1)],
     }),
   ],
