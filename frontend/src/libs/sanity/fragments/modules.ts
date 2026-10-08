@@ -30,3 +30,9 @@ export const TEXT_MODULE_FRAGMENT = defineQuery(`{
 export const EXPERIENCE_MODULE_FRAGMENT = defineQuery(
   `{ title, experienceBlocks[]{ _key, _type, company, role, startDate, endDate, body } }`,
 );
+
+export const TOOLING_MODULE_FRAGMENT = defineQuery(`{ title, tags }`);
+
+export const CONTACT_MODULE_FRAGMENT = defineQuery(
+  `{ title, heading, "action": actions[0]->${LINK_FRAGMENT}}`,
+);
