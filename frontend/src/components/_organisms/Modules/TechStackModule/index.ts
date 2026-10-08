@@ -1,1 +1,1 @@
-export { TechStackModule } from './TechStackModule';
+export { TechStackModule, type ITechStackModuleProps } from './TechStackModule';
